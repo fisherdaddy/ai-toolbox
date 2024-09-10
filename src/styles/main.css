@@ -52,12 +52,6 @@ nav {
   width: 100%;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary-color);
-}
-
 main {
   max-width: 1200px;
   width: 100%;

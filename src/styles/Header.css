@@ -6,3 +6,26 @@
 .no-underline:hover {
   text-decoration: none; /* 确保悬停时也不会出现下划线 */
 }
+
+.logo {
+    width: 40px; /* 调整为适合你的 logo 大小 */
+    height: auto;
+    margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem; /* 调整为适合你的设计 */
+  white-space: nowrap;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}

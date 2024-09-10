@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const i18n = {
   zh: {
-    title: 'AI工具箱',
+    title: 'AI 工具箱',
     slogan: '您的智能助手集合，一站式解决各种AI需求。',
     searchPlaceholder: '搜索工具...',
     tools: {

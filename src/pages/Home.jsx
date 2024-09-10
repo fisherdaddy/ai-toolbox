@@ -14,6 +14,7 @@ function Home() {
   return (
     <div>
       <section className="hero">
+        {/* 添加 logo */}
         <h1>{t('title')}</h1>
         <p className="slogan">{t('slogan')}</p>
       </section>
