@@ -1,6 +1,6 @@
 # AI Toolbox
 
-AI 工具箱是一个集成多种人工智能工具的Web应用程序,旨在为用户提供一站式AI解决方案。该项目由 [AI 编辑器 Cursor](https://fisherdaddy.com/posts/cursor-the-ai-code-editor/) 提供支持。
+[AI 工具箱](https://fishersama.com/)是一个集成多种人工智能工具的Web应用程序,旨在为用户提供一站式AI解决方案。该项目由 [AI 编辑器 Cursor](https://fisherdaddy.com/posts/cursor-the-ai-code-editor/) 提供支持。
 
 ## 功能特性
 
@@ -20,7 +20,7 @@ AI 工具箱是一个集成多种人工智能工具的Web应用程序,旨在为�
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/your-username/ai-toolbox.git
+git clone https://github.com/fisherdaddy/ai-toolbox.git
 cd ai-toolbox
 ```
 
