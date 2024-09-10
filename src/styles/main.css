@@ -1,0 +1,192 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #06c;
+  --background-color: #fff;
+  --text-color: #1d1d1f;
+  --card-background: #fbfbfd;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding-top: 2px;
+  padding-bottom: 30px;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6rem 1rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0.1rem 0.1rem;
+  border-radius: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.slogan {
+  font-size: 1.8rem;
+  margin-bottom: 3.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.search-container {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+#tool-search {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#tool-search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#tool-search:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-container i {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+}
+
+.tools-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.tool-card {
+  background-color: var(--card-background);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tool-icon {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.tool-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tool-description {
+  font-size: 1.1rem;
+  color: #86868b;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: var(--card-background);
+  color: #86868b;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .slogan {
+    font-size: 1.5rem;
+  }
+}
