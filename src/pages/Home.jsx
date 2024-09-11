@@ -6,7 +6,7 @@ import { useTranslation } from '../js/i18n';
 const tools = [
   { id: 'text2image', icon: 'fa-image', path: '/text2image' },
   { id: 'jsonFormatter', icon: 'fa-code', path: '/json-formatter' },
-  { id: 'textTranslation', icon: 'fa-language', path: '/text-translation' },
+  { id: 'urlDecode', icon: 'fa-decode', path: '/url-decode' },
 ];
 
 function Home() {
