@@ -1,31 +1,59 @@
 .no-underline {
-  text-decoration: none;
-  color: inherit; /* 这会保持链接颜色与周围文本相同 */
-}
-
-.no-underline:hover {
-  text-decoration: none; /* 确保悬停时也不会出现下划线 */
-}
-
-.logo {
-    width: 40px; /* 调整为适合你的 logo 大小 */
-    height: auto;
-    margin-right: 10px;
-}
-
-.title {
-  font-size: 1.5rem; /* 调整为适合你的设计 */
-  white-space: nowrap;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.logo-title-container {
-  display: flex;
-  align-items: center;
-}
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .no-underline:hover {
+    text-decoration: none;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    object-fit: contain;
+  }
+  
+  .title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #6366F1; /* 使用与图片中紫色渐变相近的颜色 */
+    transition: color 0.2s ease;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo-title-container {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .logo-title-container .title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-title-container:hover .title {
+    color: #4F46E5; /* 悬停时稍微深一点的紫色 */
+  }
+  
+  /* 添加一个简单的动画效果 */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* 为移动设备优化 */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.3rem;
+    }
+  }

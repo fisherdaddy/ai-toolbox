@@ -1,38 +1,66 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  margin: 10px auto;
+`;
+
+const Title = styled.h1`
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+`;
+
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 1200px;
-  height: 80vh;
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 20px auto;
+  margin: 10px auto;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: 70vh;
+  }
 `;
 
 const InputText = styled.textarea`
-  width: 50%;
-  height: 100%;
-  font-size: 16px;
-  padding: 20px;
+  width: 100%;
+  height: 200px;
+  font-size: 14px;
+  padding: 10px;
   border: none;
-  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
   box-sizing: border-box;
   outline: none;
   resize: none;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 100%;
+    border-bottom: none;
+    border-right: 1px solid #e0e0e0;
+  }
 `;
 
 const PreviewContainer = styled.div`
-  width: 50%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 100%;
+  }
 `;
 
 const Preview = styled.div`
@@ -43,6 +71,12 @@ const Preview = styled.div`
   overflow-y: auto;
   flex-grow: 1;
   padding-right: 10px;
+  font-size: 14px;
+  max-height: 200px;
+
+  @media (min-width: 768px) {
+    max-height: none;
+  }
 
   h1, h2, h3 {
     color: #2c3e50;
@@ -50,7 +84,7 @@ const Preview = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   &::-webkit-scrollbar-track {
@@ -59,7 +93,7 @@ const Preview = styled.div`
 
   &::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
@@ -68,15 +102,16 @@ const Preview = styled.div`
 `;
 
 const DownloadButton = styled.button`
-  padding: 12px 24px;
+  padding: 8px 16px;
   background-color: #3498db;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   transition: background-color 0.3s ease;
   align-self: flex-end;
+  margin-top: 10px;
 
   &:hover {
     background-color: #2980b9;
@@ -129,20 +164,23 @@ function TextToImage() {
   };
 
   return (
-    <Container>
-      <InputText
-        placeholder="输入文本（可包含标题，如# 标题1）"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <PreviewContainer>
-        <Preview
-          ref={previewRef}
-          dangerouslySetInnerHTML={{ __html: formatText(text) }}
+    <Wrapper>
+      <Title>文字卡片生成器</Title>
+      <Container>
+        <InputText
+          placeholder="输入文本（可包含标题，如# 标题1）"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
         />
-        <DownloadButton onClick={handleDownload}>导出为图片</DownloadButton>
-      </PreviewContainer>
-    </Container>
+        <PreviewContainer>
+          <Preview
+            ref={previewRef}
+            dangerouslySetInnerHTML={{ __html: formatText(text) }}
+          />
+          <DownloadButton onClick={handleDownload}>导出为图片</DownloadButton>
+        </PreviewContainer>
+      </Container>
+    </Wrapper>
   );
 }
 

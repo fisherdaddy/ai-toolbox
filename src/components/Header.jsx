@@ -13,8 +13,8 @@ function Header() {
     <header>
       <nav>
         <div className="logo-title-container">
-          <img src={logo} alt="Logo" className="logo" />
           <Link to="/" className="title no-underline">
+            <img src={logo} alt="Logo" className="logo" />
             {t('title')}
           </Link>
         </div>

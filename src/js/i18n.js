@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 const i18n = {
   zh: {
     title: 'AI 工具箱',
-    slogan: '您的智能助手集合，一站式解决各种AI需求。',
-    searchPlaceholder: '搜索工具...',
+    slogan: '您的智能助手集合，一站式解决各种 AI 需求。',
     tools: {
       text2image: {
         title: '文字卡片',
@@ -21,7 +20,6 @@ const i18n = {
   en: {
     title: 'AI Toolbox',
     slogan: 'Your collection of intelligent assistants, solving various AI needs in one place.',
-    searchPlaceholder: 'Search tools...',
     tools: {
       text2image: {
         title: 'Text to Image Card',
