@@ -1,21 +1,50 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from '../js/i18n';
 
 function LanguageSelector() {
   const { lang, setLanguage } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const handleLanguageChange = (e) => {
-    setLanguage(e.target.value);
+  const languages = {
+    en: 'English',
+    zh: '中文',
+    ja: '日本語',
+    ko: '한국어'
   };
 
+  const handleLanguageChange = (newLang) => {
+    setLanguage(newLang);
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div id="language-selector">
-      <select id="lang-select" value={lang} onChange={handleLanguageChange}>
-      <option value="zh">中文</option>
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-        <option value="ko">한국어</option>
-      </select>
+    <div className="language-selector">
+      <button onClick={() => setIsOpen(!isOpen)} className="language-button">
+        {languages[lang]}
+      </button>
+      {isOpen && (
+        <ul className="language-dropdown" ref={dropdownRef}>
+          {Object.entries(languages).map(([code, name]) => (
+            <li key={code} onClick={() => handleLanguageChange(code)}>
+              {name}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
