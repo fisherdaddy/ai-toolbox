@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 const i18n = {
   en: {
     title: 'AI Toolbox',
+    description: 'Your one-stop solution for various AI tools.',
     slogan: 'Your collection of intelligent assistants, solving various AI needs in one place.',
     tools: {
       text2image: {
@@ -28,9 +29,15 @@ const i18n = {
         copiedMessage: 'Copied'
       },
     },
+    notFound: {
+      title: '404 - Page Not Found',
+      description: 'Sorry, the page you are looking for does not exist.',
+      back_home: 'Back to Home'
+    }
   },
   zh: {
     title: 'AI 工具箱',
+    description: '一站式解决各种AI工具需求。',
     slogan: '您的智能助手集合，一站式解决各种 AI 需求。',
     tools: {
       text2image: {
@@ -56,9 +63,15 @@ const i18n = {
         copiedMessage: '已复制'
       },
     },
+    notFound: {
+      title: '404 - 页面未找到',
+      description: '抱歉，您访问的页面不存在。',
+      back_home: '返回首页'
+    }
   },
   ja: {
     title: 'AIツールボックス',
+    description: 'あなたのインテリジェントアシスタントコレクション、様々なAIニーズを一箇所で解決します。',
     slogan: 'あなたのインテリジェントアシスタントコレクション、様々なAIニーズを一箇所で解決します。',
     tools: {
       text2image: {
@@ -84,9 +97,15 @@ const i18n = {
         copiedMessage: 'コピーしました'
       },
     },
+    notFound: {
+      title: '404 - ページが見つかりません',
+      description: '申し訳ありませんが、お探しのページは存在しません。',
+      back_home: 'ホームに戻る'
+    }
   },
   ko: {
     title: 'AI 도구 상자',
+    description: '당신의 지능형 어시스턴트 컬렉션, 다양한 AI 요구 사항을 한 곳에서 해결합니다.',
     slogan: '당신의 지능형 어시스턴트 컬렉션, 다양한 AI 요구 사항을 한 곳에서 해결합니다.',
     tools: {
       text2image: {
@@ -112,6 +131,11 @@ const i18n = {
         copiedMessage: '복사됨'
       },
     },
+    notFound: {
+      title: '404 - 페이지를 찾을 수 없습니다',
+      description: '죄송합니다. 찾고 있는 페이지가 존재하지 않습니다.',
+      back_home: '홈으로 돌아가기'
+    }
   },
 };
 

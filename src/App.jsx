@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import JsonFormatter from './components/JsonFormatter';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import TextToImage from './components/TextToImage';
-import UrlDecode from './components/UrlDecode';
+import NotFound from './pages/NotFound';
 
-function App(op) {
+const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
+const TextToImage = lazy(() => import('./components/TextToImage'));
+const UrlDecode = lazy(() => import('./components/UrlDecode'));
+
+function App() {
   return (
     <div className="app-container">
       <Header />
       <div className="content-wrapper">
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/text2image" element={<TextToImage />} />
-            <Route path="/json-formatter" element={<JsonFormatter />} />
-            <Route path="/url-decode" element={<UrlDecode />} />
-          </Routes>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/text2image" element={<TextToImage />} />
+              <Route path="/json-formatter" element={<JsonFormatter />} />
+              <Route path="/url-decode" element={<UrlDecode />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </main>
       </div>
       <Footer />

@@ -2,3 +2,4 @@ node_modules/
 package-lock.json
 dist/
 src/.DS_Store
+!robots.txt
