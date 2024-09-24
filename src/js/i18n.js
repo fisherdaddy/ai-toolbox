@@ -33,6 +33,9 @@ const i18n = {
       title: '404 - Page Not Found',
       description: 'Sorry, the page you are looking for does not exist.',
       back_home: 'Back to Home'
+    },
+    footer: {
+      copyRight: 'AI Toolbox. All rights reserved.'
     }
   },
   zh: {
@@ -67,6 +70,9 @@ const i18n = {
       title: '404 - 页面未找到',
       description: '抱歉，您访问的页面不存在。',
       back_home: '返回首页'
+    },
+    footer: {
+      copyRight: 'AI 工具箱. 保留所有权利。'
     }
   },
   ja: {
@@ -101,6 +107,9 @@ const i18n = {
       title: '404 - ページが見つかりません',
       description: '申し訳ありませんが、お探しのページは存在しません。',
       back_home: 'ホームに戻る'
+    },
+    footer: {
+      copyRight: 'AIツールボックス. すべての権利を保有します。'
     }
   },
   ko: {
@@ -135,6 +144,9 @@ const i18n = {
       title: '404 - 페이지를 찾을 수 없습니다',
       description: '죄송합니다. 찾고 있는 페이지가 존재하지 않습니다.',
       back_home: '홈으로 돌아가기'
+    },
+    footer: {
+      copyRight: 'AI 도구 상자. 모든 권리 보유.'
     }
   },
 };

@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from '../js/i18n';
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer>
-      <p>&copy; 2024 AI 工具箱. 保留所有权利。</p>
+      <p>&copy; 2024 {t('footer.copyRight')}</p>
     </footer>
   );
 }
