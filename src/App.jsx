@@ -8,7 +8,7 @@ import NotFound from './pages/NotFound';
 const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
 const TextToImage = lazy(() => import('./components/TextToImage'));
 const UrlDecode = lazy(() => import('./components/UrlDecode'));
-
+const About = lazy(() => import('./pages/About'));
 function App() {
   return (
     <div className="app-container">
@@ -21,6 +21,7 @@ function App() {
               <Route path="/text2image" element={<TextToImage />} />
               <Route path="/json-formatter" element={<JsonFormatter />} />
               <Route path="/url-decode" element={<UrlDecode />} />
+              <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

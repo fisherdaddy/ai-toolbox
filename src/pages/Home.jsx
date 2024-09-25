@@ -24,7 +24,6 @@ const Home = () => {
           <p className="slogan">{t('slogan')}</p>
         </section>
         <section className="tools-section">
-          <h2>工具</h2>
           <div className="tools-grid">
             {tools.map(tool => (
               <Link to={tool.path} key={tool.id} className="tool-card">

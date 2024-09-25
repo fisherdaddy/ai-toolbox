@@ -36,7 +36,19 @@ const i18n = {
     },
     footer: {
       copyRight: 'AI Toolbox. All rights reserved.'
-    }
+    },
+    about: {
+      title: 'About Us',
+      description: 'AI Toolbox is a comprehensive web application that integrates various AI tools to provide users with a one-stop AI solution.',
+      mission: 'Our Mission',
+      missionDescription: 'To empower users with easy access to powerful AI tools, enhancing productivity and creativity.',
+      team: 'Our Team',
+      teamDescription: 'We are a dedicated team of AI enthusiasts and developers committed to building innovative solutions.',
+      contact: 'Contact Us',
+    },
+    navigation: {
+      about: 'About Us'
+    },
   },
   zh: {
     title: 'AI 工具箱',
@@ -73,7 +85,19 @@ const i18n = {
     },
     footer: {
       copyRight: 'AI 工具箱. 保留所有权利。'
-    }
+    },
+    about: {
+      title: '关于我们',
+      description: 'AI 工具箱是一个集成多种人工智能工具的综合Web应用程序，旨在为用户提供一站式AI解决方案。',
+      mission: '我们的使命',
+      missionDescription: '通过提供强大的AI工具，赋能用户，提高生产力和创造力。',
+      team: '我们的团队',
+      teamDescription: '我们是一支由AI爱好者和开发人员组成的专注团队，致力于构建创新的解决方案。',
+      contact: '联系我们',
+    },
+    navigation: {
+      about: '关于我们'
+    },
   },
   ja: {
     title: 'AIツールボックス',
@@ -110,7 +134,19 @@ const i18n = {
     },
     footer: {
       copyRight: 'AIツールボックス. すべての権利を保有します。'
-    }
+    },
+    about: {
+      title: '私たちについて',
+      description: 'AIツールボックスは、さまざまなAIツールを統合した包括的なWebアプリケーションであり、ユーザーにワンストップのAIソリューションを提供します。',
+      mission: '私たちの使命',
+      missionDescription: '強力なAIツールへの簡単なアクセスを提供し、ユーザーの生産性と創造性を高めること。',
+      team: '私たちのチーム',
+      teamDescription: '私たちは革新的なソリューションの構築に専念するAI愛好家と開発者の献身的なチームです。',
+      contact: 'お問い合わせ',
+    },
+    navigation: {
+      about: '私たちについて'
+    },
   },
   ko: {
     title: 'AI 도구 상자',
@@ -147,7 +183,19 @@ const i18n = {
     },
     footer: {
       copyRight: 'AI 도구 상자. 모든 권리 보유.'
-    }
+    },
+    about: {
+      title: '회사 소개',
+      description: 'AI 도구 상자는 다양한 AI 도구를 통합한 종합 웹 애플리케이션으로, 사용자에게 원스톱 AI 솔루션을 제공합니다.',
+      mission: '우리의 사명',
+      missionDescription: '강력한 AI 도구에 쉽게 접근할 수 있도록 하여 생산성과 창의성을 향상시키는 것.',
+      team: '우리 팀',
+      teamDescription: '우리는 혁신적인 솔루션을 구축하는 데 전념하는 AI 애호가 및 개발자 팀입니다.',
+      contact: '문의하기',
+    },
+    navigation: {
+      about: '회사 소개'
+    },
   },
 };
 

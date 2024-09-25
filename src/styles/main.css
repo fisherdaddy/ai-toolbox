@@ -201,3 +201,30 @@ footer {
   }
 }
 
+.footer-separator {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background-color: #ccc;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit; /* 保持与父元素相同的颜色，可以根据需要调整 */
+}
+
+.footer-link:hover {
+  text-decoration: none; /* 悬停时也不显示下划线 */
+}
+
+/* 如果需要进一步去除所有链接的下划线，可以添加以下全局样式 */
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
