@@ -63,12 +63,6 @@ const events = [
     description: '多语言语音识别模型，接近人类的识别水平。'
   },
   { 
-    date: '2022年11月', 
-    title: 'ChatGPT 发布', 
-    feature: '对话模型',  
-    description: '基于GPT-3.5的对话模型，能够进行自然语言交互。'
-  },
-  { 
     date: '2022年11月30日', 
     title: 'ChatGPT', 
     feature: '基于 GPT-3.5 的 ChatGPT 网页版',  
@@ -95,14 +89,14 @@ const events = [
   { 
     date: '2023年5月18日', 
     title: 'ChatGPT iOS 版发布', 
-    feature: 'iOS 版的 ChatGPT',  
-    description: 'iOS 版的 ChatGPT。'
+    feature: '',  
+    description: ''
   },
   { 
     date: '2024年7月25日', 
     title: 'ChatGPT Android 版发布', 
-    feature: 'Android 版的 ChatGPT',  
-    description: 'Android 版的 ChatGPT。'
+    feature: '',  
+    description: ''
   },
   { 
     date: '2023年8月29日', 
@@ -137,8 +131,8 @@ const events = [
   { 
     date: '2024年6月26日', 
     title: 'Mac 版ChatGPT 发布', 
-    feature: 'Mac 版 ChatGPT',  
-    description: 'Mac 版 ChatGPT 旨在与用户日常操作无缝集成，提供方便的快捷键（Option + 空格键）以允许用户随时随地启动应用。用户可以轻松与聊天机器人进行交互，并可选择将文件、照片和屏幕截图等附加到信息中，供 ChatGPT 使用这些素材进行理解和创作。'
+    feature: '',  
+    description: ''
   },
   { 
     date: '2024年7月18日', 
@@ -161,8 +155,8 @@ const events = [
   { 
     date: '2024年10月18日', 
     title: 'Windows 版ChatGPT 发布', 
-    feature: 'Windows 版 ChatGPT',  
-    description: '支持Windows系统，为用户提供更便捷的ChatGPT访问方式。'
+    feature: '',  
+    description: ''
   },
   { 
     date: '2024年10月31日', 
