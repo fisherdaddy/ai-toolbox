@@ -4,7 +4,7 @@ import LanguageSelector from './LanguageSelector';
 import { useTranslation } from '../js/i18n';
 import '../styles/Header.css'; // 确保创建并导入这个CSS文件
 // 导入 logo 图片
-import logo from '../assets/logo.png'; // 请确保路径正确
+import logo from '/assets/logo.png'; // 请确保路径正确
 
 function Header() {
   const { t } = useTranslation();

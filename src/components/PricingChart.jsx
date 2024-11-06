@@ -59,7 +59,7 @@ const ProviderColumn = ({ provider, maxPrice, highlightedBarTypes }) => (
     </div>
     <div className="provider-info">
       <img
-        src={`/src/assets/${provider.logo}`}
+        src={`${provider.logo}`}
         alt={`${provider.name} logo`}
         className="provider-logo"
       />
