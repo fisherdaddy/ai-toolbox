@@ -1,0 +1,42 @@
+{
+    "title": "视觉各模型价格对比",
+    "subtitle": "Price: RMB per 1M Tokens",
+    "providers": [
+      {
+        "name": "gpt-4o-mini",
+        "logo": "../assets/openai_small.svg",
+        "inputPrice": 1.05,
+        "outputPrice": 4.2
+      },
+      {
+        "name": "yi-vision-16k",
+        "logo": "../assets/yi_small.jpg",
+        "inputPrice": 6,
+        "outputPrice": 6
+      },
+      {
+        "name": "GLM-4V-Plus",
+        "logo": "../assets/glm_small.svg",
+        "inputPrice": 10,
+        "outputPrice": 10
+      },
+      {
+        "name": "qwen-vl-max",
+        "logo": "../assets/ali_small.svg",
+        "inputPrice": 20,
+        "outputPrice": 20
+      },
+      {
+        "name": "gpt-4o",
+        "logo": "../assets/openai_small.svg",
+        "inputPrice": 17.5,
+        "outputPrice": 70
+      },
+      {
+        "name": "GLM-4V",
+        "logo": "../assets/glm_small.svg",
+        "inputPrice": 50,
+        "outputPrice": 50
+      }
+    ]
+  }

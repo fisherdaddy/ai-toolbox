@@ -8,10 +8,11 @@
   background-color: #ffffff;
 }
 
-h1 {
+.timeline-title {
   text-align: center;
   color: #d9730d;
   margin-bottom: 40px;
+  font-size: 60px;
 }
 
 .timeline {

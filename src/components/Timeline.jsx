@@ -170,7 +170,7 @@ const events = [
 const Timeline = () => {
   return (
     <div className="container">
-      <h1>OpenAI 产品发布时间线</h1>
+      <div className="timeline-title">OpenAI 产品发布时间线</div>
       <ul className="timeline">
         {events.map((item, index) => (
           <li className="event" key={index}>

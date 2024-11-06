@@ -1,0 +1,177 @@
+.pricing-chart {
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.chart-subtitle {
+  font-size: 1rem;
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.legend {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.input-color {
+  background-color: #4285f4;
+}
+
+.output-color {
+  background-color: #7c4dff;
+}
+
+.chart-area {
+  display: flex;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.y-axis-label {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem; /* 减小柱状图之间的间距 */
+  height: 300px;
+  position: relative;
+  padding-bottom: 80px;
+  width: 100%; /* 确保容器占满可用宽度 */
+  overflow: visible; /* 移除水平滚动 */
+}
+
+.grid-lines {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 80px;
+  z-index: 1;
+}
+
+.grid-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chart-column {
+  position: relative;
+  flex: 1; /* 使柱状图列可伸缩 */
+  /* max-width: 60px; */ /* 移除这行 */
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 让.bar根据可用空间调整宽度 */
+.bars-container {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+  height: 100%;
+  justify-content: center;
+  flex-grow: 1; /* 新增 */
+}
+
+.bar {
+  width: 15px; /* 减小柱状图的宽度 */
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.input-bar {
+  background-color: #4285f4;
+}
+
+.output-bar {
+  background-color: #7c4dff;
+  margin-left: 5px;
+}
+
+.price-label {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem; /* 减小价格标签的字体大小 */
+  white-space: nowrap;
+}
+
+.provider-info {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.provider-logo {
+  width: 20px; /* 缩小Logo尺寸 */
+  height: 20px;
+  object-fit: contain;
+}
+
+.provider-name {
+  font-size: 13px;
+  transform: translate(-18px, 36px) rotate(-77deg);
+  transform-origin: top center;
+  /* white-space: nowrap; */
+  /* margin-top: 35px; */
+  line-height: 16px;
+  padding-top: -11px;
+  width: 80px;
+  text-align: right;
+  height: 40px;
+  word-break: break-all;
+  white-space: break-spaces;
+  padding-right: 18px;
+}
+
+.pricing-charts-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.update-time {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}

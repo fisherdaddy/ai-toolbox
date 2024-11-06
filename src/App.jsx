@@ -10,6 +10,8 @@ const TextToImage = lazy(() => import('./components/TextToImage'));
 const UrlDecode = lazy(() => import('./components/UrlDecode'));
 const About = lazy(() => import('./pages/About'));
 const OpenAITimeline = lazy(() => import('./components/Timeline'));
+const PricingCharts  = lazy(() => import('./components/PricingCharts'));
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
               <Route path="/url-decode" element={<UrlDecode />} />
               <Route path="/about" element={<About />} />
               <Route path="/openai-timeline" element={<OpenAITimeline />} />
+              <Route path="/llm-model-price" element={<PricingCharts />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

@@ -28,6 +28,15 @@ const i18n = {
         copyButton: 'Copy',
         copiedMessage: 'Copied'
       },
+      openAITimeline: {
+        title: 'Summary of OpenAI Product Releases',
+        description: 'Overview of OpenAI Product Release Dates'
+      },
+      modelPrice: {
+        title: 'Global Model Price Comparison',
+        description: 'Overview of Price Comparison Among Models'
+      }
+      
     },
     notFound: {
       title: '404 - Page Not Found',
@@ -77,6 +86,14 @@ const i18n = {
         copyButton: '复制',
         copiedMessage: '已复制'
       },
+      openAITimeline: {
+        title: "OpenAI 产品发布汇总",
+        description: 'OpenAI 产品发布时间一览',
+      },
+      modelPrice: {
+        title: "全球各大模型价格对比",
+        description: "各模型价格对比一览"
+      }
     },
     notFound: {
       title: '404 - 页面未找到',
@@ -126,6 +143,15 @@ const i18n = {
         copyButton: 'コピー',
         copiedMessage: 'コピーしました'
       },
+      openAITimeline: {
+        title: 'OpenAI製品リリースの概要',
+        description: 'OpenAI製品リリース日時の一覧'
+      },
+      modelPrice: {
+        title: '世界の主要モデル価格比較',
+        description: '各モデルの価格比較一覧'
+      }
+      
     },
     notFound: {
       title: '404 - ページが見つかりません',
@@ -175,6 +201,15 @@ const i18n = {
         copyButton: '복사',
         copiedMessage: '복사됨'
       },
+      openAITimeline: {
+        title: 'OpenAI 제품 출시 요약',
+        description: 'OpenAI 제품 출시 날짜 개요'
+      },
+      modelPrice: {
+        title: '글로벌 모델 가격 비교',
+        description: '모델 간 가격 비교 개요'
+      }
+      
     },
     notFound: {
       title: '404 - 페이지를 찾을 수 없습니다',
