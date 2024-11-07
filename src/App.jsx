@@ -12,7 +12,7 @@ const UrlEncode = lazy(() => import('./components/UrlEncode'));
 const About = lazy(() => import('./pages/About'));
 const OpenAITimeline = lazy(() => import('./components/OpenAITimeline'));
 const PricingCharts  = lazy(() => import('./components/PricingCharts'));
-
+const HandwriteGen  = lazy(() => import('./components/HandwriteGen'));
 
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/openai-timeline" element={<OpenAITimeline />} />
               <Route path="/llm-model-price" element={<PricingCharts />} />
+              <Route path="/handwriting" element={<HandwriteGen />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

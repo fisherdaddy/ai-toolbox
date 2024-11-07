@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap');
+
+@font-face {
+    font-family: 'XINYE';
+    src: url('../data/handwrite/fonts/new-leaf.otf');
+}
+
+@font-face {
+    font-family: 'cicada';
+    src: url('../data/handwrite/fonts/cicada.ttf');
+}
+
+@font-face {
+    font-family: 'xiongdi';
+    src: url('../data/handwrite/fonts/xiongdi.ttf');
+}
+
+@font-face {
+    font-family: 'qishan-zhong';
+    src: url('../data/handwrite/fonts/qishan-zhong.ttf');
+}
+
+body, html, #root {
+    height: 100%;
+    margin: 0;
+}
+
+.site-layout-background {
+    background: #fff;
+}
+
+.preview-area {
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+.settings-section {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.ant-input-number, .ant-input, .ant-select-selector {
+    width: 100%;
+}
+
+.ant-slider {
+    width: 100%;
+}
+
+.ant-btn {
+    margin-top: 16px;
+}
