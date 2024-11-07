@@ -13,6 +13,7 @@ const About = lazy(() => import('./pages/About'));
 const OpenAITimeline = lazy(() => import('./components/OpenAITimeline'));
 const PricingCharts  = lazy(() => import('./components/PricingCharts'));
 const HandwriteGen  = lazy(() => import('./components/HandwriteGen'));
+const ImageBase64Converter  = lazy(() => import('./components/ImageBase64Converter'));
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/openai-timeline" element={<OpenAITimeline />} />
               <Route path="/llm-model-price" element={<PricingCharts />} />
               <Route path="/handwriting" element={<HandwriteGen />} />
+              <Route path="/image-base64" element={<ImageBase64Converter />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

@@ -45,7 +45,22 @@
         },
         "handwrite": {
           "title": "Handwriting Font Generator",
-          "description": "Generates effects similar to writing on paper"
+          "description": "Generate an effect comparable to writing on paper"
+        },
+        "imageBase64Converter": {
+          "title": "Image and Base64 Converter",
+          "description": "Mutual conversion between images and Base64",
+          "imageToBase64": "Image to Base64",
+          "base64Result": "Base64 Result",
+          "base64ToImage": "Base64 to Image",
+          "base64InputPlaceholder": "Paste Base64 string here",
+          "imageResult": "Image Result",
+          "invalidBase64": "Invalid Base64 string",
+          "download": "Download Image"
+        },
+        "fisherai": {
+          "title": "One-Click Summary Plugin",
+          "description": "The Best Summary Extension for Chrome Browser"
         }
       },
       "notFound": {
@@ -115,7 +130,22 @@
         },
         "handwrite": {
           "title": "手写字体生成器",
-          "description": "生成和纸上书写一样的效果"
+          "description": "生成和纸上书写相媲美的效果"
+        },
+        "imageBase64Converter": {
+          "title": "图片与 Base64 转换器",
+          "description": "图片与 Base64 的互相转换",
+          "imageToBase64": "图片转 Base64",
+          "base64Result": "Base64 结果",
+          "base64ToImage": "Base64 转图片",
+          "base64InputPlaceholder": "在此粘贴 Base64 字符串",
+          "imageResult": "图片结果",
+          "invalidBase64": "无效的 Base64 字符串",
+          "download": "下载图片"
+        },
+        "fisherai": {
+          "title": "一键摘要插件",
+          "description": "最好用的 Chrome 浏览器摘要插件"
         }
       },
       "notFound": {
@@ -185,7 +215,22 @@
         },
         "handwrite": {
           "title": "手書きフォントジェネレーター",
-          "description": "紙に書くような効果を生成します"
+          "description": "紙に書くのと同等の効果を生成します"
+        },
+        "imageBase64Converter": {
+            "title": "画像とBase64コンバーター",
+            "description": "画像とBase64の相互変換",
+            "imageToBase64": "画像をBase64に変換",
+            "base64Result": "Base64の結果",
+            "base64ToImage": "Base64を画像に変換",
+            "base64InputPlaceholder": "ここにBase64文字列を貼り付け",
+            "imageResult": "画像の結果",
+            "invalidBase64": "無効なBase64文字列",
+            "download": "画像をダウンロード"
+        },
+        "fisherai": {
+          "title": "ワンクリック要約プラグイン",
+          "description": "最高のChromeブラウザ用要約プラグイン"
         }
       },
       "notFound": {
@@ -255,7 +300,22 @@
         },
         "handwrite": {
           "title": "손글씨 폰트 생성기",
-          "description": "종이에 쓴 것 같은 효과를 생성합니다"
+          "description": "종이에 쓰는 것과 견줄 수 있는 효과를 생성합니다"
+        },
+        "imageBase64Converter": {
+          "title": "이미지 및 Base64 변환기",
+          "description": "이미지와 Base64의 상호 변환",
+          "imageToBase64": "이미지를 Base64로 변환",
+          "base64Result": "Base64 결과",
+          "base64ToImage": "Base64를 이미지로 변환",
+          "base64InputPlaceholder": "여기에 Base64 문자열을 붙여넣기",
+          "imageResult": "이미지 결과",
+          "invalidBase64": "잘못된 Base64 문자열",
+          "download": "이미지 다운로드"
+        },
+        "fisherai": {
+          "title": "원클릭 요약 플러그인",
+          "description": "가장 유용한 Chrome 브라우저 요약 확장 프로그램"
         }
       },
       "notFound": {
