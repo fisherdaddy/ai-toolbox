@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import i18n from '../data/i18n.json';
 
-let currentLanguage = localStorage.getItem('language') || 'en';
+let currentLanguage = localStorage.getItem('language') || 'zh';
 let listeners = [];
 
 export function setLanguage(lang) {
