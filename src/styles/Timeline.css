@@ -10,7 +10,7 @@
 
 .timeline-title {
   text-align: center;
-  color: #d9730d;
+  color: #7c4dff;
   margin-bottom: 40px;
   font-size: 60px;
 }
@@ -28,7 +28,7 @@
   left: 50%;
   width: 2px;
   height: 100%;
-  background: #f5a623;
+  background: #7c4dff;
 }
 
 .event {
@@ -43,7 +43,7 @@
   left: 50%;
   width: 20px;
   height: 20px;
-  background: #f5a623;
+  background: #7c4dff;
   border-radius: 50%;
   transform: translateX(-50%);
 }
@@ -67,7 +67,7 @@
 
 .event-date {
   font-weight: bold;
-  color: #d9730d;
+  color: #7c4dff;
   margin-bottom: 5px;
 }
 
