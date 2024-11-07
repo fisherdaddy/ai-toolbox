@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 const i18n = {
   en: {
     title: 'AI Toolbox',
-    description: 'Your one-stop solution for various AI tools.',
+    description: 'AI Toolbox - A collection of AI tools including text cards, JSON formatter, URL decoder, OpenAI product releases summary, and global model price comparisons to help you accomplish various tasks effortlessly.',
     slogan: 'Your collection of intelligent assistants, solving various AI needs in one place.',
+    keywords: 'AI Toolbox, AI tools, text cards, JSON formatter, URL decoder, OpenAI products, model price comparison, online tools, free tools',
     tools: {
       text2image: {
         title: 'Text to Image Card',
@@ -29,12 +30,12 @@ const i18n = {
         copiedMessage: 'Copied'
       },
       openAITimeline: {
-        title: 'Summary of OpenAI Product Releases',
-        description: 'Overview of OpenAI Product Release Dates'
+        title: "OpenAI Product Release",
+        description: 'Overview of OpenAI product release dates',
       },
       modelPrice: {
-        title: 'Global Model Price Comparison',
-        description: 'Overview of Price Comparison Among Models'
+          title: "Global Large Model Price Comparison",
+          description: "Arena for comparing prices of various models worldwide"
       }
       
     },
@@ -61,8 +62,9 @@ const i18n = {
   },
   zh: {
     title: 'AI 工具箱',
-    description: '一站式解决各种AI工具需求。',
+    description: 'AI工具箱 - 集合了多种 AI 工具，如文字卡片、JSON 格式化、URL 解码器、OpenAI 产品发布汇总、全球各大模型价格对比，帮助您轻松完成各类任务。',
     slogan: '您的智能助手集合，一站式解决各种 AI 需求。',
+    keywords: 'AI工具箱，AI 工具，文字卡片，JSON 格式化，URL 解码器，OpenAI 产品，模型价格对比，在线工具，免费工具',
     tools: {
       text2image: {
         title: '文字卡片',
@@ -87,12 +89,12 @@ const i18n = {
         copiedMessage: '已复制'
       },
       openAITimeline: {
-        title: "OpenAI 产品发布汇总",
+        title: "OpenAI 产品发布",
         description: 'OpenAI 产品发布时间一览',
       },
       modelPrice: {
-        title: "全球各大模型价格对比",
-        description: "各模型价格对比一览"
+        title: "全球大模型价格对比",
+        description: "全球各模型价格对比竞技场"
       }
     },
     notFound: {
@@ -118,8 +120,9 @@ const i18n = {
   },
   ja: {
     title: 'AIツールボックス',
-    description: 'あなたのインテリジェントアシスタントコレクション、様々なAIニーズを一箇所で解決します。',
+    description: 'AIツールボックス - テキストカード、JSONフォーマッター、URLデコーダー、OpenAI製品のリリースまとめ、世界のモデル価格比較など、多様なAIツールを集めたサイトです。さまざまなタスクを簡単にこなせます。',
     slogan: 'あなたのインテリジェントアシスタントコレクション、様々なAIニーズを一箇所で解決します。',
+    keywords: 'AIツールボックス、AIツール、テキストカード、JSONフォーマッター、URLデコーダー、OpenAI製品、モデル価格比較、オンラインツール、無料ツール',
     tools: {
       text2image: {
         title: 'テキストから画像',
@@ -144,12 +147,12 @@ const i18n = {
         copiedMessage: 'コピーしました'
       },
       openAITimeline: {
-        title: 'OpenAI製品リリースの概要',
-        description: 'OpenAI製品リリース日時の一覧'
+        title: "OpenAI 製品リリース",
+        description: 'OpenAI 製品リリース時刻表',
       },
       modelPrice: {
-        title: '世界の主要モデル価格比較',
-        description: '各モデルの価格比較一覧'
+          title: "世界の大規模モデル価格比較",
+          description: "世界各国のモデル価格比較アリーナ"
       }
       
     },
@@ -176,8 +179,9 @@ const i18n = {
   },
   ko: {
     title: 'AI 도구 상자',
-    description: '당신의 지능형 어시스턴트 컬렉션, 다양한 AI 요구 사항을 한 곳에서 해결합니다.',
+    description: 'AI 도구상자 - 텍스트 카드, JSON 포매터, URL 디코더, OpenAI 제품 출시 요약, 글로벌 모델 가격 비교 등 다양한 AI 도구를 모아 다양한 작업을 손쉽게 수행할 수 있도록 도와드립니다.',
     slogan: '당신의 지능형 어시스턴트 컬렉션, 다양한 AI 요구 사항을 한 곳에서 해결합니다.',
+    keywords: 'AI 도구상자, AI 도구, 텍스트 카드, JSON 포매터, URL 디코더, OpenAI 제품, 모델 가격 비교, 온라인 도구, 무료 도구',
     tools: {
       text2image: {
         title: '텍스트를 이미지로',
@@ -202,12 +206,12 @@ const i18n = {
         copiedMessage: '복사됨'
       },
       openAITimeline: {
-        title: 'OpenAI 제품 출시 요약',
-        description: 'OpenAI 제품 출시 날짜 개요'
+        title: "OpenAI 제품 출시",
+        description: 'OpenAI 제품 출시 일정',
       },
       modelPrice: {
-        title: '글로벌 모델 가격 비교',
-        description: '모델 간 가격 비교 개요'
+          title: "전세계 대형 모델 가격 비교",
+          description: "전 세계 각 모델 가격 비교 아레나"
       }
       
     },

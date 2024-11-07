@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Title, Wrapper, Container, Preview } from './SharedStyles';
+import { Title, Wrapper, Container, Preview } from '../js/SharedStyles';
 import { useTranslation } from '../js/i18n';
+import SEO from '../components/SEO';
 
 const InputText = styled.textarea`
   width: 100%;
@@ -115,38 +116,44 @@ function JsonFormatter() {
   };
 
   return (
-    <Wrapper>
-      <Title>{t('tools.jsonFormatter.title')}</Title>
-      <Container>
-        <InputText
-          placeholder={t('tools.jsonFormatter.inputPlaceholder')}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <RelativePreviewContainer>
-          {parsedJson ? (
-            <>
-              <Preview>
-                <JsonView data={parsedJson} />
-              </Preview>
-              <CopyButton onClick={handleCopy} className={isCopied ? 'copied' : ''}>
-                {isCopied ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                  </svg>
-                )}
-              </CopyButton>
-            </>
-          ) : (
-            <Preview>{t('tools.jsonFormatter.invalidJson')}</Preview>
-          )}
-        </RelativePreviewContainer>
-      </Container>
-    </Wrapper>
+    <>
+       <SEO
+        title={t('tools.jsonFormatter.title')}
+        description={t('tools.jsonFormatter.description')}
+      />
+      <Wrapper>
+        <Title>{t('tools.jsonFormatter.title')}</Title>
+        <Container>
+          <InputText
+            placeholder={t('tools.jsonFormatter.inputPlaceholder')}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <RelativePreviewContainer>
+            {parsedJson ? (
+              <>
+                <Preview>
+                  <JsonView data={parsedJson} />
+                </Preview>
+                <CopyButton onClick={handleCopy} className={isCopied ? 'copied' : ''}>
+                  {isCopied ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                    </svg>
+                  )}
+                </CopyButton>
+              </>
+            ) : (
+              <Preview>{t('tools.jsonFormatter.invalidJson')}</Preview>
+            )}
+          </RelativePreviewContainer>
+        </Container>
+      </Wrapper>
+    </>
   );
 }
 

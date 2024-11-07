@@ -9,7 +9,7 @@ const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
 const TextToImage = lazy(() => import('./components/TextToImage'));
 const UrlDecode = lazy(() => import('./components/UrlDecode'));
 const About = lazy(() => import('./pages/About'));
-const OpenAITimeline = lazy(() => import('./components/Timeline'));
+const OpenAITimeline = lazy(() => import('./components/OpenAITimeline'));
 const PricingCharts  = lazy(() => import('./components/PricingCharts'));
 
 

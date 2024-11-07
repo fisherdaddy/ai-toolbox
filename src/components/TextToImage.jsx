@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { Title, Wrapper, Container, InputText, PreviewContainer, Preview } from './SharedStyles';
+import { Title, Wrapper, Container, InputText, PreviewContainer, Preview } from '../js/SharedStyles';
 import { useTranslation } from '../js/i18n';
+import SEO from '../components/SEO';
 
 const DownloadButton = styled.button`
   padding: 8px 16px;
@@ -68,25 +69,31 @@ function TextToImage() {
   };
 
   return (
-    <Wrapper>
-      <Title>{t('tools.text2image.title')}</Title>
-      <Container>
-        <InputText
-          placeholder={t('tools.text2image.inputPlaceholder')}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-        <PreviewContainer>
-          <Preview
-            ref={previewRef}
-            dangerouslySetInnerHTML={{ __html: formatText(text) }}
+    <>
+      <SEO
+        title={t('tools.text2image.title')}
+        description={t('tools.text2image.description')}
+      />
+      <Wrapper>
+        <Title>{t('tools.text2image.title')}</Title>
+        <Container>
+          <InputText
+            placeholder={t('tools.text2image.inputPlaceholder')}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           />
-          <DownloadButton onClick={handleDownload}>
-            {t('tools.text2image.downloadButton')}
-          </DownloadButton>
-        </PreviewContainer>
-      </Container>
-    </Wrapper>
+          <PreviewContainer>
+            <Preview
+              ref={previewRef}
+              dangerouslySetInnerHTML={{ __html: formatText(text) }}
+            />
+            <DownloadButton onClick={handleDownload}>
+              {t('tools.text2image.downloadButton')}
+            </DownloadButton>
+          </PreviewContainer>
+        </Container>
+      </Wrapper>
+    </>
   );
 }
 

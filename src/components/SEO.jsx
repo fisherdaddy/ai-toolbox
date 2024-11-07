@@ -20,7 +20,7 @@ function SEO({ title, description, lang = 'en', meta = [] }) {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "SoftwareApplication",
     "name": defaultTitle,
     "url": "https://fishersama.com/", // 请替换为您的网站URL
     "description": defaultDescription,
@@ -28,6 +28,11 @@ function SEO({ title, description, lang = 'en', meta = [] }) {
       "@type": "SearchAction",
       "target": "https://fishersama.com/search?q={search_term}",
       "query-input": "required name=search_term"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
     }
   };
 
@@ -42,6 +47,14 @@ function SEO({ title, description, lang = 'en', meta = [] }) {
         {
           name: 'description',
           content: description || defaultDescription,
+        },
+        {
+          name: 'keywords',
+          content: t('keywords'), // 确保在 i18n 配置中添加 'keywords'
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
         },
         {
           property: 'og:title',
@@ -66,6 +79,10 @@ function SEO({ title, description, lang = 'en', meta = [] }) {
         {
           name: 'twitter:description',
           content: description || defaultDescription,
+        },
+        {
+          name: 'robots',
+          content: 'index,follow',
         },
         // 可以根据需要添加更多元数据
       ].concat(meta)}
