@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
 const TextToImage = lazy(() => import('./components/TextToImage'));
 const UrlDecode = lazy(() => import('./components/UrlDecode'));
+const UrlEncode = lazy(() => import('./components/UrlEncode'));
 const About = lazy(() => import('./pages/About'));
 const OpenAITimeline = lazy(() => import('./components/OpenAITimeline'));
 const PricingCharts  = lazy(() => import('./components/PricingCharts'));
@@ -25,6 +26,7 @@ function App() {
               <Route path="/text2image" element={<TextToImage />} />
               <Route path="/json-formatter" element={<JsonFormatter />} />
               <Route path="/url-decode" element={<UrlDecode />} />
+              <Route path="/url-encode" element={<UrlEncode />} />
               <Route path="/about" element={<About />} />
               <Route path="/openai-timeline" element={<OpenAITimeline />} />
               <Route path="/llm-model-price" element={<PricingCharts />} />

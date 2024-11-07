@@ -5,10 +5,11 @@ import SEO from '../components/SEO';
 
 const tools = [
   { id: 'text2image', icon: 'fa-image', path: '/text2image' },
-  { id: 'jsonFormatter', icon: 'fa-code', path: '/json-formatter' },
+  { id: 'jsonFormatter', icon: 'fa-jsonformat', path: '/json-formatter' },
   { id: 'urlDecode', icon: 'fa-decode', path: '/url-decode' },
-  { id: 'openAITimeline', icon: 'fa-decode', path: '/openai-timeline' },
-  { id: 'modelPrice', icon: 'fa-decode', path: '/llm-model-price' },
+  { id: 'urlEncode', icon: 'fa-encode', path: '/url-encode' },
+  { id: 'openAITimeline', icon: 'fa-openai-timeline', path: '/openai-timeline' },
+  { id: 'modelPrice', icon: 'fa-model-price', path: '/llm-model-price' },
 ];
 
 const Home = () => {
