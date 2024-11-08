@@ -61,6 +61,10 @@
         "fisherai": {
           "title": "One-Click Summary Plugin",
           "description": "The Best Summary Extension for Chrome Browser"
+        },
+        "quotecard": {
+          "title": "Famous Quote Card Generator",
+          "description": "Convert bilingual famous quotes into cards"
         }
       },
       "notFound": {
@@ -146,6 +150,10 @@
         "fisherai": {
           "title": "一键摘要插件",
           "description": "最好用的 Chrome 浏览器摘要插件"
+        },
+        "quotecard": {
+          "title": "名言卡片生成器",
+          "description": "名言双语文本转为卡片"
         }
       },
       "notFound": {
@@ -231,6 +239,10 @@
         "fisherai": {
           "title": "ワンクリック要約プラグイン",
           "description": "最高のChromeブラウザ用要約プラグイン"
+        },
+        "quotecard": {
+          "title": "名言カード生成器",
+          "description": "名言のバイリンガルテキストをカードに変換"
         }
       },
       "notFound": {
@@ -316,6 +328,10 @@
         "fisherai": {
           "title": "원클릭 요약 플러그인",
           "description": "가장 유용한 Chrome 브라우저 요약 확장 프로그램"
+        },
+        "quotecard": {
+          "title": "명언 카드 생성기",
+          "description": "명언 이중 언어 텍스트를 카드로 변환"
         }
       },
       "notFound": {

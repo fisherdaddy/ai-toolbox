@@ -4,12 +4,13 @@ import { useTranslation } from '../js/i18n';
 import SEO from '../components/SEO';
 
 const tools = [
+  { id: 'handwrite', icon: 'fa-handwrite', path: '/handwriting' },
+  { id: 'quotecard', icon: 'fa-quotecard', path: '/quote-card' },
   { id: 'text2image', icon: 'fa-image', path: '/text2image' },
   { id: 'jsonFormatter', icon: 'fa-jsonformat', path: '/json-formatter' },
   { id: 'urlDecode', icon: 'fa-decode', path: '/url-decode' },
   { id: 'urlEncode', icon: 'fa-encode', path: '/url-encode' },
   { id: 'imageBase64Converter', icon: 'fa-image-base64', path: '/image-base64' },
-  { id: 'handwrite', icon: 'fa-handwrite', path: '/handwriting' },
   { id: 'openAITimeline', icon: 'fa-openai-timeline', path: '/openai-timeline' },
   { id: 'modelPrice', icon: 'fa-model-price', path: '/llm-model-price' },
   { id: 'fisherai', icon: 'fa-fisherai', path: 'https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj', external: true } // 新增外部链接
