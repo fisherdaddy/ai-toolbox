@@ -2,16 +2,20 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
-import * as jwt_decode from 'jwt-decode';
 
 const Login = () => {
   const navigate = useNavigate();
 
   const handleLoginSuccess = (credentialResponse) => {
     const { credential } = credentialResponse;
-    const decoded = jwt_decode.default(credential);
+
+    // 手动解码 JWT
+    const base64Url = credential.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const decodedPayload = JSON.parse(window.atob(base64));
+
     // 将用户信息保存到 localStorage 或上下文
-    localStorage.setItem('user', JSON.stringify(decoded));
+    localStorage.setItem('user', JSON.stringify(decodedPayload));
     navigate('/'); // 登录成功后重定向到首页
   };
 

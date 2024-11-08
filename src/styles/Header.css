@@ -97,3 +97,45 @@ header nav {
     margin-top: 10px;
   }
 }
+
+/* 头像容器 */
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* 用户头像 */
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* 下拉菜单 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* 紧贴在头像下方 */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px; /* 可选：头像和菜单之间的间距 */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 100px; /* 可选：设置最小宽度 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+/* 下拉菜单中的按钮 */
+.dropdown-menu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.dropdown-menu button:hover {
+  color: #007bff;
+}
