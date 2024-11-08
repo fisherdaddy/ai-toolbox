@@ -27,7 +27,7 @@
           "copiedMessage": "Copied"
         },
         "urlEncodeDecode": {
-          "title": "URL Encode/Decode Tool",
+          "title": "URL Encode/Decode",
           "description": "Encode or decode a URL online.",
           "modeLabel": "Select Mode",
           "encode": "Encode",
@@ -71,6 +71,130 @@
         "quotecard": {
           "title": "Famous Quote Card Generator",
           "description": "Convert bilingual famous quotes into cards"
+        },
+        "chatgpt": {
+            "title": "ChatGPT",
+            "description": "AI conversational assistant by OpenAI"
+        },
+        "claude": {
+            "title": "Claude",
+            "description": "AI conversational assistant by Anthropic"
+        },
+        "gemini": {
+            "title": "Gemini",
+            "description": "AI dialogue tool by Google"
+        },
+        "poe": {
+            "title": "POE",
+            "description": "Multi-model chat platform by Quora"
+        },
+        "perplexity": {
+            "title": "Perplexity",
+            "description": "A powerful AI search engine"
+        },
+        "kimi": {
+            "title": "Kimi Assistant",
+            "description": "An AI assistant with reasoning and deep thinking capabilities"
+        },
+        "doubao": {
+            "title": "Doubao",
+            "description": "AI conversational assistant by ByteDance"
+        },
+        "zhipu": {
+            "title": "Zhipu Qingyan",
+            "description": "A versatile and free AI assistant supporting image generation and video creation"
+        },
+        "yuanbao": {
+            "title": "Tencent Yuanbao",
+            "description": "AI conversational assistant by Tencent"
+        },
+        "qwen": {
+            "title": "Tongyi Qianwen",
+            "description": "AI conversational assistant by Alibaba"
+        },
+        "hailuo": {
+            "title": "Hailuo AI",
+            "description": "AI conversational assistant by MiniMax"
+        },
+        "baichuan": {
+            "title": "Baixiaoying",
+            "description": "A free AI assistant by Baichuan Intelligent"
+        },
+        "wenxin": {
+            "title": "Wenxin Yiyan",
+            "description": "AI conversational assistant by Baidu"
+        },
+        "mita": {
+            "title": "Mita Search",
+            "description": "Ad-free AI search engine delivering direct results"
+        },
+        "coze": {
+            "title": "Coze",
+            "description": "AI agent platform by ByteDance"
+        },
+        "midjourney": {
+            "title": "Midjourney",
+            "description": "AI tool for image and illustration generation"
+        },
+        "stableDiffusion": {
+            "title": "Stable Diffusion",
+            "description": "Text-to-image AI model by StabilityAI"
+        },
+        "tongyiwanxiang": {
+            "title": "Tongyi Wanxiang",
+            "description": "AI painting creation platform by Alibaba"
+        },
+        "wenxinyige": {
+            "title": "Wenxin Yige",
+            "description": "AI art and creative platform by Baidu"
+        },
+        "canva": {
+            "title": "Canva",
+            "description": "Graphic design platform for social media graphics, presentations, posters, and more"
+        },
+        "meitu": {
+            "title": "Meitu Design Studio",
+            "description": "AI platform for image creation and design"
+        },
+        "keling": {
+            "title": "Keling AI",
+            "description": "AI image and video creation platform by Kuaishou"
+        },
+        "runway": {
+            "title": "Runway",
+            "description": "A powerful AI video production tool for green screen keying and video composition"
+        },
+        "luma": {
+            "title": "Dream Machine",
+            "description": "AI video generation tool by Luma"
+        },
+        "gamma": {
+            "title": "Gamma App",
+            "description": "AI tool for generating presentation slides"
+        },
+        "aippt": {
+            "title": "AiPPT",
+            "description": "AI tool for quick high-quality PPT generation"
+        },
+        "suno": {
+            "title": "Suno",
+            "description": "High-quality AI music creation platform"
+        },
+        "haimian": {
+            "title": "Haimian Music",
+            "description": "Free AI music creation and discovery platform by ByteDance"
+        },
+        "elevenLabs": {
+            "title": "ElevenLabs",
+            "description": "AI text-to-speech supporting 28 languages, including Chinese"
+        },
+        "tongyitingwu": {
+            "title": "Tongyi Tingwu",
+            "description": "AI assistant by Alibaba focused on audio and video content for work and study"
+        },
+        "cursor": {
+            "title": "Cursor",
+            "description": "AI code editor for fast programming and software development"
         }
       },
       "notFound": {
@@ -92,6 +216,12 @@
       },
       "navigation": {
         "about": "About Us"
+      },
+      "categories": {
+          "Chatbots": "Smart Assistant",
+          "Image": "Image",
+          "AudioVideo": "Audio & Video",
+          "Productivity": "Productivity"
       }
     },
     "zh": {
@@ -122,7 +252,7 @@
           "copiedMessage": "已复制"
         },
         "urlEncodeDecode": {
-          "title": "URL 编码/解码工具",
+          "title": "URL 编码/解码",
           "description": "在线编码或解码 URL。",
           "modeLabel": "选择模式",
           "encode": "编码",
@@ -166,6 +296,130 @@
         "quotecard": {
           "title": "名言卡片生成器",
           "description": "名言双语文本转为卡片"
+        },
+        "chatgpt": {
+          "title": "ChatGPT",
+          "description": "OpenAI旗下AI对话助手"
+        },
+        "claude": {
+          "title": "Claude",
+          "description": "Anthropic旗下AI对话助手"
+        },
+        "gemini": {
+          "title": "Gemini",
+          "description": "Google旗下AI对话工具"
+        },
+        "poe": {
+          "title": "POE",
+          "description": "Quora 旗下的多模型聊天平台"
+        },
+        "perplexity": {
+          "title": "Perplexity",
+          "description": "强大的AI搜索引擎"
+        },
+        "kimi": {
+          "title": "Kimi 智能助手",
+          "description": "会推理解析，能深度思考的AI助手"
+        },
+        "doubao": {
+          "title": "豆包",
+          "description": "字节跳动旗下的AI对话助手"
+        },
+        "zhipu": {
+          "title": "智谱清言",
+          "description": "免费全能的AI助手，支持AI绘画、视频生成"
+        },
+        "yuanbao": {
+          "title": "腾讯元宝",
+          "description": "腾讯旗下的AI对话助手"
+        },
+        "qwen": {
+          "title": "通义千问",
+          "description": "阿里巴巴旗下的AI对话助手"
+        },
+        "hailuo": {
+          "title": "海螺AI",
+          "description": "MiniMax旗下的AI对话助手"
+        },
+        "baichuan": {
+          "title": "百小应",
+          "description": "百川智能推出的免费AI助手"
+        },
+        "wenxin": {
+          "title": "文心一言",
+          "description": "百度旗下的AI对话助手"
+        },
+        "mita": {
+          "title": "秘塔搜索",
+          "description": "没有广告，直达结果的AI搜索引擎"
+        },
+        "coze": {
+          "title": "Coze",
+          "description": "字节旗下AI智能体平台"
+        },
+        "midjourney": {
+          "title": "Midjourney",
+          "description": "AI图像和插画生成工具"
+        },
+        "stableDiffusion": {
+          "title": "Stable Diffusion",
+          "description": "StabilityAI推出的文本到图像生成AI"
+        },
+        "tongyiwanxiang": {
+          "title": "通义万相",
+          "description": "阿里推出的AI绘画创作平台"
+        },
+        "wenxinyige": {
+          "title": "文心一格",
+          "description": "百度旗下AI艺术和创意辅助平台"
+        },
+        "canva": {
+          "title": "Canva",
+          "description": "用于创建社交媒体图形、演示文稿、海报、文档和其他视觉内容的平面设计平台"
+        },
+        "meitu": {
+          "title": "美图设计室",
+          "description": "AI图像创作和设计平台"
+        },
+        "keling": {
+          "title": "可灵 AI",
+          "description": "快手推出的AI图像和视频创作平台"
+        },
+        "runway": {
+          "title": "Runway",
+          "description": "强大的AI视频制作工具，绿幕抠像、视频合成等"
+        },
+        "luma": {
+          "title": "Dream Machine",
+          "description": "Luma推出的AI视频生成工具"
+        },
+        "gamma": {
+          "title": "Gamma App",
+          "description": "AI幻灯片演示生成工具"
+        },
+        "aippt": {
+          "title": "AiPPT",
+          "description": "AI快速生成高质量PPT"
+        },
+        "suno": {
+          "title": "Suno",
+          "description": "高质量的AI音乐创作平台"
+        },
+        "haimian": {
+          "title": "海绵音乐",
+          "description": "字节跳动推出的免费AI音乐创作和发现平台"
+        },
+        "elevenLabs": {
+          "title": "ElevenLabs",
+          "description": "AI文本转语音，支持包含中文在内的28种语言"
+        },
+        "tongyitingwu": {
+          "title": "通义听悟",
+          "description": "阿里巴巴旗下聚焦音视频内容的工作学习AI助手"
+        },
+        "cursor": {
+          "title": "Cursor",
+          "description": "AI代码编辑器，快速进行编程和软件开发"
         }
       },
       "notFound": {
@@ -187,6 +441,12 @@
       },
       "navigation": {
         "about": "关于我们"
+      },
+      "categories": {
+        "Chatbots": "智能助手",
+        "Image": "图像",
+        "AudioVideo": "音视频",
+        "Productivity": "效率办公"
       }
     },
     "ja": {
@@ -261,7 +521,132 @@
         "quotecard": {
           "title": "名言カード生成器",
           "description": "名言のバイリンガルテキストをカードに変換"
+        },
+        "chatgpt": {
+            "title": "ChatGPT",
+            "description": "OpenAIのAI対話アシスタント"
+        },
+        "claude": {
+            "title": "Claude",
+            "description": "AnthropicのAI対話アシスタント"
+        },
+        "gemini": {
+            "title": "Gemini",
+            "description": "GoogleのAI対話ツール"
+        },
+        "poe": {
+            "title": "POE",
+            "description": "Quoraのマルチモデルチャットプラットフォーム"
+        },
+        "perplexity": {
+            "title": "Perplexity",
+            "description": "強力なAI検索エンジン"
+        },
+        "kimi": {
+            "title": "Kimiアシスタント",
+            "description": "推論・深い思考が可能なAIアシスタント"
+        },
+        "doubao": {
+            "title": "Doubao",
+            "description": "ByteDanceのAI対話アシスタント"
+        },
+        "zhipu": {
+            "title": "Zhipu Qingyan",
+            "description": "画像生成や動画作成をサポートする無料の万能AIアシスタント"
+        },
+        "yuanbao": {
+            "title": "Tencent Yuanbao",
+            "description": "TencentのAI対話アシスタント"
+        },
+        "qwen": {
+            "title": "Tongyi Qianwen",
+            "description": "AlibabaのAI対話アシスタント"
+        },
+        "hailuo": {
+            "title": "Hailuo AI",
+            "description": "MiniMaxのAI対話アシスタント"
+        },
+        "baichuan": {
+            "title": "Baixiaoying",
+            "description": "Baichuan Intelligentの無料AIアシスタント"
+        },
+        "wenxin": {
+            "title": "Wenxin Yiyan",
+            "description": "BaiduのAI対話アシスタント"
+        },
+        "mita": {
+            "title": "Mita検索",
+            "description": "広告なしで結果に直結するAI検索エンジン"
+        },
+        "coze": {
+            "title": "Coze",
+            "description": "ByteDanceのAIエージェントプラットフォーム"
+        },
+        "midjourney": {
+            "title": "Midjourney",
+            "description": "画像やイラスト生成のAIツール"
+        },
+        "stableDiffusion": {
+            "title": "Stable Diffusion",
+            "description": "StabilityAIのテキストから画像生成AI"
+        },
+        "tongyiwanxiang": {
+            "title": "Tongyi Wanxiang",
+            "description": "AlibabaのAI絵画制作プラットフォーム"
+        },
+        "wenxinyige": {
+            "title": "Wenxin Yige",
+            "description": "BaiduのAIアート・クリエイティブ支援プラットフォーム"
+        },
+        "canva": {
+            "title": "Canva",
+            "description": "SNSグラフィック、プレゼン資料、ポスターなどを作成するデザインプラットフォーム"
+        },
+        "meitu": {
+            "title": "Meituデザインスタジオ",
+            "description": "AI画像作成とデザインプラットフォーム"
+        },
+        "keling": {
+            "title": "Keling AI",
+            "description": "KuaishouのAI画像・動画制作プラットフォーム"
+        },
+        "runway": {
+            "title": "Runway",
+            "description": "グリーンスクリーン、動画合成などのAI動画制作ツール"
+        },
+        "luma": {
+            "title": "Dream Machine",
+            "description": "LumaのAI動画生成ツール"
+        },
+        "gamma": {
+            "title": "Gamma App",
+            "description": "AIプレゼン資料生成ツール"
+        },
+        "aippt": {
+            "title": "AiPPT",
+            "description": "AIで高品質なPPTを素早く生成"
+        },
+        "suno": {
+            "title": "Suno",
+            "description": "高品質なAI音楽制作プラットフォーム"
+        },
+        "haimian": {
+            "title": "Haimian Music",
+            "description": "ByteDanceの無料AI音楽制作・発見プラットフォーム"
+        },
+        "elevenLabs": {
+            "title": "ElevenLabs",
+            "description": "28言語対応のAIテキスト音声変換"
+        },
+        "tongyitingwu": {
+            "title": "Tongyi Tingwu",
+            "description": "Alibabaの音声・映像内容に特化したAIアシスタント"
+        },
+        "cursor": {
+            "title": "Cursor",
+            "description": "素早くプログラミングできるAIコードエディター"
         }
+
       },
       "notFound": {
         "title": "404 - ページが見つかりません",
@@ -282,7 +667,14 @@
       },
       "navigation": {
         "about": "私たちについて"
+      },
+      "categories": {
+          "Chatbots": "スマートアシスタント",
+          "Image": "画像",
+          "AudioVideo": "音声・動画",
+          "Productivity": "効率オフィス"
       }
+
     },
     "ko": {
       "title": "AI 도구 상자",
@@ -356,7 +748,132 @@
         "quotecard": {
           "title": "명언 카드 생성기",
           "description": "명언 이중 언어 텍스트를 카드로 변환"
+        },
+        "chatgpt": {
+            "title": "ChatGPT",
+            "description": "OpenAI의 AI 대화 도우미"
+        },
+        "claude": {
+            "title": "Claude",
+            "description": "Anthropic의 AI 대화 도우미"
+        },
+        "gemini": {
+            "title": "Gemini",
+            "description": "Google의 AI 대화 도구"
+        },
+        "poe": {
+            "title": "POE",
+            "description": "Quora의 멀티 모델 채팅 플랫폼"
+        },
+        "perplexity": {
+            "title": "Perplexity",
+            "description": "강력한 AI 검색 엔진"
+        },
+        "kimi": {
+            "title": "Kimi 도우미",
+            "description": "추론 및 심층 사고가 가능한 AI 도우미"
+        },
+        "doubao": {
+            "title": "Doubao",
+            "description": "ByteDance의 AI 대화 도우미"
+        },
+        "zhipu": {
+            "title": "Zhipu Qingyan",
+            "description": "이미지 생성 및 영상 제작을 지원하는 무료 만능 AI 도우미"
+        },
+        "yuanbao": {
+            "title": "Tencent Yuanbao",
+            "description": "Tencent의 AI 대화 도우미"
+        },
+        "qwen": {
+            "title": "Tongyi Qianwen",
+            "description": "Alibaba의 AI 대화 도우미"
+        },
+        "hailuo": {
+            "title": "Hailuo AI",
+            "description": "MiniMax의 AI 대화 도우미"
+        },
+        "baichuan": {
+            "title": "Baixiaoying",
+            "description": "Baichuan Intelligent의 무료 AI 도우미"
+        },
+        "wenxin": {
+            "title": "Wenxin Yiyan",
+            "description": "Baidu의 AI 대화 도우미"
+        },
+        "mita": {
+            "title": "Mita 검색",
+            "description": "광고 없이 결과로 직행하는 AI 검색 엔진"
+        },
+        "coze": {
+            "title": "Coze",
+            "description": "ByteDance의 AI 에이전트 플랫폼"
+        },
+        "midjourney": {
+            "title": "Midjourney",
+            "description": "이미지 및 일러스트 생성 AI 도구"
+        },
+        "stableDiffusion": {
+            "title": "Stable Diffusion",
+            "description": "StabilityAI의 텍스트-이미지 생성 AI"
+        },
+        "tongyiwanxiang": {
+            "title": "Tongyi Wanxiang",
+            "description": "Alibaba의 AI 그림 제작 플랫폼"
+        },
+        "wenxinyige": {
+            "title": "Wenxin Yige",
+            "description": "Baidu의 AI 예술 및 창작 보조 플랫폼"
+        },
+        "canva": {
+            "title": "Canva",
+            "description": "SNS 그래픽, 프레젠테이션, 포스터 등을 위한 디자인 플랫폼"
+        },
+        "meitu": {
+            "title": "Meitu 디자인 스튜디오",
+            "description": "AI 이미지 창작 및 디자인 플랫폼"
+        },
+        "keling": {
+            "title": "Keling AI",
+            "description": "Kuaishou의 AI 이미지 및 비디오 창작 플랫폼"
+        },
+        "runway": {
+            "title": "Runway",
+            "description": "그린 스크린 및 비디오 합성 등의 AI 비디오 제작 도구"
+        },
+        "luma": {
+            "title": "Dream Machine",
+            "description": "Luma의 AI 비디오 생성 도구"
+        },
+        "gamma": {
+            "title": "Gamma App",
+            "description": "AI 프레젠테이션 생성 도구"
+        },
+        "aippt": {
+            "title": "AiPPT",
+            "description": "AI로 고품질 PPT 빠르게 생성"
+        },
+        "suno": {
+            "title": "Suno",
+            "description": "고품질 AI 음악 창작 플랫폼"
+        },
+        "haimian": {
+            "title": "Haimian Music",
+            "description": "ByteDance의 무료 AI 음악 창작 및 발견 플랫폼"
+        },
+        "elevenLabs": {
+            "title": "ElevenLabs",
+            "description": "중국어를 포함한 28개 언어를 지원하는 AI 텍스트 음성 변환"
+        },
+        "tongyitingwu": {
+            "title": "Tongyi Tingwu",
+            "description": "Alibaba의 오디오 및 비디오 콘텐츠에 집중한 AI 도우미"
+        },
+        "cursor": {
+            "title": "Cursor",
+            "description": "빠른 프로그래밍을 위한 AI 코드 편집기"
         }
+
       },
       "notFound": {
         "title": "404 - 페이지를 찾을 수 없습니다",
@@ -377,6 +894,12 @@
       },
       "navigation": {
         "about": "회사 소개"
+      },
+      "categories": {
+          "Chatbots": "스마트 어시스턴트",
+          "Image": "이미지",
+          "AudioVideo": "오디오 및 비디오",
+          "Productivity": "생산성"
       }
     }
   }

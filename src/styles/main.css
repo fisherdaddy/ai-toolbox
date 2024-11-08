@@ -56,12 +56,14 @@ main {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 3rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
 }
+
 
 .tools-section h2 {
   text-align: center;
   font-size: 3rem;
+  margin-top: 0; /* 重置margin-top */
   margin-bottom: 4rem;
   color: var(--primary-color);
   font-weight: 700;
@@ -226,3 +228,11 @@ footer {
   text-decoration: none;
 }
 
+.category-group {
+  margin-bottom: 1rem; /* 添加margin-bottom以增加分组间距 */
+  margin-top: 6rem;
+}
+
+.category-group:first-child {
+  margin-top: 0; /* 确保第一个分组没有额外的顶部间距 */
+}

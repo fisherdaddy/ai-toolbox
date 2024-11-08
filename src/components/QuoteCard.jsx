@@ -127,7 +127,7 @@ const Label = styled.label`
 
 const DownloadButton = styled.button`
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #1677ff;
   color: white;
   border: none;
   border-radius: 8px;
@@ -136,7 +136,7 @@ const DownloadButton = styled.button`
   margin-top: 20px;
 
   &:hover {
-    background-color: #45a049;
+    background-color: #2f86ff;
   }
 `;
 
