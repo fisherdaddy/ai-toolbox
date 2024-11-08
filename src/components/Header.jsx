@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from '../js/i18n';
 import '../styles/Header.css';
@@ -22,7 +22,6 @@ function Header() {
     setMenuOpen((prev) => !prev);
   };
 
-  // 点击菜单外部时关闭菜单
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -39,17 +38,30 @@ function Header() {
     <header>
       <nav>
         <div className="logo-title-container">
-          <Link to="/" className="title no-underline">
+          <NavLink to="/" className="title no-underline">
             <img src={logo} alt="Logo" className="logo" />
             {t('title')}
-          </Link>
+          </NavLink>
+        </div>
+        <div className="menu-items">
+          <NavLink to="/dev-tools" className={({ isActive }) => (isActive ? 'active' : '')}>
+            {t('dev-tools')}
+          </NavLink>
+          <NavLink to="/image-tools" className={({ isActive }) => (isActive ? 'active' : '')}>
+            {t('image-tools')}
+          </NavLink>
+          <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : '')}>
+            {t('blog')}
+          </NavLink>
+          <NavLink to="/ai-products" className={({ isActive }) => (isActive ? 'active' : '')}>
+            {t('ai-products')}
+          </NavLink>
         </div>
         <div className="right-container">
           <LanguageSelector />
           <div className="auth-container">
             {user ? (
               <div className="user-info">
-                {/* 头像容器 */}
                 <div className="avatar-container" ref={menuRef}>
                   <img
                     src={user.picture}
@@ -57,7 +69,6 @@ function Header() {
                     className="avatar"
                     onClick={toggleMenu}
                   />
-                  {/* 下拉菜单 */}
                   {menuOpen && (
                     <div className="dropdown-menu">
                       <button onClick={handleLogout}>{t('logout')}</button>
@@ -66,7 +77,7 @@ function Header() {
                 </div>
               </div>
             ) : (
-              <Link to="/login">{t('login')}</Link>
+              <NavLink to="/login">{t('login')}</NavLink>
             )}
           </div>
         </div>

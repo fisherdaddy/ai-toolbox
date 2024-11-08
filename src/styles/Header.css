@@ -53,14 +53,39 @@
 
 header nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  margin-left: 40px; /* 调整导航菜单与标题之间的距离 */
+}
+
+.menu-items a {
+  color: hsl(205deg, 25%, 23%);
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 16px; /* 增大字体大小 */
+  font-weight: 500; /* 调整字体粗细 */
+  transition: color 0.2s ease;
+}
+
+.menu-items a:hover {
+  color: #4F46E5; /* 悬停时的颜色，稍深的紫色 */
+}
+
+.menu-items a.active {
+  color: #6366F1; /* 高亮颜色，与网站主题一致 */
+  font-weight: bold;
+  border-bottom: 2px solid #6366F1; /* 添加下划线高亮 */
 }
 
 .right-container {
   display: flex;
   align-items: center;
+  margin-left: auto; /* 将右侧容器推到最右边 */
 }
 
 .right-container > * {
@@ -138,4 +163,17 @@ header nav {
 
 .dropdown-menu button:hover {
   color: #007bff;
+}
+
+/* 调整导航栏布局 */
+header nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.right-container {
+  margin-left: auto; /* 将右侧容器推到最右边 */
+  display: flex;
+  align-items: center;
 }

@@ -59,35 +59,6 @@ main {
   padding: 3rem 1rem 1rem;
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 0.1rem 0.1rem;
-  border-radius: 20px;
-  color: white;
-}
-
-h1 {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-}
-
-.slogan {
-  font-size: 1.8rem;
-  margin-bottom: 3.5rem;
-  font-weight: 400;
-  opacity: 0.9;
-}
-
-.search-container {
-  position: relative;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
 .tools-section h2 {
   text-align: center;
   font-size: 3rem;
@@ -105,33 +76,48 @@ h1 {
 .tool-card {
   background-color: var(--card-background);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 1rem; /* 减少内边距以增加内容紧凑度 */
   box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
-  text-align: center;
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  text-decoration: none;
+  height: 100%;
 }
 
 .tool-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
 }
 
 .tool-icon {
-  font-size: 4rem;
-  color: var(--secondary-color);
-  margin-bottom: 2rem;
+  width: 40px; /* 调整图标宽度 */
+  height: 40px; /* 调整图标高度 */
+  object-fit: contain;
+  margin-right: 1rem; /* 缩小图标与文本之间的间距 */
+}
+
+.tool-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .tool-title {
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin: 0;
+  margin-bottom: 0.25rem; /* 减少标题与描述之间的间距 */
+  color: var(--primary-color);
+  text-decoration: none; 
 }
 
 .tool-description {
   font-size: 1.1rem;
   color: #86868b;
-  line-height: 1.5;
+  line-height: 1.4; /* 适当调整行高 */
+  margin: 0; /* 移除描述的默认 margin */
+  text-decoration: none; 
 }
 
 footer {
@@ -146,12 +132,24 @@ footer {
     grid-template-columns: 1fr;
   }
   
-  h1 {
-    font-size: 3rem;
+  .tool-card {
+    flex-direction: column; /* 在小屏幕上堆叠图标和文本 */
+    align-items: center; /* 居中对齐 */
+    text-align: center;
+    padding: 1rem;
   }
   
-  .slogan {
-    font-size: 1.5rem;
+  .tool-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .tool-title {
+    margin-bottom: 0.25rem; /* 减少标题与描述之间的间距 */
+  }
+  
+  .tool-description {
+    line-height: 1.4; /* 保持一致的行高 */
   }
 }
 
@@ -212,14 +210,13 @@ footer {
 
 .footer-link {
   text-decoration: none;
-  color: inherit; /* 保持与父元素相同的颜色，可以根据需要调整 */
+  color: inherit;
 }
 
 .footer-link:hover {
-  text-decoration: none; /* 悬停时也不显示下划线 */
+  text-decoration: none;
 }
 
-/* 如果需要进一步去除所有链接的下划线，可以添加以下全局样式 */
 .footer a {
   text-decoration: none;
   color: inherit;
@@ -228,3 +225,4 @@ footer {
 .footer a:hover {
   text-decoration: none;
 }
+

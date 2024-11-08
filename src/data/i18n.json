@@ -7,6 +7,10 @@
       "welcome": "Welcome",
       "login": "Login",
       "logout": "Logout",
+      "dev-tools": "Development Tools",
+      "image-tools": "Image Tools",
+      "blog": "Blog",
+      "ai-products": "AI Products",
       "tools": {
         "text2image": {
           "title": "Text to Image Card",
@@ -22,21 +26,20 @@
           "copyButton": "Copy",
           "copiedMessage": "Copied"
         },
-        "urlDecode": {
-          "title": "URL Decoder",
-          "description": "Decode URL-encoded strings",
-          "inputLabel": "Enter URL to decode",
-          "resultLabel": "Decoded result",
-          "copyButton": "Copy",
-          "copiedMessage": "Copied"
+        "urlEncodeDecode": {
+          "title": "URL Encode/Decode Tool",
+          "description": "Encode or decode a URL online.",
+          "modeLabel": "Select Mode",
+          "encode": "Encode",
+          "decode": "Decode"
         },
         "urlEncode": {
-          "title": "URL Encoder",
-          "description": "Encode URL strings",
-          "inputLabel": "Enter URL to encode",
-          "resultLabel": "Encoded result",
-          "copyButton": "Copy",
-          "copiedMessage": "Copied"
+          "inputLabel": "Enter text to encode",
+          "resultLabel": "Encoded Result"
+        },
+        "urlDecode": {
+          "inputLabel": "Enter URL to decode",
+          "resultLabel": "Decoded Result"
         },
         "openAITimeline": {
           "title": "OpenAI Product Release",
@@ -62,7 +65,7 @@
           "download": "Download Image"
         },
         "fisherai": {
-          "title": "One-Click Summary Plugin",
+          "title": "FisherAI",
           "description": "The Best Summary Extension for Chrome Browser"
         },
         "quotecard": {
@@ -99,6 +102,10 @@
       "welcome": "欢迎",
       "login": "登录",
       "logout": "退出登录",
+      "dev-tools": "开发工具",
+      "image-tools": "图片工具",
+      "blog": "博客",
+      "ai-products": "AI 产品",
       "tools": {
         "text2image": {
           "title": "文字卡片",
@@ -114,21 +121,20 @@
           "copyButton": "复制",
           "copiedMessage": "已复制"
         },
-        "urlDecode": {
-          "title": "URL 解码器",
-          "description": "解码 URL 编码的字符串",
-          "inputLabel": "输入需要解码的 URL",
-          "resultLabel": "解码结果",
-          "copyButton": "复制",
-          "copiedMessage": "已复制"
+        "urlEncodeDecode": {
+          "title": "URL 编码/解码工具",
+          "description": "在线编码或解码 URL。",
+          "modeLabel": "选择模式",
+          "encode": "编码",
+          "decode": "解码"
         },
         "urlEncode": {
-          "title": "URL 编码器",
-          "description": "编码 URL 字符串",
-          "inputLabel": "输入需要编码的 URL",
-          "resultLabel": "编码结果",
-          "copyButton": "复制",
-          "copiedMessage": "已复制"
+          "inputLabel": "输入要编码的文本",
+          "resultLabel": "编码结果"
+        },
+        "urlDecode": {
+          "inputLabel": "输入要解码的 URL",
+          "resultLabel": "解码结果"
         },
         "openAITimeline": {
           "title": "OpenAI 产品发布",
@@ -143,7 +149,7 @@
           "description": "生成和纸上书写相媲美的效果"
         },
         "imageBase64Converter": {
-          "title": "图片与 Base64 转换器",
+          "title": "Base64与图片转换",
           "description": "图片与 Base64 的互相转换",
           "imageToBase64": "图片转 Base64",
           "base64Result": "Base64 结果",
@@ -154,7 +160,7 @@
           "download": "下载图片"
         },
         "fisherai": {
-          "title": "一键摘要插件",
+          "title": "FisherAI",
           "description": "最好用的 Chrome 浏览器摘要插件"
         },
         "quotecard": {
@@ -191,6 +197,10 @@
       "welcome": "ようこそ",
       "login": "ログイン",
       "logout": "ログアウト",
+      "dev-tools": "開発ツール",
+      "image-tools": "画像ツール",
+      "blog": "ブログ",
+      "ai-products": "AI製品",
       "tools": {
         "text2image": {
           "title": "テキストから画像",
@@ -206,21 +216,20 @@
           "copyButton": "コピー",
           "copiedMessage": "コピーしました"
         },
-        "urlDecode": {
-          "title": "URLデコーダー",
-          "description": "URLエンコードされた文字列をデコード",
-          "inputLabel": "デコードするURLを入力",
-          "resultLabel": "デコード結果",
-          "copyButton": "コピー",
-          "copiedMessage": "コピーしました"
+        "urlEncodeDecode": {
+          "title": "URL エンコード/デコード ツール",
+          "description": "URL をオンラインでエンコードまたはデコードします。",
+          "modeLabel": "モードを選択",
+          "encode": "エンコード",
+          "decode": "デコード"
         },
         "urlEncode": {
-          "title": "URLエンコーダー",
-          "description": "URL文字列をエンコード",
-          "inputLabel": "エンコードするURLを入力",
-          "resultLabel": "エンコード結果",
-          "copyButton": "コピー",
-          "copiedMessage": "コピーしました"
+          "inputLabel": "エンコードするテキストを入力",
+          "resultLabel": "エンコード結果"
+        },
+        "urlDecode": {
+          "inputLabel": "デコードする URL を入力",
+          "resultLabel": "デコード結果"
         },
         "openAITimeline": {
           "title": "OpenAI 製品リリース",
@@ -246,7 +255,7 @@
             "download": "画像をダウンロード"
         },
         "fisherai": {
-          "title": "ワンクリック要約プラグイン",
+          "title": "FisherAI",
           "description": "最高のChromeブラウザ用要約プラグイン"
         },
         "quotecard": {
@@ -283,6 +292,10 @@
       "welcome": "환영합니다",
       "login": "로그인",
       "logout": "로그아웃",
+      "dev-tools": "개발 도구",
+      "image-tools": "이미지 도구",
+      "blog": "블로그",
+      "ai-products": "AI 제품",
       "tools": {
         "text2image": {
           "title": "텍스트를 이미지로",
@@ -298,21 +311,20 @@
           "copyButton": "복사",
           "copiedMessage": "복사됨"
         },
-        "urlDecode": {
-          "title": "URL 디코더",
-          "description": "URL 인코딩된 문자열 디코딩",
-          "inputLabel": "디코딩할 URL 입력",
-          "resultLabel": "디코딩 결과",
-          "copyButton": "복사",
-          "copiedMessage": "복사됨"
+        "urlEncodeDecode": {
+          "title": "URL 인코딩/디코딩 도구",
+          "description": "URL을 온라인으로 인코딩하거나 디코딩합니다.",
+          "modeLabel": "모드 선택",
+          "encode": "인코딩",
+          "decode": "디코딩"
         },
         "urlEncode": {
-          "title": "URL 인코더",
-          "description": "URL 문자열 인코딩",
-          "inputLabel": "인코딩할 URL을 입력",
-          "resultLabel": "인코딩 결과",
-          "copyButton": "복사",
-          "copiedMessage": "복사됨"
+          "inputLabel": "인코딩할 텍스트 입력",
+          "resultLabel": "인코딩 결과"
+        },
+        "urlDecode": {
+          "inputLabel": "디코딩할 URL 입력",
+          "resultLabel": "디코딩 결과"
         },
         "openAITimeline": {
           "title": "OpenAI 제품 출시",
@@ -338,7 +350,7 @@
           "download": "이미지 다운로드"
         },
         "fisherai": {
-          "title": "원클릭 요약 플러그인",
+          "title": "FisherAI",
           "description": "가장 유용한 Chrome 브라우저 요약 확장 프로그램"
         },
         "quotecard": {

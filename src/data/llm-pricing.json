@@ -4,133 +4,133 @@
     "providers": [
       {
         "name": "Doubao-lite-32k",
-        "logo": "/assets/doubao.png",
+        "logo": "/assets/icon/doubao.png",
         "inputPrice": 0.3,
         "outputPrice": 0.6
       },
       {
         "name": "yi-lightning\n-16k",
-        "logo": "/assets/yi_small.jpg",
+        "logo": "/assets/icon/yi_small.jpg",
         "inputPrice": 0.99,
         "outputPrice": 0.99
       },
       {
         "name": "GLM-4-Air\n-128k",
-        "logo": "/assets/glm_small.svg",
+        "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 1,
         "outputPrice": 1
       },
       {
         "name": "gemini 1.5 Flash",
-        "logo": "/assets/google_small.svg",
+        "logo": "/assets/icon/google_small.svg",
         "inputPrice": 0.53,
         "outputPrice": 2.1
       },
       {
         "name": "Doubao-pro-32k",
-        "logo": "/assets/doubao.png",
+        "logo": "/assets/icon/doubao.png",
         "inputPrice": 0.8,
         "outputPrice": 2
       },
       {
         "name": "qwen-plus\n-128k",
-        "logo": "/assets/ali_small.svg",
+        "logo": "/assets/icon/ali_small.svg",
         "inputPrice": 0.8,
         "outputPrice": 2
       },
       {
         "name": "ERNIE 3.5",
-        "logo": "/assets/wenxin_small.png",
+        "logo": "/assets/icon/wenxin_small.png",
         "inputPrice": 0.8,
         "outputPrice": 2
       },
       {
         "name": "deepseek-\nchat-128k",
-        "logo": "/assets/deepseek_small.jpg",
+        "logo": "/assets/icon/deepseek_small.jpg",
         "inputPrice": 1,
         "outputPrice": 2
       },
       {
         "name": "gpt-4o-mini",
-        "logo": "/assets/openai_small.svg",
+        "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.05,
         "outputPrice": 4.2
       },
       {
         "name": "qwen-math-plus",
-        "logo": "/assets/ali_small.svg",
+        "logo": "/assets/icon/ali_small.svg",
         "inputPrice": 4,
         "outputPrice": 12
       },
       {
         "name": "claude 3.5\nHaiku",
-        "logo": "/assets/anthropic_small.svg",
+        "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 8.75,
         "outputPrice": 35
       },
       {
         "name": "yi-large-32k",
-        "logo": "/assets/yi_small.jpg",
+        "logo": "/assets/icon/yi_small.jpg",
         "inputPrice": 20,
         "outputPrice": 20
       },
       {
         "name": "mooonshot-v1-32k",
-        "logo": "/assets/moonshot_small.svg",
+        "logo": "/assets/icon/moonshot_small.svg",
         "inputPrice": 24,
         "outputPrice": 24
       },
       {
         "name": "qwen-max-32k",
-        "logo": "/assets/ali_small.svg",
+        "logo": "/assets/icon/ali_small.svg",
         "inputPrice": 20,
         "outputPrice": 60
       },
       {
         "name": "ERNIE 4.0\nTurbo",
-        "logo": "/assets/wenxin_small.png",
+        "logo": "/assets/icon/wenxin_small.png",
         "inputPrice": 20,
         "outputPrice": 60
       },
       {
         "name": "gpt-4o",
-        "logo": "/assets/openai_small.svg",
+        "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 17.5,
         "outputPrice": 70
       },
       {
         "name": "GLM-4-Plus-128k",
-        "logo": "/assets/glm_small.svg",
+        "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 50,
         "outputPrice": 50
       },
       {
         "name": "o1-mini",
-        "logo": "/assets/openai_small.svg",
+        "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 21,
         "outputPrice": 84
       },
       {
         "name": "gemini 1.5 Pro",
-        "logo": "/assets/google_small.svg",
+        "logo": "/assets/icon/google_small.svg",
         "inputPrice": 87.5,
         "outputPrice": 35
       },
       {
         "name": "claude 3.5\nSonnet",
-        "logo": "/assets/anthropic_small.svg",
+        "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 26.3,
         "outputPrice": 105
       },
       {
         "name": "o1-preview",
-        "logo": "/assets/openai_small.svg",
+        "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 105,
         "outputPrice": 420
       },
       {
         "name": "claude 3.5\nOpus",
-        "logo": "/assets/anthropic_small.svg",
+        "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 131,
         "outputPrice": 525
       }

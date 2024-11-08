@@ -6,10 +6,14 @@ import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 
+const DevTools = lazy(() => import('./pages/DevTools'));
+const ImageTools = lazy(() => import('./pages/ImageTools'));
+const Blog = lazy(() => import('./pages/Blog'));
+const AIProduct = lazy(() => import('./pages/AIProduct'));
+
 const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
 const TextToImage = lazy(() => import('./components/TextToImage'));
-const UrlDecode = lazy(() => import('./components/UrlDecode'));
-const UrlEncode = lazy(() => import('./components/UrlEncode'));
+const UrlEnDecode = lazy(() => import('./components/UrlEnDecode'));
 const About = lazy(() => import('./pages/About'));
 const OpenAITimeline = lazy(() => import('./components/OpenAITimeline'));
 const PricingCharts  = lazy(() => import('./components/PricingCharts'));
@@ -27,11 +31,16 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/about" element={<About />} />
+
+              <Route path="/dev-tools" element={<DevTools />} />
+              <Route path="/image-tools" element={<ImageTools />} />
+              <Route path="/ai-products" element={<AIProduct />} />
+              <Route path="/blog" element={<Blog />} />
+
               <Route path="/text2image" element={<TextToImage />} />
               <Route path="/json-formatter" element={<JsonFormatter />} />
-              <Route path="/url-decode" element={<UrlDecode />} />
-              <Route path="/url-encode" element={<UrlEncode />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/url-encode-and-decode" element={<UrlEnDecode />} />
               <Route path="/openai-timeline" element={<OpenAITimeline />} />
               <Route path="/llm-model-price" element={<PricingCharts />} />
               <Route path="/handwriting" element={<HandwriteGen />} />

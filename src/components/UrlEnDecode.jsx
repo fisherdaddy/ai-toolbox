@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
 
-const EncoderContainer = styled(Container)`
+const EncoderDecoderContainer = styled(Container)`
   flex-direction: column;
 `;
 
@@ -69,53 +69,85 @@ const CopyButton = styled.button`
   }
 
   &.copied {
-    color: #34a853; // 成功复制后的绿色反馈
+    color: #34a853; // 成功复制后的反馈颜色
   }
 `;
 
-function UrlEncoder() {
+const ModeSwitcher = styled.div`
+  margin-bottom: 20px;
+
+  select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    font-size: 14px;
+    color: #202124;
+  }
+`;
+
+function UrlEncoderDecoder() {
   const { t } = useTranslation();
   const [input, setInput] = useState('');
-  const [encodedText, setEncodedText] = useState('');
+  const [resultText, setResultText] = useState('');
   const [isCopied, setIsCopied] = useState(false);
+  const [mode, setMode] = useState('decode'); // 'encode' 或 'decode'
+
+  const handleModeChange = (e) => {
+    setMode(e.target.value);
+    // 当模式切换时，清空输入和输出
+    setInput('');
+    setResultText('');
+  };
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
     setInput(inputValue);
     try {
-      const encoded = encodeURIComponent(inputValue);
-      setEncodedText(encoded);
+      let result;
+      if (mode === 'decode') {
+        result = decodeURIComponent(inputValue);
+      } else {
+        result = encodeURIComponent(inputValue);
+      }
+      setResultText(result);
     } catch (error) {
-      setEncodedText('编码出错');
+      setResultText('Invalid input');
     }
   };
 
   const handleCopy = useCallback(() => {
-    navigator.clipboard.writeText(encodedText).then(() => {
+    navigator.clipboard.writeText(resultText).then(() => {
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
     });
-  }, [encodedText]);
+  }, [resultText]);
 
   return (
     <>
       <SEO
-        title={t('tools.urlEncode.title')}
-        description={t('tools.urlEncode.description')}
+        title={t('tools.urlEncodeDecode.title')}
+        description={t('tools.urlEncodeDecode.description')}
       />
       <Wrapper>
-        <Title>{t('tools.urlEncode.title')}</Title>
-        <EncoderContainer>
+        <Title>{t('tools.urlEncodeDecode.title')}</Title>
+        <EncoderDecoderContainer>
+          <ModeSwitcher>
+            <Label>{t('tools.urlEncodeDecode.modeLabel')}</Label>
+            <select value={mode} onChange={handleModeChange}>
+              <option value="encode">{t('tools.urlEncodeDecode.encode')}</option>
+              <option value="decode">{t('tools.urlEncodeDecode.decode')}</option>
+            </select>
+          </ModeSwitcher>
           <StyledInputText
             id="urlInput"
-            placeholder={t('tools.urlEncode.inputLabel')}
+            placeholder={mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
             value={input}
             onChange={handleInputChange}
           />
           <PreviewWrapper>
-            <Label>{t('tools.urlEncode.resultLabel')}</Label>
+            <Label>{mode === 'decode' ? t('tools.urlDecode.resultLabel') : t('tools.urlEncode.resultLabel')}</Label>
             <ResultContainer>
-              <StyledPreview>{encodedText}</StyledPreview>
+              <StyledPreview>{resultText}</StyledPreview>
               <CopyButton onClick={handleCopy} className={isCopied ? 'copied' : ''}>
                 {isCopied ? (
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -129,10 +161,10 @@ function UrlEncoder() {
               </CopyButton>
             </ResultContainer>
           </PreviewWrapper>
-        </EncoderContainer>
+        </EncoderDecoderContainer>
       </Wrapper>
     </>
   );
 }
 
-export default UrlEncoder;
+export default UrlEncoderDecoder;
