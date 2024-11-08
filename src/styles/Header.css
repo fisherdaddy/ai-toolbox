@@ -1,59 +1,99 @@
 .no-underline {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .no-underline:hover {
-    text-decoration: none;
-  }
-  
-  .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    object-fit: contain;
-  }
-  
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-underline:hover {
+  text-decoration: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #6366F1; /* 使用与图片中紫色渐变相近的颜色 */
+  transition: color 0.2s ease;
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.logo-title-container .title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title-container:hover .title {
+  color: #4F46E5; /* 悬停时稍微深一点的紫色 */
+}
+
+/* 添加一个简单的动画效果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 为移动设备优化 */
+@media (max-width: 768px) {
   .title {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: #6366F1; /* 使用与图片中紫色渐变相近的颜色 */
-    transition: color 0.2s ease;
+    font-size: 1.3rem;
   }
-  
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-container > * {
+  margin-left: 15px;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 10px;
+}
+
+.user-info button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .right-container {
+    flex-direction: column;
+    align-items: flex-end;
   }
-  
-  .logo-title-container {
-    display: flex;
-    align-items: center;
-    animation: fadeIn 0.5s ease-in-out;
+
+  .right-container > * {
+    margin-left: 0;
+    margin-top: 10px;
   }
-  
-  .logo-title-container .title {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-title-container:hover .title {
-    color: #4F46E5; /* 悬停时稍微深一点的紫色 */
-  }
-  
-  /* 添加一个简单的动画效果 */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* 为移动设备优化 */
-  @media (max-width: 768px) {
-    .title {
-      font-size: 1.3rem;
-    }
-  }
+}

@@ -1,13 +1,20 @@
+// src/components/Header.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
 import { useTranslation } from '../js/i18n';
-import '../styles/Header.css'; // 确保创建并导入这个CSS文件
-// 导入 logo 图片
-import logo from '/assets/logo.png'; // 请确保路径正确
+import '../styles/Header.css';
+import logo from '/assets/logo.png';
 
 function Header() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+  };
 
   return (
     <header>
@@ -18,7 +25,21 @@ function Header() {
             {t('title')}
           </Link>
         </div>
-        <LanguageSelector />
+        <div className="right-container">
+          <LanguageSelector />
+          <div className="auth-container">
+            {user ? (
+              <div className="user-info">
+                <span>
+                  {t('welcome')}, {user.name || user.given_name}
+                </span>
+                <button onClick={handleLogout}>{t('logout')}</button>
+              </div>
+            ) : (
+              <Link to="/login">{t('login')}</Link>
+            )}
+          </div>
+        </div>
       </nav>
     </header>
   );

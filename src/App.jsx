@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
+import Login from './pages/Login';
 
 const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
 const TextToImage = lazy(() => import('./components/TextToImage'));
@@ -25,6 +26,7 @@ function App() {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/text2image" element={<TextToImage />} />
               <Route path="/json-formatter" element={<JsonFormatter />} />
               <Route path="/url-decode" element={<UrlDecode />} />
@@ -36,6 +38,7 @@ function App() {
               <Route path="/image-base64" element={<ImageBase64Converter />} />
               <Route path="/quote-card" element={<QuoteCard />} />
               <Route path="*" element={<NotFound />} />
+
             </Routes>
           </Suspense>
         </main>-
