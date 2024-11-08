@@ -126,7 +126,7 @@ const tools = [
   },
   { 
     id: 'wenxinyige', 
-    icon: '/assets/icon/wenxin_small.svg', 
+    icon: '/assets/icon/wenxin_small.png', 
     path: 'https://yige.baidu.com/', 
     external: true ,
     category: 'Image'
