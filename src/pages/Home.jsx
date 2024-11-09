@@ -18,6 +18,38 @@ const tools = [
 const Home = () => {
   const { t } = useTranslation();
 
+  const renderToolLink = (tool) => {
+    const content = (
+      <>
+        <img 
+          src={tool.icon} 
+          alt={`${t(`tools.${tool.id}.title`)} icon`} 
+          className="tool-icon" 
+          loading="lazy" 
+        />
+        <div className="tool-content">
+          <h3 className="tool-title">{t(`tools.${tool.id}.title`)}</h3>
+          <p className="tool-description">{t(`tools.${tool.id}.description`)}</p>
+        </div>
+      </>
+    );
+
+    return tool.external ? (
+      <a 
+        href={tool.path}
+        className="tool-card"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    ) : (
+      <Link to={tool.path} className="tool-card">
+        {content}
+      </Link>
+    );
+  };
+
   return (
     <>
       <SEO
@@ -28,18 +60,9 @@ const Home = () => {
         <section className="tools-section">
           <div className="tools-grid">
             {tools.map(tool => (
-              <Link to={tool.path} key={tool.id} className="tool-card">
-                <img 
-                  src={tool.icon} 
-                  alt={`${t(`tools.${tool.id}.title`)} icon`} 
-                  className="tool-icon" 
-                  loading="lazy" 
-                />
-                <div className="tool-content">
-                  <h3 className="tool-title">{t(`tools.${tool.id}.title`)}</h3>
-                  <p className="tool-description">{t(`tools.${tool.id}.description`)}</p>
-                </div>
-              </Link>
+              <React.Fragment key={tool.id}>
+                {renderToolLink(tool)}
+              </React.Fragment>
             ))}
           </div>
         </section>

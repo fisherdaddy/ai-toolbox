@@ -11,15 +11,11 @@ function Header() {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user'));
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    navigate('/login');
-  };
-
   const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
+    setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
@@ -28,69 +24,97 @@ function Header() {
         setMenuOpen(false);
       }
     };
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [menuRef]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/login');
+    setMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header>
       <nav>
         <div className="logo-title-container">
-          <NavLink to="/" className="title no-underline">
+          <NavLink to="/" className="title no-underline" onClick={handleNavClick}>
             <img src={logo} alt="Logo" className="logo" />
             {t('title')}
           </NavLink>
         </div>
-        <div className="menu-items">
-          <NavLink to="/dev-tools" className={({ isActive }) => (isActive ? 'active' : '')}>
-            {t('dev-tools')}
-          </NavLink>
-          <NavLink to="/image-tools" className={({ isActive }) => (isActive ? 'active' : '')}>
-            {t('image-tools')}
-          </NavLink>
-          <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active' : '')}>
-            {t('blog')}
-          </NavLink>
-          <NavLink to="/ai-products" className={({ isActive }) => (isActive ? 'active' : '')}>
-            {t('ai-products')}
-          </NavLink>
-        </div>
-        <div className="right-container">
-          <LanguageSelector />
-          <div className="auth-container">
-            {user ? (
-              <div className="user-info">
-                <div className="avatar-container" ref={menuRef}>
-                  <img
-                    src={user.picture}
-                    alt="User Avatar"
-                    className="avatar"
-                    onClick={toggleMenu}
-                  />
-                  <div className={`dropdown-menu ${menuOpen ? 'active' : ''}`}>
-                    <button onClick={handleLogout}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                        <polyline points="16 17 21 12 16 7" />
-                        <line x1="21" y1="12" x2="9" y2="12" />
-                      </svg>
-                      {t('logout')}
-                    </button>
+
+        <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {mobileMenuOpen ? (
+              <path d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+
+        <div className={`menu-container ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <div className="menu-items">
+            <NavLink to="/dev-tools" onClick={handleNavClick}>
+              {t('dev-tools')}
+            </NavLink>
+            <NavLink to="/image-tools" onClick={handleNavClick}>
+              {t('image-tools')}
+            </NavLink>
+            <NavLink to="/blog" onClick={handleNavClick}>
+              {t('blog')}
+            </NavLink>
+            <NavLink to="/ai-products" onClick={handleNavClick}>
+              {t('ai-products')}
+            </NavLink>
+          </div>
+          <div className="right-container">
+            <LanguageSelector />
+            <div className="auth-container">
+              {user ? (
+                <div className="user-info">
+                  <div className="avatar-container" ref={menuRef}>
+                    <img
+                      src={user.picture}
+                      alt="User Avatar"
+                      className="avatar"
+                      onClick={toggleMenu}
+                    />
+                    <div className={`dropdown-menu ${menuOpen ? 'active' : ''}`}>
+                      <button onClick={handleLogout}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                          <polyline points="16 17 21 12 16 7" />
+                          <line x1="21" y1="12" x2="9" y2="12" />
+                        </svg>
+                        {t('logout')}
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <NavLink to="/login" className="login-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-                  <polyline points="10 17 15 12 10 7" />
-                  <line x1="15" y1="12" x2="3" y2="12" />
-                </svg>
-                {t('login')}
-              </NavLink>
-            )}
+              ) : (
+                <NavLink to="/login" className="login-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                    <polyline points="10 17 15 12 10 7" />
+                    <line x1="15" y1="12" x2="3" y2="12" />
+                  </svg>
+                  {t('login')}
+                </NavLink>
+              )}
+            </div>
           </div>
         </div>
       </nav>

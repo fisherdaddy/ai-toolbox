@@ -1,4 +1,17 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
 
+# Allow Google Images to index images
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /images/
+
+# Allow Google Mobile to index mobile version
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Sitemap
 Sitemap: https://fishersama.com/sitemap.xml

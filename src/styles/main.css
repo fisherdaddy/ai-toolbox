@@ -256,3 +256,71 @@ footer {
     linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px);
   background-size: 100% 100%, 20px 20px, 20px 20px;
 }
+
+/* 移动端适配基础设置 */
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px; /* 调整基础字体大小 */
+  }
+
+  main {
+    padding: 1rem;
+    margin-top: 3.5rem; /* 为固定导航栏留出空间 */
+  }
+
+  .tools-section {
+    padding: 1rem 0;
+  }
+
+  .tools-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .tool-card {
+    padding: 1.2rem;
+  }
+
+  .tool-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tool-title {
+    font-size: 1.2rem;
+  }
+
+  .tool-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* 针对更小屏幕的优化 */
+@media screen and (max-width: 480px) {
+  .tools-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .tool-card {
+    padding: 1rem;
+  }
+
+  .tool-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* 针对横屏模式的优化 */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

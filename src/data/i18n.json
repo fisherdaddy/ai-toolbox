@@ -6,6 +6,7 @@
       "keywords": "AI Toolbox, AI tools, text cards, JSON formatter, URL decoder, OpenAI products, model price comparison, online tools, free tools",
       "welcome": "Welcome",
       "login": "Login",
+      "loginSubtitle": "Welcome to AI Toolbox, please log in for the full experience",
       "logout": "Logout",
       "dev-tools": "Development Tools",
       "image-tools": "Image Tools",
@@ -231,6 +232,7 @@
       "keywords": "AI工具箱，AI 工具，文字卡片，JSON 格式化，URL 解码器，OpenAI 产品，模型价格对比，在线工具，免费工具",
       "welcome": "欢迎",
       "login": "登录",
+      "loginSubtitle": "欢迎使用 AI 工具箱，请登录以获得完整体验",
       "logout": "退出登录",
       "dev-tools": "开发工具",
       "image-tools": "图片工具",
@@ -447,10 +449,7 @@
         "Image": "图像",
         "AudioVideo": "音视频",
         "Productivity": "效率办公"
-      },
-      "login": "登录",
-      "loginSubtitle": "欢迎使用 AI 工具箱，请登录以获得完整体验",
-      "or": "或"
+      }
     },
     "ja": {
       "title": "AIツールボックス",
@@ -459,6 +458,7 @@
       "keywords": "AIツールボックス、AIツール、テキストカード、JSONフォーマッター、URLデコーダー、OpenAI製品、モデル価格比較、オンラインツール、無料ツール",
       "welcome": "ようこそ",
       "login": "ログイン",
+      "loginSubtitle": "AIツールボックスへようこそ。フル体験のためにログインしてください",
       "logout": "ログアウト",
       "dev-tools": "開発ツール",
       "image-tools": "画像ツール",
@@ -686,6 +686,7 @@
       "keywords": "AI 도구상자, AI 도구, 텍스트 카드, JSON 포매터, URL 디코더, OpenAI 제품, 모델 가격 비교, 온라인 도구, 무료 도구",
       "welcome": "환영합니다",
       "login": "로그인",
+      "loginSubtitle": "AI 툴박스에 오신 것을 환영합니다. 전체 경험을 위해 로그인해 주세요",
       "logout": "로그아웃",
       "dev-tools": "개발 도구",
       "image-tools": "이미지 도구",
