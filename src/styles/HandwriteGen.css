@@ -58,3 +58,92 @@ body, html, #root {
 .ant-btn {
     margin-top: 16px;
 }
+
+.handwrite-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+}
+
+.settings-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 1rem;
+}
+
+.preview-area {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: auto;
+    padding: 2rem;
+}
+
+.preview-area:hover {
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.ant-select-selector,
+.ant-input,
+.ant-input-number,
+.ant-slider {
+    border-radius: 8px !important;
+    border: 1px solid rgba(99, 102, 241, 0.2) !important;
+}
+
+.ant-select-selector:hover,
+.ant-input:hover,
+.ant-input-number:hover {
+    border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+.ant-btn-primary {
+    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.ant-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.01em;
+}
+
+.title-label {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
