@@ -1,0 +1,131 @@
+{
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "最高のChromeブラウザ用要約プラグイン"
+    },
+    "chatgpt": {
+        "title": "ChatGPT",
+        "description": "OpenAIのAI対話アシスタント"
+    },
+    "claude": {
+        "title": "Claude",
+        "description": "AnthropicのAI対話アシスタント"
+    },
+    "gemini": {
+        "title": "Gemini",
+        "description": "GoogleのAI対話ツール"
+    },
+    "poe": {
+        "title": "POE",
+        "description": "Quoraのマルチモデルチャットプラットフォーム"
+    },
+    "perplexity": {
+        "title": "Perplexity",
+        "description": "強力なAI検索エンジン"
+    },
+    "kimi": {
+        "title": "Kimiアシスタント",
+        "description": "推論・深い思考が可能なAIアシスタント"
+    },
+    "doubao": {
+        "title": "Doubao",
+        "description": "ByteDanceのAI対話アシスタント"
+    },
+    "zhipu": {
+        "title": "Zhipu Qingyan",
+        "description": "画像生成や動画作成をサポートする無料の万能AIアシスタント"
+    },
+    "yuanbao": {
+        "title": "Tencent Yuanbao",
+        "description": "TencentのAI対話アシスタント"
+    },
+    "qwen": {
+        "title": "Tongyi Qianwen",
+        "description": "AlibabaのAI対話アシスタント"
+    },
+    "hailuo": {
+        "title": "Hailuo AI",
+        "description": "MiniMaxのAI対話アシスタント"
+    },
+    "baichuan": {
+        "title": "Baixiaoying",
+        "description": "Baichuan Intelligentの無料AIアシスタント"
+    },
+    "wenxin": {
+        "title": "Wenxin Yiyan",
+        "description": "BaiduのAI対話アシスタント"
+    },
+    "mita": {
+        "title": "Mita検索",
+        "description": "広告なしで結果に直結するAI検索エンジン"
+    },
+    "coze": {
+        "title": "Coze",
+        "description": "ByteDanceのAIエージェントプラットフォーム"
+    },
+    "midjourney": {
+        "title": "Midjourney",
+        "description": "画像やイラスト生成のAIツール"
+    },
+    "stableDiffusion": {
+        "title": "Stable Diffusion",
+        "description": "StabilityAIのテキストから画像生成AI"
+    },
+    "tongyiwanxiang": {
+        "title": "Tongyi Wanxiang",
+        "description": "AlibabaのAI絵画制作プラットフォーム"
+    },
+    "wenxinyige": {
+        "title": "Wenxin Yige",
+        "description": "BaiduのAIアート・クリエイティブ支援プラットフォーム"
+    },
+    "canva": {
+        "title": "Canva",
+        "description": "SNSグラフィック、プレゼン資料、ポスターなどを作成するデザインプラットフォーム"
+    },
+    "meitu": {
+        "title": "Meituデザインスタジオ",
+        "description": "AI画像作成とデザインプラットフォーム"
+    },
+    "keling": {
+        "title": "Keling AI",
+        "description": "KuaishouのAI画像・動画制作プラットフォーム"
+    },
+    "runway": {
+        "title": "Runway",
+        "description": "グリーンスクリーン、動画合成などのAI動画制作ツール"
+    },
+    "luma": {
+        "title": "Dream Machine",
+        "description": "LumaのAI動画生成ツール"
+    },
+    "gamma": {
+        "title": "Gamma App",
+        "description": "AIプレゼン資料生成ツール"
+    },
+    "aippt": {
+        "title": "AiPPT",
+        "description": "AIで高品質なPPTを素早く生成"
+    },
+    "suno": {
+        "title": "Suno",
+        "description": "高品質なAI音楽制作プラットフォーム"
+    },
+    "haimian": {
+        "title": "Haimian Music",
+        "description": "ByteDanceの無料AI音楽制作・発見プラットフォーム"
+    },
+    "elevenLabs": {
+        "title": "ElevenLabs",
+        "description": "28言語対応のAIテキスト音声変換"
+    },
+    "tongyitingwu": {
+        "title": "Tongyi Tingwu",
+        "description": "Alibabaの音声・映像内容に特化したAIアシスタント"
+    },
+    "cursor": {
+        "title": "Cursor",
+        "description": "素早くプログラミングできるAIコードエディター"
+    }
+
+}

@@ -1,0 +1,98 @@
+{
+    "text2image": {
+      "title": "テキストから画像",
+      "description": "テキストを画像カードに変換",
+      "inputPlaceholder": "テキストを入力（タイトルを含めることができます、例：# タイトル1）",
+      "selectTemplate": "テンプレートを選択",
+      "previewDefault": "# プレビューエリア\nテキストを入力すると、ここにプレビューが表示されます",
+      "placeholder": "# タイトル\n## サブタイトル\n- リスト項目\n**太字** *斜体*",
+      "downloadButton": "画像としてエクスポート",
+      "templates": {
+        "simple": "シンプル",
+        "ai-style": "AIスタイル",
+        "dark": "ダーク",
+        "paper": "ペーパー",
+        "minimal": "ミニマル",
+        "tech": "テック"
+      }
+    },
+    "quoteCard": {
+      "title": "名言カードジェネレーター",
+      "description": "名言のバイリンガルテキストをカードに変換",
+      "chinesePlaceholder": "中国語の名言を入力",
+      "englishPlaceholder": "英語訳を入力",
+      "authorPlaceholder": "著者名を入力",
+      "selectChineseFont": "中国語フォントを選択",
+      "selectEnglishFont": "英語フォントを選択",
+      "selectFontColor": "フォントカラーを選択",
+      "selectAuthorColor": "著者名の色を選択",
+      "selectBackground": "背景色を選択",
+      "customBackground": "カスタム背景色を選択",
+      "downloadButton": "画像をダウンロード",
+      "defaultQuote": "中国語の名言を入力してください",
+      "defaultTranslation": "英語訳をここに入力してください",
+      "defaultAuthor": "著者名",
+      "fonts": {
+        "system": "システムデフォルト",
+        "sans": "サンセリフ",
+        "serif": "セリフ",
+        "mono": "等幅"
+      },
+      "backgrounds": {
+        "white": "白",
+        "dark": "黒",
+        "paper": "クリーム",
+        "custom": "カスタム"
+      }
+    },
+    "jsonFormatter": {
+      "title": "JSONフォーマッター",
+      "description": "JSONデータを整形し検証する",
+      "inputPlaceholder": "JSONデータを入力",
+      "invalidJson": "無効なJSON",
+      "copyButton": "コピー",
+      "copiedMessage": "コピーしました"
+    },
+    "urlEncodeDecode": {
+      "title": "URL エンコード/デコード ツール",
+      "description": "URL をオンラインでエンコードまたはデコードします。",
+      "modeLabel": "モードを選択",
+      "encode": "エンコード",
+      "decode": "デコード"
+    },
+    "urlEncode": {
+      "inputLabel": "エンコードするテキストを入力",
+      "resultLabel": "エンコード結果"
+    },
+    "urlDecode": {
+      "inputLabel": "デコードする URL を入力",
+      "resultLabel": "デコード結果"
+    },
+    "openAITimeline": {
+      "title": "OpenAI 製品リリース",
+      "description": "OpenAI 製品リリース時刻表"
+    },
+    "modelPrice": {
+      "title": "世界の大規模モデル価格比較",
+      "description": "世界各国のモデル価格比較アリーナ"
+    },
+    "handwrite": {
+      "title": "手書きフォントジェネレーター",
+      "description": "紙に書くのと同等の効果を生成します"
+    },
+    "imageBase64Converter": {
+        "title": "画像とBase64コンバーター",
+        "description": "画像とBase64の相互変換",
+        "imageToBase64": "画像をBase64に変換",
+        "base64Result": "Base64の結果",
+        "base64ToImage": "Base64を画像に変換",
+        "base64InputPlaceholder": "ここにBase64文字列を貼り付け",
+        "imageResult": "画像の結果",
+        "invalidBase64": "無効なBase64文字列",
+        "download": "画像をダウンロード"
+    },
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "最高のChromeブラウザ用要約プラグイン"
+    }
+}

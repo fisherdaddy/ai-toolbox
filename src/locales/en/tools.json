@@ -1,0 +1,98 @@
+{
+    "text2image": {
+      "title": "Text to Image Card",
+      "description": "Convert text to image card",
+      "selectTemplate": "Select Template",
+      "inputLabel": "Input Text (Markdown Supported)",
+      "placeholder": "# Title\n## Subtitle\n- List item\n**Bold** *Italic*",
+      "downloadButton": "Export as Image",
+      "previewDefault": "# Preview Area\nEnter text to see preview here",
+      "templates": {
+        "simple": "Simple",
+        "ai-style": "AI Style",
+        "dark": "Dark",
+        "paper": "Paper",
+        "minimal": "Minimal",
+        "tech": "Tech"
+      }
+    },
+    "quoteCard": {
+      "title": "Quote Card Generator",
+      "description": "Convert bilingual quotes to cards",
+      "chinesePlaceholder": "Enter quote in Chinese",
+      "englishPlaceholder": "Enter English translation",
+      "authorPlaceholder": "Enter author name",
+      "selectChineseFont": "Select Chinese Font",
+      "selectEnglishFont": "Select English Font",
+      "selectFontColor": "Select Font Color",
+      "selectAuthorColor": "Select Author Color",
+      "selectBackground": "Select Background",
+      "customBackground": "Select Custom Background",
+      "downloadButton": "Download Image",
+      "defaultQuote": "Enter quote in Chinese",
+      "defaultTranslation": "Enter the English translation here.",
+      "defaultAuthor": "Author Name",
+      "fonts": {
+        "system": "System Default",
+        "sans": "Sans Serif",
+        "serif": "Serif",
+        "mono": "Monospace"
+      },
+      "backgrounds": {
+        "white": "White",
+        "dark": "Dark",
+        "paper": "Paper",
+        "custom": "Custom"
+      }
+    },
+    "jsonFormatter": {
+      "title": "JSON Formatter",
+      "description": "Beautify and validate JSON data",
+      "inputPlaceholder": "Enter JSON data",
+      "invalidJson": "Invalid JSON",
+      "copyButton": "Copy",
+      "copiedMessage": "Copied"
+    },
+    "urlEncodeDecode": {
+      "title": "URL Encode/Decode",
+      "description": "Encode or decode a URL online.",
+      "modeLabel": "Select Mode",
+      "encode": "Encode",
+      "decode": "Decode"
+    },
+    "urlEncode": {
+      "inputLabel": "Enter text to encode",
+      "resultLabel": "Encoded Result"
+    },
+    "urlDecode": {
+      "inputLabel": "Enter URL to decode",
+      "resultLabel": "Decoded Result"
+    },
+    "openAITimeline": {
+      "title": "OpenAI Product Release",
+      "description": "Overview of OpenAI product release dates"
+    },
+    "modelPrice": {
+      "title": "Global Large Model Price Comparison",
+      "description": "Arena for comparing prices of various models worldwide"
+    },
+    "handwrite": {
+      "title": "Handwriting Font Generator",
+      "description": "Generate an effect comparable to writing on paper"
+    },
+    "imageBase64Converter": {
+      "title": "Image and Base64 Converter",
+      "description": "Mutual conversion between images and Base64",
+      "imageToBase64": "Image to Base64",
+      "base64Result": "Base64 Result",
+      "base64ToImage": "Base64 to Image",
+      "base64InputPlaceholder": "Paste Base64 string here",
+      "imageResult": "Image Result",
+      "invalidBase64": "Invalid Base64 string",
+      "download": "Download Image"
+    },
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "The Best Summary Extension for Chrome Browser"
+    }
+}

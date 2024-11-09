@@ -1,0 +1,130 @@
+{
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "最好用的 Chrome 浏览器摘要插件"
+    },
+    "chatgpt": {
+      "title": "ChatGPT",
+      "description": "OpenAI旗下AI对话助手"
+    },
+    "claude": {
+      "title": "Claude",
+      "description": "Anthropic旗下AI对话助手"
+    },
+    "gemini": {
+      "title": "Gemini",
+      "description": "Google旗下AI对话工具"
+    },
+    "poe": {
+      "title": "POE",
+      "description": "Quora 旗下的多模型聊天平台"
+    },
+    "perplexity": {
+      "title": "Perplexity",
+      "description": "强大的AI搜索引擎"
+    },
+    "kimi": {
+      "title": "Kimi 智能助手",
+      "description": "会推理解析，能深度思考的AI助手"
+    },
+    "doubao": {
+      "title": "豆包",
+      "description": "字节跳动旗下的AI对话助手"
+    },
+    "zhipu": {
+      "title": "智谱清言",
+      "description": "免费全能的AI助手，支持AI绘画、视频生成"
+    },
+    "yuanbao": {
+      "title": "腾讯元宝",
+      "description": "腾讯旗下的AI对话助手"
+    },
+    "qwen": {
+      "title": "通义千问",
+      "description": "阿里巴巴旗下的AI对话助手"
+    },
+    "hailuo": {
+      "title": "海螺AI",
+      "description": "MiniMax旗下的AI对话助手"
+    },
+    "baichuan": {
+      "title": "百小应",
+      "description": "百川智能推出的免费AI助手"
+    },
+    "wenxin": {
+      "title": "文心一言",
+      "description": "百度旗下的AI对话助手"
+    },
+    "mita": {
+      "title": "秘塔搜索",
+      "description": "没有广告，直达结果的AI搜索引擎"
+    },
+    "coze": {
+      "title": "Coze",
+      "description": "字节旗下AI智能体平台"
+    },
+    "midjourney": {
+      "title": "Midjourney",
+      "description": "AI图像和插画生成工具"
+    },
+    "stableDiffusion": {
+      "title": "Stable Diffusion",
+      "description": "StabilityAI推出的文本到图像生成AI"
+    },
+    "tongyiwanxiang": {
+      "title": "通义万相",
+      "description": "阿里推出的AI绘画创作平台"
+    },
+    "wenxinyige": {
+      "title": "文心一格",
+      "description": "百度旗下AI艺术和创意辅助平台"
+    },
+    "canva": {
+      "title": "Canva",
+      "description": "用于创建社交媒体图形、演示文稿、海报、文档和其他视觉内容的平面设计平台"
+    },
+    "meitu": {
+      "title": "美图设计室",
+      "description": "AI图像创作和设计平台"
+    },
+    "keling": {
+      "title": "可灵 AI",
+      "description": "快手推出的AI图像和视频创作平台"
+    },
+    "runway": {
+      "title": "Runway",
+      "description": "强大的AI视频制作工具，绿幕抠像视频合成等"
+    },
+    "luma": {
+      "title": "Dream Machine",
+      "description": "Luma推出的AI视频生成工具"
+    },
+    "gamma": {
+      "title": "Gamma App",
+      "description": "AI幻灯片演示生成工具"
+    },
+    "aippt": {
+      "title": "AiPPT",
+      "description": "AI快速生成高质量PPT"
+    },
+    "suno": {
+      "title": "Suno",
+      "description": "高质量的AI音乐创作平台"
+    },
+    "haimian": {
+      "title": "海绵音乐",
+      "description": "字节跳动推出的免费AI音乐创作和发现平台"
+    },
+    "elevenLabs": {
+      "title": "ElevenLabs",
+      "description": "AI文本转语音，支持包含中文在内的28种语言"
+    },
+    "tongyitingwu": {
+      "title": "通义听悟",
+      "description": "阿里巴巴旗下聚焦音视频内容的工作学习AI助手"
+    },
+    "cursor": {
+      "title": "Cursor",
+      "description": "AI代码编辑器，快速进行编程和软件开发"
+    }
+}

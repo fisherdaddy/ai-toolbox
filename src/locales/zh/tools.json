@@ -1,0 +1,97 @@
+{
+    "text2image": {
+      "title": "文字转图片生成器",
+      "description": "将文本转换为精美的图片",
+      "selectTemplate": "选择模板",
+      "inputLabel": "输入文本 (支持 Markdown)",
+      "placeholder": "# 标题\n## 子标题\n- 列表项\n**粗体** *斜体*",
+      "downloadButton": "生成图片",
+      "previewDefault": "# 预览区域\n输入文本后在这里预览效果",
+      "templates": {
+        "simple": "简约",
+        "ai-style": "AI风格",
+        "dark": "暗色",
+        "paper": "纸张",
+        "minimal": "极简",
+        "tech": "科技"
+      }
+    },
+    "quoteCard": {
+      "title": "名言卡片生成器",
+      "description": "名言双语文本转为卡片",
+      "chinesePlaceholder": "请输入中文名人名言",
+      "englishPlaceholder": "请输入英文翻译",
+      "authorPlaceholder": "请输入作者姓名",
+      "selectChineseFont": "选择中文字体",
+      "selectEnglishFont": "选择英文字体",
+      "selectFontColor": "选择字体颜色",
+      "selectAuthorColor": "选择作者颜色",
+      "selectBackground": "选择背景颜色",
+      "customBackground": "选择自定义背景颜色",
+      "downloadButton": "下载图片",
+      "defaultQuote": "中文名人名言",
+      "defaultTranslation": "英文翻译",
+      "defaultAuthor": "作者姓名",
+      "fonts": {
+        "system": "系统默认",
+        "sans": "无衬线",
+        "serif": "衬线",
+        "mono": "等宽"
+      },
+      "backgrounds": {
+        "white": "白色",
+        "dark": "黑色",
+        "paper": "黄色纸张"
+      }
+    },
+    "jsonFormatter": {
+      "title": "JSON 格式化",
+      "description": "美化和验证 JSON 数据",
+      "inputPlaceholder": "输入 JSON 数据",
+      "invalidJson": "无效的 JSON",
+      "copyButton": "复制",
+      "copiedMessage": "已复制"
+    },
+    "urlEncodeDecode": {
+      "title": "URL 编码/解码",
+      "description": "在线编码或解码 URL。",
+      "modeLabel": "选择模式",
+      "encode": "编码",
+      "decode": "解码"
+    },
+    "urlEncode": {
+      "inputLabel": "输入要编码的文本",
+      "resultLabel": "编码结果"
+    },
+    "urlDecode": {
+      "inputLabel": "输入要解码的 URL",
+      "resultLabel": "解码结果"
+    },
+    "openAITimeline": {
+      "title": "OpenAI 产品发布",
+      "description": "OpenAI 产品发布时间一览"
+    },
+    "modelPrice": {
+      "title": "全球大模型价格对比",
+      "description": "全球各模型价格对比竞技场"
+    },
+    "handwrite": {
+      "title": "手写字体生成器",
+      "description": "生成和纸上书写相媲美的效果"
+    },
+    "imageBase64Converter": {
+      "title": "Base64与图片转换",
+      "description": "图片与 Base64 的互相转换",
+      "imageToBase64": "图片转 Base64",
+      "base64Result": "Base64 结果",
+      "base64ToImage": "Base64 转图片",
+      "base64InputPlaceholder": "在此粘贴 Base64 字符串",
+      "imageResult": "图片结果",
+      "invalidBase64": "无效的 Base64 字符串",
+      "download": "下载图片"
+    },
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "最好用的 Chrome 浏览器摘要插件"
+    }
+}

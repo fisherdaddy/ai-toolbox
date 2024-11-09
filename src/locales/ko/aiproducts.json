@@ -1,0 +1,131 @@
+{
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "가장 유용한 Chrome 브라우저 요약 확장 프로그램"
+    },
+    "chatgpt": {
+        "title": "ChatGPT",
+        "description": "OpenAI의 AI 대화 도우미"
+    },
+    "claude": {
+        "title": "Claude",
+        "description": "Anthropic의 AI 대화 도우미"
+    },
+    "gemini": {
+        "title": "Gemini",
+        "description": "Google의 AI 대화 도구"
+    },
+    "poe": {
+        "title": "POE",
+        "description": "Quora의 멀티 모델 채팅 플랫폼"
+    },
+    "perplexity": {
+        "title": "Perplexity",
+        "description": "강력한 AI 검색 엔진"
+    },
+    "kimi": {
+        "title": "Kimi 도우미",
+        "description": "추론 및 심층 사고가 가능한 AI 도우미"
+    },
+    "doubao": {
+        "title": "Doubao",
+        "description": "ByteDance의 AI 대화 도우미"
+    },
+    "zhipu": {
+        "title": "Zhipu Qingyan",
+        "description": "이미지 생성 및 영상 제작을 지원하는 무료 만능 AI 도우미"
+    },
+    "yuanbao": {
+        "title": "Tencent Yuanbao",
+        "description": "Tencent의 AI 대화 도우미"
+    },
+    "qwen": {
+        "title": "Tongyi Qianwen",
+        "description": "Alibaba의 AI 대화 도우미"
+    },
+    "hailuo": {
+        "title": "Hailuo AI",
+        "description": "MiniMax의 AI 대화 도우미"
+    },
+    "baichuan": {
+        "title": "Baixiaoying",
+        "description": "Baichuan Intelligent의 무료 AI 도우미"
+    },
+    "wenxin": {
+        "title": "Wenxin Yiyan",
+        "description": "Baidu의 AI 대화 도우미"
+    },
+    "mita": {
+        "title": "Mita 검색",
+        "description": "광고 없이 결과로 직행하는 AI 검색 엔진"
+    },
+    "coze": {
+        "title": "Coze",
+        "description": "ByteDance의 AI 에이전트 플랫폼"
+    },
+    "midjourney": {
+        "title": "Midjourney",
+        "description": "이미지 및 일러스트 생성 AI 도구"
+    },
+    "stableDiffusion": {
+        "title": "Stable Diffusion",
+        "description": "StabilityAI의 텍스트-이미지 생성 AI"
+    },
+    "tongyiwanxiang": {
+        "title": "Tongyi Wanxiang",
+        "description": "Alibaba의 AI 그림 제작 플랫폼"
+    },
+    "wenxinyige": {
+        "title": "Wenxin Yige",
+        "description": "Baidu의 AI 예술 및 창작 보조 플랫폼"
+    },
+    "canva": {
+        "title": "Canva",
+        "description": "SNS 그래픽, 프레젠테이션, 포스터 등을 위한 디자인 플랫폼"
+    },
+    "meitu": {
+        "title": "Meitu 디자인 스튜디오",
+        "description": "AI 이미지 창작 및 디자인 플랫폼"
+    },
+    "keling": {
+        "title": "Keling AI",
+        "description": "Kuaishou의 AI 이미지 및 비디오 창작 플랫폼"
+    },
+    "runway": {
+        "title": "Runway",
+        "description": "그린 스크린 및 비디오 합성 등의 AI 비디오 제작 도구"
+    },
+    "luma": {
+        "title": "Dream Machine",
+        "description": "Luma의 AI 비디오 생성 도구"
+    },
+    "gamma": {
+        "title": "Gamma App",
+        "description": "AI 프레젠테이션 생성 도구"
+    },
+    "aippt": {
+        "title": "AiPPT",
+        "description": "AI로 고품질 PPT 빠르게 생성"
+    },
+    "suno": {
+        "title": "Suno",
+        "description": "고품질 AI 음악 창작 플랫폼"
+    },
+    "haimian": {
+        "title": "Haimian Music",
+        "description": "ByteDance의 무료 AI 음악 창작 및 발견 플랫폼"
+    },
+    "elevenLabs": {
+        "title": "ElevenLabs",
+        "description": "중국어를 포함한 28개 언어를 지원하는 AI 텍스트 음성 변환"
+    },
+    "tongyitingwu": {
+        "title": "Tongyi Tingwu",
+        "description": "Alibaba의 오디오 및 비디오 콘텐츠에 집중한 AI 도우미"
+    },
+    "cursor": {
+        "title": "Cursor",
+        "description": "빠른 프로그래밍을 위한 AI 코드 편집기"
+    }
+
+}

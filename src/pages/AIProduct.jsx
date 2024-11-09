@@ -268,13 +268,13 @@ const AIProduct = () => {
                     >
                       <img 
                         src={tool.icon} 
-                        alt={`${t(`tools.${tool.id}.title`)} icon`} 
+                        alt={`${t(`aiproducts.${tool.id}.title`)} icon`} 
                         className="tool-icon" 
                         loading="lazy" 
                       />
                       <div className="tool-content">
-                        <h3 className="tool-title">{t(`tools.${tool.id}.title`)}</h3>
-                        <p className="tool-description">{t(`tools.${tool.id}.description`)}</p>
+                        <h3 className="tool-title">{t(`aiproducts.${tool.id}.title`)}</h3>
+                        <p className="tool-description">{t(`aiproducts.${tool.id}.description`)}</p>
                       </div>
                     </a>
                   ) : (

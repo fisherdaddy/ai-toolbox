@@ -1,0 +1,40 @@
+{
+    "title": "AI 工具箱",
+    "description": "AI工具箱 - 集合了多种 AI 工具，如文字卡片、JSON 格式化、URL 解码器、OpenAI 产品发布汇总、全球各大模型价格对比，帮助您轻松完成各类任务。",
+    "slogan": "您的智能开发工具集合，一站式解决各种 AI 工具需求。",
+    "keywords": "AI工具箱，AI 工具，文字卡片，JSON 格式化，URL 解码器，OpenAI 产品，模型价格对比，在线工具，免费工具",
+    "welcome": "欢迎",
+    "login": "登录",
+    "loginSubtitle": "欢迎使用 AI 工具箱，请登录以获得完整体验",
+    "logout": "退出登录",
+    "dev-tools": "开发工具",
+    "image-tools": "图片工具",
+    "blog": "博客",
+    "ai-products": "AI 产品",
+    "notFound": {
+      "title": "404 - 页面未找到",
+      "description": "抱歉，您访问的页面不存在。",
+      "back_home": "返回首页"
+    },
+    "footer": {
+      "copyRight": "AI 工具箱. 保留所有权利。"
+    },
+    "about": {
+      "title": "关于我们",
+      "description": "AI 工具箱是一个集成多种AI开发工具的综合Web应用程序，旨在为用户提供一站式AI解决方案。",
+      "mission": "我们的使命",
+      "missionDescription": "通过提供强大的AI工具，赋能用户，提高生产力和创造力。",
+      "team": "我们的团队",
+      "teamDescription": "我们是一支由AI爱好者和开发人员组成的专注团队，致力于构建创新的解决方案。",
+      "contact": "联系我们"
+    },
+    "navigation": {
+      "about": "关于我们"
+    },
+    "categories": {
+      "Chatbots": "智能助手",
+      "Image": "图像",
+      "AudioVideo": "音视频",
+      "Productivity": "效率办公"
+    }
+}

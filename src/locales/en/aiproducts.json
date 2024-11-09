@@ -1,0 +1,130 @@
+{
+    "fisherai": {
+      "title": "FisherAI",
+      "description": "The Best Summary Extension for Chrome Browser"
+    },
+    "chatgpt": {
+        "title": "ChatGPT",
+        "description": "AI conversational assistant by OpenAI"
+    },
+    "claude": {
+        "title": "Claude",
+        "description": "AI conversational assistant by Anthropic"
+    },
+    "gemini": {
+        "title": "Gemini",
+        "description": "AI dialogue tool by Google"
+    },
+    "poe": {
+        "title": "POE",
+        "description": "Multi-model chat platform by Quora"
+    },
+    "perplexity": {
+        "title": "Perplexity",
+        "description": "A powerful AI search engine"
+    },
+    "kimi": {
+        "title": "Kimi Assistant",
+        "description": "An AI assistant with reasoning and deep thinking capabilities"
+    },
+    "doubao": {
+        "title": "Doubao",
+        "description": "AI conversational assistant by ByteDance"
+    },
+    "zhipu": {
+        "title": "Zhipu Qingyan",
+        "description": "A versatile and free AI assistant supporting image generation and video creation"
+    },
+    "yuanbao": {
+        "title": "Tencent Yuanbao",
+        "description": "AI conversational assistant by Tencent"
+    },
+    "qwen": {
+        "title": "Tongyi Qianwen",
+        "description": "AI conversational assistant by Alibaba"
+    },
+    "hailuo": {
+        "title": "Hailuo AI",
+        "description": "AI conversational assistant by MiniMax"
+    },
+    "baichuan": {
+        "title": "Baixiaoying",
+        "description": "A free AI assistant by Baichuan Intelligent"
+    },
+    "wenxin": {
+        "title": "Wenxin Yiyan",
+        "description": "AI conversational assistant by Baidu"
+    },
+    "mita": {
+        "title": "Mita Search",
+        "description": "Ad-free AI search engine delivering direct results"
+    },
+    "coze": {
+        "title": "Coze",
+        "description": "AI agent platform by ByteDance"
+    },
+    "midjourney": {
+        "title": "Midjourney",
+        "description": "AI tool for image and illustration generation"
+    },
+    "stableDiffusion": {
+        "title": "Stable Diffusion",
+        "description": "Text-to-image AI model by StabilityAI"
+    },
+    "tongyiwanxiang": {
+        "title": "Tongyi Wanxiang",
+        "description": "AI painting creation platform by Alibaba"
+    },
+    "wenxinyige": {
+        "title": "Wenxin Yige",
+        "description": "AI art and creative platform by Baidu"
+    },
+    "canva": {
+        "title": "Canva",
+        "description": "Graphic design platform for social media graphics, presentations, posters, and more"
+    },
+    "meitu": {
+        "title": "Meitu Design Studio",
+        "description": "AI platform for image creation and design"
+    },
+    "keling": {
+        "title": "Keling AI",
+        "description": "AI image and video creation platform by Kuaishou"
+    },
+    "runway": {
+        "title": "Runway",
+        "description": "A powerful AI video production tool for green screen keying and video composition"
+    },
+    "luma": {
+        "title": "Dream Machine",
+        "description": "AI video generation tool by Luma"
+    },
+    "gamma": {
+        "title": "Gamma App",
+        "description": "AI tool for generating presentation slides"
+    },
+    "aippt": {
+        "title": "AiPPT",
+        "description": "AI tool for quick high-quality PPT generation"
+    },
+    "suno": {
+        "title": "Suno",
+        "description": "High-quality AI music creation platform"
+    },
+    "haimian": {
+        "title": "Haimian Music",
+        "description": "Free AI music creation and discovery platform by ByteDance"
+    },
+    "elevenLabs": {
+        "title": "ElevenLabs",
+        "description": "AI text-to-speech supporting 28 languages, including Chinese"
+    },
+    "tongyitingwu": {
+        "title": "Tongyi Tingwu",
+        "description": "AI assistant by Alibaba focused on audio and video content for work and study"
+    },
+    "cursor": {
+        "title": "Cursor",
+        "description": "AI code editor for fast programming and software development"
+    }
+}

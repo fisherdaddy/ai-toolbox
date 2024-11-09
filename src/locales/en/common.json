@@ -1,0 +1,40 @@
+{
+    "title": "AI Toolbox",
+    "description": "AI Toolbox - A collection of AI tools including text cards, JSON formatter, URL decoder, OpenAI product releases summary, and global model price comparisons to help you accomplish various tasks effortlessly.",
+    "slogan": "Your intelligent development toolset, a one-stop solution for all AI tool needs.",
+    "keywords": "AI Toolbox, AI tools, text cards, JSON formatter, URL decoder, OpenAI products, model price comparison, online tools, free tools",
+    "welcome": "Welcome",
+    "login": "Login",
+    "loginSubtitle": "Welcome to AI Toolbox, please log in for the full experience",
+    "logout": "Logout",
+    "dev-tools": "Development Tools",
+    "image-tools": "Image Tools",
+    "blog": "Blog",
+    "ai-products": "AI Products",
+    "notFound": {
+      "title": "404 - Page Not Found",
+      "description": "Sorry, the page you are looking for does not exist.",
+      "back_home": "Back to Home"
+    },
+    "footer": {
+      "copyRight": "AI Toolbox. All rights reserved."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "AI Toolbox is a comprehensive web application that integrates various AI tools to provide users with a one-stop AI solution.",
+      "mission": "Our Mission",
+      "missionDescription": "To empower users with easy access to powerful AI tools, enhancing productivity and creativity.",
+      "team": "Our Team",
+      "teamDescription": "We are a dedicated team of AI enthusiasts and developers committed to building innovative solutions.",
+      "contact": "Contact Us"
+    },
+    "navigation": {
+      "about": "About Us"
+    },
+    "categories": {
+        "Chatbots": "Smart Assistant",
+        "Image": "Image",
+        "AudioVideo": "Audio & Video",
+        "Productivity": "Productivity"
+    }
+}
