@@ -447,7 +447,10 @@
         "Image": "图像",
         "AudioVideo": "音视频",
         "Productivity": "效率办公"
-      }
+      },
+      "login": "登录",
+      "loginSubtitle": "欢迎使用 AI 工具箱，请登录以获得完整体验",
+      "or": "或"
     },
     "ja": {
       "title": "AIツールボックス",
@@ -662,7 +665,7 @@
         "mission": "私たちの使命",
         "missionDescription": "強力なAIツールへの簡単なアクセスを提供し、ユーザーの生産性と創造性を高めること。",
         "team": "私たちのチーム",
-        "teamDescription": "私たちは革新的なソリューションの構築に専念するAI愛好家と開発者の献身的なチームです。",
+        "teamDescription": "私たちは革新的なソリューションを축하는 데 전념하는 AI 애호가 및 개발자 팀입니다.",
         "contact": "お問い合わせ"
       },
       "navigation": {

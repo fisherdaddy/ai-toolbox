@@ -16,8 +16,8 @@
 
 .title {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
   color: #6366F1; /* 使用与图片中紫色渐变相近的颜色 */
   transition: color 0.2s ease;
@@ -64,12 +64,13 @@ header nav {
 }
 
 .menu-items a {
-  color: hsl(205deg, 25%, 23%);
+  color: #4B5563;
   text-decoration: none;
-  padding: 0 15px;
-  font-size: 16px; /* 增大字体大小 */
-  font-weight: 500; /* 调整字体粗细 */
-  transition: color 0.2s ease;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .menu-items a:hover {
@@ -176,4 +177,258 @@ header nav {
   margin-left: auto; /* 将右侧容器推到最右边 */
   display: flex;
   align-items: center;
+}
+
+/* 导航栏基础样式 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+}
+
+/* Logo和标题容器 */
+.logo-title-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.02em;
+}
+
+/* 导航菜单 */
+.menu-items {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  gap: 2rem;
+}
+
+.menu-items a {
+  color: #4B5563;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+  color: #6366F1;
+}
+
+.menu-items a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  transition: width 0.3s ease;
+}
+
+.menu-items a:hover::after {
+  width: 100%;
+}
+
+.menu-items a.active {
+  color: #6366F1;
+}
+
+.menu-items a.active::after {
+  width: 100%;
+}
+
+/* 右侧容器 */
+.right-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* 用户头像和下拉菜单 */
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.avatar:hover {
+  border-color: #6366F1;
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 120px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background: none;
+  border: none;
+  color: #4B5563;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366F1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .menu-items {
+    display: none;
+  }
+  
+  .right-container {
+    gap: 1rem;
+  }
+}
+
+/* 登录按钮样式 */
+.auth-container .login-button {
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-container .login-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+}
+
+/* 头像和下拉菜单样式优化 */
+.avatar-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.avatar:hover {
+  border-color: #6366F1;
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 150px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: #4B5563;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-menu button:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366F1;
 }
