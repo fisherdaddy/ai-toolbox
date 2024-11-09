@@ -1,13 +1,14 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import html2canvas from 'html2canvas';
+import { useTranslation } from '../js/i18n';
 
 // 更新中文字体数组，包含显示名称和 CSS 字体族名称
 const chineseFonts = [
-    { name: '系统默认', value: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif' },
-    { name: '无衬线', value: '"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif' },
-    { name: '衬线', value: 'Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, serif' },
-    { name: '等宽', value: '"SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, "Noto Sans Mono CJK SC", monospace' },
+    { name: 'system', value: '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif' },
+    { name: 'sans', value: '"PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif' },
+    { name: 'serif', value: 'Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, serif' },
+    { name: 'mono', value: '"SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, "Noto Sans Mono CJK SC", monospace' },
   ];
 
 // 定义可选的英文字体
@@ -21,10 +22,9 @@ const englishFonts = [
 
 // 定义可选的背景颜色
 const backgroundOptions = [
-  { name: '白色', value: '#FFFFFF' },
-  { name: '黑色', value: '#333333' }, // 修改为深灰色
-  { name: '黄色纸张', value: '#fdf6e3' },
-  { name: '自定义', value: 'custom' },
+  { name: 'white', value: '#FFFFFF' },
+  { name: 'dark', value: '#333333' }, // 修改为深灰色
+  { name: 'paper', value: '#fdf6e3' },
 ];
 
 const Container = styled.div`
@@ -203,6 +203,8 @@ const DownloadButton = styled.button`
 `;
 
 function QuoteCard() {
+  const { t } = useTranslation();
+  
   const [chineseText, setChineseText] = useState('');
   const [englishText, setEnglishText] = useState('');
   const [author, setAuthor] = useState('');
@@ -242,36 +244,34 @@ function QuoteCard() {
   return (
     <Container>
       <ContentWrapper>
-        {/* 左侧输入区域 */}
         <InputContainer>
-          <TitleLabel>名言卡片生成器</TitleLabel>
+          <TitleLabel>{t('tools.quoteCard.title')}</TitleLabel>
           <InputText
-            placeholder="请输入中文名人名言"
+            placeholder={t('tools.quoteCard.chinesePlaceholder')}
             value={chineseText}
             onChange={(e) => setChineseText(e.target.value)}
           />
           <InputText
-            placeholder="请输入英文翻译"
+            placeholder={t('tools.quoteCard.englishPlaceholder')}
             value={englishText}
             onChange={(e) => setEnglishText(e.target.value)}
           />
           <InputField
-            placeholder="请输入作者姓名"
+            placeholder={t('tools.quoteCard.authorPlaceholder')}
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
 
-          {/* 字体选择 */}
-          <Label>选择中文字体:</Label>
+          <Label>{t('tools.quoteCard.selectChineseFont')}:</Label>
           <Select value={chineseFont} onChange={(e) => setChineseFont(e.target.value)}>
             {chineseFonts.map((font) => (
               <option key={font.value} value={font.value}>
-                {font.name}
+                {t(`tools.quoteCard.fonts.${font.name}`)}
               </option>
             ))}
           </Select>
 
-          <Label>选择英文字体:</Label>
+          <Label>{t('tools.quoteCard.selectEnglishFont')}:</Label>
           <Select value={englishFont} onChange={(e) => setEnglishFont(e.target.value)}>
             {englishFonts.map((font) => (
               <option key={font.value} value={font.value}>
@@ -280,70 +280,57 @@ function QuoteCard() {
             ))}
           </Select>
 
-          {/* 字体颜色选择 */}
-          <Label>选择字体颜色:</Label>
+          <Label>{t('tools.quoteCard.selectFontColor')}:</Label>
           <ColorInput
             type="color"
             value={fontColor}
             onChange={(e) => setFontColor(e.target.value)}
           />
 
-          {/* 作者颜色选择 */}
-          <Label>选择作者颜色:</Label>
+          <Label>{t('tools.quoteCard.selectAuthorColor')}:</Label>
           <ColorInput
             type="color"
             value={authorColor}
             onChange={(e) => setAuthorColor(e.target.value)}
           />
 
-          {/* 背景色选择 */}
-          <Label>选择背景颜色:</Label>
+          <Label>{t('tools.quoteCard.selectBackground')}:</Label>
           <Select
-            value={
-              backgroundOptions.some((option) => option.value === bgColor)
-                ? bgColor
-                : 'custom'
-            }
+            value={backgroundOptions.some((option) => option.value === bgColor) ? bgColor : 'custom'}
             onChange={handleBackgroundChange}
           >
             {backgroundOptions.map((option) => (
-              <option key={option.name} value={option.value}>
-                {option.name}
+              <option key={option.value} value={option.value}>
+                {t(`tools.quoteCard.backgrounds.${option.name}`)}
               </option>
             ))}
           </Select>
           {bgColor === 'custom' && (
             <>
-              <Label>选择自定义背景颜色:</Label>
+              <Label>{t('tools.quoteCard.customBackground')}:</Label>
               <ColorInput
                 type="color"
                 value={customBgColor}
                 onChange={(e) => setBgColor(e.target.value)}
-                title="选择自定义背景颜色"
+                title={t('tools.quoteCard.customBackground')}
               />
             </>
           )}
 
-          {/* 下载按钮 */}
           <DownloadButton onClick={handleDownload}>
-            下载图片
+            {t('tools.quoteCard.downloadButton')}
           </DownloadButton>
         </InputContainer>
 
-        {/* 右侧预览区域 */}
-        <PreviewContainer
-          $bgColor={bgColor}
-          $fontColor={fontColor}
-          ref={previewRef}
-        >
+        <PreviewContainer $bgColor={bgColor} $fontColor={fontColor} ref={previewRef}>
           <QuoteText $color={fontColor} $fontFamily={chineseFont}>
-            {chineseText || '请输入中文名人名言'}
+            {chineseText || t('tools.quoteCard.defaultQuote')}
           </QuoteText>
           <QuoteText $color={fontColor} $fontFamily={englishFont}>
-            {englishText || 'Enter the English translation here.'}
+            {englishText || t('tools.quoteCard.defaultTranslation')}
           </QuoteText>
           <QuoteAuthor $color={authorColor} $fontFamily={englishFont}>
-            —— {author || '作者姓名'}
+            —— {author || t('tools.quoteCard.defaultAuthor')}
           </QuoteAuthor>
         </PreviewContainer>
       </ContentWrapper>

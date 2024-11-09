@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 const tools = [
   { id: 'handwrite', icon: '/assets/icon/handwrite.png', path: '/handwriting' },
-  { id: 'quotecard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
+  { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'text2image', icon: '/assets/icon/text2image.png', path: '/text2image' },
   { id: 'jsonFormatter', icon: '/assets/icon/json-format.png', path: '/json-formatter' },
   { id: 'urlEncodeDecode', icon: '/assets/icon/url-endecode.png', path: '/url-encode-and-decode' },

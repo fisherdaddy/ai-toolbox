@@ -11,6 +11,8 @@
     "@react-oauth/google": "^0.12.1",
     "antd": "^5.21.6",
     "html2canvas": "^1.4.1",
+    "marked": "^15.0.0",
+    "marked-react": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

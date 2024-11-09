@@ -16,8 +16,48 @@
         "text2image": {
           "title": "Text to Image Card",
           "description": "Convert text to image card",
-          "inputPlaceholder": "Enter text (can include titles, e.g. # Title 1)",
-          "downloadButton": "Export as Image"
+          "selectTemplate": "Select Template",
+          "inputLabel": "Input Text (Markdown Supported)",
+          "placeholder": "# Title\n## Subtitle\n- List item\n**Bold** *Italic*",
+          "downloadButton": "Export as Image",
+          "previewDefault": "# Preview Area\nEnter text to see preview here",
+          "templates": {
+            "simple": "Simple",
+            "ai-style": "AI Style",
+            "dark": "Dark",
+            "paper": "Paper",
+            "minimal": "Minimal",
+            "tech": "Tech"
+          }
+        },
+        "quoteCard": {
+          "title": "Quote Card Generator",
+          "description": "Convert bilingual quotes to cards",
+          "chinesePlaceholder": "Enter quote in Chinese",
+          "englishPlaceholder": "Enter English translation",
+          "authorPlaceholder": "Enter author name",
+          "selectChineseFont": "Select Chinese Font",
+          "selectEnglishFont": "Select English Font",
+          "selectFontColor": "Select Font Color",
+          "selectAuthorColor": "Select Author Color",
+          "selectBackground": "Select Background",
+          "customBackground": "Select Custom Background",
+          "downloadButton": "Download Image",
+          "defaultQuote": "Enter quote in Chinese",
+          "defaultTranslation": "Enter the English translation here.",
+          "defaultAuthor": "Author Name",
+          "fonts": {
+            "system": "System Default",
+            "sans": "Sans Serif",
+            "serif": "Serif",
+            "mono": "Monospace"
+          },
+          "backgrounds": {
+            "white": "White",
+            "dark": "Dark",
+            "paper": "Paper",
+            "custom": "Custom"
+          }
         },
         "jsonFormatter": {
           "title": "JSON Formatter",
@@ -68,10 +108,6 @@
         "fisherai": {
           "title": "FisherAI",
           "description": "The Best Summary Extension for Chrome Browser"
-        },
-        "quotecard": {
-          "title": "Famous Quote Card Generator",
-          "description": "Convert bilingual famous quotes into cards"
         },
         "chatgpt": {
             "title": "ChatGPT",
@@ -240,10 +276,49 @@
       "ai-products": "AI 产品",
       "tools": {
         "text2image": {
-          "title": "文字卡片",
-          "description": "将文字转换为图片卡",
-          "inputPlaceholder": "输入文本（可包含标题，如# 标题1）",
-          "downloadButton": "导出为图片"
+          "title": "文字转图片生成器",
+          "description": "将文本转换为精美的图片",
+          "selectTemplate": "选择模板",
+          "inputLabel": "输入文本 (支持 Markdown)",
+          "placeholder": "# 标题\n## 子标题\n- 列表项\n**粗体** *斜体*",
+          "downloadButton": "生成图片",
+          "previewDefault": "# 预览区域\n输入文本后在这里预览效果",
+          "templates": {
+            "simple": "简约",
+            "ai-style": "AI风格",
+            "dark": "暗色",
+            "paper": "纸张",
+            "minimal": "极简",
+            "tech": "科技"
+          }
+        },
+        "quoteCard": {
+          "title": "名言卡片生成器",
+          "description": "名言双语文本转为卡片",
+          "chinesePlaceholder": "请输入中文名人名言",
+          "englishPlaceholder": "请输入英文翻译",
+          "authorPlaceholder": "请输入作者姓名",
+          "selectChineseFont": "选择中文字体",
+          "selectEnglishFont": "选择英文字体",
+          "selectFontColor": "选择字体颜色",
+          "selectAuthorColor": "选择作者颜色",
+          "selectBackground": "选择背景颜色",
+          "customBackground": "选择自定义背景颜色",
+          "downloadButton": "下载图片",
+          "defaultQuote": "中文名人名言",
+          "defaultTranslation": "英文翻译",
+          "defaultAuthor": "作者姓名",
+          "fonts": {
+            "system": "系统默认",
+            "sans": "无衬线",
+            "serif": "衬线",
+            "mono": "等宽"
+          },
+          "backgrounds": {
+            "white": "白色",
+            "dark": "黑色",
+            "paper": "黄色纸张"
+          }
         },
         "jsonFormatter": {
           "title": "JSON 格式化",
@@ -294,10 +369,6 @@
         "fisherai": {
           "title": "FisherAI",
           "description": "最好用的 Chrome 浏览器摘要插件"
-        },
-        "quotecard": {
-          "title": "名言卡片生成器",
-          "description": "名言双语文本转为卡片"
         },
         "chatgpt": {
           "title": "ChatGPT",
@@ -389,7 +460,7 @@
         },
         "runway": {
           "title": "Runway",
-          "description": "强大的AI视频制作工具，绿幕抠像、视频合成等"
+          "description": "强大的AI视频制作工具，绿幕抠像视频合成等"
         },
         "luma": {
           "title": "Dream Machine",
@@ -469,7 +540,47 @@
           "title": "テキストから画像",
           "description": "テキストを画像カードに変換",
           "inputPlaceholder": "テキストを入力（タイトルを含めることができます、例：# タイトル1）",
-          "downloadButton": "画像としてエクスポート"
+          "selectTemplate": "テンプレートを選択",
+          "previewDefault": "# プレビューエリア\nテキストを入力すると、ここにプレビューが表示されます",
+          "placeholder": "# タイトル\n## サブタイトル\n- リスト項目\n**太字** *斜体*",
+          "downloadButton": "画像としてエクスポート",
+          "templates": {
+            "simple": "シンプル",
+            "ai-style": "AIスタイル",
+            "dark": "ダーク",
+            "paper": "ペーパー",
+            "minimal": "ミニマル",
+            "tech": "テック"
+          }
+        },
+        "quoteCard": {
+          "title": "名言カードジェネレーター",
+          "description": "名言のバイリンガルテキストをカードに変換",
+          "chinesePlaceholder": "中国語の名言を入力",
+          "englishPlaceholder": "英語訳を入力",
+          "authorPlaceholder": "著者名を入力",
+          "selectChineseFont": "中国語フォントを選択",
+          "selectEnglishFont": "英語フォントを選択",
+          "selectFontColor": "フォントカラーを選択",
+          "selectAuthorColor": "著者名の色を選択",
+          "selectBackground": "背景色を選択",
+          "customBackground": "カスタム背景色を選択",
+          "downloadButton": "画像をダウンロード",
+          "defaultQuote": "中国語の名言を入力してください",
+          "defaultTranslation": "英語訳をここに入力してください",
+          "defaultAuthor": "著者名",
+          "fonts": {
+            "system": "システムデフォルト",
+            "sans": "サンセリフ",
+            "serif": "セリフ",
+            "mono": "等幅"
+          },
+          "backgrounds": {
+            "white": "白",
+            "dark": "黒",
+            "paper": "クリーム",
+            "custom": "カスタム"
+          }
         },
         "jsonFormatter": {
           "title": "JSONフォーマッター",
@@ -520,10 +631,6 @@
         "fisherai": {
           "title": "FisherAI",
           "description": "最高のChromeブラウザ用要約プラグイン"
-        },
-        "quotecard": {
-          "title": "名言カード生成器",
-          "description": "名言のバイリンガルテキストをカードに変換"
         },
         "chatgpt": {
             "title": "ChatGPT",
@@ -686,7 +793,7 @@
       "keywords": "AI 도구상자, AI 도구, 텍스트 카드, JSON 포매터, URL 디코더, OpenAI 제품, 모델 가격 비교, 온라인 도구, 무료 도구",
       "welcome": "환영합니다",
       "login": "로그인",
-      "loginSubtitle": "AI 툴박스에 오신 것을 환영합니다. 전체 경험을 위해 로그인해 주세요",
+      "loginSubtitle": "AI 툴��스에 오신 것을 환영합니다. 전체 경험을 위해 로그인해 주세요",
       "logout": "로그아웃",
       "dev-tools": "개발 도구",
       "image-tools": "이미지 도구",
@@ -697,7 +804,48 @@
           "title": "텍스트를 이미지로",
           "description": "텍스트를 이미지 카드로 변환",
           "inputPlaceholder": "텍스트 입력 (제목 포함 가능, 예: # 제목 1)",
-          "downloadButton": "이미지로 내보내기"
+          "downloadButton": "이미지로 내보내기",
+          "selectTemplate": "템플릿 선택",
+          "inputLabel": "텍스트 입력 (Markdown 지원)",
+          "placeholder": "# 제목\n## 부제목\n- 목록 항목\n**굵게** *기울임*",
+          "previewDefault": "# 미리보기 영역\n텍스트 입력 후 여기에 미리보기가 표시됩니다",
+          "templates": {
+            "simple": "심플",
+            "ai-style": "AI 스타일",
+            "dark": "다크",
+            "paper": "페이퍼",
+            "minimal": "미니멀",
+            "tech": "테크"
+          }
+        },
+        "quoteCard": {
+          "title": "명언 카드 생성기",
+          "description": "명언 이중 언어 텍스트를 카드로 변환",
+          "chinesePlaceholder": "중국어 명언 입력",
+          "englishPlaceholder": "영어 번역 입력",
+          "authorPlaceholder": "저자 이름 입력",
+          "selectChineseFont": "중국어 글꼴 선택",
+          "selectEnglishFont": "영어 글꼴 선택",
+          "selectFontColor": "글자 색상 선택",
+          "selectAuthorColor": "저자명 색상 선택",
+          "selectBackground": "배경 색상 선택",
+          "customBackground": "사용자 정의 배경 선택",
+          "downloadButton": "이미지 다운로드",
+          "defaultQuote": "중국어 명언을 입력하세요",
+          "defaultTranslation": "영어 번역을 여기에 입력하세요",
+          "defaultAuthor": "저자명",
+          "fonts": {
+            "system": "시스템 기본",
+            "sans": "고딕체",
+            "serif": "명조체",
+            "mono": "고정폭"
+          },
+          "backgrounds": {
+            "white": "흰색",
+            "dark": "검정",
+            "paper": "크림색",
+            "custom": "사용자 정의"
+          }
         },
         "jsonFormatter": {
           "title": "JSON 포맷터",
@@ -748,10 +896,6 @@
         "fisherai": {
           "title": "FisherAI",
           "description": "가장 유용한 Chrome 브라우저 요약 확장 프로그램"
-        },
-        "quotecard": {
-          "title": "명언 카드 생성기",
-          "description": "명언 이중 언어 텍스트를 카드로 변환"
         },
         "chatgpt": {
             "title": "ChatGPT",
