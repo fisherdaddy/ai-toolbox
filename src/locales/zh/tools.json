@@ -88,7 +88,10 @@
       "base64InputPlaceholder": "在此粘贴 Base64 字符串",
       "imageResult": "图片结果",
       "invalidBase64": "无效的 Base64 字符串",
-      "download": "下载图片"
+      "download": "下载图片",
+      "dragOrClick": "拖拽或点击上传图片",
+      "fileName": "文件名",
+      "fileSize": "文件大小"
     },
     "fisherai": {
       "title": "FisherAI",

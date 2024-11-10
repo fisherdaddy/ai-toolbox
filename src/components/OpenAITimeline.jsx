@@ -4,26 +4,25 @@ import events from '../data/openai-releases.json';
 import SEO from '../components/SEO';
 import { useTranslation } from '../js/i18n';
 
-
-const timeline = () => {
+const Timeline = () => {
   const { t } = useTranslation();
 
   return (
     <>
-     <SEO
+      <SEO
         title={t('tools.openAITimeline.title')}
         description={t('tools.openAITimeline.description')}
       />
       <div className="container">
-        <div className="timeline-title">OpenAI 产品发布时间线</div>
+        <h1 className="timeline-title">{t('tools.openAITimeline.title')}</h1>
         <ul className="timeline">
           {events.map((item, index) => (
             <li className="event" key={index}>
               <div className="event-content">
                 <div className="event-date">{item.date}</div>
                 <div className="event-title">{item.title}</div>
-                <div class="event-feature">{item.feature}</div>
-                <div class="event-description">{item.description}</div>
+                <div className="event-feature">{item.feature}</div>
+                <div className="event-description">{item.description}</div>
               </div>
             </li>
           ))}
@@ -33,4 +32,4 @@ const timeline = () => {
   );
 };
 
-export default timeline;
+export default Timeline;

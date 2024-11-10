@@ -90,7 +90,10 @@
       "base64InputPlaceholder": "여기에 Base64 문자열을 붙여넣기",
       "imageResult": "이미지 결과",
       "invalidBase64": "잘못된 Base64 문자열",
-      "download": "이미지 다운로드"
+      "download": "이미지 다운로드",
+      "dragOrClick": "드래그 앤 드롭 또는 클릭하여 업로드",
+      "fileName": "파일 이름",
+      "fileSize": "파일 크기"
     },
     "fisherai": {
       "title": "FisherAI",

@@ -2,26 +2,28 @@
 import React, { useState } from 'react';
 import '../styles/PricingChart.css';
 
-const ChartLegend = ({ onLegendClick, highlightedBarTypes }) => (
-  <div className="legend">
-    <div
-      className="legend-item"
-      onClick={() => onLegendClick('input')}
-      style={{ cursor: 'pointer', opacity: highlightedBarTypes.input ? 1 : 0.5 }}
-    >
-      <div className="legend-color input-color"></div>
-      <span>Input price</span>
+const ChartLegend = ({ onLegendClick, highlightedBarTypes }) => {
+  return (
+    <div className="legend">
+      <div
+        className="legend-item"
+        onClick={() => onLegendClick('input')}
+        style={{ cursor: 'pointer', opacity: highlightedBarTypes.input ? 1 : 0.5 }}
+      >
+        <div className="legend-color input-color"></div>
+        <span>Input Price</span>
+      </div>
+      <div
+        className="legend-item"
+        onClick={() => onLegendClick('output')}
+        style={{ cursor: 'pointer', opacity: highlightedBarTypes.output ? 1 : 0.5 }}
+      >
+        <div className="legend-color output-color"></div>
+        <span>Output Price</span>
+      </div>
     </div>
-    <div
-      className="legend-item"
-      onClick={() => onLegendClick('output')}
-      style={{ cursor: 'pointer', opacity: highlightedBarTypes.output ? 1 : 0.5 }}
-    >
-      <div className="legend-color output-color"></div>
-      <span>Output price</span>
-    </div>
-  </div>
-);
+  );
+};
 
 const ChartBar = ({ price, type, maxPrice, highlighted }) => {
   const getBarHeight = () => {

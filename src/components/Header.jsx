@@ -73,11 +73,11 @@ function Header() {
             <NavLink to="/image-tools" onClick={handleNavClick}>
               {t('image-tools')}
             </NavLink>
-            <NavLink to="/blog" onClick={handleNavClick}>
-              {t('blog')}
-            </NavLink>
             <NavLink to="/ai-products" onClick={handleNavClick}>
               {t('ai-products')}
+            </NavLink>
+            <NavLink to="/blog" onClick={handleNavClick}>
+              {t('blog')}
             </NavLink>
           </div>
           <div className="right-container">

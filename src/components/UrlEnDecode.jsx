@@ -1,43 +1,64 @@
 import React, { useState, useCallback } from 'react';
-import { Title, Wrapper, Container, InputText, Preview } from '../js/SharedStyles';
+import { Title, Wrapper, Container, Preview } from '../js/SharedStyles';
 import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
 
 const EncoderDecoderContainer = styled(Container)`
   flex-direction: column;
+  gap: 16px;
 `;
 
-const StyledInputText = styled(InputText)`
-  height: 100px;
-  margin-bottom: 20px;
-  @media (min-width: 768px) {
-    height: 100px;
-    width: 100%;
-  }
-`;
-
-const PreviewWrapper = styled.div`
+const StyledInputText = styled.textarea`
   width: 100%;
+  height: 120px;
+  font-size: 15px;
+  padding: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+
+  &:focus {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  }
 `;
 
 const Label = styled.label`
   font-weight: 500;
   font-size: 14px;
-  color: #5f6368;
+  color: #374151;
   margin-bottom: 8px;
   display: block;
   letter-spacing: 0.1px;
 `;
 
-const StyledPreview = styled(Preview)`
-  background-color: #f8f9fa;
-  padding: 12px 40px 12px 12px; // 增加右侧 padding 为按钮留出空间
-  border-radius: 8px;
-  border: 1px solid #dadce0;
-  font-size: 14px;
-  color: #202124;
-  min-height: 24px; // 确保即使内容为空，也有足够的高度容纳按钮
+const ModeSwitcher = styled.div`
+  margin-bottom: 8px;
+
+  select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    font-size: 14px;
+    color: #374151;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+      outline: none;
+    }
+  }
 `;
 
 const ResultContainer = styled.div`
@@ -45,43 +66,47 @@ const ResultContainer = styled.div`
   width: 100%;
 `;
 
-const CopyButton = styled.button`
+const StyledPreview = styled.div`
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 16px;
+  font-size: 15px;
+  color: #374151;
+  min-height: 24px;
+  line-height: 1.5;
+  position: relative;
+`;
+
+const ActionButton = styled.button`
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: transparent;
+  top: 12px;
+  right: 12px;
+  background: rgba(99, 102, 241, 0.1);
   border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
   cursor: pointer;
-  padding: 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0.6;
-  transition: opacity 0.3s, color 0.3s;
+  gap: 6px;
+  font-size: 13px;
+  color: #6366F1;
+  transition: all 0.3s ease;
 
   &:hover {
-    opacity: 1;
+    background: rgba(99, 102, 241, 0.2);
+  }
+
+  &.active {
+    background: #6366F1;
+    color: white;
   }
 
   svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  &.copied {
-    color: #34a853; // 成功复制后的反馈颜色
-  }
-`;
-
-const ModeSwitcher = styled.div`
-  margin-bottom: 20px;
-
-  select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #dadce0;
-    font-size: 14px;
-    color: #202124;
+    width: 14px;
+    height: 14px;
   }
 `;
 
@@ -138,29 +163,41 @@ function UrlEncoderDecoder() {
               <option value="decode">{t('tools.urlEncodeDecode.decode')}</option>
             </select>
           </ModeSwitcher>
-          <StyledInputText
-            id="urlInput"
-            placeholder={mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
-            value={input}
-            onChange={handleInputChange}
-          />
-          <PreviewWrapper>
-            <Label>{mode === 'decode' ? t('tools.urlDecode.resultLabel') : t('tools.urlEncode.resultLabel')}</Label>
+          
+          <div>
+            <Label>
+              {mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
+            </Label>
+            <StyledInputText
+              value={input}
+              onChange={handleInputChange}
+              placeholder={mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
+            />
+          </div>
+
+          <div>
+            <Label>
+              {mode === 'decode' ? t('tools.urlDecode.resultLabel') : t('tools.urlEncode.resultLabel')}
+            </Label>
             <ResultContainer>
               <StyledPreview>{resultText}</StyledPreview>
-              <CopyButton onClick={handleCopy} className={isCopied ? 'copied' : ''}>
+              <ActionButton 
+                onClick={handleCopy} 
+                className={isCopied ? 'active' : ''}
+              >
                 {isCopied ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
                 ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                   </svg>
                 )}
-              </CopyButton>
+                {isCopied ? t('tools.jsonFormatter.copiedMessage') : t('tools.jsonFormatter.copyButton')}
+              </ActionButton>
             </ResultContainer>
-          </PreviewWrapper>
+          </div>
         </EncoderDecoderContainer>
       </Wrapper>
     </>

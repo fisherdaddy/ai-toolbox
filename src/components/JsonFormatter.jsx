@@ -7,19 +7,26 @@ import SEO from '../components/SEO';
 const InputText = styled.textarea`
   width: 100%;
   height: 200px;
-  font-size: 14px;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+  padding: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   box-sizing: border-box;
   outline: none;
   resize: none;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+
+  &:focus {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  }
 
   @media (min-width: 768px) {
-    width: 35%;
+    width: 40%;
     height: 100%;
-    border-bottom: none;
-    border-right: 1px solid #e0e0e0;
   }
 `;
 
@@ -27,62 +34,52 @@ const PreviewContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 16px;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    width: 65%;
+    width: 58%;
     height: 100%;
   }
 `;
 
-const ToggleButton = styled.span`
-  cursor: pointer;
-  color: #666;
-  font-weight: bold;
-  margin-right: 5px;
-`;
-
-const Key = styled.span`
-  color: #881391;
-`;
-
-const Value = styled.span`
-  color: #1a1aa6;
-`;
-
-const JsonList = styled.ul`
-  list-style-type: none;
-  padding-left: 20px;
-  margin: 0;
-`;
-
-const CopyButton = styled.button`
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 8px;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
+  top: 12px;
+  right: 12px;
+`;
+
+const ActionButton = styled.button`
+  background: rgba(99, 102, 241, 0.1);
   border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
   cursor: pointer;
-  padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0.6;
-  transition: opacity 0.3s, color 0.3s;
+  gap: 6px;
+  font-size: 13px;
+  color: #6366F1;
+  transition: all 0.3s ease;
 
   &:hover {
-    opacity: 1;
+    background: rgba(99, 102, 241, 0.2);
+  }
+
+  &.active {
+    background: #6366F1;
+    color: white;
   }
 
   svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  &.copied {
-    color: #34a853; // Google green color for success feedback
+    width: 14px;
+    height: 14px;
   }
 `;
 
@@ -90,11 +87,58 @@ const RelativePreviewContainer = styled(PreviewContainer)`
   position: relative;
 `;
 
+const ToggleButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6366F1;
+  font-size: 13px;
+  padding: 2px 6px;
+  margin-right: 6px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+`;
+
+const JsonList = styled.ul`
+  list-style-type: none;
+  padding-left: 24px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+`;
+
+const Key = styled.span`
+  color: #6366F1;
+  font-weight: 500;
+  font-size: 15px;
+`;
+
+const Value = styled.span`
+  color: #374151;
+  font-size: 15px;
+  
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+`;
+
 function JsonFormatter() {
   const { t } = useTranslation();
   const [input, setInput] = useState('');
   const [parsedJson, setParsedJson] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
+  const [isCompressed, setIsCompressed] = useState(false);
 
   useEffect(() => {
     try {
@@ -107,7 +151,9 @@ function JsonFormatter() {
 
   const handleCopy = () => {
     if (parsedJson) {
-      const formattedJson = JSON.stringify(parsedJson, null, 2);
+      const formattedJson = isCompressed 
+        ? JSON.stringify(parsedJson)
+        : JSON.stringify(parsedJson, null, 2);
       navigator.clipboard.writeText(formattedJson).then(() => {
         setIsCopied(true);
         setTimeout(() => setIsCopied(false), 2000);
@@ -115,9 +161,13 @@ function JsonFormatter() {
     }
   };
 
+  const toggleCompression = () => {
+    setIsCompressed(!isCompressed);
+  };
+
   return (
     <>
-       <SEO
+      <SEO
         title={t('tools.jsonFormatter.title')}
         description={t('tools.jsonFormatter.description')}
       />
@@ -133,19 +183,43 @@ function JsonFormatter() {
             {parsedJson ? (
               <>
                 <Preview>
-                  <JsonView data={parsedJson} />
-                </Preview>
-                <CopyButton onClick={handleCopy} className={isCopied ? 'copied' : ''}>
-                  {isCopied ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
+                  {isCompressed ? (
+                    <pre style={{ margin: 0, whiteSpace: 'nowrap', overflowX: 'auto' }}>
+                      {JSON.stringify(parsedJson)}
+                    </pre>
                   ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                    </svg>
+                    <JsonView data={parsedJson} />
                   )}
-                </CopyButton>
+                </Preview>
+                <ButtonGroup>
+                  <ActionButton 
+                    onClick={toggleCompression}
+                    className={isCompressed ? 'active' : ''}
+                  >
+                    {isCompressed ? (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 9h16v2H4V9zm0 4h16v2H4v-2z"/>
+                      </svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 13H5v-2h14v2z"/>
+                      </svg>
+                    )}
+                    {isCompressed ? '展开' : '压缩'}
+                  </ActionButton>
+                  <ActionButton onClick={handleCopy} className={isCopied ? 'active' : ''}>
+                    {isCopied ? (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                      </svg>
+                    )}
+                    {isCopied ? '已复制' : '复制'}
+                  </ActionButton>
+                </ButtonGroup>
               </>
             ) : (
               <Preview>{t('tools.jsonFormatter.invalidJson')}</Preview>
@@ -164,10 +238,19 @@ function JsonView({ data }) {
     return (
       <div>
         <ToggleButton onClick={() => setIsExpanded(!isExpanded)}>
-          {isExpanded ? '[-]' : '[+]'}
+          {isExpanded ? (
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          )}
         </ToggleButton>
-        {!isExpanded && <span>Array</span>}
-        {isExpanded && (
+        {!isExpanded ? (
+          <span style={{ color: '#6B7280', fontSize: '15px' }}>Array [{data.length}]</span>
+        ) : (
           <JsonList>
             [
             {data.map((item, index) => (
@@ -182,19 +265,29 @@ function JsonView({ data }) {
       </div>
     );
   } else if (typeof data === 'object' && data !== null) {
+    const entries = Object.entries(data);
     return (
       <div>
         <ToggleButton onClick={() => setIsExpanded(!isExpanded)}>
-          {isExpanded ? '{-}' : '{+}'}
+          {isExpanded ? (
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          )}
         </ToggleButton>
-        {!isExpanded && <span>Object</span>}
-        {isExpanded && (
+        {!isExpanded ? (
+          <span style={{ color: '#6B7280', fontSize: '15px' }}>Object {`{${entries.length}}`}</span>
+        ) : (
           <JsonList>
             {'{'}
-            {Object.entries(data).map(([key, value], index, array) => (
+            {entries.map(([key, value], index) => (
               <li key={key}>
                 <Key>"{key}"</Key>: <JsonView data={value} />
-                {index < array.length - 1 && ','}
+                {index < entries.length - 1 && ','}
               </li>
             ))}
             {'}'}

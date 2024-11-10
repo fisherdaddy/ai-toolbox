@@ -89,7 +89,10 @@
       "base64InputPlaceholder": "Paste Base64 string here",
       "imageResult": "Image Result",
       "invalidBase64": "Invalid Base64 string",
-      "download": "Download Image"
+      "download": "Download Image",
+      "dragOrClick": "Drag and drop or click to upload",
+      "fileName": "File name",
+      "fileSize": "File size"
     },
     "fisherai": {
       "title": "FisherAI",

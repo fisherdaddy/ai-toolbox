@@ -81,15 +81,18 @@
       "description": "紙に書くのと同等の効果を生成します"
     },
     "imageBase64Converter": {
-        "title": "画像とBase64コンバーター",
-        "description": "画像とBase64の相互変換",
-        "imageToBase64": "画像をBase64に変換",
-        "base64Result": "Base64の結果",
-        "base64ToImage": "Base64を画像に変換",
-        "base64InputPlaceholder": "ここにBase64文字列を貼り付け",
-        "imageResult": "画像の結果",
-        "invalidBase64": "無効なBase64文字列",
-        "download": "画像をダウンロード"
+      "title": "Base64 と画像の変換",
+      "description": "画像と Base64 の相互変換",
+      "imageToBase64": "画像を Base64 に変換",
+      "base64Result": "Base64 結果",
+      "base64ToImage": "Base64 を画像に変換",
+      "base64InputPlaceholder": "ここに Base64 文字列を貼り付けてください",
+      "imageResult": "画像結果",
+      "invalidBase64": "無効な Base64 文字列",
+      "download": "画像をダウンロード",
+      "dragOrClick": "画像をドラッグまたはクリックしてアップロード",
+      "fileName": "ファイル名",
+      "fileSize": "ファイルサイズ"
     },
     "fisherai": {
       "title": "FisherAI",

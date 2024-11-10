@@ -1,128 +1,167 @@
 // ImageBase64Converter.jsx
 
 import React, { useState, useCallback } from 'react';
-import { Title, Wrapper, Container, InputText, Preview } from '../js/SharedStyles';
+import { Title, Wrapper, Container } from '../js/SharedStyles';
 import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from '../components/SEO';
 
 const ConverterContainer = styled(Container)`
   flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
 `;
 
-const StyledInputText = styled(InputText)`
-  height: 100px;
-  margin-bottom: 20px;
-  @media (min-width: 768px) {
-    height: 100px;
-    width: 100%;
-  }
-`;
-
-const PreviewWrapper = styled.div`
+const Section = styled.div`
   width: 100%;
 `;
 
 const Label = styled.label`
   font-weight: 500;
   font-size: 14px;
-  color: #5f6368;
-  margin-bottom: 8px;
+  color: #374151;
+  margin-bottom: 12px;
   display: block;
   letter-spacing: 0.1px;
 `;
 
-const StyledPreview = styled(Preview)`
-  background-color: #f8f9fa;
-  padding: 12px 40px 12px 12px;
-  border-radius: 8px;
-  border: 1px solid #dadce0;
-  font-size: 14px;
-  color: #202124;
-  min-height: 24px;
-  word-break: break-all;
+const StyledInputText = styled.textarea`
+  width: 100%;
+  height: 120px;
+  font-size: 15px;
+  padding: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+
+  &:focus {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  }
+`;
+
+const FileInputWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 120px;
+  border: 2px dashed rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(99, 102, 241, 0.05);
+  }
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  span {
+    color: #6366F1;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 `;
 
 const ResultContainer = styled.div`
   position: relative;
   width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  padding: 16px;
+  min-height: 120px;
 `;
 
-const CopyButton = styled.button`
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: transparent;
+const ActionButton = styled.button`
+  background: rgba(99, 102, 241, 0.1);
   border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
   cursor: pointer;
-  padding: 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  opacity: 0.6;
-  transition: opacity 0.3s, color 0.3s;
+  gap: 6px;
+  font-size: 13px;
+  color: #6366F1;
+  transition: all 0.3s ease;
 
   &:hover {
-    opacity: 1;
+    background: rgba(99, 102, 241, 0.2);
+  }
+
+  &.active {
+    background: #6366F1;
+    color: white;
   }
 
   svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
-
-  &.copied {
-    color: #34a853;
-  }
-`;
-
-const StyledInputFile = styled.input`
-  margin-bottom: 20px;
 `;
 
 const ImagePreviewContainer = styled.div`
   position: relative;
-  display: inline-block;
-  margin-top: 10px;
-`;
-
-const ImagePreview = styled.img`
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #dadce0;
-  border-radius: 8px;
-  display: block;
-`;
-
-const DownloadButton = styled.button`
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: #fff;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 6px 8px;
-  font-size: 12px;
-  color: #202124;
+  width: 100%;
+  margin-top: 8px;
   display: flex;
-  align-items: center;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  flex-direction: column;
+  gap: 12px;
+`;
 
-  &:hover {
-    opacity: 1;
-  }
+const ThumbnailContainer = styled.div`
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+`;
 
-  svg {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-  }
+const PreviewActions = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+`;
+
+const Thumbnail = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const ImageDetails = styled.div`
+  font-size: 13px;
+  color: #6B7280;
+  margin-top: 4px;
 `;
 
 const ErrorText = styled.div`
-  color: red;
+  color: #EF4444;
+  font-size: 14px;
   margin-top: 8px;
 `;
 
@@ -218,55 +257,73 @@ function ImageBase64Converter() {
       <Wrapper>
         <Title>{t('tools.imageBase64Converter.title')}</Title>
         <ConverterContainer>
-          {/* 图片转 Base64 部分 */}
-          <Label>{t('tools.imageBase64Converter.imageToBase64')}</Label>
-          <StyledInputFile
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-          />
-          {base64String && (
-            <>
-              <Label>{t('tools.imageBase64Converter.base64Result')}</Label>
+          <Section>
+            <Label>{t('tools.imageBase64Converter.imageToBase64')}</Label>
+            <FileInputWrapper>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+              />
+              <span>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"/>
+                </svg>
+                {t('tools.imageBase64Converter.dragOrClick')}
+              </span>
+            </FileInputWrapper>
+            {base64String && (
               <ResultContainer>
-                <StyledPreview>{base64String}</StyledPreview>
-                <CopyButton onClick={handleCopy} className={isCopied ? 'copied' : ''}>
+                <pre>{base64String}</pre>
+                <ActionButton onClick={handleCopy} className={isCopied ? 'active' : ''}>
                   {isCopied ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                   ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1 .9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1 -.9-2 -2-2zm0 16H8V7h11v14z" />
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
                     </svg>
                   )}
-                </CopyButton>
+                  {isCopied ? t('tools.jsonFormatter.copiedMessage') : t('tools.jsonFormatter.copyButton')}
+                </ActionButton>
+                <ThumbnailContainer>
+                  <Thumbnail src={base64String} alt="Preview" />
+                </ThumbnailContainer>
+                {imageFile && (
+                  <ImageDetails>
+                    {t('tools.imageBase64Converter.fileName')}: {imageFile.name}<br />
+                    {t('tools.imageBase64Converter.fileSize')}: {(imageFile.size / 1024).toFixed(2)} KB
+                  </ImageDetails>
+                )}
               </ResultContainer>
-            </>
-          )}
+            )}
+          </Section>
 
-          {/* Base64 转图片部分 */}
-          <Label>{t('tools.imageBase64Converter.base64ToImage')}</Label>
-          <StyledInputText
-            value={inputBase64}
-            onChange={handleBase64InputChange}
-            placeholder={t('tools.imageBase64Converter.base64InputPlaceholder')}
-          />
-          {error && <ErrorText>{error}</ErrorText>}
-          {imageSrc && (
-            <div>
-              <Label>{t('tools.imageBase64Converter.imageResult')}</Label>
+          <Section>
+            <Label>{t('tools.imageBase64Converter.base64ToImage')}</Label>
+            <StyledInputText
+              value={inputBase64}
+              onChange={handleBase64InputChange}
+              placeholder={t('tools.imageBase64Converter.base64InputPlaceholder')}
+            />
+            {error && <ErrorText>{error}</ErrorText>}
+            {imageSrc && (
               <ImagePreviewContainer>
-                <ImagePreview src={imageSrc} alt="Base64 to Image" onError={handleImageError} />
-                <DownloadButton onClick={handleDownload}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v9m0 0l-3-3m3 3l3-3" />
-                  </svg>
-                  {t('tools.imageBase64Converter.download')}
-                </DownloadButton>
+                <ThumbnailContainer>
+                  <Thumbnail src={imageSrc} alt="Thumbnail" onError={handleImageError} />
+                </ThumbnailContainer>
+                <PreviewActions>
+                  <ActionButton onClick={handleDownload}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v9m0 0l-3-3m3 3l3-3"/>
+                    </svg>
+                    {t('tools.imageBase64Converter.download')}
+                  </ActionButton>
+                </PreviewActions>
               </ImagePreviewContainer>
-            </div>
-          )}
+            )}
+          </Section>
         </ConverterContainer>
       </Wrapper>
     </>
