@@ -248,8 +248,8 @@ const AIProduct = () => {
   return (
     <>
       <SEO
-        title={t('title')}
-        description={t('slogan')}
+        title={t('ai-products.title')}
+        description={t('ai-products.description')}
       />
       <main>
         <section className="tools-section">

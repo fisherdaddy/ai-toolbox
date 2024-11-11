@@ -68,16 +68,16 @@ function Header() {
         <div className={`menu-container ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <div className="menu-items">
             <NavLink to="/dev-tools" onClick={handleNavClick}>
-              {t('dev-tools')}
+              {t('dev-tools.title')}
             </NavLink>
             <NavLink to="/image-tools" onClick={handleNavClick}>
-              {t('image-tools')}
+              {t('image-tools.title')}
             </NavLink>
             <NavLink to="/ai-products" onClick={handleNavClick}>
-              {t('ai-products')}
+              {t('ai-products.title')}
             </NavLink>
             <NavLink to="/blog" onClick={handleNavClick}>
-              {t('blog')}
+              {t('blog.title')}
             </NavLink>
           </div>
           <div className="right-container">

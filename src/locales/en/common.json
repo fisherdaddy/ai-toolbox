@@ -7,10 +7,22 @@
     "login": "Login",
     "loginSubtitle": "Welcome to AI Toolbox, please log in for the full experience",
     "logout": "Logout",
-    "dev-tools": "Development Tools",
-    "image-tools": "Image Tools",
-    "blog": "Blog",
-    "ai-products": "AI Products",
+    "dev-tools": {
+      "title": "Development Tools",
+      "description": "A collection of popular and efficient development tools, including JSON formatter, Base64 to image converter, online Diff tool, LaTeX renderer, and more. Designed to help developers handle everyday coding tasks quickly and boost development efficiency."
+    },
+    "image-tools": {
+      "title": "Image Tools",
+      "description": "A suite of practical image processing tools, including a handwriting font generator, Markdown to image converter, and quote to image creator, making image editing and creative design tasks easier."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Offers the latest tech insights, development tips, and AI product reviews to help developers stay updated with cutting-edge information and improve their skills."
+    },
+    "ai-products": {
+      "title": "AI Products",
+      "description": "A curated selection of the most popular AI products from around the world, covering intelligent assistants, AI art, audio processing, video editing, and coding tools to make your work smarter and more efficient."
+    },
     "notFound": {
       "title": "404 - Page Not Found",
       "description": "Sorry, the page you are looking for does not exist.",

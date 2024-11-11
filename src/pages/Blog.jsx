@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <>
       <SEO
-        title={t('title')}
-        description={t('slogan')}
+        title={t('blog.title')}
+        description={t('blog.description')}
       />
       <main>
         <section className="tools-section">

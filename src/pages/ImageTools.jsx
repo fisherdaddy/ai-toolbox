@@ -15,8 +15,8 @@ const ImageTools = () => {
   return (
     <>
       <SEO
-        title={t('title')}
-        description={t('slogan')}
+        title={t('image-tools.title')}
+        description={t('image-tools.description')}
       />
       <main>
         <section className="tools-section">

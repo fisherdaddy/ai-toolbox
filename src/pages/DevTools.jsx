@@ -15,8 +15,8 @@ const DevTools = () => {
   return (
     <>
       <SEO
-        title={t('title')}
-        description={t('slogan')}
+        title={t('dev-tools.title')}
+        description={t('dev-tools.description')}
       />
       <main>
         <section className="tools-section">

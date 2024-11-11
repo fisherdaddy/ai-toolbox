@@ -7,10 +7,22 @@
     "login": "登录",
     "loginSubtitle": "欢迎使用 AI 工具箱，请登录以获得完整体验",
     "logout": "退出登录",
-    "dev-tools": "开发工具",
-    "image-tools": "图片工具",
-    "blog": "博客",
-    "ai-products": "AI 产品",
+    "dev-tools": {
+      "title": "开发工具",
+      "description": "集成多种热门高效的开发工具，包括JSON格式化、Base64转图片、在线Diff对比、LaTeX渲染等，帮助开发者快速处理日常编码任务，提升开发效率。"
+    },
+    "image-tools": {
+      "title": "图片工具",
+      "description": "集成多款实用的图片处理工具，包括手写字体生成器、Markdown转图片、名人名言转图片等，轻松完成图片编辑与创意设计工作。"
+    },
+    "blog": {
+      "title": "博客",
+      "description": "提供最新技术分享、开发经验、AI产品评测等内容，帮助开发者获取前沿资讯，提升技能。"
+    },
+    "ai-products": {
+      "title": "AI 产品",
+      "description": "精选国内外最热门的AI产品，涵盖智能助手、AI绘画、音频处理、视频编辑、编程辅助等多种工具，让工作更加智能化与高效化。"
+    },
     "notFound": {
       "title": "404 - 页面未找到",
       "description": "抱歉，您访问的页面不存在。",
