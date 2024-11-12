@@ -1,7 +1,7 @@
 {
-    "text2image": {
-      "title": "テキストから画像",
-      "description": "テキストを画像カードに変換",
+    "markdown2image": {
+      "title": "Markdownを画像に変換",
+      "description": "Markdownデータを美しい画像に変換します",
       "inputPlaceholder": "テキストを入力（タイトルを含めることができます、例：# タイトル1）",
       "selectTemplate": "テンプレートを選択",
       "previewDefault": "# プレビューエリア\nテキストを入力すると、ここにプレビューが表示されます",
@@ -15,6 +15,13 @@
         "minimal": "ミニマル",
         "tech": "テック"
       }
+    },
+    "latex2image": {
+      "title": "Latex画像変換",
+      "description": "Latexの数式を簡単に画像に変換できます！",
+      "preview": "プレビュー",
+      "placeholder": "ここにLatexの数式を入力してください。HTMLも使用可能です：\n例：\n<h1>タイトル</h1>\n<p>これはインライン数式です：$E=mc^2$</p>\n<p>これはブロックレベルの数式です：$$\\sum_{i=1}^n i$$</p>",
+      "download": "プレビュー画像をダウンロード"
     },
     "quoteCard": {
       "title": "名言カードジェネレーター",

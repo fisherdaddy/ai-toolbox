@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { marked } from 'marked';
 import { useTranslation } from '../js/i18n';
-import SEO from '../components/SEO';
+import SEO from './SEO';
 import Marked from 'marked-react';
 
 // 更新预设模板
@@ -277,18 +277,18 @@ function TextToImage() {
   return (
     <>
       <SEO
-        title={t('tools.text2image.title')}
-        description={t('tools.text2image.description')}
+        title={t('tools.markdown2image.title')}
+        description={t('tools.markdown2image.description')}
       />
       <Container>
         
         <ContentWrapper>
           <InputContainer>
-            <TitleLabel>{t('tools.text2image.title')}</TitleLabel>
+            <TitleLabel>{t('tools.markdown2image.title')}</TitleLabel>
             
             {/* 模板选择 */}
             <Section>
-              <Label>{t('tools.text2image.selectTemplate')}</Label>
+              <Label>{t('tools.markdown2image.selectTemplate')}</Label>
               <TemplateGrid>
                 {templates.map(template => (
                   <TemplateItem
@@ -298,7 +298,7 @@ function TextToImage() {
                     background={template.bgColor}
                     color={template.textColor}
                   >
-                    {t(`tools.text2image.templates.${template.name}`)}
+                    {t(`tools.markdown2image.templates.${template.name}`)}
                   </TemplateItem>
                 ))}
               </TemplateGrid>
@@ -306,16 +306,16 @@ function TextToImage() {
 
             {/* Markdown 编辑器 */}
             <Section>
-              <Label>{t('tools.text2image.inputLabel')}</Label>
+              <Label>{t('tools.markdown2image.inputLabel')}</Label>
               <MarkdownEditor
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder={t('tools.text2image.placeholder')}
+                placeholder={t('tools.markdown2image.placeholder')}
               />
             </Section>
 
             <DownloadButton onClick={handleDownload}>
-              {t('tools.text2image.downloadButton')}
+              {t('tools.markdown2image.downloadButton')}
             </DownloadButton>
           </InputContainer>
 
@@ -332,7 +332,7 @@ function TextToImage() {
               }}
             >
               <Marked>
-                {text || t('tools.text2image.previewDefault')}
+                {text || t('tools.markdown2image.previewDefault')}
               </Marked>
             </div>
           </PreviewContainer>

@@ -1,7 +1,7 @@
 {
-    "text2image": {
-      "title": "Text to Image Card",
-      "description": "Convert text to image card",
+    "markdown2image": {
+      "title": "Markdown to Image",
+      "description": "Convert Markdown data into beautiful images",
       "selectTemplate": "Select Template",
       "inputLabel": "Input Text (Markdown Supported)",
       "placeholder": "# Title\n## Subtitle\n- List item\n**Bold** *Italic*",
@@ -15,6 +15,13 @@
         "minimal": "Minimal",
         "tech": "Tech"
       }
+    },
+    "latex2image": {
+      "title": "Latex to Image",
+      "description": "Effortlessly convert Latex formulas to images!",
+      "preview": "Preview",
+      "placeholder": "Enter your Latex formula here, HTML is supported:\nExample:\n<h1>Title</h1>\n<p>This is an inline formula: $E=mc^2$</p>\n<p>This is a block-level formula: $$\\sum_{i=1}^n i$$</p>",
+      "download": "Download Preview Image"
     },
     "quoteCard": {
       "title": "Quote Card Generator",

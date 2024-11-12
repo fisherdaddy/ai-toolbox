@@ -10,8 +10,10 @@
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
     "antd": "^5.21.6",
+    "dompurify": "^3.1.7",
     "html2canvas": "^1.4.1",
     "i18next": "^23.16.5",
+    "katex": "^0.16.11",
     "marked": "^15.0.0",
     "marked-react": "^2.0.0",
     "react": "^18.2.0",

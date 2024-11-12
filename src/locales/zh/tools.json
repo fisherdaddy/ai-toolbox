@@ -1,7 +1,7 @@
 {
-    "text2image": {
-      "title": "文字转图片生成器",
-      "description": "将文本转换为精美的图片",
+    "markdown2image": {
+      "title": "Markdown转图片",
+      "description": "将Markdown数据转换为精美的图片",
       "selectTemplate": "选择模板",
       "inputLabel": "输入文本 (支持 Markdown)",
       "placeholder": "# 标题\n## 子标题\n- 列表项\n**粗体** *斜体*",
@@ -15,6 +15,13 @@
         "minimal": "极简",
         "tech": "科技"
       }
+    },
+    "latex2image": {
+      "title": "Latex转图片",
+      "description": "轻松将Latex公式转换为图片！",
+      "preview": "预览",
+      "placeholder": "在此输入Latex公式，支持HTML：\n例如：\n<h1>标题</h1>\n<p>这是一个行内公式：$E=mc^2$</p>\n<p>这是一个块级公式：$$\\sum_{i=1}^n i$$</p>",
+      "download": "下载预览图片"
     },
     "quoteCard": {
       "title": "名言卡片生成器",

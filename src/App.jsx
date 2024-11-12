@@ -12,7 +12,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const AIProduct = lazy(() => import('./pages/AIProduct'));
 
 const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
-const TextToImage = lazy(() => import('./components/TextToImage'));
+const MarkdownToImage = lazy(() => import('./components/MarkdownToImage'));
 const UrlEnDecode = lazy(() => import('./components/UrlEnDecode'));
 const About = lazy(() => import('./pages/About'));
 const OpenAITimeline = lazy(() => import('./components/OpenAITimeline'));
@@ -20,6 +20,7 @@ const PricingCharts  = lazy(() => import('./components/PricingCharts'));
 const HandwriteGen  = lazy(() => import('./components/HandwriteGen'));
 const ImageBase64Converter  = lazy(() => import('./components/ImageBase64Converter'));
 const QuoteCard = lazy(() => import('./components/QuoteCard'));
+const LatexToImage = lazy(() => import('./components/LatexToImage'));
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
               <Route path="/ai-products" element={<AIProduct />} />
               <Route path="/blog" element={<Blog />} />
 
-              <Route path="/text2image" element={<TextToImage />} />
+              <Route path="/markdown-to-image" element={<MarkdownToImage />} />
               <Route path="/json-formatter" element={<JsonFormatter />} />
               <Route path="/url-encode-and-decode" element={<UrlEnDecode />} />
               <Route path="/openai-timeline" element={<OpenAITimeline />} />
@@ -46,6 +47,7 @@ function App() {
               <Route path="/handwriting" element={<HandwriteGen />} />
               <Route path="/image-base64" element={<ImageBase64Converter />} />
               <Route path="/quote-card" element={<QuoteCard />} />
+              <Route path="/latex-to-image" element={<LatexToImage />} />
               <Route path="*" element={<NotFound />} />
 
             </Routes>

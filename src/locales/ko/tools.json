@@ -1,7 +1,7 @@
 {
-    "text2image": {
-      "title": "텍스트를 이미지로",
-      "description": "텍스트를 이미지 카드로 변환",
+    "markdown2image": {
+      "title": "Markdown을 이미지로 변환",
+      "description": "Markdown 데이터를 아름다운 이미지로 변환합니다",
       "inputPlaceholder": "텍스트 입력 (제목 포함 가능, 예: # 제목 1)",
       "downloadButton": "이미지로 내보내기",
       "selectTemplate": "템플릿 선택",
@@ -16,6 +16,13 @@
         "minimal": "미니멀",
         "tech": "테크"
       }
+    },
+    "latex2image": {
+      "title": "Latex 이미지 변환",
+      "description": "Latex 수식을 손쉽게 이미지로 변환하세요! ",
+      "preview": "미리보기",
+      "placeholder": "여기에 Latex 수식을 입력하세요. HTML도 지원됩니다:\n예시:\n<h1>제목</h1>\n<p>이것은 인라인 수식입니다: $E=mc^2$</p>\n<p>이것은 블록 수식입니다: $$\\sum_{i=1}^n i$$</p>",
+      "download": "미리보기 이미지 다운로드"
     },
     "quoteCard": {
       "title": "명언 카드 생성기",
