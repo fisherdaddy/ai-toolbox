@@ -105,5 +105,13 @@
     "fisherai": {
       "title": "FisherAI",
       "description": "가장 유용한 Chrome 브라우저 요약 확장 프로그램"
+    },
+    "textDiff": {
+      "title": "텍스트 비교",
+      "description": "두 텍스트의 차이점 비교",
+      "originalText": "원본 텍스트",
+      "newText": "새 텍스트",
+      "originalPlaceholder": "원본 텍스트를 입력하세요...",
+      "newPlaceholder": "새 텍스트를 입력하세요..."
     }
 }

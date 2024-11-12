@@ -104,5 +104,13 @@
     "fisherai": {
       "title": "FisherAI",
       "description": "最高のChromeブラウザ用要約プラグイン"
+    },
+    "textDiff": {
+      "title": "テキスト差分",
+      "description": "2つのテキストの違いを比較",
+      "originalText": "元のテキスト",
+      "newText": "新しいテキスト",
+      "originalPlaceholder": "元のテキストを入力...",
+      "newPlaceholder": "新しいテキストを入力..."
     }
 }

@@ -7,10 +7,13 @@ const tools = [
   { id: 'handwrite', icon: '/assets/icon/handwrite.png', path: '/handwriting' },
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
+  
   { id: 'latex2image', icon: '/assets/icon/latex2image.png', path: '/latex-to-image' },
   { id: 'jsonFormatter', icon: '/assets/icon/json-format.png', path: '/json-formatter' },
   { id: 'urlEncodeDecode', icon: '/assets/icon/url-endecode.png', path: '/url-encode-and-decode' },
   { id: 'imageBase64Converter', icon: '/assets/icon/image-base64.png', path: '/image-base64' },
+  { id: 'textDiff', icon: '/assets/icon/diff.png', path: '/text-diff' },
+
   { id: 'openAITimeline', icon: '/assets/icon/openai_small.svg', path: '/openai-timeline' },
   { id: 'modelPrice', icon: '/assets/icon/openai_small.svg', path: '/llm-model-price' },
   { id: 'fisherai', icon: '/assets/icon/fisherai.png', path: 'https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj', external: true } // 新增外部链接

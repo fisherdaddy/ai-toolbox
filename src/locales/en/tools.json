@@ -104,5 +104,13 @@
     "fisherai": {
       "title": "FisherAI",
       "description": "The Best Summary Extension for Chrome Browser"
+    },
+    "textDiff": {
+      "title": "Text Diff",
+      "description": "Compare differences between two texts",
+      "originalText": "Original Text",
+      "newText": "New Text",
+      "originalPlaceholder": "Enter original text here...",
+      "newPlaceholder": "Enter new text here..."
     }
 }

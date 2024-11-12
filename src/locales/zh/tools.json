@@ -103,5 +103,13 @@
     "fisherai": {
       "title": "FisherAI",
       "description": "最好用的 Chrome 浏览器摘要插件"
+    },
+    "textDiff": {
+      "title": "文本差异对比",
+      "description": "比较两段文本的差异",
+      "originalText": "原始文本",
+      "newText": "新文本",
+      "originalPlaceholder": "在此输入原始文本...",
+      "newPlaceholder": "在此输入新文本..."
     }
 }

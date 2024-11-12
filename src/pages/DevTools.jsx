@@ -7,6 +7,8 @@ const tools = [
   { id: 'jsonFormatter', icon: '/assets/icon/json-format.png', path: '/json-formatter' },
   { id: 'urlEncodeDecode', icon: '/assets/icon/url-endecode.png', path: '/url-encode-and-decode' },
   { id: 'imageBase64Converter', icon: '/assets/icon/image-base64.png', path: '/image-base64' },
+  { id: 'textDiff', icon: '/assets/icon/diff.png', path: '/text-diff' },
+
 ];
 
 const DevTools = () => {

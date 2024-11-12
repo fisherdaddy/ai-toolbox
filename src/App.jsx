@@ -21,6 +21,7 @@ const HandwriteGen  = lazy(() => import('./components/HandwriteGen'));
 const ImageBase64Converter  = lazy(() => import('./components/ImageBase64Converter'));
 const QuoteCard = lazy(() => import('./components/QuoteCard'));
 const LatexToImage = lazy(() => import('./components/LatexToImage'));
+const TextDiff = lazy(() => import('./components/TextDiff'));
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
               <Route path="/image-base64" element={<ImageBase64Converter />} />
               <Route path="/quote-card" element={<QuoteCard />} />
               <Route path="/latex-to-image" element={<LatexToImage />} />
+              <Route path="/text-diff" element={<TextDiff />} />
               <Route path="*" element={<NotFound />} />
 
             </Routes>
