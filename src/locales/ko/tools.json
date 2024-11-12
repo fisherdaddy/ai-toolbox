@@ -113,5 +113,27 @@
       "newText": "새 텍스트",
       "originalPlaceholder": "원본 텍스트를 입력하세요...",
       "newPlaceholder": "새 텍스트를 입력하세요..."
+    },
+    "subtitleGenerator": {
+      "title": "자막 생성기",
+      "description": "여러 줄의 자막 이미지를 빠르게 생성, 스타일 커스터마이징 지원",
+      "uploadImage": "배경 이미지 업로드",
+      "removeImage": "이미지 제거",
+      "globalSettings": "전역 설정",
+      "fontColor": "글자 색상",
+      "fontSize": "글자 크기",
+      "subtitleHeight": "자막 높이",
+      "subtitleSettings": "자막 설정",
+      "addSubtitleLine": "자막 줄 추가",
+      "preview": "미리보기",
+      "downloadImage": "이미지 다운로드",
+      "presetColors": {
+        "classicYellow": "클래식 옐로우",
+        "pureWhite": "순수 화이트",
+        "vividOrange": "비비드 오렌지",
+        "neonGreen": "네온 그린",
+        "lightBlue": "라이트 블루",
+        "brightPink": "브라이트 핑크"
+      }
     }
 }

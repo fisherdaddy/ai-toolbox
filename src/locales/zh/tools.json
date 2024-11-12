@@ -111,5 +111,27 @@
       "newText": "新文本",
       "originalPlaceholder": "在此输入原始文本...",
       "newPlaceholder": "在此输入新文本..."
+    },
+    "subtitleGenerator": {
+      "title": "字幕拼接工具",
+      "description": "快速生成多行字幕图片，支持自定义样式",
+      "uploadImage": "上传背景图片",
+      "removeImage": "移除图片",
+      "globalSettings": "全局设置",
+      "fontColor": "字体颜色",
+      "fontSize": "字体大小",
+      "subtitleHeight": "字幕高度",
+      "subtitleSettings": "字幕设置",
+      "addSubtitleLine": "添加字幕行",
+      "preview": "预览",
+      "downloadImage": "下载图片",
+      "presetColors": {
+        "classicYellow": "经典黄",
+        "pureWhite": "纯白",
+        "vividOrange": "活力橙",
+        "neonGreen": "荧光绿",
+        "lightBlue": "浅蓝",
+          "brightPink": "亮粉"
+        }
     }
 }

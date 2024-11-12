@@ -7,6 +7,7 @@ const tools = [
   { id: 'handwrite', icon: '/assets/icon/handwrite.png', path: '/handwriting' },
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
+  { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
   
   { id: 'latex2image', icon: '/assets/icon/latex2image.png', path: '/latex-to-image' },
   { id: 'jsonFormatter', icon: '/assets/icon/json-format.png', path: '/json-formatter' },

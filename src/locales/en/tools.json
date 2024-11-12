@@ -112,5 +112,27 @@
       "newText": "New Text",
       "originalPlaceholder": "Enter original text here...",
       "newPlaceholder": "Enter new text here..."
+    },
+    "subtitleGenerator": {
+      "title": "Subtitle Generator",
+      "description": "Quickly generate multi-line subtitle images with customizable styles",
+      "uploadImage": "Upload Background Image",
+      "removeImage": "Remove Image",
+      "globalSettings": "Global Settings",
+      "fontColor": "Font Color",
+      "fontSize": "Font Size",
+      "subtitleHeight": "Subtitle Height",
+      "subtitleSettings": "Subtitle Settings",
+      "addSubtitleLine": "Add Subtitle Line",
+      "preview": "Preview",
+      "downloadImage": "Download Image",
+      "presetColors": {
+        "classicYellow": "Classic Yellow",
+        "pureWhite": "Pure White",
+        "vividOrange": "Vivid Orange",
+        "neonGreen": "Neon Green",
+        "lightBlue": "Light Blue",
+        "brightPink": "Bright Pink"
+      }
     }
 }

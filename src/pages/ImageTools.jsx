@@ -8,6 +8,8 @@ const tools = [
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
   { id: 'latex2image', icon: '/assets/icon/latex2image.png', path: '/latex-to-image' },
+  { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
+  
  ];
 
 const ImageTools = () => {

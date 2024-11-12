@@ -112,5 +112,27 @@
       "newText": "新しいテキスト",
       "originalPlaceholder": "元のテキストを入力...",
       "newPlaceholder": "新しいテキストを入力..."
+    },
+    "subtitleGenerator": {
+      "title": "字幕生成ツール",
+      "description": "複数行の字幕画像を素早く生成、スタイルのカスタマイズも可能",
+      "uploadImage": "背景画像をアップロード",
+      "removeImage": "画像を削除",
+      "globalSettings": "グローバル設定",
+      "fontColor": "フォントカラー",
+      "fontSize": "フォントサイズ",
+      "subtitleHeight": "字幕の高さ",
+      "subtitleSettings": "字幕設定",
+      "addSubtitleLine": "字幕行を追加",
+      "preview": "プレビュー",
+      "downloadImage": "画像をダウンロード",
+      "presetColors": {
+        "classicYellow": "クラシックイエロー",
+        "pureWhite": "ピュアホワイト",
+        "vividOrange": "ビビッドオレンジ",
+        "neonGreen": "ネオングリーン",
+        "lightBlue": "ライトブルー",
+        "brightPink": "ブライトピンク"
+      }
     }
 }
