@@ -134,5 +134,27 @@
         "lightBlue": "ライトブルー",
         "brightPink": "ブライトピンク"
       }
+    },
+    "imageCompressor": {
+      "title": "画像圧縮",
+      "description": "オンラインで画像を圧縮、バッチ処理対応",
+      "dropzoneText": "ここに画像をクリックまたはドラッグ（複数選択対応）",
+      "quality": "圧縮品質",
+      "maxSize": "最大ファイルサイズ",
+      "compress": "圧縮開始",
+      "compressing": "圧縮中...",
+      "download": "圧縮後の画像をダウンロード",
+      "original": "元の画像",
+      "compressed": "圧縮された画像",
+      "originalSize": "元のサイズ",
+      "compressedSize": "圧縮後のサイズ",
+      "savedSpace": "節約したスペース",
+      "filename": "ファイル名",
+      "qualityTooltip": "圧縮品質を設定します。数値が高いほど画像品質が良くなりますが、ファイルサイズも大きくなります。",
+      "maxSizeTooltip": "圧縮後の最大ファイルサイズを設定します。このサイズを超えると、圧縮パラメータが自動調整されます。",
+      "downloadAll": "すべてダウンロード",
+      "clearAll": "すべてクリア",
+      "maxImagesError": "最大10枚の画像をアップロードできます",
+      "maxImagesHint": "最大10枚の画像がアップロード可能です"
     }
 }

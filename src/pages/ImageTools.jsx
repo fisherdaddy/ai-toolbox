@@ -9,6 +9,7 @@ const tools = [
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
   { id: 'latex2image', icon: '/assets/icon/latex2image.png', path: '/latex-to-image' },
   { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
+  { id: 'imageCompressor', icon: '/assets/icon/image-compressor.png', path: '/image-compressor' },
   
  ];
 

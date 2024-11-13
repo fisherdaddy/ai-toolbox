@@ -133,5 +133,27 @@
         "lightBlue": "浅蓝",
           "brightPink": "亮粉"
         }
+    },
+    "imageCompressor": {
+      "title": "图片压缩",
+      "description": "在线压缩图片，支持批量处理",
+      "dropzoneText": "点击或拖拽图片到此处（支持多选）",
+      "quality": "压缩质量",
+      "maxSize": "最大文件大小",
+      "compress": "开始压缩",
+      "compressing": "压缩中...",
+      "download": "下载压缩后的图片",
+      "original": "原图",
+      "compressed": "压缩后",
+      "originalSize": "原始大小",
+      "compressedSize": "压缩后大小",
+      "savedSpace": "节省空间",
+      "filename": "文件名",
+      "qualityTooltip": "设置压缩质量，数值越高图片质量越好，文件也越大",
+      "maxSizeTooltip": "设置压缩后的最大文件大小，超过此大小会自动调整压缩参数",
+      "downloadAll": "下载全部",
+      "clearAll": "清除全部",
+      "maxImagesError": "最多只能上传 10 张图片",
+      "maxImagesHint": "最多可上传 10 张图片"
     }
 }

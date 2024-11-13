@@ -23,6 +23,7 @@ const QuoteCard = lazy(() => import('./components/QuoteCard'));
 const LatexToImage = lazy(() => import('./components/LatexToImage'));
 const TextDiff = lazy(() => import('./components/TextDiff'));
 const SubtitleGenerator = lazy(() => import('./components/SubtitleGenerator'));
+const ImageCompressor = lazy(() => import('./components/ImageCompressor'));
 
 function App() {
   return (
@@ -52,6 +53,8 @@ function App() {
               <Route path="/latex-to-image" element={<LatexToImage />} />
               <Route path="/text-diff" element={<TextDiff />} />
               <Route path="/subtitle-to-image" element={<SubtitleGenerator />} />
+              <Route path="/image-compressor" element={<ImageCompressor />} />
+              
               <Route path="*" element={<NotFound />} />
 
             </Routes>
