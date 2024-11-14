@@ -184,5 +184,9 @@
       },
       "download": "下载图片",
       "noImage": "请上传图片"
+    },
+    "imageBackgroundRemover": {
+      "title": "图片背景去除",
+      "description": "去除图片背景"
     }
 }

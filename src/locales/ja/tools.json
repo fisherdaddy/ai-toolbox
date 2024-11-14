@@ -185,5 +185,9 @@
       },
       "download": "画像をダウンロード",
       "noImage": "画像をアップロードしてください"
-  }
+    },
+    "imageBackgroundRemover": {
+      "title": "画像背景の削除",
+      "description": "画像の背景を削除"
+    }
 }

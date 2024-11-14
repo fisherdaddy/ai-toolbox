@@ -185,5 +185,9 @@
       },
       "download": "Download Image",
       "noImage": "Please upload an image"
-}
+    },
+    "imageBackgroundRemover": {
+      "title": "Image Background Remover",
+      "description": "Remove image background"
+    }
 }

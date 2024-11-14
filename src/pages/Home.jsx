@@ -10,6 +10,7 @@ const tools = [
   { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
   { id: 'imageCompressor', icon: '/assets/icon/image-compressor.png', path: '/image-compressor' },
   { id: 'imageWatermark', icon: '/assets/icon/image-watermark.png', path: '/image-watermark' },
+  { id: 'imageBackgroundRemover', icon: '/assets/icon/image-background-remover.png', path: 'https://huggingface.co/spaces/briaai/BRIA-RMBG-2.0', external: true },
   
   { id: 'latex2image', icon: '/assets/icon/latex2image.png', path: '/latex-to-image' },
   { id: 'jsonFormatter', icon: '/assets/icon/json-format.png', path: '/json-formatter' },
