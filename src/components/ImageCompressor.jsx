@@ -468,9 +468,10 @@ function ImageCompressor() {
   const handleCompress = async () => {
     if (images.length === 0) return;
     
+    // 清除之前的压缩结果，允许重新压缩
+    setCompressedImages([]);
+    
     for (const image of images) {
-      if (compressedImages.find(img => img.id === image.id)) continue;
-      
       setProcessing(prev => ({ ...prev, [image.id]: 0 }));
       
       try {
@@ -488,7 +489,8 @@ function ImageCompressor() {
           preview: URL.createObjectURL(compressedFile),
           size: compressedFile.size,
           name: compressedFile.name,
-          originalSize: image.size
+          originalSize: image.size,
+          compressionSettings: { ...settings } // 保存压缩时使用的设置
         };
         
         setCompressedImages(prev => [...prev, compressedImage]);
@@ -638,7 +640,10 @@ function ImageCompressor() {
                   >
                     {Object.keys(processing).length > 0 ? 
                       t('tools.imageCompressor.compressing') : 
-                      t('tools.imageCompressor.compress')}
+                      compressedImages.length > 0 ?
+                        t('tools.imageCompressor.recompress') :
+                        t('tools.imageCompressor.compress')
+                    }
                   </Button>
                   
                   {compressedImages.length > 0 && (

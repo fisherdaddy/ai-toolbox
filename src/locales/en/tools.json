@@ -136,25 +136,27 @@
       }
     },
     "imageCompressor": {
-      "title": "Image Compressor",
-      "description": "Compress images online, supports batch processing",
+      "title": "Image Compression",
+      "description": "Online image compression, supports batch processing",
       "dropzoneText": "Click or drag images here (multiple selection supported)",
       "quality": "Compression Quality",
       "maxSize": "Max File Size",
       "compress": "Start Compression",
       "compressing": "Compressing...",
       "download": "Download Compressed Image",
-      "original": "Original Image",
-      "compressed": "Compressed Image",
+      "original": "Original",
+      "compressed": "Compressed",
       "originalSize": "Original Size",
       "compressedSize": "Compressed Size",
       "savedSpace": "Space Saved",
       "filename": "Filename",
-      "qualityTooltip": "Set the compression quality. Higher values give better image quality but larger file size.",
-      "maxSizeTooltip": "Set the maximum file size after compression. If exceeded, the compression parameters will be adjusted automatically.",
+      "qualityTooltip": "Set the compression quality; higher values result in better image quality but larger file sizes",
+      "maxSizeTooltip": "Set the maximum size for compressed files; parameters will adjust automatically if exceeded",
       "downloadAll": "Download All",
       "clearAll": "Clear All",
-      "maxImagesError": "You can upload up to 10 images",
-      "maxImagesHint": "Up to 10 images can be uploaded"
+      "maxImagesError": "You can upload up to 10 images only",
+      "maxImagesHint": "You can upload a maximum of 10 images",
+      "recompress": "Recompress",
+      "compressionSettings": "Compression Settings"
     }
 }

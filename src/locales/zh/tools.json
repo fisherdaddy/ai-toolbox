@@ -154,6 +154,8 @@
       "downloadAll": "下载全部",
       "clearAll": "清除全部",
       "maxImagesError": "最多只能上传 10 张图片",
-      "maxImagesHint": "最多可上传 10 张图片"
+      "maxImagesHint": "最多可上传 10 张图片",
+      "recompress": "重新压缩",
+      "compressionSettings": "压缩设置"
     }
 }
