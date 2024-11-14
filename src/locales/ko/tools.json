@@ -159,5 +159,32 @@
       "maxImagesHint": "최대 10개의 이미지를 업로드할 수 있습니다",
       "recompress": "재압축",
       "compressionSettings": "압축 설정"
-    }
+    },
+    "imageWatermark": {
+      "title": "이미지 워터마크",
+      "description": "이미지에 텍스트 또는 이미지 워터마크 추가",
+      "uploadImage": "이미지 업로드",
+      "dropOrClick": "드래그하거나 클릭하여 이미지 업로드",
+      "watermarkType": "워터마크 유형",
+      "textWatermark": "텍스트 워터마크",
+      "imageWatermark": "이미지 워터마크",
+      "watermarkText": "워터마크 텍스트",
+      "watermarkTextPlaceholder": "워터마크 텍스트를 입력하세요",
+      "watermarkImage": "워터마크 이미지",
+      "uploadWatermark": "워터마크 이미지 업로드",
+      "opacity": "불투명도",
+      "fontSize": "글꼴 크기",
+      "rotation": "회전 각도",
+      "color": "색상",
+      "position": "위치",
+      "positions": {
+          "center": "가운데",
+          "topLeft": "왼쪽 위",
+          "topRight": "오른쪽 위",
+          "bottomLeft": "왼쪽 아래",
+          "bottomRight": "오른쪽 아래"
+      },
+      "download": "이미지 다운로드",
+      "noImage": "이미지를 업로드하세요"
+  }
 }

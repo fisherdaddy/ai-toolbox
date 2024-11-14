@@ -10,7 +10,7 @@ const tools = [
   { id: 'latex2image', icon: '/assets/icon/latex2image.png', path: '/latex-to-image' },
   { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
   { id: 'imageCompressor', icon: '/assets/icon/image-compressor.png', path: '/image-compressor' },
-  
+  { id: 'imageWatermark', icon: '/assets/icon/image-watermark.png', path: '/image-watermark' },
  ];
 
 const ImageTools = () => {

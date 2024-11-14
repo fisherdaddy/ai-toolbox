@@ -158,5 +158,32 @@
       "maxImagesHint": "最大10枚の画像をアップロードできます",
       "recompress": "再圧縮",
       "compressionSettings": "圧縮設定"
-    }
+    },
+    "imageWatermark": {
+      "title": "画像の透かし",
+      "description": "画像にテキストまたは画像の透かしを追加",
+      "uploadImage": "画像をアップロード",
+      "dropOrClick": "ドラッグまたはクリックして画像をアップロード",
+      "watermarkType": "透かしの種類",
+      "textWatermark": "テキストの透かし",
+      "imageWatermark": "画像の透かし",
+      "watermarkText": "透かしテキスト",
+      "watermarkTextPlaceholder": "透かしテキストを入力してください",
+      "watermarkImage": "透かし画像",
+      "uploadWatermark": "透かし画像をアップロード",
+      "opacity": "不透明度",
+      "fontSize": "フォントサイズ",
+      "rotation": "回転角度",
+      "color": "カラー",
+      "position": "位置",
+      "positions": {
+          "center": "中央",
+          "topLeft": "左上",
+          "topRight": "右上",
+          "bottomLeft": "左下",
+          "bottomRight": "右下"
+      },
+      "download": "画像をダウンロード",
+      "noImage": "画像をアップロードしてください"
+  }
 }

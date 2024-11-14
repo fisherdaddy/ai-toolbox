@@ -158,5 +158,32 @@
       "maxImagesHint": "You can upload a maximum of 10 images",
       "recompress": "Recompress",
       "compressionSettings": "Compression Settings"
-    }
+    },
+    "imageWatermark": {
+      "title": "Image Watermark",
+      "description": "Add text or image watermark to the image",
+      "uploadImage": "Upload Image",
+      "dropOrClick": "Drag or click to upload image",
+      "watermarkType": "Watermark Type",
+      "textWatermark": "Text Watermark",
+      "imageWatermark": "Image Watermark",
+      "watermarkText": "Watermark Text",
+      "watermarkTextPlaceholder": "Please enter watermark text",
+      "watermarkImage": "Watermark Image",
+      "uploadWatermark": "Upload Watermark Image",
+      "opacity": "Opacity",
+      "fontSize": "Font Size",
+      "rotation": "Rotation Angle",
+      "color": "Color",
+      "position": "Position",
+      "positions": {
+          "center": "Center",
+          "topLeft": "Top Left",
+          "topRight": "Top Right",
+          "bottomLeft": "Bottom Left",
+          "bottomRight": "Bottom Right"
+      },
+      "download": "Download Image",
+      "noImage": "Please upload an image"
+}
 }

@@ -24,6 +24,7 @@ const LatexToImage = lazy(() => import('./components/LatexToImage'));
 const TextDiff = lazy(() => import('./components/TextDiff'));
 const SubtitleGenerator = lazy(() => import('./components/SubtitleGenerator'));
 const ImageCompressor = lazy(() => import('./components/ImageCompressor'));
+const ImageWatermark = lazy(() => import('./components/ImageWatermark'));
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
               <Route path="/text-diff" element={<TextDiff />} />
               <Route path="/subtitle-to-image" element={<SubtitleGenerator />} />
               <Route path="/image-compressor" element={<ImageCompressor />} />
+              <Route path="/image-watermark" element={<ImageWatermark />} />
               
               <Route path="*" element={<NotFound />} />
 

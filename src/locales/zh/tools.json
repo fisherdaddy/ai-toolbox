@@ -113,7 +113,7 @@
       "newPlaceholder": "在此输入新文本..."
     },
     "subtitleGenerator": {
-      "title": "字幕拼接工具",
+      "title": "字幕拼接",
       "description": "快速生成多行字幕图片，支持自定义样式",
       "uploadImage": "上传背景图片",
       "removeImage": "移除图片",
@@ -157,5 +157,32 @@
       "maxImagesHint": "最多可上传 10 张图片",
       "recompress": "重新压缩",
       "compressionSettings": "压缩设置"
+    },
+    "imageWatermark": {
+      "title": "图片水印",
+      "description": "为图片添加文字或图片水印",
+      "uploadImage": "上传图片",
+      "dropOrClick": "拖拽或点击上传图片",
+      "watermarkType": "水印类型",
+      "textWatermark": "文字水印",
+      "imageWatermark": "图片水印",
+      "watermarkText": "水印文字",
+      "watermarkTextPlaceholder": "请输入水印文字",
+      "watermarkImage": "水印图片",
+      "uploadWatermark": "上传水印图片",
+      "opacity": "透明度",
+      "fontSize": "字体大小",
+      "rotation": "旋转角度",
+      "color": "颜色",
+      "position": "位置",
+      "positions": {
+        "center": "居中",
+        "topLeft": "左上角",
+        "topRight": "右上角",
+        "bottomLeft": "左下角",
+        "bottomRight": "右下角"
+      },
+      "download": "下载图片",
+      "noImage": "请上传图片"
     }
 }
