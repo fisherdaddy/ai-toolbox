@@ -190,5 +190,25 @@
   "imageBackgroundRemover": {
     "title": "이미지 배경 제거",
     "description": "이미지 배경 제거"
+  },
+  "textBehindImage": {
+    "title": "이미지 뒤의 텍스트",
+    "description": "이미지의 주요 객체와 배경 사이에 텍스트를 추가하여 3D 효과를 만듭니다",
+    "imageUpload": "이미지 업로드",
+    "uploadPrompt": "클릭하거나 드래그하여 이미지를 업로드하세요",
+    "textSettings": "텍스트 설정",
+    "text": "텍스트 내용",
+    "textPlaceholder": "텍스트를 입력하세요",
+    "characters": "문자 수",
+    "fontSize": "글자 크기",
+    "fontWeight": "글자 굵기",
+    "rotation": "회전 각도",
+    "color": "색상",
+    "opacity": "불투명도",
+    "positionX": "수평 위치",
+    "positionY": "수직 위치",
+    "download": "이미지 다운로드",
+    "processing": "처리 중...",
+    "noImage": "먼저 이미지를 업로드하세요"
   }
 }

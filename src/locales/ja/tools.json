@@ -189,5 +189,25 @@
     "imageBackgroundRemover": {
       "title": "画像背景の削除",
       "description": "画像の背景を削除"
+    },
+    "textBehindImage": {
+      "title": "画像の後ろの文字",
+      "description": "画像のメイン主体と背景の間に文字を追加し、3D効果を作成します",
+      "imageUpload": "画像アップロード",
+      "uploadPrompt": "クリックまたはドラッグして画像をアップロード",
+      "textSettings": "文字設定",
+      "text": "文字内容",
+      "textPlaceholder": "文字を入力してください",
+      "characters": "文字数",
+      "fontSize": "フォントサイズ",
+      "fontWeight": "フォントの太さ",
+      "rotation": "回転角度",
+      "color": "色",
+      "opacity": "不透明度",
+      "positionX": "水平位置",
+      "positionY": "垂直位置",
+      "download": "画像をダウンロード",
+      "processing": "処理中...",
+      "noImage": "最初に画像をアップロードしてください"
     }
 }

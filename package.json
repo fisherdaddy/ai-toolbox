@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@imgly/background-removal": "^1.5.5",
     "@react-oauth/google": "^0.12.1",
     "antd": "^5.21.6",
     "browser-image-compression": "^2.0.2",

@@ -188,5 +188,25 @@
     "imageBackgroundRemover": {
       "title": "图片背景去除",
       "description": "去除图片背景"
+    },
+    "textBehindImage": {
+      "title": "文字穿越图片",
+      "description": "在图片主体与背景之间添加文字，创造3D效果",
+      "imageUpload": "图片上传",
+      "uploadPrompt": "点击或拖拽上传图片",
+      "textSettings": "文字设置",
+      "text": "文字内容",
+      "textPlaceholder": "请输入文字",
+      "characters": "个字符",
+      "fontSize": "字体大小",
+      "fontWeight": "字体粗细",
+      "rotation": "旋转角度",
+      "color": "颜色",
+      "opacity": "透明度",
+      "positionX": "水平位置",
+      "positionY": "垂直位置",
+      "download": "下载图片",
+      "processing": "正在处理...",
+      "noImage": "请先上传图片"
     }
 }

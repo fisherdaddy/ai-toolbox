@@ -189,5 +189,25 @@
     "imageBackgroundRemover": {
       "title": "Image Background Remover",
       "description": "Remove image background"
+    },
+    "textBehindImage": {
+      "title": "Text Behind Image",
+      "description": "Add text between the main subject and background of the image to create a 3D effect",
+      "imageUpload": "Image Upload",
+      "uploadPrompt": "Click or drag to upload an image",
+      "textSettings": "Text Settings",
+      "text": "Text Content",
+      "textPlaceholder": "Enter text",
+      "characters": "characters",
+      "fontSize": "Font Size",
+      "fontWeight": "Font Weight",
+      "rotation": "Rotation Angle",
+      "color": "Color",
+      "opacity": "Opacity",
+      "positionX": "Horizontal Position",
+      "positionY": "Vertical Position",
+      "download": "Download Image",
+      "processing": "Processing...",
+      "noImage": "Please upload an image first"
     }
 }
