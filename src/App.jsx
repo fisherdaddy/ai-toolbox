@@ -26,7 +26,7 @@ const SubtitleGenerator = lazy(() => import('./components/SubtitleGenerator'));
 const ImageCompressor = lazy(() => import('./components/ImageCompressor'));
 const ImageWatermark = lazy(() => import('./components/ImageWatermark'));
 const TextBehindImage = lazy(() => import('./components/TextBehindImage'));
-
+const BackgroundRemover = lazy(() => import('./components/BackgroundRemover'));
 function App() {
   return (
     <div className="app-container">
@@ -57,7 +57,8 @@ function App() {
               <Route path="/subtitle-to-image" element={<SubtitleGenerator />} />
               <Route path="/image-compressor" element={<ImageCompressor />} />
               <Route path="/image-watermark" element={<ImageWatermark />} />
-              <Route path="/text-behind-image" element={<TextBehindImage />} />
+              <Route path="/text-behind-image" element={<TextBehindImage />} /> 
+              <Route path="/background-remover" element={<BackgroundRemover />} />
               <Route path="*" element={<NotFound />} />
 
             </Routes>

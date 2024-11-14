@@ -16,6 +16,8 @@ const SubtitleMaker = () => {
     strokeColor: '#000000'
   });
 
+  const fileInputRef = useRef(null);
+
   // 预设的字幕颜色选项 - 只保留最常用的几个
   const presetColors = [
     { name: t('tools.subtitleGenerator.presetColors.classicYellow'), value: '#FFE135' },
@@ -138,7 +140,15 @@ useEffect(() => {
     <Container>
       <SettingsPanel>
         <h3>{t('tools.subtitleGenerator.uploadImage')}</h3>
-        <FileInput type="file" accept="image/*" onChange={handleImageUpload} />
+        <UploadButton onClick={() => fileInputRef.current.click()}>
+          <HiddenFileInput
+            ref={fileInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+          />
+          {t('tools.subtitleGenerator.dropOrClick')}
+        </UploadButton>
         
         {imageSrc && (
           <>
@@ -322,31 +332,23 @@ const PreviewImage = styled.img`
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
-const FileInput = styled.input`
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+const UploadButton = styled.div`
+  border: 2px dashed rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
   cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
 
-  &::-webkit-file-upload-button {
-    background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-    }
+  &:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    background: rgba(99, 102, 241, 0.05);
   }
+`;
+
+const HiddenFileInput = styled.input`
+  display: none;
 `;
 
 const SettingGroup = styled.div`

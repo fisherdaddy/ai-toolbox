@@ -117,6 +117,7 @@
       "title": "字幕生成ツール",
       "description": "複数行の字幕画像を素早く生成、スタイルのカスタマイズも可能",
       "uploadImage": "背景画像をアップロード",
+      "dropOrClick": "ドラッグまたはクリックして画像をアップロード",
       "removeImage": "画像を削除",
       "globalSettings": "グローバル設定",
       "fontColor": "フォントカラー",
@@ -184,11 +185,17 @@
           "bottomRight": "右下"
       },
       "download": "画像をダウンロード",
-      "noImage": "画像をアップロードしてください"
+      "noImage": "画像をアップロードしてください",
+      "privacyNote": "この機能は完全にブラウザ内で実行され、プライバシーの漏洩リスクはありません。安心してご利用ください。"
     },
     "imageBackgroundRemover": {
-      "title": "画像背景の削除",
-      "description": "画像の背景を削除"
+      "title": "画像背景削除",
+      "description": "画像の背景を削除",
+      "uploadPrompt": "クリックまたはドラッグして画像をアップロード",
+      "processing": "処理中...",
+      "noImage": "まず画像をアップロードしてください",
+      "download": "画像をダウンロード",
+      "privacyNote": "この機能は完全にブラウザ内で実行され、プライバシーの漏洩リスクはありません。安心してご利用ください。"
     },
     "textBehindImage": {
       "title": "画像の後ろの文字",
@@ -208,6 +215,7 @@
       "positionY": "垂直位置",
       "download": "画像をダウンロード",
       "processing": "処理中...",
-      "noImage": "最初に画像をアップロードしてください"
+      "noImage": "最初に画像をアップロードしてください",
+      "privacyNote": "この機能は完全にブラウザ内で実行され、プライバシーの漏洩リスクはありません。安心してご利用ください。"
     }
 }

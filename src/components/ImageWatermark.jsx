@@ -150,6 +150,18 @@ const UploadButton = styled.div`
   }
 `;
 
+// 添加隐私提示样式
+const PrivacyNote = styled.div`
+  background: rgba(99, 102, 241, 0.1);
+  border-left: 4px solid #6366F1;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0 8px 8px 0;
+  color: #4F46E5;
+  font-size: 0.9rem;
+  line-height: 1.5;
+`;
+
 function ImageWatermark() {
   const { t } = useTranslation();
   const [image, setImage] = useState(null);
@@ -347,6 +359,11 @@ function ImageWatermark() {
                 />
                 {t('tools.imageWatermark.dropOrClick')}
               </UploadButton>
+              
+              {/* 添加隐私提示 */}
+              <PrivacyNote>
+                {t('tools.imageWatermark.privacyNote')}
+              </PrivacyNote>
             </Section>
 
             <Section>

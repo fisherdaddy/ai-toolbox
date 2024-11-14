@@ -241,6 +241,18 @@ const GroupTitle = styled.h3`
   font-weight: 600;
 `;
 
+// 添加隐私提示样式
+const PrivacyNote = styled.div`
+  background: rgba(99, 102, 241, 0.1);
+  border-left: 4px solid #6366F1;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0 8px 8px 0;
+  color: #4F46E5;
+  font-size: 0.9rem;
+  line-height: 1.5;
+`;
+
 function TextBehindImage() {
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
@@ -465,6 +477,11 @@ function TextBehindImage() {
               />
               {t('tools.textBehindImage.uploadPrompt')}
             </ImageUploadArea>
+            
+            {/* 添加隐私提示 */}
+            <PrivacyNote>
+              {t('tools.textBehindImage.privacyNote')}
+            </PrivacyNote>
           </SettingsGroup>
 
           {textSets.map(textSet => (

@@ -116,6 +116,7 @@
       "title": "字幕拼接",
       "description": "快速生成多行字幕图片，支持自定义样式",
       "uploadImage": "上传背景图片",
+      "dropOrClick": "拖拽或点击上传图片",
       "removeImage": "移除图片",
       "globalSettings": "全局设置",
       "fontColor": "字体颜色",
@@ -183,11 +184,17 @@
         "bottomRight": "右下角"
       },
       "download": "下载图片",
-      "noImage": "请上传图片"
+      "noImage": "请上传图片",
+      "privacyNote": "本功能完全在浏览器本地执行，无隐私数据泄露风险，请放心使用。"
     },
     "imageBackgroundRemover": {
       "title": "图片背景去除",
-      "description": "去除图片背景"
+      "description": "去除图片背景",
+      "uploadPrompt": "点击或拖拽上传图片",
+      "processing": "正在处理...",
+      "noImage": "请先上传图片",
+      "download": "下载图片",
+      "privacyNote": "本功能完全在浏览器本地执行，无隐私数据泄露风险，请放心使用。"
     },
     "textBehindImage": {
       "title": "文字穿越图片",
@@ -207,6 +214,7 @@
       "positionY": "垂直位置",
       "download": "下载图片",
       "processing": "正在处理...",
-      "noImage": "请先上传图片"
+      "noImage": "请先上传图片",
+      "privacyNote": "本功能完全在浏览器本地执行，无隐私数据泄露风险，请放心使用。"
     }
 }

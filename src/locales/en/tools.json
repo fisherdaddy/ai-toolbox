@@ -117,6 +117,7 @@
       "title": "Subtitle Generator",
       "description": "Quickly generate multi-line subtitle images with customizable styles",
       "uploadImage": "Upload Background Image",
+      "dragOrClick": "Drag and drop or click to upload",
       "removeImage": "Remove Image",
       "globalSettings": "Global Settings",
       "fontColor": "Font Color",
@@ -184,11 +185,17 @@
           "bottomRight": "Bottom Right"
       },
       "download": "Download Image",
-      "noImage": "Please upload an image"
+      "noImage": "Please upload an image",
+      "privacyNote": "This feature runs entirely in your browser with no risk of privacy data leakage. Feel free to use it."
     },
     "imageBackgroundRemover": {
       "title": "Image Background Remover",
-      "description": "Remove image background"
+      "description": "Remove the background of images",
+      "uploadPrompt": "Click or drag to upload an image",
+      "processing": "Processing...",
+      "noImage": "Please upload an image first",
+      "download": "Download Image",
+      "privacyNote": "This feature runs entirely in your browser with no risk of privacy data leakage. Feel free to use it."
     },
     "textBehindImage": {
       "title": "Text Behind Image",
@@ -208,6 +215,7 @@
       "positionY": "Vertical Position",
       "download": "Download Image",
       "processing": "Processing...",
-      "noImage": "Please upload an image first"
+      "noImage": "Please upload an image first",
+      "privacyNote": "This feature runs entirely in your browser with no risk of privacy data leakage. Feel free to use it."
     }
 }
