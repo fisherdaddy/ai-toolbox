@@ -217,5 +217,9 @@
       "processing": "Processing...",
       "noImage": "Please upload an image first",
       "privacyNote": "This feature runs entirely in your browser with no risk of privacy data leakage. Feel free to use it."
+    },
+    "anthropicTimeline": {
+      "title": "Anthropic Product Release",
+      "description": "Timeline of Anthropic's major product releases and events"
     }
 }

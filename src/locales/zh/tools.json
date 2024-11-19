@@ -216,5 +216,9 @@
       "processing": "正在处理...",
       "noImage": "请先上传图片",
       "privacyNote": "本功能完全在浏览器本地执行，无隐私数据泄露风险，请放心使用。"
+    },
+    "anthropicTimeline": {
+      "title": "Anthropic 产品发布",
+      "description": "Anthropic 公司重要产品及事件发布时间表"
     }
 }

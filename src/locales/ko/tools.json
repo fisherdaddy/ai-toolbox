@@ -218,5 +218,9 @@
     "processing": "처리 중...",
     "noImage": "먼저 이미지를 업로드하세요",
     "privacyNote": "이 기능은 완전히 브라우저 내에서 실행되며, 개인정보 유출 위험이 없습니다. 안심하고 사용하세요."
+  },
+  "anthropicTimeline": {
+    "title": "Anthropic 제품 출시",
+    "description": "Anthropic 제품 출시 일정"
   }
 }

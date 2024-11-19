@@ -27,6 +27,8 @@ const ImageCompressor = lazy(() => import('./components/ImageCompressor'));
 const ImageWatermark = lazy(() => import('./components/ImageWatermark'));
 const TextBehindImage = lazy(() => import('./components/TextBehindImage'));
 const BackgroundRemover = lazy(() => import('./components/BackgroundRemover'));
+const AnthropicTimeline = lazy(() => import('./components/AnthropicTimeline'));
+
 function App() {
   return (
     <div className="app-container">
@@ -59,6 +61,7 @@ function App() {
               <Route path="/image-watermark" element={<ImageWatermark />} />
               <Route path="/text-behind-image" element={<TextBehindImage />} /> 
               <Route path="/background-remover" element={<BackgroundRemover />} />
+              <Route path="/anthropic-timeline" element={<AnthropicTimeline />} />
               <Route path="*" element={<NotFound />} />
 
             </Routes>

@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 
 const tools = [
   { id: 'openAITimeline', icon: '/assets/icon/openai_small.svg', path: '/openai-timeline' },
+  { id: 'anthropicTimeline', icon: '/assets/icon/anthropic_small.svg', path: '/anthropic-timeline' },
   { id: 'modelPrice', icon: '/assets/icon/openai_small.svg', path: '/llm-model-price' },
 ];
 

@@ -217,5 +217,9 @@
       "processing": "処理中...",
       "noImage": "最初に画像をアップロードしてください",
       "privacyNote": "この機能は完全にブラウザ内で実行され、プライバシーの漏洩リスクはありません。安心してご利用ください。"
+    },
+    "anthropicTimeline": {
+      "title": "Anthropic 製品リリース",
+      "description": "Anthropic 製品リリース時刻表"
     }
 }

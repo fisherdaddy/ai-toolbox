@@ -1,0 +1,80 @@
+[
+    {
+      "date": "2021年3月",
+      "title": "Anthropic公司成立",
+      "feature": "致力于构建安全、可靠和可解释的AI系统",
+      "description": "由前OpenAI员工创立，旨在解决AI安全问题，并开发更符合人类价值观的AI系统。"
+    },
+    {
+      "date": "2021-2022年",
+      "title": "Claude早期开发",
+      "feature": "专注于“宪法式AI”的概念",
+      "description": "Anthropic开始研发Claude，并专注于“宪法式AI”的概念，通过一套原则来引导和约束AI的行为，使其更安全、更符合伦理。"
+    },
+    {
+      "date": "2023年3月",
+      "title": "Claude首次亮相",
+      "feature": "通过与Quora的Poe平台整合，首次向公众开放测试",
+      "description": "用户可以通过Poe与Claude进行互动，体验其强大的语言理解和生成能力。"
+    },
+    {
+      "date": "2023年7月",
+      "title": "Claude 2发布",
+      "feature": "上下文窗口扩展到100K tokens；在编码、数学和推理方面取得显著进步，并提升了安全性；可以通过API访问",
+      "description": "Claude 2的上下文窗口扩展到100K tokens，可以处理更长的文本输入。在编码、数学和推理方面取得了显著进步，并且在安全性方面也得到了提升，它可以通过API访问，并开始与Notion、DuckDuckGo等平台整合。"
+    },
+    {
+      "date": "2023年11月",
+      "title": "Claude 2.1发布",
+      "feature": "上下文窗口扩大到200K tokens，增强了处理复杂指令和多轮对话的能力",
+      "description": "Claude 2.1进一步提升了性能，上下文窗口扩大到200K tokens，并增强了处理复杂指令和多轮对话的能力。"
+    },
+    {
+      "date": "2024年3月4日",
+      "title": "Claude 3系列发布 (Haiku, Sonnet, Opus)",
+      "feature": "包含三个不同性能和价格的模型：Haiku (最快，最轻便)，Sonnet，Opus (最强，但最慢，最贵)",
+      "description": "Claude 3系列引入了多模态能力，支持处理更长的上下文窗口 (200K tokens)，并在多个基准测试中超越了竞争对手，例如GPT-4。  Haiku 和 Sonnet 提供免费版本，Opus 为付费版本。"
+    },
+    {
+      "date": "2024年5月1日",
+      "title": "Claude iOS APP发布",
+      "feature": "",
+      "description": ""
+    },
+    {
+      "date": "2024年6月21日",
+      "title": "Claude 3.5 Sonnet发布",
+      "feature": "性能提升，代码和视觉能力显著增强",
+      "description": "Claude 3.5 Sonnet是Claude 3.5系列的第一个模型，性能比Claude 3 Opus提升了一倍。"
+    },
+    {
+      "date": "2024年7月17日",
+      "title": "Claude Android APP发布",
+      "feature": "",
+      "description": ""
+    },
+    {
+      "date": "2024年8月28日",
+      "title": "Claude Artifacts 发布",
+      "feature": "借助 Artifacts，与 Claude 一起创建作品",
+      "description": "借助 Artifacts，您可以在一个专用窗口中即时查看、迭代和构建您与 Claude 一起创建的作品。"
+    },
+    {
+      "date": "2024年10月22日",
+      "title": "Computer use 发布",
+      "feature": "开发人员可以指导 Claude 像人们一样使用计算机 - 通过查看屏幕、移动光标、单击按钮和输入文本。API 可用",
+      "description": "Claude 3.5 Sonnet 是第一个在公开测试版中提供计算机使用的前沿人工智能模型。在这个阶段，它仍然处于实验阶段——有时很麻烦而且容易出错。"
+    },
+    {
+      "date": "2024年10月22日",
+      "title": "新版 Claude 3.5 Sonnet 和 Claude 3.5 Haiku发布",
+      "feature": "新版 Claude 3.5 Sonnet 在编码方面取得了显著进步；Claude 3.5 Haiku 最先进的技术与经济性和速度的结合",
+      "description": "升级后的 Claude 3.5 Sonnet 对其前身进行了全面改进，尤其是在编码方面取得了显着的进步。 Claude 3.5 Haiku 在许多评估中与 Claude 3 Opus 的性能相匹配，速度与上一代 Haiku 相似。"
+    },
+    {
+      "date": "2024年10月31日",
+      "title": "Mac 和 Windows 客户端发布",
+      "feature": "",
+      "description": ""
+    }
+  ]
