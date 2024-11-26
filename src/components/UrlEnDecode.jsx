@@ -2,6 +2,8 @@ import React, { useState, useCallback } from 'react';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
 import styled from 'styled-components';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // 复用相同的样式组件
 const Container = styled.div`
@@ -45,6 +47,7 @@ const Title = styled.h2`
 
 function UrlEncoderDecoder() {
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
   const [input, setInput] = useState('');
   const [resultText, setResultText] = useState('');
   const [isCopied, setIsCopied] = useState(false);
@@ -81,6 +84,7 @@ function UrlEncoderDecoder() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.urlEncodeDecode.title')}
         description={t('tools.urlEncodeDecode.description')}

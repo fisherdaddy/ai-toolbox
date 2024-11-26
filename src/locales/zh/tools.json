@@ -101,7 +101,8 @@
       "download": "下载图片",
       "dragOrClick": "拖拽或点击上传图片",
       "fileName": "文件名",
-      "fileSize": "文件大小"
+      "fileSize": "文件大小",
+      "preview": "预览"
     },
     "fisherai": {
       "title": "FisherAI",
@@ -201,7 +202,7 @@
     },
     "textBehindImage": {
       "title": "文字穿越图片",
-      "description": "在图片主体与背景之间添加文字，创造3D效果",
+      "description": "在图片主体与背景之间添加文字，3D效果",
       "imageUpload": "图片上传",
       "uploadPrompt": "点击或拖拽上传图片",
       "textSettings": "文字设置",

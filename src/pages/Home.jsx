@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from '../js/i18n';
 import SEO from '../components/SEO';
 
@@ -25,10 +25,37 @@ const tools = [
 
 const Home = () => {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleClearLoading = () => {
+      setLoading('');
+    };
+    window.addEventListener('clearLoadingState', handleClearLoading);
+    return () => {
+      window.removeEventListener('clearLoadingState', handleClearLoading);
+    };
+  }, []);
+
+  const handleNavigate = (tool) => {
+    if (tool.external) {
+      window.open(tool.path, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    setLoading(tool.id);
+    window.scrollTo(0, 0);
+    navigate(tool.path);
+  };
 
   const renderToolLink = (tool) => {
     const content = (
-      <div className="group flex items-center gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+      <div className={`group flex items-center gap-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 relative ${loading === tool.id ? 'pointer-events-none' : ''}`}>
+        {loading === tool.id && (
+          <div className="absolute inset-0 bg-white/80 rounded-xl flex items-center justify-center z-10">
+            <div className="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
         <img 
           src={tool.icon} 
           alt={`${t(`tools.${tool.id}.title`)} icon`} 
@@ -48,17 +75,15 @@ const Home = () => {
 
     return tool.external ? (
       <a 
-        href={tool.path}
-        className="block"
-        target="_blank"
-        rel="noopener noreferrer"
+        onClick={() => handleNavigate(tool)}
+        className="block cursor-pointer"
       >
         {content}
       </a>
     ) : (
-      <Link to={tool.path} className="block">
+      <div onClick={() => handleNavigate(tool)} className="block cursor-pointer">
         {content}
-      </Link>
+      </div>
     );
   };
 

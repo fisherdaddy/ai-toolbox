@@ -3,6 +3,7 @@ import { removeBackground } from "@imgly/background-removal";
 import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 // Reuse container style
 const Container = styled.div`
@@ -157,6 +158,7 @@ const PrivacyNote = styled.div`
 `;
 
 function BackgroundRemover() {
+  useScrollToTop();
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
   const [removedBgImage, setRemovedBgImage] = useState(null);

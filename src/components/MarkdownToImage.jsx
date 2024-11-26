@@ -1,9 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { marked } from 'marked';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
 import DOMPurify from 'dompurify';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // 更新预设模板
 const templates = [
@@ -303,11 +305,12 @@ const Preview = styled.div`
   hyphens: auto;
 `;
 
-function TextToImage() {
+function MarkdownToImage() {
   const { t } = useTranslation();
   const [text, setText] = useState('');
   const [selectedTemplate, setSelectedTemplate] = useState(templates[0]);
   const previewRef = useRef(null);
+  const isLoading = usePageLoading();
 
   const formatText = (text) => {
     return marked.parse(text, {
@@ -419,6 +422,7 @@ function TextToImage() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.markdown2image.title')}
         description={t('tools.markdown2image.description')}
@@ -473,4 +477,4 @@ function TextToImage() {
   );
 }
 
-export default TextToImage;
+export default MarkdownToImage;

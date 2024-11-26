@@ -3,6 +3,8 @@ import { removeBackground } from "@imgly/background-removal";
 import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import '../styles/fonts.css';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // 复用现有的基础容器样式
 const Container = styled.div`
@@ -255,6 +257,7 @@ const PrivacyNote = styled.div`
 
 function TextBehindImage() {
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
   const [selectedImage, setSelectedImage] = useState(null);
   const [isImageSetupDone, setIsImageSetupDone] = useState(false);
   const [removedBgImageUrl, setRemovedBgImageUrl] = useState(null);
@@ -460,256 +463,259 @@ function TextBehindImage() {
   }, []);
 
   return (
-    <Container>
-      <ContentWrapper>
-        <ControlPanel>
-          <Title>{t('tools.textBehindImage.title')}</Title>
+    <>
+      {isLoading && <LoadingOverlay />}
+      <Container>
+        <ContentWrapper>
+          <ControlPanel>
+            <Title>{t('tools.textBehindImage.title')}</Title>
 
-          <SettingsGroup>
-            <GroupTitle>{t('tools.textBehindImage.imageUpload')}</GroupTitle>
-            <ImageUploadArea onClick={() => fileInputRef.current.click()}>
-              <input
-                type="file"
-                ref={fileInputRef}
-                style={{ display: 'none' }}
-                accept="image/*"
-                onChange={handleImageUpload}
-              />
-              {t('tools.textBehindImage.uploadPrompt')}
-            </ImageUploadArea>
-            
-            {/* 添加隐私提示 */}
-            <PrivacyNote>
-              {t('tools.textBehindImage.privacyNote')}
-            </PrivacyNote>
-          </SettingsGroup>
-
-          {textSets.map(textSet => (
-            <SettingsGroup key={textSet.id}>
-              <GroupTitle>{t('tools.textBehindImage.textSettings')}</GroupTitle>
+            <SettingsGroup>
+              <GroupTitle>{t('tools.textBehindImage.imageUpload')}</GroupTitle>
+              <ImageUploadArea onClick={() => fileInputRef.current.click()}>
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  style={{ display: 'none' }}
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                />
+                {t('tools.textBehindImage.uploadPrompt')}
+              </ImageUploadArea>
               
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.text')}
-                  <span>{textSet.text.length} {t('tools.textBehindImage.characters')}</span>
-                </Label>
-                <Input
-                  type="text"
-                  value={textSet.text}
-                  onChange={(e) => updateTextSet(textSet.id, 'text', e.target.value)}
-                  placeholder={t('tools.textBehindImage.textPlaceholder')}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.fontSize')}
-                  <span>{textSet.fontSize}px</span>
-                </Label>
-                <Input
-                  type="number"
-                  value={textSet.fontSize}
-                  onChange={(e) => updateTextSet(textSet.id, 'fontSize', Number(e.target.value))}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.fontWeight')}
-                  <span>{textSet.fontWeight}</span>
-                </Label>
-                <Input
-                  type="range"
-                  min="100"
-                  max="900"
-                  step="100"
-                  value={textSet.fontWeight}
-                  onChange={(e) => updateTextSet(textSet.id, 'fontWeight', Number(e.target.value))}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.rotation')}
-                  <span>{textSet.rotation}°</span>
-                </Label>
-                <Input
-                  type="range"
-                  min="-180"
-                  max="180"
-                  value={textSet.rotation}
-                  onChange={(e) => updateTextSet(textSet.id, 'rotation', Number(e.target.value))}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>{t('tools.textBehindImage.color')}</Label>
-                <Input
-                  type="color"
-                  value={textSet.color}
-                  onChange={(e) => updateTextSet(textSet.id, 'color', e.target.value)}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.opacity')}
-                  <span>{textSet.opacity}</span>
-                </Label>
-                <Input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={textSet.opacity}
-                  onChange={(e) => updateTextSet(textSet.id, 'opacity', Number(e.target.value))}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.positionX')}
-                  <span>{textSet.position.x}%</span>
-                </Label>
-                <Input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value={textSet.position.x}
-                  onChange={(e) => updateTextSet(textSet.id, 'position', { 
-                    ...textSet.position, 
-                    x: Number(e.target.value) 
-                  })}
-                />
-              </InputWrapper>
-
-              <InputWrapper>
-                <Label>
-                  {t('tools.textBehindImage.positionY')}
-                  <span>{textSet.position.y}%</span>
-                </Label>
-                <Input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value={textSet.position.y}
-                  onChange={(e) => updateTextSet(textSet.id, 'position', { 
-                    ...textSet.position, 
-                    y: Number(e.target.value) 
-                  })}
-                />
-              </InputWrapper>
+              {/* 添加隐私提示 */}
+              <PrivacyNote>
+                {t('tools.textBehindImage.privacyNote')}
+              </PrivacyNote>
             </SettingsGroup>
-          ))}
 
-        </ControlPanel>
-
-        <PreviewArea className="preview-area">
-          <div className="preview-content">
-            {imageLoading ? (
-              <div className="loading-container">
-                <span> {t('tools.textBehindImage.processing')}</span>
-              </div>
-            ) : selectedImage ? (
-              <div style={{ 
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}>
-                <DownloadButton onClick={() => handleDownload('original')}>
-                  {t('tools.textBehindImage.download')}
-                </DownloadButton>
-                <img 
-                  src={selectedImage} 
-                  alt="Background" 
-                  style={{
-                    ...calculateImageDimensions(),
-                    objectFit: 'contain',
-                    position: 'relative'
-                  }} 
-                />
+            {textSets.map(textSet => (
+              <SettingsGroup key={textSet.id}>
+                <GroupTitle>{t('tools.textBehindImage.textSettings')}</GroupTitle>
                 
-                <div style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.text')}
+                    <span>{textSet.text.length} {t('tools.textBehindImage.characters')}</span>
+                  </Label>
+                  <Input
+                    type="text"
+                    value={textSet.text}
+                    onChange={(e) => updateTextSet(textSet.id, 'text', e.target.value)}
+                    placeholder={t('tools.textBehindImage.textPlaceholder')}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.fontSize')}
+                    <span>{textSet.fontSize}px</span>
+                  </Label>
+                  <Input
+                    type="number"
+                    value={textSet.fontSize}
+                    onChange={(e) => updateTextSet(textSet.id, 'fontSize', Number(e.target.value))}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.fontWeight')}
+                    <span>{textSet.fontWeight}</span>
+                  </Label>
+                  <Input
+                    type="range"
+                    min="100"
+                    max="900"
+                    step="100"
+                    value={textSet.fontWeight}
+                    onChange={(e) => updateTextSet(textSet.id, 'fontWeight', Number(e.target.value))}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.rotation')}
+                    <span>{textSet.rotation}°</span>
+                  </Label>
+                  <Input
+                    type="range"
+                    min="-180"
+                    max="180"
+                    value={textSet.rotation}
+                    onChange={(e) => updateTextSet(textSet.id, 'rotation', Number(e.target.value))}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>{t('tools.textBehindImage.color')}</Label>
+                  <Input
+                    type="color"
+                    value={textSet.color}
+                    onChange={(e) => updateTextSet(textSet.id, 'color', e.target.value)}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.opacity')}
+                    <span>{textSet.opacity}</span>
+                  </Label>
+                  <Input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value={textSet.opacity}
+                    onChange={(e) => updateTextSet(textSet.id, 'opacity', Number(e.target.value))}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.positionX')}
+                    <span>{textSet.position.x}%</span>
+                  </Label>
+                  <Input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={textSet.position.x}
+                    onChange={(e) => updateTextSet(textSet.id, 'position', { 
+                      ...textSet.position, 
+                      x: Number(e.target.value) 
+                    })}
+                  />
+                </InputWrapper>
+
+                <InputWrapper>
+                  <Label>
+                    {t('tools.textBehindImage.positionY')}
+                    <span>{textSet.position.y}%</span>
+                  </Label>
+                  <Input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={textSet.position.y}
+                    onChange={(e) => updateTextSet(textSet.id, 'position', { 
+                      ...textSet.position, 
+                      y: Number(e.target.value) 
+                    })}
+                  />
+                </InputWrapper>
+              </SettingsGroup>
+            ))}
+
+          </ControlPanel>
+
+          <PreviewArea className="preview-area">
+            <div className="preview-content">
+              {imageLoading ? (
+                <div className="loading-container">
+                  <span> {t('tools.textBehindImage.processing')}</span>
+                </div>
+              ) : selectedImage ? (
+                <div style={{ 
+                  position: 'relative',
                   width: '100%',
                   height: '100%',
-                  pointerEvents: 'none'
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
                 }}>
-                  {textSets.map(textSet => {
-                    const imageElement = document.querySelector('img[alt="Background"]');
-                    const imageRect = imageElement?.getBoundingClientRect();
-                    const imageWidth = imageRect?.width || 0;
-                    
-                    // 计算文本的中心字符位置
-                    const text = textSet.text;
-                    const centerIndex = Math.floor(text.length / 2);
-                    const leftPart = text.substring(0, centerIndex);
-                    const centerChar = text.charAt(centerIndex);
-                    const rightPart = text.substring(centerIndex + 1);
-
-                    return (
-                      <div
-                        key={textSet.id}
-                        style={{
-                          position: 'absolute',
-                          left: `${textSet.position.x}%`,
-                          top: `${textSet.position.y}%`,
-                          transform: `translate(-50%, -50%) rotate(${textSet.rotation}deg)`,
-                          color: textSet.color,
-                          fontSize: `${textSet.fontSize}px`,
-                          fontFamily: 'Inter',
-                          fontWeight: textSet.fontWeight,
-                          opacity: textSet.opacity,
-                          zIndex: 1,
-                          whiteSpace: 'pre',
-                          display: 'flex',
-                          justifyContent: 'center',
-                          alignItems: 'center',
-                          transformOrigin: 'center',
-                        }}
-                      >
-                        <span>{leftPart}</span>
-                        <span style={{ 
-                          display: 'inline-block',
-                          position: 'relative'
-                        }}>{centerChar}</span>
-                        <span>{rightPart}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-                
-                {removedBgImageUrl && (
-                  <img
-                    src={removedBgImageUrl}
-                    alt="Foreground"
+                  <DownloadButton onClick={() => handleDownload('original')}>
+                    {t('tools.textBehindImage.download')}
+                  </DownloadButton>
+                  <img 
+                    src={selectedImage} 
+                    alt="Background" 
                     style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
                       ...calculateImageDimensions(),
                       objectFit: 'contain',
-                      zIndex: 2
-                    }}
+                      position: 'relative'
+                    }} 
                   />
-                )}
-              </div>
-            ) : (
-              <div className="upload-prompt">
-                {t('tools.textBehindImage.noImage')}
-              </div>
-            )}
-            <canvas ref={canvasRef} style={{ display: 'none' }} />
-          </div>
-        </PreviewArea>
-      </ContentWrapper>
-    </Container>
+                  
+                  <div style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    pointerEvents: 'none'
+                  }}>
+                    {textSets.map(textSet => {
+                      const imageElement = document.querySelector('img[alt="Background"]');
+                      const imageRect = imageElement?.getBoundingClientRect();
+                      const imageWidth = imageRect?.width || 0;
+                      
+                      // 计算文本的中心字符位置
+                      const text = textSet.text;
+                      const centerIndex = Math.floor(text.length / 2);
+                      const leftPart = text.substring(0, centerIndex);
+                      const centerChar = text.charAt(centerIndex);
+                      const rightPart = text.substring(centerIndex + 1);
+
+                      return (
+                        <div
+                          key={textSet.id}
+                          style={{
+                            position: 'absolute',
+                            left: `${textSet.position.x}%`,
+                            top: `${textSet.position.y}%`,
+                            transform: `translate(-50%, -50%) rotate(${textSet.rotation}deg)`,
+                            color: textSet.color,
+                            fontSize: `${textSet.fontSize}px`,
+                            fontFamily: 'Inter',
+                            fontWeight: textSet.fontWeight,
+                            opacity: textSet.opacity,
+                            zIndex: 1,
+                            whiteSpace: 'pre',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            transformOrigin: 'center',
+                          }}
+                        >
+                          <span>{leftPart}</span>
+                          <span style={{ 
+                            display: 'inline-block',
+                            position: 'relative'
+                          }}>{centerChar}</span>
+                          <span>{rightPart}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
+                  {removedBgImageUrl && (
+                    <img
+                      src={removedBgImageUrl}
+                      alt="Foreground"
+                      style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        ...calculateImageDimensions(),
+                        objectFit: 'contain',
+                        zIndex: 2
+                      }}
+                    />
+                  )}
+                </div>
+              ) : (
+                <div className="upload-prompt">
+                  {t('tools.textBehindImage.noImage')}
+                </div>
+              )}
+              <canvas ref={canvasRef} style={{ display: 'none' }} />
+            </div>
+          </PreviewArea>
+        </ContentWrapper>
+      </Container>
+    </>
   );
 }
 

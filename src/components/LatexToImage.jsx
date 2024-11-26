@@ -6,6 +6,8 @@ import DOMPurify from 'dompurify';
 import SEO from './SEO';
 import { useTranslation } from '../js/i18n';
 import html2canvas from 'html2canvas';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // 容器样式
 const Container = styled.div`
@@ -144,6 +146,7 @@ const DownloadButton = styled.button`
 function HtmlPreview() {
   const [html, setHtml] = useState('');
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
 
   // 处理 LaTeX 公式
   const processLatex = (content) => {
@@ -269,6 +272,7 @@ function HtmlPreview() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.latex2image.title')}
         description={t('tools.latex2image.description')}

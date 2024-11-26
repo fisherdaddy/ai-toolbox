@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
 import imageCompression from 'browser-image-compression';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // 复用 MarkdownToImage 的容器样式
 const Container = styled.div`
@@ -402,6 +404,7 @@ const truncateFilename = (filename, maxLength = 10) => {
 
 function ImageCompressor() {
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
   const [images, setImages] = useState([]); // 修改为数组存储多张图片
   const [compressedImages, setCompressedImages] = useState([]);
   const [settings, setSettings] = useState({
@@ -523,6 +526,7 @@ function ImageCompressor() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.imageCompressor.title')}
         description={t('tools.imageCompressor.description')}

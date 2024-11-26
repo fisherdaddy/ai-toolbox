@@ -99,7 +99,8 @@
       "download": "画像をダウンロード",
       "dragOrClick": "画像をドラッグまたはクリックしてアップロード",
       "fileName": "ファイル名",
-      "fileSize": "ファイルサイズ"
+      "fileSize": "ファイルサイズ",
+      "preview": "プレビュー"
     },
     "fisherai": {
       "title": "FisherAI",

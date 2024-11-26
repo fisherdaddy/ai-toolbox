@@ -1,4 +1,5 @@
 import React from 'react';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import PricingChart from '../components/PricingChart';
 import OpenaiPricing from '../data/openai-pricing.json';
 import LLMPricing from '../data/llm-pricing.json';
@@ -6,6 +7,7 @@ import VisionPricing from '../data/vision-model-pricing.json';
 import SEO from '../components/SEO';
 
 const PricingCharts = () => {
+  useScrollToTop();
   const lastUpdateTime = '2024-11-06 21:30';
 
   return (

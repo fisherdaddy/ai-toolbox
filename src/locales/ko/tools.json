@@ -100,7 +100,8 @@
       "download": "이미지 다운로드",
       "dragOrClick": "드래그 앤 드롭 또는 클릭하여 업로드",
       "fileName": "파일 이름",
-      "fileSize": "파일 크기"
+      "fileSize": "파일 크기",
+      "preview": "미리보기"
     },
     "fisherai": {
       "title": "FisherAI",

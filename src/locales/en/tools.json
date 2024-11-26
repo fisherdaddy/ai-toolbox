@@ -99,7 +99,8 @@
       "download": "Download Image",
       "dragOrClick": "Drag and drop or click to upload",
       "fileName": "File name",
-      "fileSize": "File size"
+      "fileSize": "File size",
+      "preview": "Preview"
     },
     "fisherai": {
       "title": "FisherAI",
@@ -117,7 +118,7 @@
       "title": "Subtitle Generator",
       "description": "Quickly generate multi-line subtitle images with customizable styles",
       "uploadImage": "Upload Background Image",
-      "dragOrClick": "Drag and drop or click to upload",
+      "dropOrClick": "Drag and drop or click to upload",
       "removeImage": "Remove Image",
       "globalSettings": "Global Settings",
       "fontColor": "Font Color",

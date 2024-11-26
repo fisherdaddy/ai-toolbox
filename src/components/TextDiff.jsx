@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -167,6 +169,7 @@ const DiffHeader = styled(TitleLabel)`
 
 function TextDiff() {
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
   const [oldText, setOldText] = useState('');
   const [newText, setNewText] = useState('');
 
@@ -180,6 +183,7 @@ function TextDiff() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.textDiff.title')}
         description={t('tools.textDiff.description')}

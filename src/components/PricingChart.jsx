@@ -1,5 +1,6 @@
 // PricingChart.jsx
 import React, { useState } from 'react';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import '../styles/PricingChart.css';
 
 const ChartLegend = ({ onLegendClick, highlightedBarTypes }) => {
@@ -99,6 +100,7 @@ const GridLines = () => (
 );
 
 const PricingChart = ({ data }) => {
+  useScrollToTop();
   const [highlightedBarTypes, setHighlightedBarTypes] = useState({
     input: true,
     output: true,

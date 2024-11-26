@@ -3,9 +3,11 @@ import '../styles/Timeline.css';  // 复用已有的Timeline样式
 import events from '../data/anthropic-releases.json';
 import SEO from '../components/SEO';
 import { useTranslation } from '../js/i18n';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 const AnthropicTimeline = () => {
   const { t } = useTranslation();
+  useScrollToTop();
 
   return (
     <>

@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import html2canvas from 'html2canvas';
 import { useTranslation } from '../js/i18n';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 // 更新中文字体数组，包含显示名称和 CSS 字体族名称
 const chineseFonts = [
@@ -203,6 +204,7 @@ const DownloadButton = styled.button`
 `;
 
 function QuoteCard() {
+  useScrollToTop();
   const { t } = useTranslation();
   
   const [chineseText, setChineseText] = useState('');

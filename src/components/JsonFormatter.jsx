@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from '../js/i18n';
 import SEO from '../components/SEO';
 import styled from 'styled-components';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -48,6 +50,7 @@ function JsonFormatter() {
   const [parsedJson, setParsedJson] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
   const [isCompressed, setIsCompressed] = useState(false);
+  const isLoading = usePageLoading();
 
   useEffect(() => {
     try {
@@ -80,6 +83,7 @@ function JsonFormatter() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.jsonFormatter.title')}
         description={t('tools.jsonFormatter.description')}

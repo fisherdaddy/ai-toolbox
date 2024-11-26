@@ -1,10 +1,12 @@
 import React from 'react';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import '../styles/Timeline.css';
 import events from '../data/openai-releases.json';
 import SEO from '../components/SEO';
 import { useTranslation } from '../js/i18n';
 
 const Timeline = () => {
+  useScrollToTop();
   const { t } = useTranslation();
 
   return (

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 import '../styles/HandwriteGen.css';
 import html2canvas from 'html2canvas';
 import {
@@ -16,6 +18,7 @@ const { Option } = Select;
 const { Title } = Typography;
 
 function HandwritingGenerator() {
+    const isLoading = usePageLoading();
     const [text, setText] = useState('');
     const [font, setFont] = useState("'XINYE'");
     const [paperType, setPaperType] = useState('Lined Paper'); // 默认值为横线纸
@@ -29,6 +32,15 @@ function HandwritingGenerator() {
     const [textAlign, setTextAlign] = useState('left');
     const [lineSpacing, setLineSpacing] = useState(1.25);
     const [charSpacing, setCharSpacing] = useState(0);
+
+    useEffect(() => {
+        // Clear any loading states from previous navigation
+        const clearLoadingState = () => {
+            const event = new CustomEvent('clearLoadingState');
+            window.dispatchEvent(event);
+        };
+        clearLoadingState();
+    }, []);
 
     const handleGenerate = () => {
         const previewElement = document.querySelector('.preview-area');
@@ -145,8 +157,9 @@ function HandwritingGenerator() {
     const backgroundOffset = -(lineSpacing * fontSize - fontSize);
 
     return (
-        <div className="handwrite-container" style={{ paddingTop: '4rem' }}>
-            <Layout>
+        <>
+            {isLoading && <LoadingOverlay />}
+            <Layout className="min-h-screen pt-20">
                 <Sider width={300} className="site-layout-background">
                     <div className="settings-section">
                         <h2 className="title-label">手写字体生成器</h2>
@@ -314,7 +327,7 @@ function HandwritingGenerator() {
                     </Content>
                 </Layout>
             </Layout>
-        </div>
+        </>
     );
 }
 

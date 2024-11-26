@@ -2,6 +2,8 @@ import React, { useState, useRef, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // 复用 MarkdownToImage 的基础容器样式
 const Container = styled.div`
@@ -164,6 +166,7 @@ const PrivacyNote = styled.div`
 
 function ImageWatermark() {
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
   const [image, setImage] = useState(null);
   const [watermarkText, setWatermarkText] = useState('');
   const [watermarkImage, setWatermarkImage] = useState(null);
@@ -339,6 +342,7 @@ function ImageWatermark() {
 
   return (
     <>
+      {isLoading && <LoadingOverlay />}
       <SEO
         title={t('tools.imageWatermark.title')}
         description={t('tools.imageWatermark.description')}
