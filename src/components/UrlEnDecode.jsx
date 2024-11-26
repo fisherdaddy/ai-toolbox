@@ -1,113 +1,46 @@
 import React, { useState, useCallback } from 'react';
-import { Title, Wrapper, Container, Preview } from '../js/SharedStyles';
-import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
+import styled from 'styled-components';
 
-const EncoderDecoderContainer = styled(Container)`
-  flex-direction: column;
-  gap: 16px;
-`;
-
-const StyledInputText = styled.textarea`
-  width: 100%;
-  height: 120px;
-  font-size: 15px;
-  padding: 16px;
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  box-sizing: border-box;
-  outline: none;
-  resize: none;
-  transition: all 0.3s ease;
-  line-height: 1.5;
-
-  &:focus {
-    border-color: rgba(99, 102, 241, 0.3);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
-  }
-`;
-
-const Label = styled.label`
-  font-weight: 500;
-  font-size: 14px;
-  color: #374151;
-  margin-bottom: 8px;
-  display: block;
-  letter-spacing: 0.1px;
-`;
-
-const ModeSwitcher = styled.div`
-  margin-bottom: 8px;
-
-  select {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(99, 102, 241, 0.1);
-    font-size: 14px;
-    color: #374151;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:focus {
-      border-color: rgba(99, 102, 241, 0.3);
-      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
-      outline: none;
-    }
-  }
-`;
-
-const ResultContainer = styled.div`
+// 复用相同的样式组件
+const Container = styled.div`
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+  padding: 4rem 2rem 2rem;
   position: relative;
-  width: 100%;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+  }
 `;
 
-const StyledPreview = styled.div`
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  padding: 16px;
-  font-size: 15px;
-  color: #374151;
-  min-height: 24px;
-  line-height: 1.5;
+const ContentWrapper = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
   position: relative;
+  z-index: 1;
 `;
 
-const ActionButton = styled.button`
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(99, 102, 241, 0.1);
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: #6366F1;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(99, 102, 241, 0.2);
-  }
-
-  &.active {
-    background: #6366F1;
-    color: white;
-  }
-
-  svg {
-    width: 14px;
-    height: 14px;
-  }
+const Title = styled.h2`
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
 `;
 
 function UrlEncoderDecoder() {
@@ -115,11 +48,10 @@ function UrlEncoderDecoder() {
   const [input, setInput] = useState('');
   const [resultText, setResultText] = useState('');
   const [isCopied, setIsCopied] = useState(false);
-  const [mode, setMode] = useState('decode'); // 'encode' 或 'decode'
+  const [mode, setMode] = useState('decode');
 
   const handleModeChange = (e) => {
     setMode(e.target.value);
-    // 当模式切换时，清空输入和输出
     setInput('');
     setResultText('');
   };
@@ -153,53 +85,81 @@ function UrlEncoderDecoder() {
         title={t('tools.urlEncodeDecode.title')}
         description={t('tools.urlEncodeDecode.description')}
       />
-      <Wrapper>
-        <Title>{t('tools.urlEncodeDecode.title')}</Title>
-        <EncoderDecoderContainer>
-          <ModeSwitcher>
-            <Label>{t('tools.urlEncodeDecode.modeLabel')}</Label>
-            <select value={mode} onChange={handleModeChange}>
-              <option value="encode">{t('tools.urlEncodeDecode.encode')}</option>
-              <option value="decode">{t('tools.urlEncodeDecode.decode')}</option>
-            </select>
-          </ModeSwitcher>
+      <Container>
+        <ContentWrapper>
+          <Title>{t('tools.urlEncodeDecode.title')}</Title>
           
-          <div>
-            <Label>
-              {mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
-            </Label>
-            <StyledInputText
-              value={input}
-              onChange={handleInputChange}
-              placeholder={mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
-            />
-          </div>
-
-          <div>
-            <Label>
-              {mode === 'decode' ? t('tools.urlDecode.resultLabel') : t('tools.urlEncode.resultLabel')}
-            </Label>
-            <ResultContainer>
-              <StyledPreview>{resultText}</StyledPreview>
-              <ActionButton 
-                onClick={handleCopy} 
-                className={isCopied ? 'active' : ''}
+          <div className="flex flex-col gap-6">
+            <div className="space-y-2">
+              <label className="block text-sm font-medium text-gray-700">
+                {t('tools.urlEncodeDecode.modeLabel')}
+              </label>
+              <select
+                value={mode}
+                onChange={handleModeChange}
+                className="w-full sm:w-48 px-3 py-2 bg-white/80 backdrop-blur-sm border border-indigo-100 rounded-xl
+                  focus:ring-4 focus:ring-indigo-100 focus:border-indigo-300 focus:outline-none
+                  text-sm text-gray-700 transition duration-300"
               >
-                {isCopied ? (
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                  </svg>
-                ) : (
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
-                  </svg>
-                )}
-                {isCopied ? t('tools.jsonFormatter.copiedMessage') : t('tools.jsonFormatter.copyButton')}
-              </ActionButton>
-            </ResultContainer>
+                <option value="encode">{t('tools.urlEncodeDecode.encode')}</option>
+                <option value="decode">{t('tools.urlEncodeDecode.decode')}</option>
+              </select>
+            </div>
+            
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+              <div className="w-full lg:w-1/2 space-y-2">
+                <label className="block text-sm font-medium text-gray-700">
+                  {mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
+                </label>
+                <textarea
+                  value={input}
+                  onChange={handleInputChange}
+                  placeholder={mode === 'decode' ? t('tools.urlDecode.inputLabel') : t('tools.urlEncode.inputLabel')}
+                  className="w-full h-[calc(100vh-400px)] px-4 py-3 bg-white/80 backdrop-blur-sm border border-indigo-100 rounded-xl
+                    focus:ring-4 focus:ring-indigo-100 focus:border-indigo-300 focus:outline-none
+                    text-sm font-mono text-gray-700 transition duration-300 resize-none"
+                />
+              </div>
+
+              <div className="w-full lg:w-1/2 space-y-2">
+                <label className="block text-sm font-medium text-gray-700">
+                  {mode === 'decode' ? t('tools.urlDecode.resultLabel') : t('tools.urlEncode.resultLabel')}
+                </label>
+                <div className="relative h-[calc(100vh-400px)]">
+                  <div className="h-full w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-indigo-100 
+                    rounded-xl text-sm font-mono text-gray-700 whitespace-pre-wrap break-all overflow-auto">
+                    {resultText}
+                  </div>
+                  <button
+                    onClick={handleCopy}
+                    className={`absolute top-2 right-2 flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200
+                      ${isCopied
+                        ? 'bg-green-100 text-green-700'
+                        : 'bg-white/50 hover:bg-indigo-50 text-gray-600 hover:text-indigo-600'
+                      }`}
+                  >
+                    {isCopied ? (
+                      <>
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                        {t('tools.jsonFormatter.copied')}
+                      </>
+                    ) : (
+                      <>
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                        {t('tools.jsonFormatter.copy')}
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </EncoderDecoderContainer>
-      </Wrapper>
+        </ContentWrapper>
+      </Container>
     </>
   );
 }

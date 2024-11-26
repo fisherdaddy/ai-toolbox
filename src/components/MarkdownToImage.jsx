@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { marked } from 'marked';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
-import Marked from 'marked-react';
+import DOMPurify from 'dompurify';
 
 // 更新预设模板
 const templates = [
@@ -54,7 +54,7 @@ const templates = [
 const Container = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
-  padding: 2rem;
+  padding: 4rem 2rem 2rem;
   position: relative;
   
   &::before {
@@ -114,6 +114,16 @@ const Section = styled.div`
   gap: 0.5rem;
 `;
 
+const TemplateSection = styled(Section)`
+  margin-bottom: 1rem;
+`;
+
+const EditorSection = styled(Section)`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Label = styled.label`
   font-size: 1rem;
   color: #333333;
@@ -158,76 +168,140 @@ const TemplateItem = styled.button`
   `}
 `;
 
-const MarkdownEditor = styled.textarea`
+const Editor = styled.textarea`
   width: 100%;
-  height: 100px;
-  padding: 0.5rem;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #333333;
+  height: 500px;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  font-family: 'SF Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
   resize: vertical;
+  color: #1a1a1a;
+  overflow-y: auto;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #64748b;
+  }
 `;
 
 const DownloadButton = styled.button`
   background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
   color: white;
+  padding: 0.5rem 1rem;
   border: none;
-  padding: 1rem;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: flex-end;
-  margin-top: 1rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  opacity: ${props => props.visible ? 1 : 0};
+  pointer-events: ${props => props.visible ? 'auto' : 'none'};
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+    opacity: 0.9;
   }
 `;
 
-const PreviewContainer = styled.div`
-  flex: 1;
-  background: ${(props) => props.bgColor || '#ffffff'};
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  height: fit-content;
-  align-self: flex-start;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-  width: 100%;
+const PreviewContainer = styled(InputContainer)`
+  overflow: auto;
+  position: relative;
+  min-height: 400px;
+  display: block;
   
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.15);
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
   }
-  
-  @media (max-width: 768px) {
-    margin-top: 2rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  p {
+    margin: 1em 0;
+    line-height: 1.6;
+  }
+
+  ul, ol {
+    margin: 1em 0;
+    padding-left: 2em;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin: 0.5em 0;
+    line-height: 1.6;
+  }
+
+  pre, code {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+    font-family: 'SF Mono', monospace;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+  }
+
+  blockquote {
+    border-left: 4px solid #e2e8f0;
+    margin: 1em 0;
+    padding-left: 1em;
+    color: #64748b;
+  }
+
+  table {
+    border-collapse: collapse;
     width: 100%;
+    margin: 1em 0;
+  }
+
+  th, td {
+    border: 1px solid #e2e8f0;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  th {
+    background: rgba(0, 0, 0, 0.05);
   }
 `;
 
 const Preview = styled.div`
-  font-size: clamp(16px, 2.5vw, 24px);
-  margin-bottom: 16px;
-  color: ${(props) => props.$color || '#333333'};
-  text-align: center;
-  line-height: 1.5;
-  font-family: ${(props) => props.$fontFamily || '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'};
-  white-space: pre-wrap;
+  font-family: ${(props) => props.$font || '-apple-system, system-ui, sans-serif'};
+  font-size: 16px;
+  line-height: 1.6;
+  color: ${(props) => props.$color || '#1a1a1a'};
+  background: ${(props) => props.$background || '#ffffff'};
+  padding: ${(props) => props.$padding || '40px'};
+  border-radius: 8px;
+  overflow-wrap: break-word;
   word-wrap: break-word;
-  width: 100%;
+  hyphens: auto;
 `;
-
 
 function TextToImage() {
   const { t } = useTranslation();
@@ -238,40 +312,109 @@ function TextToImage() {
   const formatText = (text) => {
     return marked.parse(text, {
       breaks: true,
-      gfm: true
+      gfm: true,
+      headerIds: false,
+      mangle: false,
+      // 自定义图片渲染
+      renderer: {
+        image(href, title, text) {
+          // 处理相对路径
+          if (href.startsWith('/')) {
+            href = window.location.origin + href;
+          }
+          return `<img src="${href}" alt="${text}" title="${title || ''}" style="max-width: 100%; height: auto;" crossorigin="anonymous" />`;
+        }
+      }
     });
   };
 
   const handleDownload = async () => {
-    const previewClone = previewRef.current.cloneNode(true);
-    document.body.appendChild(previewClone);
-    previewClone.style.position = 'absolute';
-    previewClone.style.left = '-9999px';
-    previewClone.style.width = 'auto';
-    previewClone.style.maxWidth = '800px';
-    previewClone.style.height = 'auto';
-    previewClone.style.whiteSpace = 'pre-wrap';
-    previewClone.style.backgroundColor = 'white';
-    previewClone.style.padding = '40px';
-    
+    const previewElement = previewRef.current;
+    if (!previewElement) return;
+
     try {
+      // 等待图片加载
+      const waitForImages = () => {
+        const images = previewElement.getElementsByTagName('img');
+        const promises = Array.from(images).map(img => {
+          if (img.complete) return Promise.resolve();
+          return new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+            // 确保图片使用完整的 URL
+            if (img.src.startsWith('/')) {
+              img.src = window.location.origin + img.src;
+            }
+            // 添加跨域属性
+            img.crossOrigin = 'anonymous';
+          });
+        });
+        return Promise.all(promises);
+      };
+
+      await waitForImages();
+      // 等待渲染完成
+      await new Promise(resolve => setTimeout(resolve, 500));
+
       const html2canvas = (await import('html2canvas')).default;
-      const canvas = await html2canvas(previewClone, {
-        backgroundColor: 'white',
+      const canvas = await html2canvas(previewElement, {
+        backgroundColor: selectedTemplate.bgColor,
         scale: 2,
-        width: previewClone.offsetWidth,
-        height: previewClone.offsetHeight
+        useCORS: true,
+        allowTaint: false,
+        logging: false,
+        onclone: (clonedDoc) => {
+          const clonedElement = clonedDoc.querySelector('.markdown-content');
+          if (clonedElement) {
+            clonedElement.style.width = '100%';
+            clonedElement.style.position = 'relative';
+            clonedElement.style.transform = 'none';
+            clonedElement.style.transformOrigin = '0 0';
+            clonedElement.style.overflow = 'visible';
+          }
+        }
       });
 
       const link = document.createElement('a');
-      link.download = 'text_image.png';
+      link.download = 'markdown-preview.png';
       link.href = canvas.toDataURL('image/png');
       link.click();
     } catch (error) {
-      console.error('Failed to load html2canvas:', error);
-    } finally {
-      document.body.removeChild(previewClone);
+      console.error('导出图片失败:', error);
     }
+  };
+
+  const renderPreview = () => {
+    // 配置 marked 选项
+    marked.setOptions({
+      gfm: true, // 启用 GitHub 风格的 Markdown
+      breaks: true, // 启用换行符转换为 <br>
+      headerIds: true,
+      mangle: false,
+      pedantic: false,
+      smartLists: true, // 优化列表输出
+      smartypants: true, // 优化标点符号
+    });
+
+    // 使用 DOMPurify 清理 HTML
+    const cleanHtml = DOMPurify.sanitize(marked(text), {
+      ADD_TAGS: ['img'],
+      ADD_ATTR: ['src', 'alt'],
+    });
+
+    return (
+      <div
+        ref={previewRef}
+        dangerouslySetInnerHTML={{ __html: cleanHtml }}
+        style={{
+          fontFamily: selectedTemplate.font,
+          color: selectedTemplate.textColor,
+          background: selectedTemplate.bgColor,
+          padding: selectedTemplate.padding,
+          minHeight: '100%',
+        }}
+      />
+    );
   };
 
   return (
@@ -287,7 +430,7 @@ function TextToImage() {
             <TitleLabel>{t('tools.markdown2image.title')}</TitleLabel>
             
             {/* 模板选择 */}
-            <Section>
+            <TemplateSection>
               <Label>{t('tools.markdown2image.selectTemplate')}</Label>
               <TemplateGrid>
                 {templates.map(template => (
@@ -302,39 +445,27 @@ function TextToImage() {
                   </TemplateItem>
                 ))}
               </TemplateGrid>
-            </Section>
+            </TemplateSection>
 
             {/* Markdown 编辑器 */}
-            <Section>
+            <EditorSection>
               <Label>{t('tools.markdown2image.inputLabel')}</Label>
-              <MarkdownEditor
+              <Editor
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder={t('tools.markdown2image.placeholder')}
               />
-            </Section>
-
-            <DownloadButton onClick={handleDownload}>
-              {t('tools.markdown2image.downloadButton')}
-            </DownloadButton>
+            </EditorSection>
           </InputContainer>
 
-          <PreviewContainer 
-            ref={previewRef}
-            bgColor={selectedTemplate.bgColor}
-          >
-            <div
-              style={{
-                padding: selectedTemplate.padding,
-                color: selectedTemplate.textColor,
-                fontFamily: selectedTemplate.font,
-                width: '100%'
-              }}
+          <PreviewContainer>
+            <DownloadButton 
+              onClick={handleDownload}
+              visible={text.length > 0}
             >
-              <Marked>
-                {text || t('tools.markdown2image.previewDefault')}
-              </Marked>
-            </div>
+              {t('tools.markdown2image.downloadButton')}
+            </DownloadButton>
+            {renderPreview()}
           </PreviewContainer>
         </ContentWrapper>
       </Container>

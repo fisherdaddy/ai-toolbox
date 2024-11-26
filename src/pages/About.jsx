@@ -12,7 +12,7 @@ const About = () => {
         title={t('about.title')}
         description={t('about.description')}
       />
-      <main>
+      <main className="container mx-auto px-4 pt-16 pb-8">
         <section className="about-section">
           <div className="about-header">
             <h1>{t('about.title')}</h1>

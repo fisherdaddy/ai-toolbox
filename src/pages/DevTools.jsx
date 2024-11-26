@@ -20,20 +20,24 @@ const DevTools = () => {
         title={t('dev-tools.title')}
         description={t('dev-tools.description')}
       />
-      <main>
-        <section className="tools-section">
-          <div className="tools-grid">
+      <main className="container mx-auto px-4 pt-16 pb-8">
+        <section className="mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
             {tools.map(tool => (
-              <Link to={tool.path} key={tool.id} className="tool-card">
+              <Link 
+                to={tool.path} 
+                key={tool.id} 
+                className="flex items-center p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 transition-all hover:translate-y-[-2px] hover:shadow-lg hover:bg-white/15"
+              >
                 <img 
                   src={tool.icon} 
                   alt={`${t(`tools.${tool.id}.title`)} icon`} 
-                  className="tool-icon" 
+                  className="w-12 h-12 object-contain mr-4" 
                   loading="lazy" 
                 />
-                <div className="tool-content">
-                  <h3 className="tool-title">{t(`tools.${tool.id}.title`)}</h3>
-                  <p className="tool-description">{t(`tools.${tool.id}.description`)}</p>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg font-semibold mb-1 text-gray-800">{t(`tools.${tool.id}.title`)}</h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">{t(`tools.${tool.id}.description`)}</p>
                 </div>
               </Link>
             ))}

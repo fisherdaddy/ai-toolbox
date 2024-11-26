@@ -247,9 +247,21 @@ useEffect(() => {
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem;
   background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
   min-height: 100vh;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+    z-index: -1;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;

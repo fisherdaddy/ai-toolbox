@@ -145,7 +145,7 @@ function HandwritingGenerator() {
     const backgroundOffset = -(lineSpacing * fontSize - fontSize);
 
     return (
-        <div className="handwrite-container">
+        <div className="handwrite-container" style={{ paddingTop: '4rem' }}>
             <Layout>
                 <Sider width={300} className="site-layout-background">
                     <div className="settings-section">

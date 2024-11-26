@@ -11,7 +11,7 @@ import html2canvas from 'html2canvas';
 const Container = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
-  padding: 2rem;
+  padding: 4rem 2rem 2rem;
   position: relative;
   
   &::before {

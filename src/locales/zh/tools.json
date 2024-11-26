@@ -5,8 +5,8 @@
       "selectTemplate": "选择模板",
       "inputLabel": "输入文本 (支持 Markdown)",
       "placeholder": "# 标题\n## 子标题\n- 列表项\n**粗体** *斜体*",
-      "downloadButton": "生成图片",
-      "previewDefault": "# 预览区域\n输入文本后在这里预览效果",
+      "downloadButton": "导出图片",
+      "previewDefault": "输入文本后在这里预览效果",
       "templates": {
         "simple": "简约",
         "ai-style": "AI风格",
@@ -56,8 +56,11 @@
       "description": "美化和验证 JSON 数据",
       "inputPlaceholder": "输入 JSON 数据",
       "invalidJson": "无效的 JSON",
-      "copyButton": "复制",
-      "copiedMessage": "已复制"
+      "emptyInput": "",
+      "copy": "复制",
+      "copied": "已复制",
+      "compress": "压缩",
+      "expand": "展开"
     },
     "urlEncodeDecode": {
       "title": "URL 编码/解码",

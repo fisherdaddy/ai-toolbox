@@ -14,6 +14,7 @@ const ConverterContainer = styled(Container)`
   backdrop-filter: blur(10px);
   border: 1px solid rgba(99, 102, 241, 0.1);
   border-radius: 12px;
+  padding-top: 4rem; // 添加顶部内边距
 `;
 
 const Section = styled.div`

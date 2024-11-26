@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 
@@ -33,42 +32,43 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <div className="content-wrapper">
-        <main>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/about" element={<About />} />
+      <div className="pt-4">
+        <div className="content-wrapper">
+          <main>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/about" element={<About />} />
 
-              <Route path="/dev-tools" element={<DevTools />} />
-              <Route path="/image-tools" element={<ImageTools />} />
-              <Route path="/ai-products" element={<AIProduct />} />
-              <Route path="/blog" element={<Blog />} />
+                <Route path="/dev-tools" element={<DevTools />} />
+                <Route path="/image-tools" element={<ImageTools />} />
+                <Route path="/ai-products" element={<AIProduct />} />
+                <Route path="/blog" element={<Blog />} />
 
-              <Route path="/markdown-to-image" element={<MarkdownToImage />} />
-              <Route path="/json-formatter" element={<JsonFormatter />} />
-              <Route path="/url-encode-and-decode" element={<UrlEnDecode />} />
-              <Route path="/openai-timeline" element={<OpenAITimeline />} />
-              <Route path="/llm-model-price" element={<PricingCharts />} />
-              <Route path="/handwriting" element={<HandwriteGen />} />
-              <Route path="/image-base64" element={<ImageBase64Converter />} />
-              <Route path="/quote-card" element={<QuoteCard />} />
-              <Route path="/latex-to-image" element={<LatexToImage />} />
-              <Route path="/text-diff" element={<TextDiff />} />
-              <Route path="/subtitle-to-image" element={<SubtitleGenerator />} />
-              <Route path="/image-compressor" element={<ImageCompressor />} />
-              <Route path="/image-watermark" element={<ImageWatermark />} />
-              <Route path="/text-behind-image" element={<TextBehindImage />} /> 
-              <Route path="/background-remover" element={<BackgroundRemover />} />
-              <Route path="/anthropic-timeline" element={<AnthropicTimeline />} />
-              <Route path="*" element={<NotFound />} />
+                <Route path="/markdown-to-image" element={<MarkdownToImage />} />
+                <Route path="/json-formatter" element={<JsonFormatter />} />
+                <Route path="/url-encode-and-decode" element={<UrlEnDecode />} />
+                <Route path="/openai-timeline" element={<OpenAITimeline />} />
+                <Route path="/llm-model-price" element={<PricingCharts />} />
+                <Route path="/handwriting" element={<HandwriteGen />} />
+                <Route path="/image-base64" element={<ImageBase64Converter />} />
+                <Route path="/quote-card" element={<QuoteCard />} />
+                <Route path="/latex-to-image" element={<LatexToImage />} />
+                <Route path="/text-diff" element={<TextDiff />} />
+                <Route path="/subtitle-to-image" element={<SubtitleGenerator />} />
+                <Route path="/image-compressor" element={<ImageCompressor />} />
+                <Route path="/image-watermark" element={<ImageWatermark />} />
+                <Route path="/text-behind-image" element={<TextBehindImage />} /> 
+                <Route path="/background-remover" element={<BackgroundRemover />} />
+                <Route path="/anthropic-timeline" element={<AnthropicTimeline />} />
+                <Route path="*" element={<NotFound />} />
 
-            </Routes>
-          </Suspense>
-        </main>-
+              </Routes>
+            </Suspense>
+          </main>-
+        </div>
       </div>
-      <Footer />
     </div>
   );
 }
