@@ -4,10 +4,13 @@ import '../styles/Timeline.css';
 import events from '../data/openai-releases.json';
 import SEO from '../components/SEO';
 import { useTranslation } from '../js/i18n';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 const Timeline = () => {
   useScrollToTop();
   const { t } = useTranslation();
+  const isLoading = usePageLoading();
 
   return (
     <>
@@ -15,7 +18,8 @@ const Timeline = () => {
         title={t('tools.openAITimeline.title')}
         description={t('tools.openAITimeline.description')}
       />
-      <div className="container">
+      {isLoading && <LoadingOverlay />}
+      <div className="timeline-container">
         <h1 className="timeline-title">{t('tools.openAITimeline.title')}</h1>
         <ul className="timeline">
           {events.map((item, index) => (

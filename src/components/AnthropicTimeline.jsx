@@ -4,10 +4,13 @@ import events from '../data/anthropic-releases.json';
 import SEO from '../components/SEO';
 import { useTranslation } from '../js/i18n';
 import { useScrollToTop } from '../hooks/useScrollToTop';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 const AnthropicTimeline = () => {
   const { t } = useTranslation();
   useScrollToTop();
+  const isLoading = usePageLoading();
 
   return (
     <>
@@ -15,7 +18,8 @@ const AnthropicTimeline = () => {
         title={t('tools.anthropicTimeline.title')}
         description={t('tools.anthropicTimeline.description')}
       />
-      <div className="container">
+      {isLoading && <LoadingOverlay />}
+      <div className="timeline-container">
         <h1 className="timeline-title">{t('tools.anthropicTimeline.title')}</h1>
         <ul className="timeline">
           {events.map((item, index) => (
@@ -34,4 +38,4 @@ const AnthropicTimeline = () => {
   );
 };
 
-export default AnthropicTimeline; 
+export default AnthropicTimeline;

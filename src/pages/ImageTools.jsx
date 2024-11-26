@@ -24,9 +24,9 @@ const tools = [
         title={t('title')}
         description={t('slogan')}
       />
-      <main className="container mx-auto px-4 pt-16 pb-8">
-        <section className="mt-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+      <main className="container mx-auto px-4 pt-16 pb-8 min-h-screen">
+        <section className="mt-8 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 w-full">
             {tools.map(tool => (
               <Link 
                 to={tool.path} 

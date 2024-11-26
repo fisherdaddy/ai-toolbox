@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { useTranslation } from '../js/i18n';
 import SEO from './SEO';
 import { useScrollToTop } from '../hooks/useScrollToTop';
+import { usePageLoading } from '../hooks/usePageLoading';
+import LoadingOverlay from './LoadingOverlay';
 
 // Reuse container style
 const Container = styled.div`
@@ -81,6 +83,20 @@ const PreviewArea = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   .upload-prompt {
@@ -160,6 +176,7 @@ const PrivacyNote = styled.div`
 function BackgroundRemover() {
   useScrollToTop();
   const { t } = useTranslation();
+  const isPageLoading = usePageLoading();
   const [selectedImage, setSelectedImage] = useState(null);
   const [removedBgImage, setRemovedBgImage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -202,6 +219,7 @@ function BackgroundRemover() {
         title={t('tools.imageBackgroundRemover.title')}
         description={t('tools.imageBackgroundRemover.description')}
       />
+      {(isPageLoading || isProcessing) && <LoadingOverlay />}
       <Container>
         <ContentWrapper>
           <ControlPanel>
@@ -217,7 +235,6 @@ function BackgroundRemover() {
               {t('tools.imageBackgroundRemover.uploadPrompt')}
             </ImageUploadArea>
             
-            {/* 添加提示语 */}
             <PrivacyNote>
               {t('tools.imageBackgroundRemover.privacyNote')}
             </PrivacyNote>
@@ -230,11 +247,7 @@ function BackgroundRemover() {
               </DownloadButton>
             )}
             <div className="preview-content">
-              {isProcessing ? (
-                <div className="loading-container">
-                  <span>{t('tools.imageBackgroundRemover.processing')}</span>
-                </div>
-              ) : removedBgImage ? (
+              {removedBgImage ? (
                 <div style={{ 
                   position: 'relative',
                   width: '100%',
