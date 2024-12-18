@@ -9,6 +9,18 @@
         "outputPrice": 4.2
       },
       {
+        "name": "Doubao-vision-lite-32k",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 1.5,
+        "outputPrice": 4.5
+      },
+      {
+        "name": "Doubao-vision-pro-32k",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 3,
+        "outputPrice": 9
+      },
+      {
         "name": "yi-vision-16k",
         "logo": "/assets/icon/yi_small.jpg",
         "inputPrice": 6,
