@@ -33,22 +33,34 @@
         "outputPrice": 12
       },
       {
-        "name": "o1-preview",
+        "name": "o1",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 15,
         "outputPrice": 60
       },
       {
+        "name": "gpt-4o-mini-audio-preview",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 10,
+        "outputPrice": 20
+      },
+      {
         "name": "gpt-4o-audio-preview",
         "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 2.5,
-        "outputPrice": 10
+        "inputPrice": 100,
+        "outputPrice": 200
+      },
+      {
+        "name": "gpt-4o-mini-realtime-preview",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 10,
+        "outputPrice": 20
       },
       {
         "name": "gpt-4o-realtime-preview",
         "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 5,
-        "outputPrice": 20
+        "inputPrice": 100,
+        "outputPrice": 200
       }
     ]
   }
