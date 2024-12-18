@@ -3,19 +3,19 @@
     "subtitle": "Price: RMB per 1M Tokens",
     "providers": [
       {
-        "name": "gpt-4o-mini",
+        "name": "gpt-4o\n-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.05,
         "outputPrice": 4.2
       },
       {
-        "name": "Doubao-vision-lite-32k",
+        "name": "Doubao-\nvision-lite\n-32k",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 1.5,
         "outputPrice": 4.5
       },
       {
-        "name": "Doubao-vision-pro-32k",
+        "name": "Doubao\n-vision-pro\n-32k",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 3,
         "outputPrice": 9
