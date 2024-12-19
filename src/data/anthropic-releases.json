@@ -76,5 +76,11 @@
       "title": "Mac 和 Windows 客户端发布",
       "feature": "",
       "description": ""
+    },
+    {
+      "date": "2024年11月25日",
+      "title": "Model Context Protocol 发布",
+      "feature": "MCP 是一个开放标准，允许开发者建立安全的双向连接，将数据源与 AI 工具相连。",
+      "description": "开发者可以通过 MCP 服务器暴露数据，或创建 MCP 客户端以连接这些服务器。MCP 的目标是用单一协议取代当前复杂的多数据源集成方式，简化架构并提高系统的可扩展性。"
     }
   ]

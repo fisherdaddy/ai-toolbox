@@ -160,5 +160,41 @@
     "title": "ChatGPT搜索功能发布",
     "feature": "实时网络搜索",
     "description": "ChatGPT整合了实时互联网信息，提升了回答的准确性和时效性。"
+  },
+  {
+    "date": "2024年12月6日",
+    "title": "o1  & ChatGPT Pro 发布",
+    "feature": "o1 支持图像输入，比 o1-preview 思考时间更短，但响应更快",
+    "description": "ChatGPT Pro。200 美元/月的会员订阅费。不限制使用次数（包括o1、o1-mini、语音模式等等），另外也会有更智能的 o1 使用模式。"
+  },
+  {
+    "date": "2024年12月7日",
+    "title": "强化微调技术（Reinforcement Fine-Tuning， RFT）发布",
+    "feature": "",
+    "description": "与监督微调不同，监督微调的目标是让模型复制在输入文本或图像中提取出的特征。强化微调 RFT 不只是让模型学会模仿输入，而是学会以全新的方式进行推理，仅需要几十个例子即可做到"
+  },
+  {
+    "date": "2024年12月10日",
+    "title": "Sora 开放使用",
+    "feature": "支持文本转视频、图像转视频、视频转视频",
+    "description": ""
+  },
+  {
+    "date": "2024年12月13日",
+    "title": "高级视频模式开放使用",
+    "feature": "",
+    "description": ""
+  },
+  {
+    "date": "2024年12月14日",
+    "title": "Projects 发布",
+    "feature": "",
+    "description": "通过项目可以你可以上传文件、设置自定义指令"
+  },
+  {
+    "date": "2024年12月18日",
+    "title": "o1 api & Preference Fine-Tuning 发布",
+    "feature": "",
+    "description": ""
   }
 ]
