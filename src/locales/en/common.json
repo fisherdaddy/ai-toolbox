@@ -9,6 +9,7 @@
     "logout": "Logout",
     "copy": "Copy",
     "copied": "Copied",
+    "recommendedTools": "Recommended Tools",
     "dev-tools": {
       "title": "Development Tools",
       "description": "A collection of popular and efficient development tools, including JSON formatter, Base64 to image converter, online Diff tool, LaTeX renderer, and more. Designed to help developers handle everyday coding tasks quickly and boost development efficiency."

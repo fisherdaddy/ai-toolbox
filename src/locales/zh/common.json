@@ -9,6 +9,7 @@
     "logout": "退出登录",
     "copy": "复制",
     "copied": "已复制",
+    "recommendedTools": "推荐工具",
     "dev-tools": {
       "title": "开发工具",
       "description": "集成多种热门高效的开发工具，包括JSON格式化、Base64转图片、在线Diff对比、LaTeX渲染等，帮助开发者快速处理日常编码任务，提升开发效率。"

@@ -9,6 +9,7 @@
     "logout": "ログアウト",
     "copy": "コピー",
     "copied": "コピーされました",
+    "recommendedTools": "おすすめツール",
     "dev-tools": {
       "title": "開発ツール",
       "description": "JSONフォーマッター、Base64画像変換、オンラインDiffツール、LaTeXレンダリングなど、さまざまな人気で効率的な開発ツールを統合し、日常のコーディングタスクを迅速に処理し、開発効率を向上させます。"

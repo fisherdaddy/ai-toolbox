@@ -9,6 +9,7 @@
     "logout": "로그아웃",
     "copy": "복사",
     "copied": "복사된 메시지",
+    "recommendedTools": "추천 도구",
     "dev-tools": {
       "title": "개발 도구",
       "description": "JSON 포맷터, Base64 이미지 변환기, 온라인 Diff 도구, LaTeX 렌더러 등 인기 있고 효율적인 개발 도구를 통합하여, 일상적인 코딩 작업을 신속하게 처리하고 개발 효율성을 높입니다."

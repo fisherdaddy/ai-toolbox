@@ -13,10 +13,40 @@ const NotFound = () => {
         title={t('notFound.title')}
         description={t('notFound.description')}
       />
-      <main>
-        <h1>{t('notFound.title')}</h1>
-        <p>{t('notFound.description')}</p>
-        <Link to="/">{t('notFound.back_home')}</Link>
+      <main className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-16">
+        <div className="text-9xl font-bold text-gray-200 select-none">404</div>
+        <h1 className="mt-8 text-3xl font-bold text-gray-800">{t('notFound.title')}</h1>
+        <p className="mt-4 text-lg text-gray-600">{t('notFound.description')}</p>
+        
+        <div className="mt-16 w-full max-w-2xl">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">{t('recommendedTools')}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link 
+              to="/json-formatter" 
+              className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
+            >
+              {t('tools.jsonFormatter.title')}
+            </Link>
+            <Link 
+              to="/url-encode-and-decode" 
+              className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
+            >
+              {t('tools.urlEncodeDecode.title')}
+            </Link>
+            <Link 
+              to="/markdown-to-image" 
+              className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
+            >
+              {t('tools.markdownToImage.title')}
+            </Link>
+            <Link 
+              to="/image-compressor" 
+              className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
+            >
+              {t('tools.imageCompressor.title')}
+            </Link>
+          </div>
+        </div>
       </main>
     </>
   );
