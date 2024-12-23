@@ -21,8 +21,8 @@ const tools = [
   return (
     <>
       <SEO
-        title={t('title')}
-        description={t('slogan')}
+        title={t('image-tools.title')}
+        description={t('image-tools.description')}
       />
       <main className="container mx-auto px-4 pt-16 pb-8 min-h-screen">
         <section className="mt-8 w-full">
