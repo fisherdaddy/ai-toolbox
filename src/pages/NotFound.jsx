@@ -34,16 +34,28 @@ const NotFound = () => {
               {t('tools.urlEncodeDecode.title')}
             </Link>
             <Link 
-              to="/markdown-to-image" 
+              to="/background-remover" 
               className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
             >
-              {t('tools.markdownToImage.title')}
+              {t('tools.imageBackgroundRemover.title')}
             </Link>
             <Link 
-              to="/image-compressor" 
+              to="/text-behind-image" 
               className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
             >
-              {t('tools.imageCompressor.title')}
+              {t('tools.textBehindImage.title')}
+            </Link>
+            <Link 
+              to="/openai-timeline" 
+              className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
+            >
+              {t('tools.openAITimeline.title')}
+            </Link>
+            <Link 
+              to="/llm-model-price" 
+              className="p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 flex items-center justify-center text-indigo-600 hover:text-indigo-700 hover:border-indigo-100"
+            >
+              {t('tools.modelPrice.title')}
             </Link>
           </div>
         </div>
