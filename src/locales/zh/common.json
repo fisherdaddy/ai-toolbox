@@ -32,7 +32,9 @@
       "back_home": "返回首页"
     },
     "footer": {
-      "copyRight": "AI 工具箱. 保留所有权利。"
+      "copyRight": "AI 工具箱. 保留所有权利。",
+      "recommendedTools": "推荐工具",
+      "resources": "相关资源"
     },
     "about": {
       "title": "关于我们",

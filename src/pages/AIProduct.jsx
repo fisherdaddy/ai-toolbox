@@ -216,6 +216,13 @@ const tools = [
     category: 'Productivity'
   },
   { 
+    id: 'windsurf', 
+    icon: '/assets/icon/windsurf.svg', 
+    path: 'https://codeium.com/windsurf', 
+    external: true ,
+    category: 'Productivity'
+  },
+  { 
     id: 'gamma', 
     icon: '/assets/icon/gamma.png', 
     path: 'https://gamma.app/', 

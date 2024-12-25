@@ -126,6 +126,9 @@
     "cursor": {
         "title": "Cursor",
         "description": "素早くプログラミングできるAIコードエディター"
+    },
+    "windsurf": {
+        "title": "Windsurf",
+        "description": "最初のプロキシIDE"
     }
-
 }

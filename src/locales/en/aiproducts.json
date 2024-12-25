@@ -126,5 +126,9 @@
     "cursor": {
         "title": "Cursor",
         "description": "AI code editor for fast programming and software development"
+    },
+    "windsurf": {
+        "title": "Windsurf",
+        "description": "First agentic IDE"
     }
 }

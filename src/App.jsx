@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 
@@ -30,9 +31,9 @@ const AnthropicTimeline = lazy(() => import('./components/AnthropicTimeline'));
 
 function App() {
   return (
-    <div className="app-container">
+    <div className="app-container min-h-screen flex flex-col">
       <Header />
-      <div className="pt-4">
+      <div className="flex-grow">
         <div className="content-wrapper">
           <main>
             <Suspense fallback={<div>Loading...</div>}>
@@ -66,9 +67,10 @@ function App() {
 
               </Routes>
             </Suspense>
-          </main>-
+          </main>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

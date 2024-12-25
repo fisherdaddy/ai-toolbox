@@ -126,5 +126,9 @@
     "cursor": {
       "title": "Cursor",
       "description": "AI代码编辑器，快速进行编程和软件开发"
+    },
+    "windsurf": {
+      "title": "Windsurf",
+      "description": "第一个代理 IDE"
     }
 }

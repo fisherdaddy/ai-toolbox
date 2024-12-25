@@ -8,7 +8,7 @@ import LoadingOverlay from './LoadingOverlay';
 const Container = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
-  padding: 4rem 2rem 2rem;
+  padding: 6rem 2rem 2rem;
   position: relative;
   
   &::before {

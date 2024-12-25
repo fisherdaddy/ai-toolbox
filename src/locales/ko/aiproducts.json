@@ -126,6 +126,10 @@
     "cursor": {
         "title": "Cursor",
         "description": "빠른 프로그래밍을 위한 AI 코드 편집기"
+    },
+    "windsurf": {
+        "title": "Windsurf",
+        "description": "첫 번째 프록시 IDE"
     }
 
 }
