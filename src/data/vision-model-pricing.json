@@ -55,6 +55,12 @@
         "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 50,
         "outputPrice": 50
+      },
+      {
+        "name": "o1",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 105,
+        "outputPrice": 420
       }
     ]
   }

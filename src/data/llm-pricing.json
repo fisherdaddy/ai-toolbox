@@ -123,7 +123,7 @@
         "outputPrice": 105
       },
       {
-        "name": "o1-preview",
+        "name": "o1",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 105,
         "outputPrice": 420
