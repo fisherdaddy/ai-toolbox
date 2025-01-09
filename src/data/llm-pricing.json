@@ -45,16 +45,16 @@
         "outputPrice": 2
       },
       {
-        "name": "deepseek-\nchat-128k",
-        "logo": "/assets/icon/deepseek_small.jpg",
-        "inputPrice": 1,
-        "outputPrice": 2
-      },
-      {
         "name": "gpt-4o-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.05,
         "outputPrice": 4.2
+      },
+      {
+        "name": "deepseek-v3",
+        "logo": "/assets/icon/deepseek_small.jpg",
+        "inputPrice": 2,
+        "outputPrice": 8
       },
       {
         "name": "qwen-math-plus",

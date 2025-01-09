@@ -27,6 +27,12 @@
         "outputPrice": 6
       },
       {
+        "name": "qwen-vl-plus",
+        "logo": "/assets/icon/ali_small.svg",
+        "inputPrice": 8,
+        "outputPrice": 8
+      },
+      {
         "name": "GLM-4V-Plus",
         "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 10,

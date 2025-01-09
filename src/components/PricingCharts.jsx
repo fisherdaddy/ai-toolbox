@@ -11,7 +11,7 @@ import LoadingOverlay from './LoadingOverlay';
 const PricingCharts = () => {
   useScrollToTop();
   const isLoading = usePageLoading();
-  const lastUpdateTime = '2024-12-18 19:56';
+  const lastUpdateTime = '2025-01-09 10:00';
 
   return (
     <>
