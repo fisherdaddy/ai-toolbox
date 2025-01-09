@@ -45,7 +45,7 @@
     },
     "hailuo": {
       "title": "海螺AI",
-      "description": "MiniMax旗下的AI对话助手"
+      "description": "MiniMax旗下"
     },
     "baichuan": {
       "title": "百小应",
@@ -83,9 +83,9 @@
       "title": "Canva",
       "description": "用于创建社交媒体图形、演示文稿、海报、文档和其他视觉内容的平面设计平台"
     },
-    "meitu": {
-      "title": "美图设计室",
-      "description": "AI图像创作和设计平台"
+    "jimeng": {
+      "title": "即梦 AI",
+      "description": "字节旗下的AI图像视频创作平台"
     },
     "keling": {
       "title": "可灵 AI",

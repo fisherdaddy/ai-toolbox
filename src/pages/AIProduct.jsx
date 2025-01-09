@@ -28,7 +28,7 @@ const tools = [
   { 
     id: 'gemini', 
     icon: '/assets/icon/google_small.svg', 
-    path: 'https://aistudio.google.com', 
+    path: 'https://gemini.google.com', 
     external: true,
     category: 'Chatbots' 
   },
@@ -39,7 +39,6 @@ const tools = [
     external: true,
     category: 'Chatbots' 
   },
-
   { 
     id: 'kimi', 
     icon: '/assets/icon/moonshot_small.svg', 
@@ -104,6 +103,13 @@ const tools = [
     category: 'Chatbots' 
   },
   { 
+    id: 'jimeng', 
+    icon: '/assets/icon/jimeng.png', 
+    path: 'https://jimeng.jianying.com', 
+    external: true ,
+    category: 'Image'
+  },
+  { 
     id: 'midjourney', 
     icon: '/assets/icon/midjourney.png', 
     path: 'https://www.midjourney.com/', 
@@ -139,11 +145,11 @@ const tools = [
     category: 'Image'
   },
   { 
-    id: 'meitu', 
-    icon: '/assets/icon/meitu.jpg', 
-    path: 'https://www.designkit.com/', 
+    id: 'hailuo', 
+    icon: '/assets/icon/hailuo.png', 
+    path: 'https://hailuoai.com/video', 
     external: true ,
-    category: 'Image'
+    category: 'AudioVideo'
   },
   { 
     id: 'keling', 
@@ -184,13 +190,6 @@ const tools = [
     id: 'suno', 
     icon: '/assets/icon/suno.png', 
     path: 'https://suno.com/', 
-    external: true ,
-    category: 'AudioVideo'
-  },
-  { 
-    id: 'haimian', 
-    icon: '/assets/icon/haimian.png', 
-    path: 'https://www.haimian.com/', 
     external: true ,
     category: 'AudioVideo'
   },
