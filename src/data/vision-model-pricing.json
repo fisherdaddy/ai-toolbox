@@ -15,6 +15,12 @@
         "outputPrice": 4.5
       },
       {
+        "name": "gemini 1.5 Flash",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 0.53,
+        "outputPrice": 2.1
+      },
+      {
         "name": "Doubao-vision-pro-32k",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 3,
@@ -55,6 +61,18 @@
         "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 50,
         "outputPrice": 50
+      },
+      {
+        "name": "gemini 1.5 Pro",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 87.5,
+        "outputPrice": 35
+      },
+      {
+        "name": "claude 3.5\nSonnet",
+        "logo": "/assets/icon/anthropic_small.svg",
+        "inputPrice": 26.3,
+        "outputPrice": 105
       },
       {
         "name": "o1",
