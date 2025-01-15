@@ -51,6 +51,12 @@
         "outputPrice": 20
       },
       {
+        "name": "moonshot-v1-32k-vision-preview",
+        "logo": "/assets/icon/moonshot_small.svg",
+        "inputPrice": 24,
+        "outputPrice": 24
+      },
+      {
         "name": "gpt-4o",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 17.5,
