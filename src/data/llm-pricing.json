@@ -63,6 +63,12 @@
         "outputPrice": 12
       },
       {
+        "name": "deepseek-reasoner",
+        "logo": "/assets/icon/deepseek_small.jpg",
+        "inputPrice": 4,
+        "outputPrice": 16
+      },
+      {
         "name": "claude 3.5\nHaiku",
         "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 8.75,
