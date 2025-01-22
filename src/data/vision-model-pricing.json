@@ -21,6 +21,12 @@
         "outputPrice": 2.1
       },
       {
+        "name": "Doubao-1.5-vision-pro-32k",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 3,
+        "outputPrice": 9
+      },
+      {
         "name": "Doubao-vision-pro-32k",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 3,

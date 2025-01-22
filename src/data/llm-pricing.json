@@ -27,6 +27,12 @@
         "outputPrice": 2.1
       },
       {
+        "name": "Doubao-1.5-pro-32k",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 0.8,
+        "outputPrice": 2
+      },
+      {
         "name": "Doubao-pro-32k",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 0.8,
