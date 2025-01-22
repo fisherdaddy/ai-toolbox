@@ -222,5 +222,17 @@
     "anthropicTimeline": {
       "title": "Anthropic 製品リリース",
       "description": "Anthropic 製品リリース時刻表"
+    },
+    "drugsList": {
+      "title": "中国輸入オリジナル薬品リスト",
+      "description": "薬品名、製造会社、カテゴリ情報",
+      "searchPlaceholder": "薬品名または製造会社を検索...",
+      "drugName": "薬品名",
+      "manufacturer": "製造会社",
+      "sourceTitle": "データ出典",
+      "sourceUrl": "mRNAラッキーインテリジェンス局",
+      "showing": "表示中",
+      "items": "項目",
+      "allCategories": "すべてのカテゴリ"
     }
 }

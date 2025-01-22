@@ -223,5 +223,17 @@
   "anthropicTimeline": {
     "title": "Anthropic 제품 출시",
     "description": "Anthropic 제품 출시 일정"
+  },
+  "drugsList": {
+    "title": "중국 수입 원조 약품 목록",
+    "description": "약품명, 제조사 및 카테고리 정보",
+    "searchPlaceholder": "약품명 또는 제조사를 검색...",
+    "drugName": "약품명",
+    "manufacturer": "제조사",
+    "sourceTitle": "데이터 출처",
+    "sourceUrl": "mRNA 행운 정보국",
+    "showing": "표시 중",
+    "items": "항목",
+    "allCategories": "모든 카테고리"
   }
 }

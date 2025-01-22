@@ -161,7 +161,6 @@ const DrugsList = () => {
         {/* Source Information */}
         <footer className="source-info">
           <h3>{t('tools.drugsList.sourceTitle')}</h3>
-          <p>{t('tools.drugsList.sourceDescription')}</p>
           <a 
             href="https://mp.weixin.qq.com/s/EBu_ZTy5uovPa_8kCs_TBQ" 
             target="_blank" 
@@ -170,9 +169,6 @@ const DrugsList = () => {
           >
             {t('tools.drugsList.sourceUrl')}
           </a>
-          <p className="update-time">
-            {t('tools.drugsList.lastUpdate')}: {new Date().toLocaleDateString()}
-          </p>
         </footer>
       </div>
     </>

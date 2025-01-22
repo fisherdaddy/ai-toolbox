@@ -222,5 +222,17 @@
     "anthropicTimeline": {
       "title": "Anthropic Product Release",
       "description": "Timeline of Anthropic's major product releases and events"
+    },
+    "drugsList": {
+      "title": "Imported Original Drug Directory of China",
+      "description": "Drug name, manufacturer, and category information",
+      "searchPlaceholder": "Search drug name or manufacturer...",
+      "drugName": "Drug Name",
+      "manufacturer": "Manufacturer",
+      "sourceTitle": "Data Source",
+      "sourceUrl": "mRNA Lucky Intelligence Bureau",
+      "showing": "Showing",
+      "items": "items",
+      "allCategories": "All Categories"
     }
 }
