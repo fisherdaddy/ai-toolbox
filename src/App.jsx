@@ -28,6 +28,7 @@ const ImageWatermark = lazy(() => import('./components/ImageWatermark'));
 const TextBehindImage = lazy(() => import('./components/TextBehindImage'));
 const BackgroundRemover = lazy(() => import('./components/BackgroundRemover'));
 const AnthropicTimeline = lazy(() => import('./components/AnthropicTimeline'));
+const DrugsList = lazy(() => import('./components/DrugsList'));
 
 function App() {
   return (
@@ -51,7 +52,9 @@ function App() {
                 <Route path="/json-formatter" element={<JsonFormatter />} />
                 <Route path="/url-encode-and-decode" element={<UrlEnDecode />} />
                 <Route path="/openai-timeline" element={<OpenAITimeline />} />
+                <Route path="/anthropic-timeline" element={<AnthropicTimeline />} />
                 <Route path="/llm-model-price" element={<PricingCharts />} />
+                <Route path="/drugs-list" element={<DrugsList />} />
                 <Route path="/handwriting" element={<HandwriteGen />} />
                 <Route path="/image-base64" element={<ImageBase64Converter />} />
                 <Route path="/quote-card" element={<QuoteCard />} />
@@ -62,7 +65,6 @@ function App() {
                 <Route path="/image-watermark" element={<ImageWatermark />} />
                 <Route path="/text-behind-image" element={<TextBehindImage />} /> 
                 <Route path="/background-remover" element={<BackgroundRemover />} />
-                <Route path="/anthropic-timeline" element={<AnthropicTimeline />} />
                 <Route path="*" element={<NotFound />} />
 
               </Routes>

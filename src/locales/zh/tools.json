@@ -224,5 +224,17 @@
     "anthropicTimeline": {
       "title": "Anthropic 产品发布",
       "description": "Anthropic 公司重要产品及事件发布时间表"
+    },
+    "drugsList": {
+      "title": "中国进口原研药目录",
+      "description": "药品名称、生产厂商和类别信息",
+      "searchPlaceholder": "搜索药品名称或生产厂商...",
+      "drugName": "药品名称",
+      "manufacturer": "生产厂商",
+      "sourceTitle": "数据来源",
+      "sourceUrl": "mRNA福星情报局",
+      "showing": "显示",
+      "items": "个项目",
+      "allCategories": "所有类别"
     }
 }

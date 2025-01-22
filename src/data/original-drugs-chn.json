@@ -1,0 +1,1562 @@
+[
+    {
+        "category": "抗生素",
+        "list":
+        [
+            {
+                "name": "阿奇霉素干混悬剂（希舒美）",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "阿奇霉素片（希舒美）",
+                "factory": "晖致制药（原辉瑞）"
+            },
+            {
+                "name": "阿莫西林克拉维酸钾干混悬剂",
+                "factory": "英国葛兰素史克有限公司"
+            },
+            {
+                "name": "阿莫西林克拉维酸钾片",
+                "factory": "英国葛兰素史克有限公司"
+            },
+            {
+                "name": "头孢丙烯片",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "头孢泊肟酯干混悬剂",
+                "factory": "第一三共制药(上海)有限公司"
+            },
+            {
+                "name": "头孢泊肟酯片",
+                "factory": "第一三共制药(上海)有限公司"
+            },
+            {
+                "name": "头孢呋辛酯片",
+                "factory": "英国Glaxo Operations UK Limitea"
+            },
+            {
+                "name": "头孢克洛干混悬剂",
+                "factory": "礼来苏州制药有限公司"
+            },
+            {
+                "name": "头孢克洛缓释片(II)",
+                "factory": "礼来苏州制药有限公司"
+            },
+            {
+                "name": "头孢克洛胶囊",
+                "factory": "礼来苏州制药有限公司"
+            },
+            {
+                "name": "头孢克肟分散片",
+                "factory": "广州白云山制药股份有限公司广州白云山制药"
+            },
+            {
+                "name": "头孢克肟胶囊",
+                "factory": "广州白云山制药股份有限公司广州白云山制药"
+            },
+            {
+                "name": "头孢克肟颗粒",
+                "factory": "广州白云山制药股份有限公司广州白云山制药"
+            },
+            {
+                "name": "头孢克肟片",
+                "factory": "广州白云山制药股份有限公司广州白云山制药"
+            },
+            {
+                "name": "头孢拉定胶囊",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "头孢特仑新戊酯片",
+                "factory": "富山化学工业株式会社(广州南新制药分装)"
+            },
+            {
+                "name": "头孢妥仑匹酯片",
+                "factory": "日本明治制果株式会社小田原工场Meiji"
+            },
+            {
+                "name": "克拉霉素干混悬剂",
+                "factory": "意大利Abbott SpA"
+            },
+            {
+                "name": "克拉霉素片",
+                "factory": "上海雅培制药有限公司"
+            },
+            {
+                "name": "甲磺酸吉米沙星片",
+                "factory": "韩国LG Life Sciences, Ltd."
+            },
+            {
+                "name": "磷霉素氨丁三醇颗粒",
+                "factory": "瑞士Zambon Switzerland Ltd"
+            },
+            {
+                "name": "罗红霉素片",
+                "factory": "法国Aventis Intercontinental(赛诺菲安万特)"
+            },
+            {
+                "name": "利福昔明片",
+                "factory": "意大利阿尔法韦士曼制药公司Alfa"
+            },
+            {
+                "name": "氧氟沙星滴眼液",
+                "factory": "日本参天制药株式会社能登工厂Santen"
+            },
+            {
+                "name": "氧氟沙星片",
+                "factory": "第一三共制药(北京)有限公司"
+            },
+            {
+                "name": "氧氟沙星眼膏",
+                "factory": "日本参天制药株式会社Santen"
+            },
+            {
+                "name": "左氧氟沙星滴眼液",
+                "factory": "日本参天制药株式会社能登工厂Santen"
+            },
+            {
+                "name": "左氧氟沙星片",
+                "factory": "第一三共制药(北京)有限公司"
+            },
+            {
+                "name": "乙酰麦迪霉素干混悬剂",
+                "factory": "汕头经济特区明治医药有限公司"
+            },
+            {
+                "name": "青霉素v钾片",
+                "factory": "奥地利Sandoz GmbH"
+            },
+            {
+                "name": "阿莫西林舒巴坦片",
+                "factory": "阿根廷LaboratoriosBagoS.A"
+            },
+            {
+                "name": "利奈唑胺片",
+                "factory": "美国Pfizer Pharmaceuticals LLC(PPLLC)"
+            },
+            {
+                "name": "盐酸安妥沙星片",
+                "factory": "安徽环球药业股份有限公司"
+            },
+            {
+                "name": "盐酸米诺环素胶囊",
+                "factory": "惠氏制药有限公司"
+            }
+        ]
+    },
+    {
+        "category": "抗病毒",
+        "list":
+        [
+            {
+                "name": "阿德福韦酯胶囊",
+                "factory": "江苏正大天晴药业股份有限公司（泰中合资）"
+            },
+            {
+                "name": "阿德福韦酯片",
+                "factory": "葛兰素史克（天津）有限公司"
+            },
+            {
+                "name": "阿德福韦酯片",
+                "factory": "上海益生源药业有限公司"
+            },
+            {
+                "name": "阿德福韦酯片",
+                "factory": "天津药物研究院药业有限责任公司"
+            },
+            {
+                "name": "恩替卡韦片",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "拉米夫定/齐多夫定片",
+                "factory": "澳大利亚葛兰素GlaxoSmithKline"
+            },
+            {
+                "name": "拉米夫定片",
+                "factory": "葛兰素史克制药(苏州)有限公司"
+            },
+            {
+                "name": "磷酸奥司他韦胶囊",
+                "factory": "瑞士巴塞尔豪夫迈.罗氏有限公司F."
+            },
+            {
+                "name": "替比夫定片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "盐酸缬更昔洛韦片",
+                "factory": "加拿大PATHEON INC."
+            }
+        ]
+    },
+    {
+        "category": "抗真菌",
+        "list":
+        [
+            {
+                "name": "酮康唑片",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "酮康唑乳膏",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "酮康唑洗剂",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "克霉唑阴道片",
+                "factory": "德国Bayer Healthcare AG"
+            },
+            {
+                "name": "联苯苄唑乳膏",
+                "factory": "拜耳医药保健有限公司"
+            },
+            {
+                "name": "硝酸咪康唑乳膏",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "硝酸咪康唑散",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "硝酸咪康唑栓",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "硝酸咪康唑阴道软胶囊",
+                "factory": "法国Cardinal Health France"
+            },
+            {
+                "name": "硝酸舍他康唑乳膏",
+                "factory": "西班牙FERRERINTERNACIONAL, S.A."
+            },
+            {
+                "name": "伊曲康唑胶囊",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "伊曲康唑口服液",
+                "factory": "比利时杨森制药公司JANSSEN PHARMACEUTICA"
+            },
+            {
+                "name": "盐酸阿莫罗芬搽剂",
+                "factory": "法国高德美制药公司Laboratoires"
+            },
+            {
+                "name": "盐酸阿莫罗芬乳膏",
+                "factory": "法国高德美制药公司Laboratoires"
+            },
+            {
+                "name": "盐酸特比萘芬片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "盐酸特比萘芬乳膏",
+                "factory": "中美天津史克制药有限公司"
+            }
+        ]
+    },
+    {
+        "category": "降血糖类",
+        "list":
+        [
+            {
+                "name": "阿卡波糖片",
+                "factory": "拜耳医药保健有限公司"
+            },
+            {
+                "name": "格列吡嗪控释片",
+                "factory": "美国辉瑞Pfizer Pharmaceuticals LLC"
+            },
+            {
+                "name": "格列吡嗪片",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "格列喹酮片",
+                "factory": "北京万辉双鹤药业有限责任公司"
+            },
+            {
+                "name": "格列美脲片",
+                "factory": "赛诺菲安万特(北京)制药有限公司"
+            },
+            {
+                "name": "格列齐特片(II)",
+                "factory": "天津华津制药有限公司"
+            },
+            {
+                "name": "伏格列波糖片",
+                "factory": "天津武田药品有限公司"
+            },
+            {
+                "name": "那格列奈片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "瑞格列奈片",
+                "factory": "德国勃林格殷格翰国际公司Boehringer"
+            },
+            {
+                "name": "罗格列酮钠片",
+                "factory": "太极集团重庆涪陵制药厂有限公司"
+            },
+            {
+                "name": "二甲双胍马来酸罗格列酮片(薄)",
+                "factory": "西班牙葛兰素"
+            },
+            {
+                "name": "盐酸吡格列酮片",
+                "factory": "同上，mRNA福星情报局（公众号)"
+            },
+            {
+                "name": "盐酸二甲双胍缓释片",
+                "factory": "美国Bristol-Myers Squibb Company"
+            },
+            {
+                "name": "盐酸二甲双胍片",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "磷酸西格列汀片",
+                "factory": "澳大利亚默沙东Merck Sharp&"
+            }
+        ]
+    },
+    {
+        "category": "心血管类",
+        "list":
+        [
+            {
+                "name": "阿托伐他汀钙片",
+                "factory": "爱尔兰Pfizer Ireland"
+            },
+            {
+                "name": "奥美沙坦酯片",
+                "factory": "第一三共制药(上海)有限公司"
+            },
+            {
+                "name": "贝那普利氢氯噻嗪片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "苯磺酸氨氯地平片",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "苯磺酸左旋氨氯地平片",
+                "factory": "施慧达药业集团(吉林)有限公司"
+            },
+            {
+                "name": "单硝酸异山梨酯缓释片",
+                "factory": "阿斯利康制药有限公司"
+            },
+            {
+                "name": "厄贝沙坦片",
+                "factory": "法国赛诺菲Sanofi Winthrop"
+            },
+            {
+                "name": "厄贝沙坦氢氯噻嗪片",
+                "factory": "法国赛诺菲Sanofi Winthrop"
+            },
+            {
+                "name": "非洛地平缓释片",
+                "factory": "阿斯利康制药有限公司"
+            },
+            {
+                "name": "富马酸比索洛尔片",
+                "factory": "德国默克(Merck KGaA)"
+            },
+            {
+                "name": "枸橼酸西地那非片",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "琥珀酸美托洛尔缓释片",
+                "factory": "瑞典阿斯利康AstraZeneca AB(阿斯利康制药"
+            },
+            {
+                "name": "甲磺酸多沙唑嗪缓释片",
+                "factory": "美国Pfizer Pharmaceuticals LLC"
+            },
+            {
+                "name": "赖诺普利片",
+                "factory": "英国阿斯利康AstraZeneca UK Limited"
+            },
+            {
+                "name": "雷米普利片",
+                "factory": "赛诺菲安万特(北京)制药有限公司"
+            },
+            {
+                "name": "利伐沙班片",
+                "factory": "德国Bayer Healthcare AG"
+            },
+            {
+                "name": "尼可地尔片",
+                "factory": "日本中外制药株式会社福岛工厂Tohoku"
+            },
+            {
+                "name": "尼莫地平片",
+                "factory": "拜耳医药保健有限公司"
+            },
+            {
+                "name": "硝苯地平控释片",
+                "factory": "德国拜耳(拜耳医药保健分装)"
+            },
+            {
+                "name": "普伐他汀钠片",
+                "factory": "第一三共制药(上海)有限公司"
+            },
+            {
+                "name": "普伐他汀钠片",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "瑞舒伐他汀钙片",
+                "factory": "波多黎各IPR Pharmaceuticals,INC"
+            },
+            {
+                "name": "缬沙坦氨氯地平片(I)",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "缬沙坦胶囊",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "缬沙坦氢氯噻嗪片",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "辛伐他汀片",
+                "factory": "杭州默沙东制药有限公司"
+            },
+            {
+                "name": "辛伐他汀片",
+                "factory": "英国Merck Sharp & Dohme(杭州默沙东分"
+            },
+            {
+                "name": "盐酸阿罗洛尔片",
+                "factory": "日本住友制药株式会社(住友制药苏州分装)"
+            },
+            {
+                "name": "盐酸贝那普利片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "盐酸贝尼地平片",
+                "factory": "日本协和发酵工业株式会社富士工厂"
+            },
+            {
+                "name": "盐酸地尔硫卓缓释胶囊(II)",
+                "factory": "天津田边制药有限公司"
+            },
+            {
+                "name": "盐酸地尔硫卓片",
+                "factory": "天津田边制药有限公司"
+            },
+            {
+                "name": "盐酸尼卡地平缓释胶囊",
+                "factory": "安斯泰来制药(中国)有限公司"
+            },
+            {
+                "name": "盐酸普罗帕酮片",
+                "factory": "德国Abbott,Gmbh&Co.KG"
+            },
+            {
+                "name": "盐酸维拉帕米缓释片",
+                "factory": "德国Abbott GmbH & Co.KG"
+            },
+            {
+                "name": "甲磺酸二氢麦角碱缓释胶囊",
+                "factory": "杭州赛诺菲安万特民生制药有限公司"
+            },
+            {
+                "name": "氨甲环酸片",
+                "factory": "日本第一三共普乐发株式会社静冈工厂"
+            },
+            {
+                "name": "奥替溴铵片",
+                "factory": "德国柏林化学股份有限公司Berlin-Chemie"
+            },
+            {
+                "name": "贝前列素钠片",
+                "factory": "日本东丽株式会社(安斯泰来制药分装)"
+            },
+            {
+                "name": "尼麦角林片",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "氯沙坦钾片",
+                "factory": "杭州默沙东制药有限公司"
+            },
+            {
+                "name": "氯沙坦钾氢氯噻嗪片",
+                "factory": "英国Merck Sharp & Dohme(杭州分装）"
+            },
+            {
+                "name": "洛索洛芬钠片",
+                "factory": "第一三共制药(上海)有限公司"
+            },
+            {
+                "name": "盐酸米多君片",
+                "factory": "奥地利Nycomed Austria GmbH"
+            },
+            {
+                "name": "匹伐他汀钙片",
+                "factory": "日本兴和株式会社(Kowa Company Ltd)"
+            },
+            {
+                "name": "盐酸咪达普利片",
+                "factory": "天津田边制药有限公司"
+            },
+            {
+                "name": "硝酸异山梨酯喷雾剂",
+                "factory": "德国ColepCCL Rapid Spray Gmbi(珠海分装）"
+            },
+            {
+                "name": "硫酸氢氯吡格雷片",
+                "factory": "法国赛诺菲Sanofi Winthrop"
+            },
+            {
+                "name": "西洛他唑片",
+                "factory": "浙江大家制药有限公司"
+            }
+        ]
+    },
+    {
+        "category": "精神/神经类",
+        "list":
+        [
+            {
+                "name": "阿立哌唑片",
+                "factory": "浙江大家制药有限公司"
+            },
+            {
+                "name": "奥氮平片",
+                "factory": "波多黎各LillydelCaribeInc."
+            },
+            {
+                "name": "奥卡西平口服混悬液",
+                "factory": "法国诺华NovartisPharmaS.A"
+            },
+            {
+                "name": "奥卡西平片",
+                "factory": "意大利诺华NovartisPharmaS.p.A"
+            },
+            {
+                "name": "巴氯芬片",
+                "factory": "意大利诺华制药有限公司Novartis Farma"
+            },
+            {
+                "name": "吡贝地尔缓释片",
+                "factory": "法国施维雅药厂LES LABORATOIRES SERVIER"
+            },
+            {
+                "name": "丙戊酸钠缓释片",
+                "factory": "杭州赛诺菲安万特民生制药有限公司"
+            },
+            {
+                "name": "丙戊酸钠口服溶液",
+                "factory": "杭州赛诺菲安万特民生制药有限公司"
+            },
+            {
+                "name": "卡马西平片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "卡左双多巴控释片",
+                "factory": "意大利默沙东Merck Sharp Dohme(杭州分装）"
+            },
+            {
+                "name": "恩他卡朋片",
+                "factory": "芬兰奥立安大药厂(Orion Corporation)"
+            },
+            {
+                "name": "氟哌噻吨/美利曲辛片",
+                "factory": "丹麦灵北制药公司H.Lundbeck A/S"
+            },
+            {
+                "name": "富马酸喹硫平片",
+                "factory": "英国阿斯利康AstraZeneca UK Limited"
+            },
+            {
+                "name": "甲磺酸溴隐亭片",
+                "factory": "意大利诺华Novartis Pharma SpA"
+            },
+            {
+                "name": "甲磺酸伊马替尼胶囊",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "甲磺酸伊马替尼片",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "米氮平片",
+                "factory": "荷兰欧加农公司N.V.Organon"
+            },
+            {
+                "name": "帕利哌酮缓释片",
+                "factory": "美国ALZA Corporation"
+            },
+            {
+                "name": "利培酮口服液",
+                "factory": "比利时杨森制药公司Janssen"
+            },
+            {
+                "name": "利培酮片",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "噻奈普汀钠片",
+                "factory": "施维雅(天津)制药有限公司"
+            },
+            {
+                "name": "托吡酯胶囊",
+                "factory": "波多黎各Janssen ortho LLC"
+            },
+            {
+                "name": "托吡酯片",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "盐酸氯米帕明片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "盐酸度洛西汀肠溶胶囊",
+                "factory": "美国礼来公司"
+            },
+            {
+                "name": "盐酸多奈哌齐片",
+                "factory": "卫材(中国)药业有限公司"
+            },
+            {
+                "name": "盐酸氟桂利嗪胶囊",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "盐酸美金刚片",
+                "factory": "德国Rottendorf Pharma GmbH"
+            },
+            {
+                "name": "盐酸帕罗西汀片",
+                "factory": "中美天津史克制药有限公司"
+            },
+            {
+                "name": "盐酸普拉克索片",
+                "factory": "德国勃林格殷格翰国际公司Boehringer"
+            },
+            {
+                "name": "盐酸齐拉西酮胶囊",
+                "factory": "澳大利亚Pfizer Australia Pty"
+            },
+            {
+                "name": "盐酸曲马多缓释片",
+                "factory": "意大利Farmaceutici Formenti S.P.A."
+            },
+            {
+                "name": "盐酸曲马多胶囊",
+                "factory": "意大利Farmaceutici Formenti S.P.A."
+            },
+            {
+                "name": "盐酸舍曲林片",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "盐酸托莫西汀胶囊",
+                "factory": "波多黎各Lilly del Caribe Inc"
+            },
+            {
+                "name": "左乙拉西坦片",
+                "factory": "比利时.优时比制药UCB Pharma S.A."
+            },
+            {
+                "name": "酒石酸唑吡坦片",
+                "factory": "法国赛诺菲Sanofi Winthrop"
+            },
+            {
+                "name": "草酸艾司西酞普兰片",
+                "factory": "丹麦灵北药厂H.Lundbeck A/S(西安杨森制药"
+            },
+            {
+                "name": "氢溴酸西酞普兰片",
+                "factory": "丹麦灵北药厂H.Lundbeck A/S(西安分装）"
+            },
+            {
+                "name": "马来酸氟伏沙明片",
+                "factory": "荷兰苏威制药公司"
+            },
+            {
+                "name": "米索前列醇片",
+                "factory": "英国NPIL PHARMACEUTICALS(UK)LJMITED"
+            },
+            {
+                "name": "氟他胺片",
+                "factory": "加拿大先灵葆雅公司(Schering-Plough"
+            },
+            {
+                "name": "酒石酸伐尼克兰片",
+                "factory": "德国 Heinrich Mack Nachf.GmbH & Co.KG"
+            }
+        ]
+    },
+    {
+        "category": "消化类",
+        "list":
+        [
+            {
+                "name": "多潘立酮混悬液",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "多潘立酮片",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "埃索美拉唑镁肠溶片",
+                "factory": "阿斯利康制药有限公司"
+            },
+            {
+                "name": "奥美拉唑镁肠溶片",
+                "factory": "瑞典阿斯利康AstraZenecaAB"
+            },
+            {
+                "name": "枸橼酸莫沙必利片",
+                "factory": "大日本制药株式会社铃鹿工厂(The Suzuka"
+            },
+            {
+                "name": "兰索拉唑肠溶胶囊",
+                "factory": "天津武田药品有限公司"
+            },
+            {
+                "name": "兰索拉唑口崩片",
+                "factory": "日本武田药品工业株式会社大阪工厂(天津武"
+            },
+            {
+                "name": "雷贝拉唑钠肠溶片",
+                "factory": "日本卫材株式会社美里工厂Eisai Co.,Ltd."
+            },
+            {
+                "name": "蒙脱石散",
+                "factory": "博福-益普生(天津)制药有限公司"
+            },
+            {
+                "name": "铝 碳酸镁片",
+                "factory": "拜耳医药保健有限公司"
+            },
+            {
+                "name": "瑞巴派特片",
+                "factory": "浙江大冢制药有限公司"
+            },
+            {
+                "name": "盐酸伊托必利片",
+                "factory": "日本雅培Abbott Japan Co,Ltd"
+            },
+            {
+                "name": "双环醇片",
+                "factory": "北京协和药厂"
+            },
+            {
+                "name": "胰酶肠溶胶囊",
+                "factory": "德国苏威制药"
+            }
+        ]
+    },
+    {
+        "category": "呼吸系统类",
+        "list":
+        [
+            {
+                "name": "丙酸倍氯米松鼻气雾剂",
+                "factory": "葛兰素史克(天津)有限公司"
+            },
+            {
+                "name": "丙酸氟替卡松鼻喷雾剂",
+                "factory": "西班牙葛兰素"
+            },
+            {
+                "name": "丙酸氟替卡松吸入气雾剂",
+                "factory": "西班牙葛兰素"
+            },
+            {
+                "name": "布地奈德鼻喷雾剂",
+                "factory": "瑞典阿斯利康AstraZeneca AB(阿斯利康制药"
+            },
+            {
+                "name": "布地奈德粉吸入剂",
+                "factory": "瑞典阿斯利康AstraZeneca AB"
+            },
+            {
+                "name": "布地奈德福莫特罗粉吸入剂",
+                "factory": "瑞典阿斯利康AstraZeneca AB"
+            },
+            {
+                "name": "复方异丙托溴铵气雾剂",
+                "factory": "巴西勃林格殷格翰公司(上海勃林格殷格翰药"
+            },
+            {
+                "name": "糠酸莫米松鼻喷雾剂",
+                "factory": "比利时先灵葆雅制药厂"
+            },
+            {
+                "name": "硫酸沙丁胺醇吸入气雾剂",
+                "factory": "西班牙葛兰素"
+            },
+            {
+                "name": "硫酸特布他林片",
+                "factory": "阿斯利康制药有限公司"
+            },
+            {
+                "name": "硫酸特布他林雾化溶液",
+                "factory": "瑞典阿斯利康AstraZeneca AB"
+            },
+            {
+                "name": "沙 美特罗替卡松粉吸入剂",
+                "factory": "英国葛兰素史克有限公司"
+            },
+            {
+                "name": "吸入用布地奈德混悬液",
+                "factory": "澳大利亚阿斯利康AstraZeneca Pty Ltd"
+            },
+            {
+                "name": "吸入用硫酸沙丁胺醇溶液",
+                "factory": "英国葛兰素史克有限公司"
+            },
+            {
+                "name": "吸入用异丙托溴铵溶液",
+                "factory": "英国勃林格殷格翰"
+            },
+            {
+                "name": "盐酸氨溴索缓释胶囊",
+                "factory": "德国勃林格殷格翰公司(上海勃林格殷格翰药"
+            },
+            {
+                "name": "盐酸氨溴索片",
+                "factory": "上海勃林格殷格翰药业有限公司"
+            },
+            {
+                "name": "异丙托溴铵气雾剂",
+                "factory": "德国勃林格殷格翰公司"
+            },
+            {
+                "name": "噻托溴铵粉吸入剂",
+                "factory": "德国勃林格殷格翰国际公司"
+            },
+            {
+                "name": "盐酸氮卓斯汀鼻喷剂",
+                "factory": "德国 MEDA Manufacturing GmbH"
+            },
+            {
+                "name": "盐酸丙卡特罗片",
+                "factory": "浙江大冢制药有限公司"
+            }
+        ]
+    },
+    {
+        "category": "抗过敏类",
+        "list":
+        [
+            {
+                "name": "奥洛他定滴眼液",
+                "factory": "美国爱尔康眼药厂比利时分厂"
+            },
+            {
+                "name": "地氯雷他定片",
+                "factory": "意大利Schering-Plough S.p.A"
+            },
+            {
+                "name": "氯雷他定片",
+                "factory": "上海先灵葆雅制药有限公司"
+            },
+            {
+                "name": "氯雷他定糖浆",
+                "factory": "比利时先灵葆雅制药厂"
+            },
+            {
+                "name": "氯雷伪麻缓释片",
+                "factory": "比利时先灵葆雅制药厂(上海先灵葆雅分装)"
+            },
+            {
+                "name": "富马酸依美斯汀滴眼液",
+                "factory": "美国爱尔康眼药厂比利时分厂s.a.ALCON-"
+            },
+            {
+                "name": "洛度沙胺滴眼液",
+                "factory": "美国爱尔康眼药厂比利时分厂"
+            },
+            {
+                "name": "咪唑斯汀缓释片",
+                "factory": "法国圣德拉堡公司(西安杨森制药分装)"
+            },
+            {
+                "name": "依巴斯汀片",
+                "factory": "西班牙INDUSTRIAS FARMACEUTICAS"
+            },
+            {
+                "name": "盐酸西替利嗪滴剂",
+                "factory": "意大利UCB Pharma S.p.A."
+            },
+            {
+                "name": "盐酸西替利嗪片",
+                "factory": "瑞士 UCB FARCHIM S.A."
+            },
+            {
+                "name": "盐酸左卡巴斯汀鼻喷剂",
+                "factory": "比利时Janssen Pharmaceutica N.V."
+            },
+            {
+                "name": "盐酸左西替利嗪片",
+                "factory": "瑞士 UCB FARCHIM S.A."
+            },
+            {
+                "name": "孟鲁司特钠咀嚼片",
+                "factory": "英国Merck Sharp & Dohme(杭州默沙东分"
+            },
+            {
+                "name": "孟鲁司特钠颗粒",
+                "factory": "美国默沙东(Merck& Co Inc)"
+            },
+            {
+                "name": "孟鲁司特钠片",
+                "factory": "英国Merck Sharp & Dohme(杭州默沙东分"
+            }
+        ]
+    },
+    {
+        "category": "眼科用药",
+        "list":
+        [
+            {
+                "name": "贝美前列素滴眼液",
+                "factory": "美国Allergan,Inc"
+            },
+            {
+                "name": "布林佐胺滴眼液",
+                "factory": "美国爱尔康眼药厂比利时分厂s.a.ALCON-"
+            },
+            {
+                "name": "夫西地酸滴眼液",
+                "factory": "丹麦利奥制药有限公司(Leo"
+            },
+            {
+                "name": "氟米龙滴眼液",
+                "factory": "爱尔兰Allergan Pharmaceuticals"
+            },
+            {
+                "name": "酒石酸溴莫尼定滴眼液",
+                "factory": "爱尔兰Allergan Pharmaceuticals"
+            },
+            {
+                "name": "拉坦前列素滴眼液",
+                "factory": "比利时辉瑞PfizerManufacturing"
+            },
+            {
+                "name": "拉坦噻吗滴眼液",
+                "factory": "比利时Pfizer Manufacturing Beglium NV"
+            },
+            {
+                "name": "酮咯酸氨丁三醇滴眼液",
+                "factory": "爱尔兰Allergan Pharmaceuticals"
+            },
+            {
+                "name": "妥布霉素滴眼液",
+                "factory": "美国爱尔康眼药厂比利时分厂s.a.ALCON"
+            },
+            {
+                "name": "妥布霉素地塞米松滴眼液",
+                "factory": "美国爱尔康眼药厂比利时分厂s.a.ALCON"
+            },
+            {
+                "name": "妥布霉素地塞米松眼膏",
+                "factory": "美国爱尔康眼药厂比利时分厂s.a.ALCON"
+            },
+            {
+                "name": "妥布霉素眼膏",
+                "factory": "美国爱尔康眼药厂比利时分厂s.a. ALCON"
+            },
+            {
+                "name": "盐酸卡替洛尔滴眼液",
+                "factory": "中国大家制药有限公司"
+            },
+            {
+                "name": "盐酸左布诺洛尔滴眼液",
+                "factory": "爱尔兰Allergan Pharmaceuticals"
+            }
+        ]
+    },
+    {
+        "category": "激素类",
+        "list":
+        [
+            {
+                "name": "阿法骨化醇片",
+                "factory": "日本帝人株式会社医药岩国制造所"
+            },
+            {
+                "name": "阿法骨化醇软胶囊",
+                "factory": "以色列梯瓦制药工业有限公司"
+            },
+            {
+                "name": "醋酸甲地孕酮片",
+                "factory": "澳大利亚Bristol-Myers Squibb Australia"
+            },
+            {
+                "name": "醋酸甲羟孕酮片",
+                "factory": "意大利辉瑞制药厂"
+            },
+            {
+                "name": "醋酸去氨加压素片",
+                "factory": "辉凌国际制药(瑞士)有限公司"
+            },
+            {
+                "name": "甲泼尼龙片",
+                "factory": "意大利法玛西亚Pharmacia Italia S.P.A"
+            },
+            {
+                "name": "结合雌激素片",
+                "factory": "爱尔兰惠氏制药有限公司Wyeth Medica"
+            },
+            {
+                "name": "结合雌激素软膏",
+                "factory": "加拿大惠氏-艾尔斯特制药公司"
+            },
+            {
+                "name": "十一酸睾酮软胶囊",
+                "factory": "法国Catalent France Beinheim S.A."
+            },
+            {
+                "name": "戊酸雌二醇片",
+                "factory": "法国杜芬药厂DELPHARM Lille S.A.S."
+            },
+            {
+                "name": "雌二醇片/雌二醇地屈孕酮片复",
+                "factory": "荷兰苏威制药公司"
+            },
+            {
+                "name": "去氧孕烯炔雌醇片",
+                "factory": "荷兰欧加农公司N.V.Organon"
+            },
+            {
+                "name": "炔 雌醇环丙孕酮片",
+                "factory": "德国先灵公司Schering GmbH &"
+            },
+            {
+                "name": "替勃龙片",
+                "factory": "南京欧加农制药有限公司"
+            }
+        ]
+    },
+    {
+        "category": "泌尿系统类",
+        "list":
+        [
+            {
+                "name": "比卡鲁胺片",
+                "factory": "德国CORDEN PHARMA GMBH"
+            },
+            {
+                "name": "非那雄胺片",
+                "factory": "波多黎各Merck Sharp & Dohme Quimica de"
+            },
+            {
+                "name": "枸橼酸坦度螺酮片",
+                "factory": "日本住友制药株式会社(住友制药苏州分装)"
+            },
+            {
+                "name": "琥珀酸索利那新片",
+                "factory": "荷兰Astellas Pharma Europe B.V.(安斯泰"
+            },
+            {
+                "name": "盐酸阿夫唑嗪缓释片",
+                "factory": "法国赛诺菲Sanofi Winthrop"
+            },
+            {
+                "name": "盐酸坦索罗辛缓释胶囊",
+                "factory": "安斯泰来制药(中国)有限公司"
+            },
+            {
+                "name": "盐酸特拉唑嗪片",
+                "factory": "英国雅培制药Abbott Laboratories"
+            }
+        ]
+    },
+    {
+        "category": "免疫系统",
+        "list":
+        [
+            {
+                "name": "环孢素软胶囊",
+                "factory": "德国R.P.Scherer GmbH & Co. KG"
+            },
+            {
+                "name": "甲磺酸伊马替尼胶囊",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "甲磺酸伊马替尼片",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "吗 替麦考酚酯胶囊",
+                "factory": "上海罗氏制药有限公司"
+            },
+            {
+                "name": "咪唑立宾片",
+                "factory": "日本旭化成株式会社Asahi Kasei"
+            },
+            {
+                "name": "硫唑嘌呤片",
+                "factory": "德国Heumann PCS GmbH"
+            }
+        ]
+    },
+    {
+        "category": "抗肿瘤类",
+        "list":
+        [
+            {
+                "name": "阿那曲唑片",
+                "factory": "美国阿斯利康有限公司AstraZeneca"
+            },
+            {
+                "name": "苯丁酸氮芥片",
+                "factory": "德国Heumann PCS GmbH"
+            },
+            {
+                "name": "吉非替尼片",
+                "factory": "英国阿斯利康AstraZeneca"
+            },
+            {
+                "name": "甲苯磺酸索拉非尼片",
+                "factory": "德国Bayer Healthcare AG"
+            },
+            {
+                "name": "卡培他滨片",
+                "factory": "上海罗氏制药有限公司"
+            },
+            {
+                "name": "来曲唑片",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "尼洛替尼胶囊",
+                "factory": "瑞士诺华制药有限公司Novartis Pharma"
+            },
+            {
+                "name": "苹果酸舒尼替尼胶囊",
+                "factory": "意大利辉瑞制药厂Pfizer Italia SRL"
+            },
+            {
+                "name": "枸橼酸托瑞米芬片",
+                "factory": "芬兰奥立安大药厂(Orion Corporation)"
+            },
+            {
+                "name": "磷酸雌莫司汀胶囊",
+                "factory": "意大利辉瑞制药厂Pfizer Italia SRL"
+            },
+            {
+                "name": "盐酸厄洛替尼片",
+                "factory": "美国许瓦兹Schwarz Pharma Manufacturing"
+            },
+            {
+                "name": "盐酸厄洛替尼片",
+                "factory": "美国许瓦兹Schwarz Pharma Manufacturing"
+            },
+            {
+                "name": "盐酸厄洛替尼片",
+                "factory": "瑞士Hoffmann. La.Rocho.ltd"
+            },
+            {
+                "name": "替吉奥胶囊",
+                "factory": "日本大鹏药品工业株式会社德岛工厂Taiho"
+            },
+            {
+                "name": "盐酸伊达比星胶囊",
+                "factory": "意大利Nerviano Medical Science S.r.1."
+            },
+            {
+                "name": "依西美坦片",
+                "factory": "意大利辉瑞制药厂Pfizer Italia SRL"
+            }
+        ]
+    },
+    {
+        "category": "其他类",
+        "list":
+        [
+            {
+                "name": "阿苯达唑片",
+                "factory": "中美（天津）史克制药有限公司"
+            },
+            {
+                "name": "阿达帕林凝胶",
+                "factory": "法国高德美制药公司Laboratoires"
+            },
+            {
+                "name": "阿仑麟酸钠片",
+                "factory": "意大利默沙东MerckSharpDohme（杭州分装）"
+            },
+            {
+                "name": "阿维A胶囊",
+                "factory": "加拿大PATHEONINC."
+            },
+            {
+                "name": "阿昔莫司胶囊",
+                "factory": "意大利辉瑞制药厂PfizerItaliaSRL"
+            },
+            {
+                "name": "布洛芬缓释胶囊",
+                "factory": "中美天津史克制药有限公司"
+            },
+            {
+                "name": "卡泊三醇搽剂",
+                "factory": "丹麦利奥制药有限公司(Leo"
+            },
+            {
+                "name": "卡泊三醇软膏",
+                "factory": "爱尔兰Leo Laboratories Ltd"
+            },
+            {
+                "name": "多烯磷脂酰胆碱胶囊",
+                "factory": "赛诺菲安万特(北京)制药有限公司"
+            },
+            {
+                "name": "法莫替丁片",
+                "factory": "安斯泰来制药(中国)有限公司"
+            },
+            {
+                "name": "非诺贝特胶囊",
+                "factory": "法国利博福尼制药公司(Laboratoires"
+            },
+            {
+                "name": "非诺贝特片(III)",
+                "factory": "法国利博福尼制药公司(Laboratoires"
+            },
+            {
+                "name": "夫西地酸乳膏",
+                "factory": "爱尔兰Leo Laboratories Ltd"
+            },
+            {
+                "name": "氟伐他汀钠缓释片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "氟伐他汀钠胶囊",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "氟康唑胶囊",
+                "factory": "辉瑞制药有限公司"
+            },
+            {
+                "name": "福辛普利钠片",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "辅酶Q10片",
+                "factory": "卫材(中国)药业有限公司"
+            },
+            {
+                "name": "复方a-酮酸片",
+                "factory": "北京费森尤斯卡比医药有限公司"
+            },
+            {
+                "name": "复方曲安奈德乳膏",
+                "factory": "中美上海施贵宝制药有限公司"
+            },
+            {
+                "name": "甘草酸二铵肠溶胶囊",
+                "factory": "江苏正大天晴药业股份有限公司"
+            },
+            {
+                "name": "甘草酸二铵胶囊",
+                "factory": "江苏正大天晴药业股份有限公司"
+            },
+            {
+                "name": "骨化三醇软胶囊",
+                "factory": "德国R.P.Scherer GmbH(上海罗氏制药分装)"
+            },
+            {
+                "name": "鲑鱼降钙素鼻喷剂",
+                "factory": "法国诺华Novartis Pharma S.A."
+            },
+            {
+                "name": "甲苯咪唑片",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "甲钴胺片",
+                "factory": "卫材(中国)药业有限公司"
+            },
+            {
+                "name": "甲磺酸倍他司汀片",
+                "factory": "卫材(中国)药业有限公司"
+            },
+            {
+                "name": "聚甲酚磺醛溶液",
+                "factory": "德国Nycomed GmbH"
+            },
+            {
+                "name": "聚甲酚磺醛阴道栓",
+                "factory": "德国Nycomed GmbH"
+            },
+            {
+                "name": "坎地沙坦西酯片",
+                "factory": "日本武田药品工业株式会社大阪工厂"
+            },
+            {
+                "name": "坎地沙坦酯片",
+                "factory": "重庆圣华曦药业有限公司"
+            },
+            {
+                "name": "坎地沙坦酯片",
+                "factory": "重庆圣华曦药业有限公司"
+            },
+            {
+                "name": "糠酸莫米松乳膏",
+                "factory": "上海先灵葆雅制药有限公司"
+            },
+            {
+                "name": "乳果糖口服溶液",
+                "factory": "荷兰苏威制药公司"
+            },
+            {
+                "name": "利培酮口服液",
+                "factory": "比利时杨森制药公司Janssen"
+            },
+            {
+                "name": "联苯苄唑乳膏",
+                "factory": "拜耳医药保健有限公司"
+            },
+            {
+                "name": "硫酸氨基葡萄糖胶囊",
+                "factory": "爱尔兰罗达药厂(Rottapharm Ltd)"
+            },
+            {
+                "name": "硫酸氨基葡萄糖散",
+                "factory": "爱尔兰罗达药厂(Rottapharm Ltd)"
+            },
+            {
+                "name": "硫酸羟氯喹片",
+                "factory": "英国Sanofi-Synthelabo Ltd."
+            },
+            {
+                "name": "氯喹那多/普罗雌烯阴道片",
+                "factory": "摩纳哥Laboratoire Theramex"
+            },
+            {
+                "name": "氯膦酸二钠胶囊",
+                "factory": "芬兰Bayer Schering Pharma Oy"
+            },
+            {
+                "name": "氯诺昔康片",
+                "factory": "奥地利Nycomed Austria GmbH"
+            },
+            {
+                "name": "氯氧喹胶囊",
+                "factory": "通化茂祥制药有限公司"
+            },
+            {
+                "name": "马来酸依那普利片",
+                "factory": "澳大利亚Merck Sharp & Dohme"
+            },
+            {
+                "name": "马来酸左旋氨氯地平片",
+                "factory": "石药集团欧意药业有限公司"
+            },
+            {
+                "name": "美洛昔康片",
+                "factory": "上海勃林格殷格翰药业有限公司"
+            },
+            {
+                "name": "美洛昔康栓",
+                "factory": "意大利Boehringer Ingelheim Italy S.P.A"
+            },
+            {
+                "name": "门 冬氨酸钾镁片",
+                "factory": "匈牙利吉瑞大药厂"
+            },
+            {
+                "name": "莫匹罗星软膏",
+                "factory": "中美天津史克制药有限公司"
+            },
+            {
+                "name": "萘丁美酮片",
+                "factory": "中美天津史克制药有限公司"
+            },
+            {
+                "name": "帕司烟肼片",
+                "factory": "瑞士Geistlich Pharma AG"
+            },
+            {
+                "name": "培哚普利片",
+                "factory": "施维雅(天津)制药有限公司"
+            },
+            {
+                "name": "匹多莫德口服液",
+                "factory": "意大利多帕药业有限公司DOPPEL"
+            },
+            {
+                "name": "匹维溴铵片",
+                "factory": "法国苏威(Solvay pharma)"
+            },
+            {
+                "name": "普罗雌烯乳膏",
+                "factory": "摩纳哥Laboratoire Theramex"
+            },
+            {
+                "name": "普罗雌烯阴道胶囊",
+                "factory": "摩纳哥Laboratoire Theramex"
+            },
+            {
+                "name": "七叶皂苷钠片",
+                "factory": "山东绿叶制药有限公司"
+            },
+            {
+                "name": "羟苯磺酸钙胶囊",
+                "factory": "奥地利依比威药品有限公司Ebewe Pharma"
+            },
+            {
+                "name": "曲安奈德益康唑乳膏",
+                "factory": "西安杨森制药有限公司"
+            },
+            {
+                "name": "曲司氯铵片",
+                "factory": "德国MADAUS GmbH"
+            },
+            {
+                "name": "瑞格列奈片",
+                "factory": "德国勃林格殷格翰国际公司Boehringer"
+            },
+            {
+                "name": "西咪替丁片",
+                "factory": "中美天津史克制药有限公司"
+            },
+            {
+                "name": "硝呋太尔片",
+                "factory": "意大利多帕药业有限公司DOPPEL"
+            },
+            {
+                "name": "硝呋太尔阴道片",
+                "factory": "意大利多帕药业有限公司DOPPEL"
+            },
+            {
+                "name": "硝呋太尔-制霉菌素阴道栓",
+                "factory": "意大利多帕药业有限公司DOPPEL"
+            },
+            {
+                "name": "银杏叶片",
+                "factory": "贵州信邦制药股份有限公司"
+            },
+            {
+                "name": "银杏叶片",
+                "factory": "上海杏灵科技药业股份有限公司"
+            },
+            {
+                "name": "吲达帕胺缓释片",
+                "factory": "施 维雅(天津)制药有限公司"
+            },
+            {
+                "name": "吲达帕胺片",
+                "factory": "法国施维雅药厂Les Laboratoires Servier"
+            },
+            {
+                "name": "长春西汀片",
+                "factory": "匈牙利吉瑞大药厂"
+            },
+            {
+                "name": "重酒石酸卡巴拉汀胶囊",
+                "factory": "西班牙诺华Novartis Farmaceutica S.A."
+            },
+            {
+                "name": "双氯芬酸二乙胺乳胶剂",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "双氯芬酸钾片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "双氯芬酸钠肠溶片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "双氯芬酸钠缓释片",
+                "factory": "北京诺华制药有限公司"
+            },
+            {
+                "name": "他达拉非片",
+                "factory": "波多黎各Lilly del Caribe Inc."
+            },
+            {
+                "name": "他卡西醇软膏",
+                "factory": "日本帝人株式会社医药岩国制造所"
+            },
+            {
+                "name": "他克莫司胶囊",
+                "factory": "爱尔兰Astellas Ireland Co.,Ltd."
+            },
+            {
+                "name": "他克莫司软膏",
+                "factory": "日本Astellas Toyama Co., Ltd. Toyama"
+            },
+            {
+                "name": "替普瑞酮胶囊",
+                "factory": "卫材(中国)药业有限公司"
+            },
+            {
+                "name": "氯沙坦钾片",
+                "factory": "杭州默沙东制药有限公司"
+            },
+            {
+                "name": "依折麦布片",
+                "factory": "新加坡SCHERING-PLOUGH(SINGAPORE)PTE LTD"
+            }
+        ]
+    },
+    {
+        "category": "胰岛素类",
+        "list":
+        [
+            {
+                "name": "精蛋白锌重组人胰岛素混合注射",
+                "factory": "埃及礼来"
+            },
+            {
+                "name": "精蛋白锌重组人胰岛素混合注射",
+                "factory": "法国礼来(礼来苏州制药分装)"
+            },
+            {
+                "name": "精蛋白锌重组人胰岛素注射液",
+                "factory": "埃及礼来"
+            },
+            {
+                "name": "精蛋白锌重组人胰岛素注射液",
+                "factory": "法国礼来(礼来苏州制药分装)"
+            },
+            {
+                "name": "生物合成人胰岛素注射液",
+                "factory": "丹麦诺和诺德公司Novo Nordisk A/S"
+            },
+            {
+                "name": "生物合成人胰岛素注射液",
+                "factory": "诺和诺德美国公司Novo Nordisk"
+            },
+            {
+                "name": "重组人胰岛素注射液",
+                "factory": "埃及礼来"
+            },
+            {
+                "name": "重组人胰岛素注射液",
+                "factory": "法国礼来(礼来苏州制药分装)"
+            }
+        ]
+    }
+]
