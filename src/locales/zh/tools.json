@@ -235,6 +235,7 @@
       "sourceUrl": "mRNA福星情报局",
       "showing": "显示",
       "items": "个项目",
-      "allCategories": "所有类别"
+      "allCategories": "所有类别",
+      "noResults": "没有找到相关结果"
     }
 }

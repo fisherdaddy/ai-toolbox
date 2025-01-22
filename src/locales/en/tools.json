@@ -233,6 +233,7 @@
       "sourceUrl": "mRNA Lucky Intelligence Bureau",
       "showing": "Showing",
       "items": "items",
-      "allCategories": "All Categories"
+      "allCategories": "All Categories",
+      "noResults": "No results found"
     }
 }
