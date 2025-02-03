@@ -27,10 +27,16 @@
         "outputPrice": 30
       },
       {
+        "name": "o3-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 1.1,
+        "outputPrice": 4.4
+      },
+      {
         "name": "o1-mini",
         "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 3,
-        "outputPrice": 12
+        "inputPrice": 1.1,
+        "outputPrice": 4.4
       },
       {
         "name": "o1",

@@ -75,6 +75,18 @@
         "outputPrice": 16
       },
       {
+        "name": "o3-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 7.7,
+        "outputPrice": 30.8
+      },
+      {
+        "name": "o1-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 7.7,
+        "outputPrice": 30.8
+      },
+      {
         "name": "claude 3.5\nHaiku",
         "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 8.75,
@@ -115,12 +127,6 @@
         "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 50,
         "outputPrice": 50
-      },
-      {
-        "name": "o1-mini",
-        "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 21,
-        "outputPrice": 84
       },
       {
         "name": "gemini 1.5 Pro",

@@ -163,7 +163,7 @@
   },
   {
     "date": "2024年12月6日",
-    "title": "o1  & ChatGPT Pro 发布",
+    "title": "o1 & ChatGPT Pro 发布",
     "feature": "o1 支持图像输入，比 o1-preview 思考时间更短，但响应更快",
     "description": "ChatGPT Pro。200 美元/月的会员订阅费。不限制使用次数（包括o1、o1-mini、语音模式等等），另外也会有更智能的 o1 使用模式。"
   },
@@ -199,8 +199,26 @@
   },
   {
     "date": "2024年12月21日",
-    "title": "o3 & o3-mini 发布",
+    "title": "o3 和 o3-mini 预告",
     "feature": "",
     "description": ""
+  },
+  {
+    "date": "2025年1月23日",
+    "title": "Operator 发布",
+    "feature": "Operator 由名为 Computer-Using Agent (CUA) 的新模型驱动。CUA 结合了 GPT-4o 的视觉能力和通过强化学习获得的先进推理能力，使其能够与图形用户界面 (GUI) 进行交互。",
+    "description": "这是 OpenAI 发布的第一个 Agent， 旨在通过模拟人类在浏览器上的操作（如打字、点击和滚动）来完成各种重复性任务，从而扩展 AI 的实用性，帮助用户节省时间和为企业创造新的互动机会。"
+  },
+  {
+    "date": "2025年1月31日",
+    "title": "o3-mini 发布",
+    "feature": "与 OpenAI o1 类似，OpenAI o3-mini 针对 STEM 推理进行了优化。",
+    "description": "在中等推理强度下，o3-mini 在数学、编程和科学方面的表现与 o1 持平，同时响应速度更快。"
+  },
+  {
+    "date": "2025年2月2日",
+    "title": "Deep Search 发布",
+    "feature": "OpenAI 发布的第二个 Agent",
+    "description": "Deep Research基于 o3的微调版本，它能够在数十分钟内完成人类研究人员需要花费数小时才能完成的工作，极大地提高了研究效率。"
   }
 ]
