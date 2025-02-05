@@ -223,6 +223,10 @@
       "title": "Anthropic Product Release",
       "description": "Timeline of Anthropic's major product releases and events"
     },
+    "deepSeekTimeline": {
+      "title": "DeepSeek Product Release",
+      "description": "Timeline of DeepSeek's major product releases and events"
+    },
     "drugsList": {
       "title": "Imported Original Drug Directory of China",
       "description": "Drug name, manufacturer, and category information",

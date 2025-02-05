@@ -223,6 +223,10 @@
       "title": "Anthropic 製品リリース",
       "description": "Anthropic 製品リリース時刻表"
     },
+    "deepSeekTimeline": {
+      "title": "DeepSeek 製品リリース",
+      "description": "DeepSeek 製品リリース時刻表"
+    },
     "drugsList": {
       "title": "中国輸入オリジナル薬品リスト",
       "description": "薬品名、製造会社、カテゴリ情報",

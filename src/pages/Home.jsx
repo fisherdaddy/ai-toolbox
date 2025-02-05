@@ -19,6 +19,7 @@ const tools = [
   { id: 'textDiff', icon: '/assets/icon/diff.png', path: '/text-diff' },
   { id: 'openAITimeline', icon: '/assets/icon/openai_small.svg', path: '/openai-timeline' },
   { id: 'anthropicTimeline', icon: '/assets/icon/anthropic_small.svg', path: '/anthropic-timeline' },
+  { id: 'deepSeekTimeline', icon: '/assets/icon/deepseek_small.jpg', path: '/deepseek-timeline' },
   { id: 'modelPrice', icon: '/assets/icon/model-price.svg', path: '/llm-model-price' },
   { id: 'drugsList', icon: '/assets/icon/drugs.svg', path: '/drugs-list' },
   { id: 'fisherai', icon: '/assets/icon/fisherai.png', path: 'https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj', external: true }

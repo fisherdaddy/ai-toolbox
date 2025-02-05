@@ -6,8 +6,10 @@ import SEO from '../components/SEO';
 const tools = [
   { id: 'openAITimeline', icon: '/assets/icon/openai_small.svg', path: '/openai-timeline' },
   { id: 'anthropicTimeline', icon: '/assets/icon/anthropic_small.svg', path: '/anthropic-timeline' },
+  { id: 'deepSeekTimeline', icon: '/assets/icon/deepseek_small.jpg', path: '/deepseek-timeline' },
   { id: 'modelPrice', icon: '/assets/icon/model-price.svg', path: '/llm-model-price' },
   { id: 'drugsList', icon: '/assets/icon/drugs.svg', path: '/drugs-list' },
+  
 ];
 
 const Home = () => {

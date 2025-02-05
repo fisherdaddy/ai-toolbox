@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2023年7月",
+    "title": "DeepSeek 公司成立",
+    "feature": "致力于 AGI",
+    "description": "由知名量化资管巨头幻方量化创立，其掌门人梁文锋是 DeepSeek 的创始人。"
+  },
+  {
+    "date": "2023年11月",
+    "title": "开源 DeepSeekLLM 7B 和 67B 的 Base 和 Chat 模型",
+    "feature": "DeepSeek LLM 67B Base 在推理、代码、数学和中文理解等多个领域超越了 Llama2 70B Base。",
+    "description": "DeepSeek Coder 是一系列从零在包含 87% 代码和 13% 自然语言的 2T tokens 数据集上从头开始训练的代码语言模型，它旨在提升代码编写的效率和质量，MIT 许可并允许商业用途。"
+  },
+  {
+    "date": "2024年2月",
+    "title": "开源 DeepSeek Coder 系列模型",
+    "feature": "DeepSeek Coder 提供 1B、5.7B、6.7B 和 33B 等多种模型尺寸，用户可以根据自身需求和硬件条件选择合适的模型。",
+    "description": "在 HumanEval, MultiPL-E, MBPP, DS-1000 和 APPS 基准测试中，性能在公开可用的代码模型中处于领先地位，MIT 许可并允许商业用途。"
+  },
+  {
+    "date": "2024年2月",
+    "title": "开源 DeepSeek Math 模型",
+    "feature": "DeepSeekMath 7B 模型在 MATH 基准测试中取得了令人印象深刻的 51.7% 的成绩，接近 Gemini-Ultra 和 GPT-4 的水平，且未使用外部工具或投票技术。该模型包含 Base 、 Instruct 和 RL 三个版本。",
+    "description": "DeepSeekMath 基于 DeepSeek-Coder-v1.5 7B 初始化，并在来自 Common Crawl 的数学相关 tokens 以及自然语言和代码数据上进行了 500B tokens 的持续预训练，MIT 许可并允许商业用途。"
+  },
+  {
+    "date": "2024年3月",
+    "title": "开源 DeepSeek-VL 系列模型",
+    "feature": "该模型具备通用的多模态理解能力，能够处理包括逻辑图表、网页、公式识别、科学文献、自然图像以及复杂场景中的具身智能等多种任务。",
+    "description": "DeepSeek-VL 系列模型，包括 7B 和 1.3B 参数两种尺寸，并分别提供 base 和 chat 版本，MIT 许可并允许商业用途。"
+  },
+  {
+    "date": "2024年5月",
+    "title": "开源 DeepSeek-V2 系列模型",
+    "feature": "经济高效的混合专家 (MoE) 语言模型",
+    "description": "该模型总参数量为 236B，在包含 8.1 万亿 token 的多样化、高质量语料库上进行了预训练，并经过 SFT 和 RL 过程进行优化。与 DeepSeek 67B 相比，DeepSeek-V2 实现了更强的性能，并分别提供 base 和 chat 版本，MIT 许可并允许商业用途。"
+  },
+  {
+    "date": "2024年7月",
+    "title": "开源 DeepSeek-Coder-V2 系列模型",
+    "feature": "混合专家模型 (MoE) 代码语言模型",
+    "description": "DeepSeek-Coder-V2 基于 DeepSeekMoE 框架，提供 16B 和 236B 总参数量的模型，并提供 Base 和 Instruct 模型，MIT 许可均可公开下载和商用。"
+  },
+  {
+    "date": "2024年12月26日",
+    "title": "开源 DeepSeek-V3 系列模型",
+    "feature": "DeepSeek-V3 采用 MoE 架构，总参数 671B",
+    "description": "DeepSeek-V3 在 14.8 万亿高质量 token 上进行了预训练，并通过监督微调和强化学习进一步提升性能。该模型在 DeepSeek-V2 的基础上进行了创新，采用了多头潜在注意力 (MLA) 和 DeepSeekMoE 架构，并引入了无辅助损失的负载均衡策略和多 token 预测训练目标，旨在实现高效推理和低成本训练。MIT 许可均可公开下载和商用。"
+  },
+  {
+    "date": "2025年1月20日",
+    "title": "开源推理模型 DeepSeek-R1",
+    "feature": "性能比肩 OpenAI o1，成本低廉",
+    "description": "2025年1月20日，DeepSeek推出了推理模型 DeepSeek-R1，并同步开源其模型权重，通过大规模强化学习技术显著提升推理能力，性能媲美顶尖闭源产品，迅速引发全球关注。MIT 许可均可公开下载和商用。"
+  },
+  {
+    "date": "2025年1月28日",
+    "title": "开源 Janus-Pro",
+    "feature": "一个新颖的自回归框架，多模态理解与生成的统一",
+    "description": "Janus-Pro 是 Janus 的升级版本，通过优化训练策略、扩展训练数据和扩大模型规模，在多模态理解和文本到图像的指令跟随能力上都得到了显著提升，同时增强了文本到图像生成的稳定性。"
+  }
+]
