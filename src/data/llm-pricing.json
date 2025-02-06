@@ -21,6 +21,12 @@
         "outputPrice": 1
       },
       {
+        "name": "gemini 2.0 Flash-Lite",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 0.53,
+        "outputPrice": 2.1
+      },
+      {
         "name": "gemini 1.5 Flash",
         "logo": "/assets/icon/google_small.svg",
         "inputPrice": 0.53,
@@ -49,6 +55,12 @@
         "logo": "/assets/icon/wenxin_small.png",
         "inputPrice": 0.8,
         "outputPrice": 2
+      },
+      {
+        "name": "google 2.0 Falsh",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 0.7,
+        "outputPrice": 2.8
       },
       {
         "name": "gpt-4o-mini",

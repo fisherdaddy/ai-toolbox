@@ -1,5 +1,5 @@
 // PricingChart.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 import '../styles/PricingChart.css';
 
@@ -105,6 +105,54 @@ const PricingChart = ({ data }) => {
     input: true,
     output: true,
   });
+  const chartAreaRef = useRef(null);
+  const [hasScroll, setHasScroll] = useState(false);
+  const [showScrollHint, setShowScrollHint] = useState(false);
+
+  useEffect(() => {
+    const checkScroll = () => {
+      if (chartAreaRef.current) {
+        const { scrollWidth, clientWidth, scrollLeft } = chartAreaRef.current;
+        setHasScroll(scrollWidth > clientWidth);
+        // 只在滚动到最左侧时显示提示
+        setShowScrollHint(scrollWidth > clientWidth && scrollLeft === 0);
+      }
+    };
+
+    const handleScroll = () => {
+      if (chartAreaRef.current) {
+        const { scrollLeft } = chartAreaRef.current;
+        // 当用户开始滚动时隐藏提示
+        if (scrollLeft > 0) {
+          setShowScrollHint(false);
+        }
+      }
+    };
+
+    checkScroll();
+    window.addEventListener('resize', checkScroll);
+    if (chartAreaRef.current) {
+      chartAreaRef.current.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('resize', checkScroll);
+      if (chartAreaRef.current) {
+        chartAreaRef.current.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [data]);
+
+  const handleScrollHintClick = () => {
+    if (chartAreaRef.current) {
+      const { scrollWidth, clientWidth } = chartAreaRef.current;
+      chartAreaRef.current.scrollTo({
+        left: scrollWidth - clientWidth,
+        behavior: 'smooth'
+      });
+      setShowScrollHint(false);
+    }
+  };
 
   const handleLegendClick = (barType) => {
     setHighlightedBarTypes((prevState) => ({
@@ -130,7 +178,7 @@ const PricingChart = ({ data }) => {
 
       <ChartLegend onLegendClick={handleLegendClick} highlightedBarTypes={highlightedBarTypes} />
 
-      <div className="chart-area">
+      <div className={`chart-area ${hasScroll ? 'has-scroll' : ''}`} ref={chartAreaRef}>
         <YAxis maxPrice={maxPrice} />
         <div className="chart-container">
           <GridLines />
@@ -143,6 +191,19 @@ const PricingChart = ({ data }) => {
             />
           ))}
         </div>
+        {showScrollHint && (
+          <div 
+            className="scroll-hint-container"
+            onClick={handleScrollHintClick}
+            style={{ cursor: 'pointer' }}
+          >
+            <div className="scroll-hint">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/>
+              </svg>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

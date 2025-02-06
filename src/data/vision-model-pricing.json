@@ -15,10 +15,22 @@
         "outputPrice": 4.5
       },
       {
+        "name": "gemini 2.0 Flash-Lite",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 0.53,
+        "outputPrice": 2.1
+      },
+      {
         "name": "gemini 1.5 Flash",
         "logo": "/assets/icon/google_small.svg",
         "inputPrice": 0.53,
         "outputPrice": 2.1
+      },
+      {
+        "name": "gemini 2.0 Falsh",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 0.7,
+        "outputPrice": 2.8
       },
       {
         "name": "Doubao-1.5-vision-pro-32k",

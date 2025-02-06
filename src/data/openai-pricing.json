@@ -9,24 +9,6 @@
         "outputPrice": 0.6
       },
       {
-        "name": "gpt-4o",
-        "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 2.5,
-        "outputPrice": 10
-      },
-      {
-        "name": "gpt-4o-latest",
-        "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 5,
-        "outputPrice": 15
-      },
-      {
-        "name": "gpt-4-turbo",
-        "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 10,
-        "outputPrice": 30
-      },
-      {
         "name": "o3-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.1,
@@ -39,10 +21,16 @@
         "outputPrice": 4.4
       },
       {
-        "name": "o1",
+        "name": "gpt-4o",
         "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 15,
-        "outputPrice": 60
+        "inputPrice": 2.5,
+        "outputPrice": 10
+      },
+      {
+        "name": "gpt-4o-latest",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 5,
+        "outputPrice": 15
       },
       {
         "name": "gpt-4o-mini-audio-preview",
@@ -51,16 +39,28 @@
         "outputPrice": 20
       },
       {
-        "name": "gpt-4o-audio-preview",
-        "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 100,
-        "outputPrice": 200
-      },
-      {
         "name": "gpt-4o-mini-realtime-preview",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 10,
         "outputPrice": 20
+      },
+      {
+        "name": "gpt-4-turbo",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 10,
+        "outputPrice": 30
+      },
+      {
+        "name": "o1",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 15,
+        "outputPrice": 60
+      },
+      {
+        "name": "gpt-4o-audio-preview",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 100,
+        "outputPrice": 200
       },
       {
         "name": "gpt-4o-realtime-preview",
