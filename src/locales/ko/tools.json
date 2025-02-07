@@ -225,8 +225,8 @@
     "description": "Anthropic 제품 출시 일정"
   },
   "deepSeekTimeline": {
-    "title": "DeepSeek 제품 출시",
-    "description": "DeepSeek 제품 출시 일정"
+    "title": "DeepSeek 모델 출시",
+    "description": "DeepSeek 모델 출시 일정"
   },
   "drugsList": {
     "title": "중국 수입 원조 약품 목록",

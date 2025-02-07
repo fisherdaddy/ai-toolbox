@@ -226,8 +226,8 @@
       "description": "Anthropic 公司重要产品及事件发布时间表"
     },
     "deepSeekTimeline": {
-      "title": "DeepSeek 产品发布",
-      "description": "DeepSeek 产品发布时间一览"
+      "title": "DeepSeek 模型发布",
+      "description": "DeepSeek 模型发布时间一览"
     },
     "drugsList": {
       "title": "中国进口原研药目录",
