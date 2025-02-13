@@ -28,7 +28,7 @@ const ChartLegend = ({ onLegendClick, highlightedBarTypes }) => {
 
 const ChartBar = ({ price, type, maxPrice, highlighted }) => {
   const getBarHeight = () => {
-    return (price / maxPrice) * 300;
+    return (price / maxPrice) * 200;
   };
 
   return (
