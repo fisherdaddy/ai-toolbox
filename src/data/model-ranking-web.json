@@ -1,0 +1,96 @@
+{
+  "title": "国内外各模型能力对比 - Web开发",
+  "subtitle": "数据来源：lmarena.ai",
+  "providers": [
+    {
+      "name": "Claude-3.5-Sonnet-(20241022)",
+      "score": 1252.68,
+      "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
+      "name": "DeepSeek-R1",
+      "score": 1210.90,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "o3-mini-high-(20250131)",
+      "score": 1157.14,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Claude-3.5-Haiku-(20241022)",
+      "score": 1138.22,
+      "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Pro-Exp-02-05",
+      "score": 1111.42,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "o3-mini-(20250131)",
+      "score": 1106.80,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "o1-(20241217)",
+      "score": 1054.47,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "o1-mini-(20240912)",
+      "score": 1051.66,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-Thinking-01-21",
+      "score": 1038.65,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-Thinking-1219",
+      "score": 1026.64,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Gemini-Exp-1206",
+      "score": 1025.29,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Qwen2.5-Max",
+      "score": 987.17,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-Exp",
+      "score": 987.10,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "DeepSeek-V3",
+      "score": 967.68,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "GPT-4o-2024-11-20",
+      "score": 964.00,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Qwen2.5-Coder-32B-Instruct",
+      "score": 904.64,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
+      "name": "Gemini-1.5-Pro-002",
+      "score": 895.41,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Llama-3.1-405B-Instruct",
+      "score": 814.01,
+      "logo": "/assets/icon/meta.svg"
+    }
+  ]
+} 

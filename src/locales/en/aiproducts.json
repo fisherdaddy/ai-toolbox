@@ -15,6 +15,10 @@
         "title": "Gemini",
         "description": "AI dialogue tool by Google"
     },
+    "deepseek": {
+        "title": "DeepSeek",
+        "description": "AI dialogue tool by DeepSeek"
+    },
     "poe": {
         "title": "POE",
         "description": "Multi-model chat platform by Quora"

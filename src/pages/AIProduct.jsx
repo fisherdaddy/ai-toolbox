@@ -33,6 +33,13 @@ const tools = [
     category: 'Chatbots' 
   },
   { 
+    id: 'deepseek', 
+    icon: '/assets/icon/deepseek_small.jpg', 
+    path: 'https://chat.deepseek.com', 
+    external: true,
+    category: 'Chatbots' 
+  },
+  { 
     id: 'poe', 
     icon: '/assets/icon/poe.png', 
     path: 'https://poe.com/', 

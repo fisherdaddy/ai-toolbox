@@ -15,6 +15,10 @@
         "title": "Gemini",
         "description": "GoogleのAI対話ツール"
     },
+    "deepseek": {
+        "title": "DeepSeek",
+        "description": "DeepSeekのAI対話ツール"
+    },
     "poe": {
         "title": "POE",
         "description": "Quoraのマルチモデルチャットプラットフォーム"

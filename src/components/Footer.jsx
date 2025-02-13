@@ -85,6 +85,7 @@ const Footer = () => {
         { name: t('tools.openAITimeline.title'), path: '/openai-timeline', description: t('openAITimeline.description') },
         { name: t('tools.anthropicTimeline.title'), path: '/anthropic-timeline', description: t('anthropicTimeline.description') },
         { name: t('tools.modelPrice.title'), path: '/llm-model-price', description: t('modelPrice.description') },
+        { name: 'Artifical Analysis', url: 'https://artificialanalysis.ai/', description: 'Artifical Analysis' },
       ],
       relatedLinks: [
         { name: 'OpenAI Research', url: 'https://openai.com/research/', description: 'Leading AI research company' },

@@ -15,6 +15,10 @@
       "title": "Gemini",
       "description": "Google旗下AI对话工具"
     },
+    "deepseek": {
+      "title": "DeepSeek",
+      "description": "DeepSeek 旗下的 AI 对话助手"
+    },
     "poe": {
       "title": "POE",
       "description": "Quora 旗下的多模型聊天平台"

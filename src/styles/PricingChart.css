@@ -280,3 +280,75 @@
 .chart-area::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.4);
 }
+
+.score-bar {
+  background: linear-gradient(180deg, #4CAF50 0%, #2E7D32 100%);
+  width: 40px;
+  margin: 0 10px;
+  border-radius: 4px;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.tab-ranking-charts {
+  margin: 2rem 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1px;
+  background: #f5f5f5;
+  padding: 0.5rem;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.tab-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.tab-button.active {
+  background: #fff;
+  color: #1a73e8;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content {
+  padding: 1rem;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

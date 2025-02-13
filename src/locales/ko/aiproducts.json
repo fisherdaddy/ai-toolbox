@@ -15,6 +15,10 @@
         "title": "Gemini",
         "description": "Google의 AI 대화 도구"
     },
+    "deepseek": {
+        "title": "DeepSeek",
+        "description": "DeepSeek의 AI 대화 도구"
+    },
     "poe": {
         "title": "POE",
         "description": "Quora의 멀티 모델 채팅 플랫폼"

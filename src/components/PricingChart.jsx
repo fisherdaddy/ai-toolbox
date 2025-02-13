@@ -3,7 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 import '../styles/PricingChart.css';
 
-const ChartLegend = ({ onLegendClick, highlightedBarTypes }) => {
+const ChartLegend = ({ onLegendClick, highlightedBarTypes, showPricing = true }) => {
+  if (!showPricing) return null;
+  
   return (
     <div className="legend">
       <div
@@ -26,39 +28,52 @@ const ChartLegend = ({ onLegendClick, highlightedBarTypes }) => {
   );
 };
 
-const ChartBar = ({ price, type, maxPrice, highlighted }) => {
+const ChartBar = ({ price, type, maxPrice, highlighted, score }) => {
   const getBarHeight = () => {
+    if (score !== undefined) {
+      return (score / maxPrice) * 200;
+    }
     return (price / maxPrice) * 200;
   };
 
   return (
     <div
-      className={`bar ${type}-bar`}
+      className={`bar ${score !== undefined ? 'score-bar' : `${type}-bar`}`}
       style={{
         height: `${getBarHeight()}px`,
         opacity: highlighted ? 1 : 0.3,
       }}
     >
-      <span className="price-label">{price}</span>
+      <span className="price-label">{score !== undefined ? score : price}</span>
     </div>
   );
 };
 
-const ProviderColumn = ({ provider, maxPrice, highlightedBarTypes }) => (
+const ProviderColumn = ({ provider, maxPrice, highlightedBarTypes, showPricing = true }) => (
   <div className="chart-column">
     <div className="bars-container">
-      <ChartBar
-        price={provider.inputPrice}
-        type="input"
-        maxPrice={maxPrice}
-        highlighted={highlightedBarTypes.input}
-      />
-      <ChartBar
-        price={provider.outputPrice}
-        type="output"
-        maxPrice={maxPrice}
-        highlighted={highlightedBarTypes.output}
-      />
+      {showPricing ? (
+        <>
+          <ChartBar
+            price={provider.inputPrice}
+            type="input"
+            maxPrice={maxPrice}
+            highlighted={highlightedBarTypes.input}
+          />
+          <ChartBar
+            price={provider.outputPrice}
+            type="output"
+            maxPrice={maxPrice}
+            highlighted={highlightedBarTypes.output}
+          />
+        </>
+      ) : (
+        <ChartBar
+          score={provider.score}
+          maxPrice={maxPrice}
+          highlighted={true}
+        />
+      )}
     </div>
     <div className="provider-info">
       <img
@@ -99,7 +114,7 @@ const GridLines = () => (
   </div>
 );
 
-const PricingChart = ({ data }) => {
+const PricingChart = ({ data, showPricing = true }) => {
   useScrollToTop();
   const [highlightedBarTypes, setHighlightedBarTypes] = useState({
     input: true,
@@ -162,6 +177,9 @@ const PricingChart = ({ data }) => {
   };
 
   const getMaxPrice = () => {
+    if (!showPricing) {
+      return Math.max(...data.providers.map(provider => provider.score));
+    }
     const prices = data.providers.flatMap((provider) => [
       provider.inputPrice,
       provider.outputPrice,
@@ -176,7 +194,11 @@ const PricingChart = ({ data }) => {
       <h1 className="chart-title">{data.title}</h1>
       <h2 className="chart-subtitle">{data.subtitle}</h2>
 
-      <ChartLegend onLegendClick={handleLegendClick} highlightedBarTypes={highlightedBarTypes} />
+      <ChartLegend 
+        onLegendClick={handleLegendClick} 
+        highlightedBarTypes={highlightedBarTypes}
+        showPricing={showPricing}
+      />
 
       <div className={`chart-area ${hasScroll ? 'has-scroll' : ''}`} ref={chartAreaRef}>
         <YAxis maxPrice={maxPrice} />
@@ -188,6 +210,7 @@ const PricingChart = ({ data }) => {
               provider={provider}
               maxPrice={maxPrice}
               highlightedBarTypes={highlightedBarTypes}
+              showPricing={showPricing}
             />
           ))}
         </div>

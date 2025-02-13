@@ -1,0 +1,136 @@
+{
+  "title": "国内外各模型能力对比 - 数学",
+  "subtitle": "数据来源：lmarena.ai",
+  "providers": [
+    {
+      "name": "o1-2024-12-17",
+      "score": 1362,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "o3-mini",
+      "score": 1360,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "DeepSeek-R1",
+      "score": 1351,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
+      "score": 1348,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "o1-preview",
+      "score": 1340,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-001",
+      "score": 1334,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Pro-Exp-02-05",
+      "score": 1332,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Qwen2.5-Max",
+      "score": 1326,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
+      "name": "o1-mini",
+      "score": 1326,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "ChatGPT-4o-latest（2025-01-29）",
+      "score": 1306,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Step-2-16K-Exp",
+      "score": 1270,
+      "logo": "/assets/icon/stepfun.svg"
+    },
+    {
+      "name": "Gemini-1.5-Pro-002",
+      "score": 1278,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Claude-3.5-Sonnet-(20241022)",
+      "score": 1278,
+      "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
+      "name": "DeepSeek-V3",
+      "score": 1274,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "Claude-3.5-Sonnet-(20240620)",
+      "score": 1271,
+      "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
+      "name": "Yi-Lightning",
+      "score": 1269,
+      "logo": "/assets/icon/yi_small.jpg"
+    },
+    {
+      "name": "Athene-v2-Chat-72B",
+      "score": 1266,
+      "logo": "/assets/icon/nexusflow.svg"
+    },
+    {
+      "name": "Qwen2.5-plus-1127",
+      "score": 1266,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-Lite-Preview-02-05",
+      "score": 1263,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Deepseek-v2.5-1210",
+      "score": 1254,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "GLM-4-Plus-0111",
+      "score": 1249,
+      "logo": "/assets/icon/glm_small.svg"
+    },
+    {
+      "name": "GPT-4o-2024-05-13",
+      "score": 1254,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "GPT-4o-2024-08-06",
+      "score": 1252,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Qwen2.5-72B-Instruct",
+      "score": 1252,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
+      "name": "Grok-2-08-13",
+      "score": 1252,
+      "logo": "/assets/icon/grok.svg"
+    },
+    {
+      "name": "Meta-Llama-3.1-405B-Instruct-bf16",
+      "score": 1250,
+      "logo": "/assets/icon/meta.svg"
+    }
+  ]
+} 
