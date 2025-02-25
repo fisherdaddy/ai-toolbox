@@ -70,5 +70,23 @@
     "title": "DeepSeek 日活突破 2000 万",
     "feature": "成为全球增长最快的 APP",
     "description": "DeepSeek 的 DAU 达到2215万，相当于同期 ChatGPT DAU（5323万）的41.6%，且超越了豆包的1695万日活"
+  },
+  {
+    "date": "2025年2月21日",
+    "title": "预告为期 5 天的开源周",
+    "feature": "下周起，我们将开源 5 个仓库，以完全透明的方式分享我们取得的初步进展。",
+    "description": "这些即将开源的 5 个仓库构成我们在线服务的基础模块，都经过了详细的文档记录、部署和生产环境的严格测试。"
+  },
+  {
+    "date": "2025年2月24日",
+    "title": "开源 FlashMLA",
+    "feature": "FlashMLA 是一款高效 MLA (Multi-Layer Attention) 解码内核，专为 Hopper GPU 架构设计，并针对可变长度序列的服务场景进行了优化。其目标是提升在 Hopper GPU 上进行模型解码的效率，尤其是在处理不同长度序列时。",
+    "description": "GitHub 地址：https://github.com/deepseek-ai/FlashMLA"
+  },
+  {
+    "date": "2025年2月25日",
+    "title": "开源 DeepEP",
+    "feature": "DeepEP 是一个专为 混合专家模型 (MoE) 和专家并行 (EP) 设计的高效通信库。它旨在通过提供高性能的 GPU 通信内核，加速 MoE 模型的训练和推理过程。",
+    "description": "Github地址：https://github.com/deepseek-ai/DeepEP"
   }
 ]

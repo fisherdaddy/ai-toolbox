@@ -44,6 +44,15 @@ const Title = styled.h2`
   text-align: center;
 `;
 
+// New styled component for the JSON display container
+const JsonDisplayContainer = styled.div`
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  word-wrap: break-word;
+  word-break: break-word;
+`;
+
 function JsonFormatter() {
   const { t } = useTranslation();
   const [input, setInput] = useState('');
@@ -94,25 +103,25 @@ function JsonFormatter() {
           
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 h-[calc(100vh-220px)]">
             <textarea
-              className="w-full lg:w-5/12 p-4 text-sm font-mono border border-indigo-100 rounded-xl bg-white/80 backdrop-blur-sm focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100 outline-none resize-none transition duration-300"
+              className="w-full lg:w-5/12 p-4 text-sm font-mono border border-indigo-100 rounded-xl bg-white/80 backdrop-blur-sm focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100 outline-none resize-none transition duration-300 overflow-auto"
               placeholder={t('tools.jsonFormatter.inputPlaceholder')}
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
             
-            <div className="w-full lg:w-7/12 relative border border-indigo-100 rounded-xl bg-white/80 backdrop-blur-sm p-4">
+            <div className="w-full lg:w-7/12 relative border border-indigo-100 rounded-xl bg-white/80 backdrop-blur-sm p-4 flex flex-col h-full">
               {parsedJson ? (
                 <>
-                  <div className="font-mono text-sm leading-relaxed overflow-auto">
+                  <JsonDisplayContainer className="font-mono text-sm leading-relaxed">
                     {isCompressed ? (
-                      <pre className="m-0 whitespace-nowrap">
+                      <pre className="m-0 whitespace-pre-wrap">
                         {JSON.stringify(parsedJson)}
                       </pre>
                     ) : (
                       <JsonView data={parsedJson} />
                     )}
-                  </div>
-                  <div className="absolute top-4 right-4 flex gap-2">
+                  </JsonDisplayContainer>
+                  <div className="absolute top-4 right-4 flex gap-2 z-10">
                     <button
                       onClick={toggleCompression}
                       className={`
