@@ -12,6 +12,7 @@ const templates = [
   { 
     name: 'simple',
     bgColor: 'linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%)',
+    fallbackColor: '#ffffff',
     textColor: '#2d3748',
     font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     padding: '40px 45px'
@@ -19,6 +20,7 @@ const templates = [
   {
     name: 'ai-style',
     bgColor: 'linear-gradient(120deg, #0A2463 0%, #3E92CC 100%)',
+    fallbackColor: '#0A2463',
     textColor: '#ffffff',
     font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     padding: '40px 45px'
@@ -26,6 +28,7 @@ const templates = [
   {
     name: 'dark',
     bgColor: 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)',
+    fallbackColor: '#1a202c',
     textColor: '#f7fafc',
     font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     padding: '40px 45px'
@@ -33,6 +36,7 @@ const templates = [
   {
     name: 'paper',
     bgColor: 'linear-gradient(135deg, #fdf6e3 0%, #f9f3db 100%)',
+    fallbackColor: '#fdf6e3',
     textColor: '#433422',
     font: 'Georgia, "Nimbus Roman No9 L", "Songti SC", serif',
     padding: '40px 45px'
@@ -40,6 +44,7 @@ const templates = [
   {
     name: 'minimal',
     bgColor: 'linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%)',
+    fallbackColor: '#f8f9fa',
     textColor: '#1a202c',
     font: '-apple-system, "SF Pro Text", sans-serif',
     padding: '40px 45px'
@@ -47,6 +52,7 @@ const templates = [
   {
     name: 'tech',
     bgColor: 'linear-gradient(135deg, #0f1b3d 0%, #1e293b 100%)',
+    fallbackColor: '#0f1b3d',
     textColor: '#e2e8f0',
     font: '"SF Mono", SFMono-Regular, Consolas, monospace',
     padding: '40px 45px'
@@ -240,20 +246,46 @@ const PreviewContainer = styled(InputContainer)`
 
   ul, ol {
     margin: 1em 0;
-    padding-left: 2em;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ol {
-    list-style-type: decimal;
+    padding-left: 1em;
+    list-style-type: none;
   }
 
   li {
     margin: 0.5em 0;
     line-height: 1.6;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.2em;
+  }
+  
+  /* 为无序列表项添加自定义标记 */
+  ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -0.25em; /* 使用更大的负值，进一步向上移动圆点 */
+    color: #4F46E5; /* 使用主题色 */
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.6;
+    display: inline-block; /* 更好的对齐控制 */
+  }
+  
+  /* 为有序列表项添加自定义标记 */
+  ol {
+    counter-reset: item;
+  }
+  
+  ol li::before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    top: -0.25em; /* 使用更大的负值，进一步向上移动数字 */
+    color: #4F46E5; /* 使用主题色 */
+    font-weight: bold;
+    line-height: 1.6;
+    display: inline-block; /* 更好的对齐控制 */
   }
 
   pre, code {
@@ -292,18 +324,6 @@ const PreviewContainer = styled(InputContainer)`
   }
 `;
 
-const Preview = styled.div`
-  font-family: ${(props) => props.$font || '-apple-system, system-ui, sans-serif'};
-  font-size: 16px;
-  line-height: 1.6;
-  color: ${(props) => props.$color || '#1a1a1a'};
-  background: ${(props) => props.$background || '#ffffff'};
-  padding: ${(props) => props.$padding || '40px'};
-  border-radius: 8px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-`;
 
 function MarkdownToImage() {
   const { t } = useTranslation();
@@ -312,27 +332,10 @@ function MarkdownToImage() {
   const previewRef = useRef(null);
   const isLoading = usePageLoading();
 
-  const formatText = (text) => {
-    return marked.parse(text, {
-      breaks: true,
-      gfm: true,
-      headerIds: false,
-      mangle: false,
-      // 自定义图片渲染
-      renderer: {
-        image(href, title, text) {
-          // 处理相对路径
-          if (href.startsWith('/')) {
-            href = window.location.origin + href;
-          }
-          return `<img src="${href}" alt="${text}" title="${title || ''}" style="max-width: 100%; height: auto;" crossorigin="anonymous" />`;
-        }
-      }
-    });
-  };
-
   const handleDownload = async () => {
     const previewElement = previewRef.current;
+
+    console.log('previewElement', previewElement);
     if (!previewElement) return;
 
     try {
@@ -361,13 +364,14 @@ function MarkdownToImage() {
 
       const html2canvas = (await import('html2canvas')).default;
       const canvas = await html2canvas(previewElement, {
-        backgroundColor: selectedTemplate.bgColor,
+        backgroundColor: selectedTemplate.fallbackColor,
         scale: 2,
         useCORS: true,
         allowTaint: false,
         logging: false,
         onclone: (clonedDoc) => {
           const clonedElement = clonedDoc.querySelector('.markdown-content');
+          console.log('clonedElement', clonedElement);
           if (clonedElement) {
             clonedElement.style.width = '100%';
             clonedElement.style.position = 'relative';
