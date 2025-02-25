@@ -3,6 +3,16 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
+      "name": "chocolate (Early Grok-3)",
+      "score": 1403,
+      "logo": "/assets/icon/grok.svg"
+    },
+    {
+      "name": "o3-mini-high",
+      "score": 1373,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
       "name": "Gemini-2.0-Pro-Exp-02-05",
       "score": 1374,
       "logo": "/assets/icon/google_small.svg"

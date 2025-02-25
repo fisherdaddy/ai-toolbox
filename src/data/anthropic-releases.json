@@ -82,5 +82,11 @@
       "title": "Model Context Protocol 发布",
       "feature": "MCP 是一个开放标准，允许开发者建立安全的双向连接，将数据源与 AI 工具相连。",
       "description": "开发者可以通过 MCP 服务器暴露数据，或创建 MCP 客户端以连接这些服务器。MCP 的目标是用单一协议取代当前复杂的多数据源集成方式，简化架构并提高系统的可扩展性。"
+    },
+    {
+      "date": "2025年2月25日",
+      "title": "Cloud 3.7 sonnet 和 Claude Code 发布",
+      "feature": "Claude 3.7 Sonnet 既是普通 LLM 又是推理模型。在标准模式下，它是 Claude 3.5 Sonnet 的升级版；在扩展思考模式下，它会在回答前进行自我反思，从而提高其在数学、物理、指令跟随、编码和许多其他任务上的性能。",
+      "description": "与 Claude 3.7 Sonnet 模型一同发布的还有 Claude Code ，这是一个用于 agentic coding 的命令行工具，目前以有限的研究预览版形式提供。 Claude Code 旨在让开发者能够直接从终端将大量的工程任务委托给 Claude 完成。"
     }
   ]

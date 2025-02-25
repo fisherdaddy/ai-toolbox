@@ -18,6 +18,11 @@
       "logo": "/assets/icon/deepseek_small.jpg"
     },
     {
+      "name": "chocolate (Early Grok-3)",
+      "score": 1350,
+      "logo": "/assets/icon/grok.svg"
+    },
+    {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
       "score": 1348,
       "logo": "/assets/icon/google_small.svg"

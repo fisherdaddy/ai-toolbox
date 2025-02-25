@@ -8,6 +8,11 @@
       "logo": "/assets/icon/openai_small.svg"
     },
     {
+      "name": "chocolate (Early Grok-3)",
+      "score": 1416,
+      "logo": "/assets/icon/grok.svg"
+    },
+    {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
       "score": 1403,
       "logo": "/assets/icon/google_small.svg"

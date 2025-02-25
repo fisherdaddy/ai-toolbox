@@ -147,6 +147,12 @@
         "outputPrice": 35
       },
       {
+        "name": "claude 3.7\nSonnet",
+        "logo": "/assets/icon/anthropic_small.svg",
+        "inputPrice": 26.3,
+        "outputPrice": 105
+      },
+      {
         "name": "claude 3.5\nSonnet",
         "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 26.3,
