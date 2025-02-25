@@ -11,45 +11,45 @@ import LoadingOverlay from './LoadingOverlay';
 const templates = [
   { 
     name: 'simple',
-    bgColor: '#ffffff',
-    textColor: '#333333',
+    bgColor: 'linear-gradient(135deg, #ffffff 0%, #f5f7ff 100%)',
+    textColor: '#2d3748',
     font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    padding: '40px'
+    padding: '40px 45px'
   },
   {
     name: 'ai-style',
-    bgColor: 'linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)',
+    bgColor: 'linear-gradient(120deg, #0A2463 0%, #3E92CC 100%)',
     textColor: '#ffffff',
     font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    padding: '40px'
+    padding: '40px 45px'
   },
   {
     name: 'dark',
-    bgColor: '#2d3748',
-    textColor: '#ffffff',
+    bgColor: 'linear-gradient(135deg, #1a202c 0%, #2d3748 100%)',
+    textColor: '#f7fafc',
     font: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    padding: '40px'
+    padding: '40px 45px'
   },
   {
     name: 'paper',
-    bgColor: '#fdf6e3',
-    textColor: '#333333',
+    bgColor: 'linear-gradient(135deg, #fdf6e3 0%, #f9f3db 100%)',
+    textColor: '#433422',
     font: 'Georgia, "Nimbus Roman No9 L", "Songti SC", serif',
-    padding: '40px'
+    padding: '40px 45px'
   },
   {
     name: 'minimal',
-    bgColor: '#f8f9fa',
-    textColor: '#1a1a1a',
+    bgColor: 'linear-gradient(135deg, #f8f9fa 0%, #edf2f7 100%)',
+    textColor: '#1a202c',
     font: '-apple-system, "SF Pro Text", sans-serif',
-    padding: '40px'
+    padding: '40px 45px'
   },
   {
     name: 'tech',
-    bgColor: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+    bgColor: 'linear-gradient(135deg, #0f1b3d 0%, #1e293b 100%)',
     textColor: '#e2e8f0',
     font: '"SF Mono", SFMono-Regular, Consolas, monospace',
-    padding: '40px'
+    padding: '40px 45px'
   }
 ];
 
