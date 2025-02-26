@@ -281,7 +281,6 @@ const PreviewContainer = styled(InputContainer)`
     counter-increment: item;
     position: absolute;
     left: 0;
-    top: -0.25em; /* 使用更大的负值，进一步向上移动数字 */
     color: #4F46E5; /* 使用主题色 */
     font-weight: bold;
     line-height: 1.6;
