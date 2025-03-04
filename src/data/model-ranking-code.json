@@ -3,19 +3,29 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
-      "name": "chocolate (Early Grok-3)",
-      "score": 1403,
-      "logo": "/assets/icon/grok.svg"
+      "name": "GPT-4.5-Preview",
+      "score": 1426,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "o3-mini-high",
-      "score": 1373,
-      "logo": "/assets/icon/openai_small.svg"
+      "name": "Grok-3-Preview-02-24",
+      "score": 1410,
+      "logo": "/assets/icon/grok.svg"
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
       "score": 1374,
       "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "DeepSeek-R1",
+      "score": 1370,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "o3-mini-high",
+      "score": 1373,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "ChatGPT-4o-latest（2025-01-29）",
@@ -28,23 +38,28 @@
       "logo": "/assets/icon/google_small.svg"
     },
     {
+      "name": "Claude 3.7 Sonnet",
+      "score": 1364,
+      "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
       "name": "o1-2024-12-17",
       "score": 1363,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "DeepSeek-R1",
-      "score": 1363,
-      "logo": "/assets/icon/deepseek_small.jpg"
-    },
-    {
-      "name": "o3-mini",
-      "score": 1359,
-      "logo": "/assets/icon/openai_small.svg"
+      "name": "Gemini-2.0-Flash-001",
+      "score": 1356,
+      "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "o1-preview",
       "score": 1355,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "o3-mini",
+      "score": 1353,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
@@ -53,13 +68,8 @@
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "Gemini-2.0-Flash-001",
-      "score": 1349,
-      "logo": "/assets/icon/google_small.svg"
-    },
-    {
       "name": "Qwen2.5-Max",
-      "score": 1337,
+      "score": 1341,
       "logo": "/assets/icon/ali_small.svg"
     },
     {

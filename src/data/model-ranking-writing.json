@@ -4,33 +4,38 @@
   "providers": [
     {
       "name": "ChatGPT-4o-latest (2025-01-29)",
-      "score": 1422,
+      "score": 1418,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "chocolate (Early Grok-3)",
-      "score": 1416,
+      "name": "Grok-3-Preview-02-24t",
+      "score": 1417,
       "logo": "/assets/icon/grok.svg"
     },
     {
+      "name": "GPT-4.5-Preview",
+      "score": 1405,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
-      "score": 1403,
+      "score": 1393,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
-      "score": 1389,
-      "logo": "/assets/icon/google_small.svg"
-    },
-    {
-      "name": "Gemini-2.0-Flash-001",
-      "score": 1362,
+      "score": 1388,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "DeepSeek-R1",
-      "score": 1362,
+      "score": 1369,
       "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-001",
+      "score": 1352,
+      "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "o1-2024-12-17",

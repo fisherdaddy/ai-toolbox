@@ -3,24 +3,29 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
-      "name": "o1-2024-12-17",
-      "score": 1362,
+      "name": "GPT-4.5-Preview",
+      "score": 1367,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "o3-mini",
-      "score": 1360,
+      "name": "o3-mini-high",
+      "score": 1361,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "o1-2024-12-17",
+      "score": 1359,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "DeepSeek-R1",
-      "score": 1351,
+      "score": 1359,
       "logo": "/assets/icon/deepseek_small.jpg"
     },
     {
-      "name": "chocolate (Early Grok-3)",
-      "score": 1350,
-      "logo": "/assets/icon/grok.svg"
+      "name": "o3-mini",
+      "score": 1353,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
@@ -33,12 +38,17 @@
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "Gemini-2.0-Flash-001",
-      "score": 1334,
-      "logo": "/assets/icon/google_small.svg"
+      "name": "Grok-3-Preview-02-24",
+      "score": 1337,
+      "logo": "/assets/icon/grok.svg"
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
+      "score": 1335,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-001",
       "score": 1332,
       "logo": "/assets/icon/google_small.svg"
     },

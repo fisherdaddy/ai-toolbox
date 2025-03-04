@@ -57,6 +57,12 @@
         "outputPrice": 60
       },
       {
+        "name": "gpt-4.5",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 75,
+        "outputPrice": 150
+      },
+      {
         "name": "gpt-4o-audio-preview",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 100,

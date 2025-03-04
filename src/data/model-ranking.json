@@ -3,9 +3,14 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
-      "name": "chocolate (Early Grok-3)",
-      "score": 1403,
+      "name": "Grok-3-Preview-02-24",
+      "score": 1412,
       "logo": "/assets/icon/grok.svg"
+    },
+    {
+      "name": "GPT-4.5-Preview",
+      "score": 1411,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
@@ -14,7 +19,7 @@
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
-      "score": 1379,
+      "score": 1380,
       "logo": "/assets/icon/google_small.svg"
     },
     {
@@ -38,19 +43,39 @@
       "logo": "/assets/icon/openai_small.svg"
     },
     {
+      "name": "Qwen2.5-Max",
+      "score": 1336,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
       "name": "o1-preview",
       "score": 1335,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "Qwen2.5-Max",
-      "score": 1332,
-      "logo": "/assets/icon/ali_small.svg"
+      "name": "o3-mini-high",
+      "score": 1329,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "DeepSeek-V3",
-      "score": 1316,
+      "score": 1318,
       "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "GLM-4-Plus",
+      "score": 1311,
+      "logo": "/assets/icon/glm_small.svg"
+    },
+    {
+      "name": "Qwen-plus-0125",
+      "score": 1310,
+      "logo": "/assets/icon/ali_small.svg"
+    },
+    {
+      "name": "Claude 3.7 Sonnet",
+      "score": 1309,
+      "logo": "/assets/icon/anthropic_small.svg"
     },
     {
       "name": "Gemini-2.0-Flash-Lite-Preview-02-05",
@@ -58,19 +83,14 @@
       "logo": "/assets/icon/google_small.svg"
     },
     {
-      "name": "o3-mini",
-      "score": 1307,
-      "logo": "/assets/icon/openai_small.svg"
-    },
-    {
-      "name": "GLM-4-Plus-0111",
-      "score": 1304,
-      "logo": "/assets/icon/glm_small.svg"
-    },
-    {
       "name": "Step-2-16K-Exp",
       "score": 1304,
       "logo": "/assets/icon/stepfun.svg"
+    },
+    {
+      "name": "o3-mini",
+      "score": 1304,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "o1-mini",
@@ -106,21 +126,6 @@
       "name": "Qwen2.5-plus-1127",
       "score": 1282,
       "logo": "/assets/icon/ali_small.svg"
-    },
-    {
-      "name": "Deepseek-v2.5-1210",
-      "score": 1279,
-      "logo": "/assets/icon/deepseek_small.jpg"
-    },
-    {
-      "name": "Athene-v2-Chat-72B",
-      "score": 1275,
-      "logo": "/assets/icon/nexusflow.svg"
-    },
-    {
-      "name": "GLM-4-Plus",
-      "score": 1274,
-      "logo": "/assets/icon/glm_small.svg"
     }
   ]
 } 

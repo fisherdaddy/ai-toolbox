@@ -3,6 +3,11 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
+      "name": "Claude-3.7-Sonnet-(20240219)",
+      "score": 1363,
+      "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
       "name": "Claude-3.5-Sonnet-(20241022)",
       "score": 1252.68,
       "logo": "/assets/icon/anthropic_small.svg"

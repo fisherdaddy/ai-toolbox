@@ -169,6 +169,12 @@
         "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 131,
         "outputPrice": 525
+      },
+      {
+        "name": "gpt-4.5",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 525,
+        "outputPrice": 1050
       }
     ]
   }

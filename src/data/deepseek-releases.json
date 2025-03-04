@@ -88,5 +88,23 @@
     "title": "开源 DeepEP",
     "feature": "DeepEP 是一个专为 混合专家模型 (MoE) 和专家并行 (EP) 设计的高效通信库。它旨在通过提供高性能的 GPU 通信内核，加速 MoE 模型的训练和推理过程。",
     "description": "Github地址：https://github.com/deepseek-ai/DeepEP"
+  },
+  {
+    "date": "2025年2月26日",
+    "title": "开源 DeepGEMM",
+    "feature": "DeepGEMM 是一个专为 NVIDIA Hopper 架构 GPU 设计的库，旨在提供高效且简洁的 FP8 通用矩阵乘法 (GEMM) 内核，并采用了 DeepSeek-V3 中提出的细粒度缩放技术。",
+    "description": "Github地址：https://github.com/deepseek-ai/DeepGEMM"
+  },
+  {
+    "date": "2025年2月27日",
+    "title": "开源 DualPipe、EPLB 和 Profile-data",
+    "feature": "DualPipe - 一种双向流水线并行算法，用于 V3/R1 训练中的计算-通信重叠。EPLB - 一种用于 V3/R1 的专家并行负载均衡器。Profile-data - 分析 V3/R1 中的计算-通信重叠。",
+    "description": "Github地址：https://github.com/deepseek-ai/DualPipe；https://github.com/deepseek-ai/eplb；https://github.com/deepseek-ai/profile-data"
+  },
+  {
+    "date": "2025年2月28日",
+    "title": "开源 3FS 和 smallpond",
+    "feature": "Fire-Flyer File System (3FS) 是一款高性能分布式文件系统，专门为解决 AI 训练和推理工作负载的挑战而设计。smallpond 是一个轻量级的数据处理框架，它构建于 DuckDB 和 3FS 之上。该框架旨在提供高性能、可扩展且易于操作的数据处理能力，特别适用于处理 PB 级别的大规模数据集。",
+    "description": "Github地址：https://github.com/deepseek-ai/3FS；https://github.com/deepseek-ai/smallpond"
   }
 ]
