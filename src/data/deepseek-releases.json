@@ -106,5 +106,11 @@
     "title": "开源 3FS 和 smallpond",
     "feature": "Fire-Flyer File System (3FS) 是一款高性能分布式文件系统，专门为解决 AI 训练和推理工作负载的挑战而设计。smallpond 是一个轻量级的数据处理框架，它构建于 DuckDB 和 3FS 之上。该框架旨在提供高性能、可扩展且易于操作的数据处理能力，特别适用于处理 PB 级别的大规模数据集。",
     "description": "Github地址：https://github.com/deepseek-ai/3FS；https://github.com/deepseek-ai/smallpond"
+  },
+  {
+    "date": "2025年3月24日",
+    "title": "DeepSeek-V3-0324 模型发布",
+    "feature": "v3 模型更新",
+    "description": "HuggingFace地址：https://huggingface.co/deepseek-ai/DeepSeek-V3-0324/tree/main"
   }
 ]

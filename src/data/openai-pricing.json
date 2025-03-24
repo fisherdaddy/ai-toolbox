@@ -21,9 +21,27 @@
         "outputPrice": 4.4
       },
       {
+        "name": "gpt-4o-mini-transcribe",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 3,
+        "outputPrice": 5
+      },
+      {
         "name": "gpt-4o",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 2.5,
+        "outputPrice": 10
+      },
+      {
+        "name": "gpt-4o-mini-tts",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 0.6,
+        "outputPrice": 12
+      },
+      {
+        "name": "gpt-4o-transcribe",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 6,
         "outputPrice": 10
       },
       {

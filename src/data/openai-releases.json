@@ -226,5 +226,11 @@
     "title": "GPT-4.5 发布",
     "feature": "GPT-4.5 代表了无监督学习扩展方面的一个进步，通过扩大无监督学习的规模，GPT-4.5 提升了其识别模式、建立联系以及在没有推理的情况下生成创造性见解的能力。",
     "description": "GPT-4.5 拥有更广泛的知识库，能更好地理解用户意图，并展现出更高的“情商”（EQ），从而在写作、编程和问题解决等方面表现更佳，并且有望减少幻觉。"
+  },
+  {
+    "date": "2025年3月20日",
+    "title": "新一代语音转文本模型和文本转语音模型 发布",
+    "feature": "新一代语音转文本模型（ gpt-4o-transcribe、gpt-4o-mini-transcribe）和文本转语音模型（gpt-4o-mini-tts）",
+    "description": "新一代语音转文本模型： 推出了 gpt-4o-transcribe 和 gpt-4o-mini-transcribe 模型，相较于原有的 Whisper 模型，在词错误率 (Word Error Rate, WER) 上有显著改进，语言识别和准确性更高。新一代文本转语音模型： 推出了 gpt-4o-mini-tts 模型，该模型最大的亮点是其可指导性 (steerability)，开发者可以指示模型不仅说什么，还可以指定 如何 说，例如模仿 “富有同情心的客服人员” 的语气。"
   }
 ]
