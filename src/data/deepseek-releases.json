@@ -110,7 +110,7 @@
   {
     "date": "2025年3月24日",
     "title": "DeepSeek-V3-0324 模型发布",
-    "feature": "v3 模型更新",
+    "feature": "推理能力增强、Web前端开发能力优化、中文写作能力升级、中文搜索能力优化、Function Calling 能力改进",
     "description": "HuggingFace地址：https://huggingface.co/deepseek-ai/DeepSeek-V3-0324/tree/main"
   }
 ]

@@ -3,28 +3,28 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
-      "name": "ChatGPT-4o-latest (2025-01-29)",
-      "score": 1418,
-      "logo": "/assets/icon/openai_small.svg"
+      "name": "Gemini-2.5-Pro-Exp-03-25",
+      "score": 1486,
+      "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "Grok-3-Preview-02-24t",
-      "score": 1417,
+      "score": 1404,
       "logo": "/assets/icon/grok.svg"
     },
     {
       "name": "GPT-4.5-Preview",
-      "score": 1405,
+      "score": 1397,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
-      "score": 1393,
+      "score": 1390,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
-      "score": 1388,
+      "score": 1390,
       "logo": "/assets/icon/google_small.svg"
     },
     {

@@ -3,18 +3,13 @@
   "subtitle": "数据来源：lmarena.ai",
   "providers": [
     {
+      "name": "Gemini-2.5-Pro-Exp-03-25",
+      "score": 1412,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
       "name": "GPT-4.5-Preview",
-      "score": 1367,
-      "logo": "/assets/icon/openai_small.svg"
-    },
-    {
-      "name": "o3-mini-high",
-      "score": 1361,
-      "logo": "/assets/icon/openai_small.svg"
-    },
-    {
-      "name": "o1-2024-12-17",
-      "score": 1359,
+      "score": 1378,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
@@ -23,8 +18,18 @@
       "logo": "/assets/icon/deepseek_small.jpg"
     },
     {
+      "name": "o1-2024-12-17",
+      "score": 1354,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "o3-mini-high",
+      "score": 1351,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
       "name": "o3-mini",
-      "score": 1353,
+      "score": 1349,
       "logo": "/assets/icon/openai_small.svg"
     },
     {

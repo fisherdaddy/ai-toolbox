@@ -8,6 +8,11 @@
       "logo": "/assets/icon/anthropic_small.svg"
     },
     {
+      "name": "Gemini-2.5-Pro-Exp-03-25",
+      "score": 1267,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
       "name": "Claude-3.5-Sonnet-(20241022)",
       "score": 1252.68,
       "logo": "/assets/icon/anthropic_small.svg"
