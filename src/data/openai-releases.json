@@ -232,5 +232,11 @@
     "title": "新一代语音转文本模型和文本转语音模型 发布",
     "feature": "新一代语音转文本模型（ gpt-4o-transcribe、gpt-4o-mini-transcribe）和文本转语音模型（gpt-4o-mini-tts）",
     "description": "新一代语音转文本模型： 推出了 gpt-4o-transcribe 和 gpt-4o-mini-transcribe 模型，相较于原有的 Whisper 模型，在词错误率 (Word Error Rate, WER) 上有显著改进，语言识别和准确性更高。新一代文本转语音模型： 推出了 gpt-4o-mini-tts 模型，该模型最大的亮点是其可指导性 (steerability)，开发者可以指示模型不仅说什么，还可以指定 如何 说，例如模仿 “富有同情心的客服人员” 的语气。"
+  },
+  {
+    "date": "2025年3月25日",
+    "title": "GPT-4o 原生生图能力发布",
+    "feature": "GPT-4o 原生生图能力发布",
+    "description": "OpenAI 在 GPT-4o 中引入了其最先进的图像生成器，旨在实现实用且有价值的图像生成。与以往的模型不同，GPT-4o 的图像生成能力专注于精确、准确和照片写实的效果，使其成为一个实用的沟通和信息创建工具，而不仅仅是装饰品。该模型通过原生多模态能力，能够更好地理解和执行用户指令，从而生成更符合用户意图的图像。"
   }
 ]
