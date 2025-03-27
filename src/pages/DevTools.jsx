@@ -8,7 +8,7 @@ const tools = [
   { id: 'urlEncodeDecode', icon: '/assets/icon/url-endecode.png', path: '/url-encode-and-decode' },
   { id: 'imageBase64Converter', icon: '/assets/icon/image-base64.png', path: '/image-base64' },
   { id: 'textDiff', icon: '/assets/icon/diff.png', path: '/text-diff' },
-
+  { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
 ];
 
 const DevTools = () => {

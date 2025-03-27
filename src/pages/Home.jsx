@@ -22,6 +22,7 @@ const tools = [
   { id: 'deepSeekTimeline', icon: '/assets/icon/deepseek_small.jpg', path: '/deepseek-timeline' },
   { id: 'modelPrice', icon: '/assets/icon/model-price.svg', path: '/llm-model-price' },
   { id: 'drugsList', icon: '/assets/icon/drugs.svg', path: '/drugs-list' },
+  { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
   { id: 'fisherai', icon: '/assets/icon/fisherai.png', path: 'https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj', external: true }
 ];
 

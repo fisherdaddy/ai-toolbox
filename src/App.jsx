@@ -30,6 +30,7 @@ const BackgroundRemover = lazy(() => import('./components/BackgroundRemover'));
 const AnthropicTimeline = lazy(() => import('./components/AnthropicTimeline'));
 const DrugsList = lazy(() => import('./components/DrugsList'));
 const DeepSeekTimeline = lazy(() => import('./components/DeepSeekTimeline'));
+const WechatFormatter = lazy(() => import('./components/WechatFormatter'));
 
 function App() {
   return (
@@ -67,8 +68,8 @@ function App() {
                 <Route path="/text-behind-image" element={<TextBehindImage />} /> 
                 <Route path="/background-remover" element={<BackgroundRemover />} />
                 <Route path="/deepseek-timeline" element={<DeepSeekTimeline />} />
+                <Route path="/wechat-formatter" element={<WechatFormatter />} />
                 <Route path="*" element={<NotFound />} />
-
               </Routes>
             </Suspense>
           </main>

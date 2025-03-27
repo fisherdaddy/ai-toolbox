@@ -241,5 +241,9 @@
       "items": "个项目",
       "allCategories": "所有类别",
       "noResults": "没有找到相关结果"
+    },
+    "wechatFormatter": {
+      "title": "微信公众号排版",
+      "description": "将 Markdown 或 HTML 转换为公众号排版"
     }
 }

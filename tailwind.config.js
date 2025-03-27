@@ -15,8 +15,7 @@ export default {
     },
   },
   plugins: [
-    // 注意：line-clamp 现在已经内置在 Tailwind CSS v3.3+ 中
-    // 不需要额外的插件了
+    require('@tailwindcss/typography'),
   ],
 }
 
