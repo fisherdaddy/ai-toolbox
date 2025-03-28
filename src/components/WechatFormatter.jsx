@@ -196,6 +196,14 @@ const WechatFormatter = () => {
       html = text;
     }
 
+    // 处理标题，使用微信公众号兼容的样式
+    html = html.replace(/<h1>(.*?)<\/h1>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 24px; color: #333; display: block;">\$1</strong></section>');
+    html = html.replace(/<h2>(.*?)<\/h2>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 20px; color: #333; display: block;">\$1</strong></section>');
+    html = html.replace(/<h3>(.*?)<\/h3>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 18px; color: #333; display: block;">\$1</strong></section>');
+    html = html.replace(/<h4>(.*?)<\/h4>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 16px; color: #333; display: block;">\$1</strong></section>');
+    html = html.replace(/<h5>(.*?)<\/h5>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 15px; color: #333; display: block;">\$1</strong></section>');
+    html = html.replace(/<h6>(.*?)<\/h6>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 14px; color: #333; display: block;">\$1</strong></section>');
+
     // 添加微信公众号特定的样式
     const wechatHtml = `
       <div class="wechat-content prose max-w-none">
