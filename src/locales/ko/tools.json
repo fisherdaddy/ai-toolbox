@@ -240,5 +240,26 @@
     "items": "항목",
     "allCategories": "모든 카테고리",
     "noResults": "검색 결과가 없습니다"
-  }
+  },
+  "wechatFormatter": {
+    "title": "WeChat 서식 도우미",
+    "description": "Markdown 및 HTML 콘텐츠를 한 번에 WeChat 서식으로 변환",
+    "input": "입력 내용",
+    "output": "출력 내용",
+    "inputPlaceholder": "WeChat용으로 정렬할 텍스트를 입력하세요",
+    "format": "서식 지정",
+    "copyOutput": "결과 복사",
+    "copiedMessage": "클립보드에 복사됨",
+    "copy": "복사",
+    "copied": "복사 완료!"
+  },
+  "imageAnnotator": {
+    "title": "이미지 어노테이터",
+    "description": "이미지에 경계 상자를 추가하고 편집합니다",
+    "uploadImage": "이미지 업로드",
+    "dropOrClick": "드래그하거나 클릭하여 이미지 업로드",
+    "downloadButton": "다운로드",
+    "noImageMessage": "이미지를 업로드하거나 이미지 URL을 제공하세요",
+    "resetView": "뷰 초기화"
+  } 
 }

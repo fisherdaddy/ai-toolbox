@@ -7,6 +7,8 @@ const tools = [
   { id: 'handwrite', icon: '/assets/icon/handwrite.png', path: '/handwriting' },
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
+  { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
+  { id: 'imageAnnotator', icon: '/assets/icon/image-annotator.png', path: '/image-annotator' },
   { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
   { id: 'imageCompressor', icon: '/assets/icon/image-compressor.png', path: '/image-compressor' },
   { id: 'imageWatermark', icon: '/assets/icon/image-watermark.png', path: '/image-watermark' },
@@ -22,7 +24,6 @@ const tools = [
   { id: 'deepSeekTimeline', icon: '/assets/icon/deepseek_small.jpg', path: '/deepseek-timeline' },
   { id: 'modelPrice', icon: '/assets/icon/model-price.svg', path: '/llm-model-price' },
   { id: 'drugsList', icon: '/assets/icon/drugs.svg', path: '/drugs-list' },
-  { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
   { id: 'fisherai', icon: '/assets/icon/fisherai.png', path: 'https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj', external: true }
 ];
 

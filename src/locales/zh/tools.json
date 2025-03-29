@@ -226,24 +226,44 @@
       "description": "Anthropic 公司重要产品及事件发布时间表"
     },
     "deepSeekTimeline": {
-      "title": "DeepSeek 模型发布",
-      "description": "DeepSeek 模型发布时间一览"
+      "title": "DeepSeek 模型发布记录",
+      "description": "DeepSeek 重要模型发布及事件时间线"
     },
     "drugsList": {
-      "title": "中国进口原研药目录",
-      "description": "药品名称、生产厂商和类别信息",
-      "searchPlaceholder": "搜索药品名称或生产厂商...",
+      "title": "国内进口原研药目录",
+      "description": "药品名称、厂家和分类信息查询",
+      "searchPlaceholder": "搜索药品名称或厂家...",
       "drugName": "药品名称",
-      "manufacturer": "生产厂商",
+      "manufacturer": "生产厂家",
       "sourceTitle": "数据来源",
-      "sourceUrl": "mRNA福星情报局",
+      "sourceUrl": "mRNA幸运情报局",
       "showing": "显示",
-      "items": "个项目",
-      "allCategories": "所有类别",
-      "noResults": "没有找到相关结果"
+      "items": "项",
+      "allCategories": "所有分类",
+      "noResults": "未找到结果"
     },
     "wechatFormatter": {
-      "title": "微信公众号排版",
-      "description": "将 Markdown 或 HTML 转换为公众号排版"
+      "title": "微信公众号排版助手",
+      "description": "Markdown、 HTML 格式内容一键即可转为微信公众号排版",
+      "input": "输入内容",
+      "output": "输出内容",
+      "inputPlaceholder": "在此输入需要微信排版的文本",
+      "format": "格式化",
+      "copyOutput": "复制结果",
+      "copiedMessage": "已复制到剪贴板",
+      "copy": "复制",
+      "copied": "已复制！"
+    },
+    "imageAnnotator": {
+      "title": "图像标注工具",
+      "description": "上传图片并可视化显示边界框",
+      "uploadLabel": "上传图片",
+      "urlLabel": "或图片URL",
+      "urlPlaceholder": "https://example.com/image.jpg",
+      "coordinatesLabel": "边界框坐标 (x1,y1,x2,y2)",
+      "coordinatesPlaceholder": "输入坐标，JSON格式：[[x1,y1,x2,y2], ...] 或每行输入一个框",
+      "downloadButton": "下载",
+      "noImageMessage": "上传图片或提供图片URL开始",
+      "resetView": "重置视图"
     }
 }

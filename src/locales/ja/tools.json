@@ -239,5 +239,26 @@
       "items": "項目",
       "allCategories": "すべてのカテゴリ",
       "noResults": "検索結果がありません"
+    },
+    "wechatFormatter": {
+      "title": "WeChat フォーマッター",
+      "description": "Markdown および HTML コンテンツを一度に WeChat フォーマットに変換",
+      "input": "入力内容",
+      "output": "出力内容",
+      "inputPlaceholder": "WeChat用に整列するテキストを入力してください",
+      "format": "フォーマット",
+      "copyOutput": "出力をコピー",
+      "copiedMessage": "コピーしました",
+      "copy": "コピー",
+      "copied": "コピーしました！"
+    },
+    "imageAnnotator": {
+      "title": "画像アノテーションツール",
+      "description": "画像に境界ボックスを追加して編集できます",
+      "uploadImage": "画像をアップロード",
+      "dropOrClick": "ドラッグまたはクリックして画像をアップロード",
+      "downloadButton": "ダウンロード",
+      "noImageMessage": "画像をアップロードするか、画像URLを提供して開始してください",
+      "resetView": "ビューをリセット"
     }
 }

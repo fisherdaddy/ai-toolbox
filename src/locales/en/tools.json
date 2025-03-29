@@ -239,5 +239,29 @@
       "items": "items",
       "allCategories": "All Categories",
       "noResults": "No results found"
+    },
+    "wechatFormatter": {
+      "title": "WeChat Article Formatter",
+      "description": "Markdown and HTML content can be converted to WeChat format at once",
+      "input": "Input Content",
+      "output": "Output Content",
+      "inputPlaceholder": "Enter the text you want to format for WeChat here",
+      "format": "Format",
+      "copyOutput": "Copy Output",
+      "copiedMessage": "Copied to clipboard",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "imageAnnotator": {
+      "title": "Image Annotator",
+      "description": "Upload an image and visualize bounding boxes using coordinates",
+      "uploadLabel": "Upload Image",
+      "urlLabel": "Or Image URL",
+      "urlPlaceholder": "https://example.com/image.jpg",
+      "coordinatesLabel": "Bounding Box Coordinates (x1,y1,x2,y2)",
+      "coordinatesPlaceholder": "Enter coordinates in JSON format: [[x1,y1,x2,y2], ...] or one box per line",
+      "downloadButton": "Download",
+      "noImageMessage": "Upload an image or provide an image URL to begin",
+      "resetView": "Reset View"
     }
 }

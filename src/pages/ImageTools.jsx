@@ -13,6 +13,7 @@ const tools = [
   { id: 'imageWatermark', icon: '/assets/icon/image-watermark.png', path: '/image-watermark' },
   { id: 'imageBackgroundRemover', icon: '/assets/icon/image-background-remover.png', path: '/background-remover' },
   { id: 'textBehindImage', icon: '/assets/icon/text-behind-image.png', path: '/text-behind-image' },
+  { id: 'imageAnnotator', icon: '/assets/icon/image-annotator.png', path: '/image-annotator' },
  ];
 
  const ImageTools = () => {
