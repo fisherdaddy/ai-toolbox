@@ -522,6 +522,19 @@ function ImageAnnotator() {
                     // Determine label position based on box position
                     const isNearTop = box.y1 < 30;
                     
+                    // Calculate the scaling ratio between original image and displayed image
+                    const displayedWidth = imageRef.current ? imageRef.current.width : 0;
+                    const displayedHeight = imageRef.current ? imageRef.current.height : 0;
+                    
+                    const scaleX = imageSize.width > 0 ? displayedWidth / imageSize.width : 1;
+                    const scaleY = imageSize.height > 0 ? displayedHeight / imageSize.height : 1;
+                    
+                    // Scale the coordinates
+                    const scaledX1 = box.x1 * scaleX;
+                    const scaledY1 = box.y1 * scaleY;
+                    const scaledX2 = box.x2 * scaleX;
+                    const scaledY2 = box.y2 * scaleY;
+                    
                     return (
                       <BoundingBox
                         key={box.id}
@@ -530,10 +543,10 @@ function ImageAnnotator() {
                         isOtherSelected={selectedBoxId !== null && selectedBoxId !== box.id}
                         onClick={() => handleBoxClick(box.id)}
                         style={{
-                          left: `${box.x1}px`,
-                          top: `${box.y1}px`,
-                          width: `${box.x2 - box.x1}px`,
-                          height: `${box.y2 - box.y1}px`
+                          left: `${scaledX1}px`,
+                          top: `${scaledY1}px`,
+                          width: `${scaledX2 - scaledX1}px`,
+                          height: `${scaledY2 - scaledY1}px`
                         }}
                       >
                         <BoxLabel
