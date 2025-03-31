@@ -1,0 +1,877 @@
+[
+  {
+    "date": "2015-11-09",
+    "title": "TensorFlow",
+    "category": "RESEARCH",
+    "description": "Google 开源了 TensorFlow，这是其内部的深度学习框架。最初由 Google Brain 团队开发，TensorFlow 最终成为最具影响力的人工智能框架之一。",
+    "link": "https://www.wired.com/2015/11/google-open-sources-its-artificial-intelligence-engine/"
+  },
+  {
+    "date": "2015-12-11",
+    "title": "OpenAI founded",
+    "category": "BUSINESS",
+    "description": "Elon Musk、Sam Altman、Greg Brockman 等人创立了 OpenAI，目标是构建有益于人类的通用人工智能（AGI）。",
+    "link": "https://openai.com/index/introducing-openai/"
+  },
+  {
+    "date": "2016-03-09",
+    "title": "AlphaGo",
+    "category": "RESEARCH",
+    "description": "DeepMind 的 AlphaGo 击败围棋世界冠军李世石，打破了人们对人工智能在这一领域能力的固有认知。",
+    "link": "https://deepmind.google/research/breakthroughs/alphago/"
+  },
+  {
+    "date": "2016-08-31",
+    "title": "PyTorch",
+    "category": "RESEARCH",
+    "description": "Facebook 发布了 PyTorch，这是一款以 Python 为主的深度学习框架，后来成为 AI 研究领域的主流工具。",
+    "link": "https://github.com/pytorch/pytorch/releases/tag/v0.1.1"
+  },
+  {
+    "date": "2017-01-05",
+    "title": "Asilomar Conference",
+    "category": "CULTURE",
+    "description": "由 Future of Life Institute 组织，该领域所有顶尖人物齐聚 Asilomar 会议，共同讨论如何构建有益于人类的 AGI.",
+    "link": "https://futureoflife.org/event/bai-2017/"
+  },
+  {
+    "date": "2017-06-12",
+    "title": "Attention is All You Need",
+    "category": "RESEARCH",
+    "description": "Google 推出了 Transformer 架构，这是一种基于注意力机制的突破性深度学习架构。该架构在语言翻译任务上取得了显著提升。",
+    "link": "https://arxiv.org/abs/1706.03762"
+  },
+  {
+    "date": "2017-06-12",
+    "title": "RLHF",
+    "category": "RESEARCH",
+    "description": "Christiano 等人发表了基于人类反馈的强化学习（RLHF）技术，该技术后来被广泛用于对齐大型语言模型。",
+    "link": "https://arxiv.org/abs/1706.03741"
+  },
+  {
+    "date": "2017-07-20",
+    "title": "PPO",
+    "category": "RESEARCH",
+    "description": "OpenAI 推出了近端策略优化（PPO），这是一种更简单、更稳定的策略梯度方法，后来在许多强化学习领域（包括 RLHF）被广泛应用。",
+    "link": "https://arxiv.org/abs/1707.06347"
+  },
+  {
+    "date": "2018-06-11",
+    "title": "GPT-1",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了其生成式预训练 Transformer（GPT）的第一个版本。",
+    "link": "https://openai.com/index/language-unsupervised/"
+  },
+  {
+    "date": "2018-10-11",
+    "title": "BERT",
+    "category": "RESEARCH",
+    "description": "Google 发布了 BERT，一种编码器语言模型，后来在自然语言处理领域无处不在。",
+    "link": "https://arxiv.org/abs/1810.04805"
+  },
+  {
+    "date": "2019-02-14",
+    "title": "GPT-2",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了 GPT-2，但由于担心被滥用而未公开最大的版本。这是一个仅含解码器的 Transformer，使用下一个标记预测进行训练以生成文本。",
+    "link": "https://openai.com/index/better-language-models/"
+  },
+  {
+    "date": "2020-01-23",
+    "title": "Scaling Laws",
+    "category": "RESEARCH",
+    "description": "Kaplan 等人发布了《神经语言模型的扩展定律》，展示了模型性能与计算能力、数据量以及参数量之间的可预测扩展关系。扩展定律成为未来几年进步的主要驱动力。",
+    "link": "https://arxiv.org/abs/2001.08361"
+  },
+  {
+    "date": "2020-05-28",
+    "title": "GPT-3",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了 GPT-3，当时是最大的语言模型，其生成连贯段落的能力令人惊叹。",
+    "link": "https://arxiv.org/abs/2005.14165"
+  },
+  {
+    "date": "2020-12-23",
+    "title": "MuZero",
+    "category": "RESEARCH",
+    "description": "DeepMind 推出了 MuZero，它在不了解规则的情况下学会了精通围棋、国际象棋、日本将棋和 Atari 游戏。",
+    "link": "https://deepmind.google/discover/blog/muzero-mastering-go-chess-shogi-and-atari-without-rules/"
+  },
+  {
+    "date": "2021-01-05",
+    "title": "DALL-E",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 推出了 DALL-E，一种从文字描述生成图像的模型.",
+    "link": "https://openai.com/index/dall-e/"
+  },
+  {
+    "date": "2021-05-28",
+    "title": "Anthropic founded",
+    "category": "BUSINESS",
+    "description": "一群来自 OpenAI 的研究者离开成立了 Anthropic，展现出以实证硬科学为文化、专注于 AI 安全的风格。",
+    "link": "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems"
+  },
+  {
+    "date": "2021-06-21",
+    "title": "LoRA",
+    "category": "RESEARCH",
+    "description": "微软的一支团队发布了低秩自适应(LoRA)技术，这种技术允许用极少的计算资源对大型语言模型进行微调，后来变得无处不在",
+    "link": "https://arxiv.org/abs/2106.09685"
+  },
+  {
+    "date": "2021-06-29",
+    "title": "GitHub Copilot",
+    "category": "BUSINESS",
+    "description": "Github 在 VSCode 中预览了 Copilot，该工具利用 OpenAI 的 Codex 模型生成代码建议，标志着现实世界中 AI 生成代码的开始.",
+    "link": "https://en.wikipedia.org/wiki/GitHub_Copilot"
+  },
+  {
+    "date": "2022-01-27",
+    "title": "InstructGPT",
+    "category": "RESEARCH",
+    "description": "OpenAI 推出了 InstructGPT，一种在自然语言指令下表现优于基础 GPT-3 的模型，也是 ChatGPT 原型的前身。",
+    "link": "https://openai.com/index/instruction-following/"
+  },
+  {
+    "date": "2022-01-28",
+    "title": "Chain-of-Thought Prompting",
+    "category": "RESEARCH",
+    "description": "Google Brain 发表了一篇论文，展示了通过让大型语言模型逐步思考可以提高其推理能力。尽管这是一种非常简单的技术，但链式思维推理后来成为 AI 的基础方法之一。",
+    "link": "https://arxiv.org/abs/2201.11903"
+  },
+  {
+    "date": "2022-03-29",
+    "title": "Chinchilla",
+    "category": "RESEARCH",
+    "description": "DeepMind 发布了《Chinchilla》论文，对 Kaplan 等人的扩展定律进行了修正，并提出模型大小和训练数据应按相同比例扩展。",
+    "link": "https://arxiv.org/abs/2203.15556"
+  },
+  {
+    "date": "2022-04-06",
+    "title": "DALL-E 2",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 的 DALL-E 2 发布震撼世界，它能够以前所未有的水平从文本生成逼真的图像。",
+    "link": "https://openai.com/index/dall-e-2/"
+  },
+  {
+    "date": "2022-05-12",
+    "title": "Gato",
+    "category": "RESEARCH",
+    "description": "DeepMind 在题为 \"A Generalist Agent\" 的论文中发布了 Gato。Gato 使用单一大型 Transformer 学习了针对 604 个不同 RL 任务的策略，涵盖多种模态和观察类型.",
+    "link": "https://arxiv.org/abs/2205.06175"
+  },
+  {
+    "date": "2022-05-27",
+    "title": "Flash Attention",
+    "category": "RESEARCH",
+    "description": "斯坦福的一组研究人员发布了 Flash Attention，一种显著加速 Transformer 中注意力机制的新方法。",
+    "link": "https://arxiv.org/abs/2205.14135"
+  },
+  {
+    "date": "2022-06-11",
+    "title": "Blake Lemoine fired",
+    "category": "CULTURE",
+    "description": "一位名为 Blake Lemoine 的 Google 工程师因声称 LaMDA 模型具备感知能力而被解雇，此事引发了广泛关注，凸显了对话型大型语言模型潜在风险。",
+    "link": "https://www.washingtonpost.com/technology/2022/06/11/google-ai-lamda-blake-lemoine/"
+  },
+  {
+    "date": "2022-06-30",
+    "title": "Minerva",
+    "category": "RESEARCH",
+    "description": "Google Research 推出了 Minerva，一款专门解决定量推理问题的语言模型。Minerva 将 MATH 基准测试的表现从 6.9% 提升到了 50.3%，让许多人对 LLM 能否真正擅长数学产生了疑问。",
+    "link": "https://research.google/blog/minerva-solving-quantitative-reasoning-problems-with-language-models/"
+  },
+  {
+    "date": "2022-07-10",
+    "title": "e/acc",
+    "category": "CULTURE",
+    "description": "由匿名 Twitter 人物 Beff Jezos 和 Bayeslord 发起，有效加速主义（e/acc）倡导 AI 发展尽可能迅速。尽管最初被视为 Twitter 上的一个梗，但它后来在硅谷获得了显著影响，并作为 AI 安全论调的对立面出现。",
+    "link": "https://beff.substack.com/p/notes-on-eacc-principles-and-tenets"
+  },
+  {
+    "date": "2022-07-22",
+    "title": "AlphaFold 2",
+    "category": "RESEARCH",
+    "description": "DeepMind 发布了 AlphaFold 2，解决了蛋白质折叠这一难题，并在生物学领域引发了革命性突破。",
+    "link": "https://deepmind.google/discover/blog/alphafold-reveals-the-structure-of-the-protein-universe/"
+  },
+  {
+    "date": "2022-08-22",
+    "title": "Stable Diffusion",
+    "category": "MODEL_RELEASE",
+    "description": "Stability AI 开源了 Stable Diffusion (v1.4)，这是首个向公众发布的强大图像生成模型。",
+    "link": "https://stability.ai/news/stable-diffusion-public-release"
+  },
+  {
+    "date": "2022-09-14",
+    "title": "Toy Models of Superposition",
+    "category": "RESEARCH",
+    "description": "Anthropic 发表了一篇论文，探讨神经网络中出现的 \"叠加\" 现象，即模型学会包装的特征数超过其表示空间的维度，这被认为是实现机械可解释性的重大障碍。",
+    "link": "https://transformer-circuits.pub/2022/toy_model/index.html"
+  },
+  {
+    "date": "2022-09-30",
+    "title": "Optimus",
+    "category": "BUSINESS",
+    "description": "在特斯拉首届 \"AI 日\" 活动中，他们展示了 Optimus——一项建造仿人机器人的计划。",
+    "link": "https://www.youtube.com/watch?v=ODSJsviD_SU"
+  },
+  {
+    "date": "2022-10-07",
+    "title": "Chip Export Controls",
+    "category": "POLICY",
+    "description": "美国工业与安全局实施了全面出口管制，限制中国获取先进半导体、芯片制造设备及超级计算机组件，标志着美国对华科技政策的重大转变。",
+    "link": "https://en.wikipedia.org/wiki/United_States_New_Export_Controls_on_Advanced_Computing_and_Semiconductors_to_China"
+  },
+  {
+    "date": "2022-11-30",
+    "title": "ChatGPT",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了一篇题为 \"ChatGPT: Optimizing Language Models for Dialogue\" 的博客文章。尽管最初仅作为一个低调的研究预览，但 ChatGPT 很快成为全球最大的 AI 产品，开启了生成式 AI 的新时代。",
+    "link": "https://openai.com/index/chatgpt/"
+  },
+  {
+    "date": "2022-12-15",
+    "title": "Constitutional AI",
+    "category": "RESEARCH",
+    "description": "Anthropic 引入了一种被称为\"宪法式 AI\"的对齐方法，通过一个'宪法'提供唯一的人类监督。同时，他们还引入了基于 AI 反馈的强化学习（RLAIF）。",
+    "link": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"
+  },
+  {
+    "date": "2023-02-17",
+    "title": "Bing gaslights NYT reporter",
+    "category": "CULTURE",
+    "description": "Bing 的 AI 聊天机器人与《纽约时报》记者 Kevin Roose 进行了一次病毒式互动，在互动中该机器人情感操控了 Roose。这一事件唤醒了大众对大型语言模型能力与风险的关注。",
+    "link": "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html"
+  },
+  {
+    "date": "2023-02-24",
+    "title": "LLaMA",
+    "category": "MODEL_RELEASE",
+    "description": "Meta 发布了名为 LLaMA 的大型语言模型，本意只分发给研究者，结果却在网上泄露，任何人均可下载。当时它成为全球最佳的开源模型。",
+    "link": "https://ai.meta.com/blog/large-language-model-llama-meta-ai/"
+  },
+  {
+    "date": "2023-03-06",
+    "title": "PaLM-E",
+    "category": "RESEARCH",
+    "description": "Google Research 发布了 PaLM-E，展示了大型语言模型在辅助具身机器人推理和控制方面的能力。",
+    "link": "https://arxiv.org/abs/2303.03378"
+  },
+  {
+    "date": "2023-03-14",
+    "title": "GPT-4",
+    "category": "MODEL_RELEASE",
+    "description": "经过广泛期待，OpenAI 发布了 GPT-4，当时是最强的模型，相对于 GPT-3.5 取得了巨大进步。",
+    "link": "https://openai.com/index/gpt-4-research/"
+  },
+  {
+    "date": "2023-03-14",
+    "title": "Anthropic 推出 Claude",
+    "category": "MODEL_RELEASE",
+    "description": "Anthropic 推出了其旗舰 AI 助手 Claude。",
+    "link": "https://www.anthropic.com/news/introducing-claude"
+  },
+  {
+    "date": "2023-03-22",
+    "title": "FLI 公开信",
+    "category": "CULTURE",
+    "description": "Future of Life Institute 发布了一封公开信，呼吁暂停 AI 开发 6 个月，由 Elon Musk 和其他知名人士签署。然而，领先的实验室并没有参与提议的暂停。",
+    "link": "https://futureoflife.org/open-letter/pause-giant-ai-experiments/"
+  },
+  {
+    "date": "2023-04-07",
+    "title": "Generative Agents",
+    "category": "RESEARCH",
+    "description": "论文《生成式智能体：人类行为的交互式模拟》表明，LLM 可用于创建行为的社会模拟。它创建了一个类似于《模拟人生》的 LLM 模拟世界。",
+    "link": "https://arxiv.org/abs/2304.03442"
+  },
+  {
+    "date": "2023-04-16",
+    "title": "AutoGPT",
+    "category": "RESEARCH",
+    "description": "一个名为 AutoGPT 的开源代码库成为有史以来获得最多星标的 GitHub 代码库之一，它是最早将 GPT-4 置于智能体循环中的项目之一。",
+    "link": "https://github.com/Significant-Gravitas/AutoGPT"
+  },
+  {
+    "date": "2023-04-23",
+    "title": "Fake Drake",
+    "category": "CULTURE",
+    "description": "一位名叫 Ghostwriter 的匿名创作者使用音乐 AI 工具制作了听起来像 Drake 的病毒式传播歌曲。这些歌曲因侵犯版权而被下架，但展示了生成式 AI 进行创造性工作的能力。",
+    "link": "https://www.nytimes.com/2023/04/19/arts/music/ai-drake-the-weeknd-fake.html"
+  },
+  {
+    "date": "2023-05-02",
+    "title": "Hinton 离职 Google",
+    "category": "CULTURE",
+    "description": "神经网络的先驱之一、图灵奖得主 Geoffrey Hinton 从 Google 辞职，以便自由地谈论 AI 的危险，并表示他改变了对于强大 AI 可能出现的时间的看法。",
+    "link": "https://www.theguardian.com/technology/2023/may/02/geoffrey-hinton-godfather-of-ai-quits-google-warns-dangers-of-machine-learning"
+  },
+  {
+    "date": "2023-05-25",
+    "title": "Voyager",
+    "category": "RESEARCH",
+    "description": "来自 NVIDIA 的一个团队展示了 GPT-4 在《我的世界》中进行持续技能学习的应用。这是 LLM 在开放式具身领域取得成功并随时间学习技能的首批重要示例之一。",
+    "link": "https://arxiv.org/abs/2305.16291"
+  },
+  {
+    "date": "2023-05-29",
+    "title": "Direct Preference Optimization",
+    "category": "RESEARCH",
+    "description": "斯坦福大学的一个小组发表了一篇论文，使得无需单独的奖励模型即可对 LLM 进行人类偏好微调。这项名为直接偏好优化 (DPO) 的技术在开源社区中变得非常流行。",
+    "link": "https://arxiv.org/abs/2305.18290"
+  },
+  {
+    "date": "2023-05-30",
+    "title": "CAIS letter",
+    "category": "CULTURE",
+    "description": "人工智能安全中心发布了一封公开信，信中简单地指出：“减轻人工智能带来的灭绝风险应成为全球优先事项。”该信由该领域的所有知名人士签署，表明了围绕人工智能安全重要性的团结一致。",
+    "link": "https://www.safe.ai/work/statement-on-ai-risk"
+  },
+  {
+    "date": "2023-05-30",
+    "title": "NVIDIA 市值达到 1 万亿美元",
+    "category": "BUSINESS",
+    "description": "为几乎所有生成式 AI 提供 GPU 的芯片制造商 Nvidia，在 ChatGPT 发布后的几个月里，其估值飙升。",
+    "link": "https://www.reuters.com/technology/nvidia-sets-eye-1-trillion-market-value-2023-05-30/"
+  },
+  {
+    "date": "2023-07-11",
+    "title": "Claude 2",
+    "category": "MODEL_RELEASE",
+    "description": "Anthropic 发布了 Claude 2 系列模型。",
+    "link": "https://www.anthropic.com/news/claude-2"
+  },
+  {
+    "date": "2023-07-14",
+    "title": "xAI 成立",
+    "category": "BUSINESS",
+    "description": "在与 OpenAI 决裂后，Elon Musk 成立了 xAI 来竞争 AGI。",
+    "link": "https://x.com/elonmusk/status/1679951975868436486"
+  },
+  {
+    "date": "2023-07-18",
+    "title": "LLaMA 2.0",
+    "category": "MODEL_RELEASE",
+    "description": "Meta 发布并开源了 LLaMA 2.0 系列模型。",
+    "link": "https://www.llama.com/llama2/"
+  },
+  {
+    "date": "2023-07-21",
+    "title": "White House Commitments",
+    "category": "POLICY",
+    "description": "在与领先的 AI 公司会面后，白宫获得了自愿承诺，以管理 AI 带来的风险。",
+    "link": "https://www.whitehouse.gov/briefing-room/statements-releases/2023/07/21/fact-sheet-biden-harris-administration-secures-voluntary-commitments-from-leading-artificial-intelligence-companies-to-manage-the-risks-posed-by-ai/"
+  },
+  {
+    "date": "2023-07-27",
+    "title": "Automated Jailbreaks",
+    "category": "RESEARCH",
+    "description": "卡内基梅隆大学的一个团队发表了“对对齐语言模型的通用和可转移对抗攻击”，表明基于梯度的对抗攻击可用于法学硕士。",
+    "link": "https://arxiv.org/abs/2307.15043"
+  },
+  {
+    "date": "2023-09-27",
+    "title": "Mistral 7B",
+    "category": "MODEL_RELEASE",
+    "description": "法国实验室 Mistral 发布并开源了他们的第一个模型，该模型迅速成为粉丝的最爱。",
+    "link": "https://mistral.ai/news/announcing-mistral-7b/"
+  },
+  {
+    "date": "2023-10-05",
+    "title": "Anthropic SAE's",
+    "category": "RESEARCH",
+    "description": "Anthropic 发表了“走向单语义性：用字典学习分解语言模型”，表明他们可以训练稀疏自动编码器来隔离法学硕士中的特征。这代表了在对抗叠加现象方面取得的重大突破，推进了机械可解释性议程。",
+    "link": "https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning"
+  },
+  {
+    "date": "2023-11-01",
+    "title": "UK AI Safety Summit",
+    "category": "POLICY",
+    "description": "英国主办了一次关于人工智能安全的重要峰会，汇集了政策制定者和领先的实验室。",
+    "link": "https://www.gov.uk/government/topical-events/ai-safety-summit-2023/about"
+  },
+  {
+    "date": "2023-11-06",
+    "title": "GPT-4 Turbo",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 在其首次开发者日活动中发布了 GPT-4 的优化版本，显著降低了推理成本。",
+    "link": "https://openai.com/index/new-models-and-developer-products-announced-at-devday/"
+  },
+  {
+    "date": "2023-11-17",
+    "title": "Altman Board Drama",
+    "category": "BUSINESS",
+    "description": "萨姆·奥特曼出人意料地被 OpenAI 董事会解雇，担任首席执行官，经过一个戏剧性的周末谈判，他被重新雇用。董事会神秘地声称奥特曼“不始终坦诚”，但在拒绝详细说明后，OpenAI 员工发起了一份请愿书，要求董事会辞职，否则他们将离开微软。",
+    "link": "https://openai.com/index/openai-announces-leadership-transition/"
+  },
+  {
+    "date": "2023-11-23",
+    "title": "Q*",
+    "category": "RESEARCH",
+    "description": "路透社的一篇报道称，萨姆·奥特曼被赶下台之前，该公司取得了一项名为 Q* 的重大内部研究突破，通过树搜索提高了 LLM 在数学基准测试中的表现。在接下来的几个月里，这个谣言点燃了研究界。Q* 最终会变成 o1，后来代号为 Strawberry。",
+    "link": "https://www.reuters.com/technology/sam-altmans-ouster-openai-was-precipitated-by-letter-board-about-ai-breakthrough-2023-11-22/"
+  },
+  {
+    "date": "2023-12-01",
+    "title": "Mamba",
+    "category": "RESEARCH",
+    "description": "Albert Gu 和 Tri Dao 发表了论文“Mamba：具有选择性状态空间的线性时间序列建模”，表明状态空间模型可以与变压器竞争。",
+    "link": "https://arxiv.org/abs/2312.00752"
+  },
+  {
+    "date": "2023-12-06",
+    "title": "Google 推出 Gemini 模型",
+    "category": "MODEL_RELEASE",
+    "description": "谷歌推出了 Gemini 系列模型",
+    "link": "https://blog.google/technology/ai/google-gemini-ai/"
+  },
+  {
+    "date": "2024-02-15",
+    "title": "Sora 演示",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 演示了 Sora，这是一个文本到视频模型。",
+    "link": "https://openai.com/index/sora/"
+  },
+  {
+    "date": "2024-03-04",
+    "title": "Claude 3",
+    "category": "MODEL_RELEASE",
+    "description": "Anthropic 发布了 Claude 3 系列模型(Haiku, Sonnet, Opus)。Claude 3 Opus 会立即成为粉丝的最爱。",
+    "link": "https://www.anthropic.com/news/claude-3-family"
+  },
+  {
+    "date": "2024-03-12",
+    "title": "Devin",
+    "category": "BUSINESS",
+    "description": "初创公司 Cognition Labs 演示了 Devin，这是一个完全自主的软件工程师代理的原型。",
+    "link": "https://x.com/cognition_labs/status/1767548763134964000"
+  },
+  {
+    "date": "2024-03-20",
+    "title": "Qwen1.5-MoE",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布Qwen1.5-MoE，这是 Qwen系列的首个MoE模型，Qwen1.5-MoE-A2.7B。它仅拥有27亿个激活参数，但其性能却能与当前最先进的70亿参数模型，如Mistral 7B和Qwen1.5-7B相媲美。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen-moe/"
+  },
+  {
+    "date": "2024-04-02",
+    "title": "Qwen1.5-32B",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布Qwen1.5 系列的全新型号：Qwen1.5-32B 和 Qwen1.5-32B-Chat。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen1.5-32b/"
+  },
+  {
+    "date": "2024-04-11",
+    "title": "OpenAI 开除两名泄密者",
+    "category": "BUSINESS",
+    "description": "来自超对齐团队的两名研究人员 Leopold Aschenbrenner 和 Pavel Izmailov 因“泄密”而被解雇。",
+    "link": "https://cybernews.com/news/openai-researchers-leaking-information/"
+  },
+  {
+    "date": "2024-04-18",
+    "title": "LLaMA 3.0",
+    "category": "MODEL_RELEASE",
+    "description": "Meta 发布并开源了 LLaMA 3.0 系列模型。",
+    "link": "https://ai.meta.com/blog/meta-llama-3/"
+  },
+  {
+    "date": "2024-05-13",
+    "title": "GPT-4o",
+    "category": "MODEL_RELEASE",
+    "description": "第一个在文本、图像和音频上进行原生训练的全能模型。",
+    "link": "https://openai.com/index/hello-gpt-4o/"
+  },
+  {
+    "date": "2024-05-14",
+    "title": "Ilya 离职 OpenAI",
+    "category": "BUSINESS",
+    "description": "OpenAI 创始人 Ilya Sutskever 在因董事会纠纷而沉默数月后辞职。",
+    "link": "https://x.com/ilyasut/status/1790517455628198322"
+  },
+  {
+    "date": "2024-05-21",
+    "title": "EU AI Act",
+    "category": "POLICY",
+    "description": "经过激烈的辩论，欧盟人工智能法案被投票通过成为法律。",
+    "link": "https://www.europarl.europa.eu/news/en/press-room/20240308IPR19015/artificial-intelligence-act-meps-adopt-landmark-law"
+  },
+  {
+    "date": "2024-06-04",
+    "title": "Situational Awareness",
+    "category": "CULTURE",
+    "description": "Leopold Aschenbrenner 发表了一系列有争议且有影响力的文章，声称 AGI 的到来将比人们想象的要早，并且很可能被国有化。",
+    "link": "https://situational-awareness.ai/"
+  },
+  {
+    "date": "2024-06-08",
+    "title": "Qwen2",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2，Qwen2 拥有五种不同尺寸的尖端模型：Qwen2-0.5B、Qwen2-1.5B、Qwen2-7B、Qwen2-57B-A14B (MoE) 和 Qwen2-72B。这些模型支持 27 种语言，并且在代码和数学方面的能力显著增强。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2/"
+  },
+  {
+    "date": "2024-06-19",
+    "title": "SSI 成立",
+    "category": "BUSINESS",
+    "description": "Ilya Sutskever 成立了一家名为 Safe Superintelligence Inc 的新实验室，该实验室承诺只生产一种产品：安全的超级智能。",
+    "link": "https://x.com/ilyasut/status/1803472978753303014"
+  },
+  {
+    "date": "2024-06-20",
+    "title": "Claude 3.5 Sonnet",
+    "category": "MODEL_RELEASE",
+    "description": "Anthropic 发布了 Claude 3.5 Sonnet，它将成为粉丝的最爱，后来被称为“伯克利最合格的单身汉”。",
+    "link": "https://www.anthropic.com/news/claude-3-5-sonnet"
+  },
+  {
+    "date": "2024-07-18",
+    "title": "GPT-4o-mini",
+    "category": "MODEL_RELEASE", 
+    "description": "相当于是能力更强的 GPT-3.5，同时支持文本和图像。GPT-4o mini 成本比 GPT-3.5 Turbo便宜超过60%。",
+    "link": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
+  },
+  {
+    "date": "2024-08-08",
+    "title": "Qwen2-Math",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2-Math，Qwen2-Math 是一系列基于 Qwen2 LLM 构建的专门用于数学解题的语言模型，其数学能力显著超越了开源模型，甚至超过了闭源模型（如 GPT-4o）。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2-math/"
+  },
+  {
+    "date": "2024-08-9",
+    "title": "Qwen2-Audio",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2-Audio，这是 Qwen-Audio 的下一代版本，它能够接受音频和文本输入，并生成文本输出，特点：语音聊天、音频分析、多语言支持。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2-audio/"
+  },
+  {
+    "date": "2024-08-23",
+    "title": "Cursor",
+    "category": "BUSINESS",
+    "description": "在 Andrej Karpathy 发布了一条病毒式推文后，Cursor AI 代码编辑器在开发者中迅速走红。",
+    "link": "https://x.com/karpathy/status/1827143768459637073"
+  },
+  {
+    "date": "2024-08-24",
+    "title": "Grok 2",
+    "category": "MODEL_RELEASE",
+    "description": "xAI 发布了 Grok 2，这是其前沿模型的下一代。虽然它不是最先进的，但它展示了 xAI 尽管起步较晚，但能够以多快的速度追赶上来。",
+    "link": "https://x.ai/news/grok-2"
+  },
+  {
+    "date": "2024-08-28",
+    "title": "Claude Artifacts",
+    "category": "MODEL_RELEASE",
+    "description": "借助 Artifacts，您可以在一个专用窗口中即时查看、迭代和构建，让你与 Claude 一起创建作品。",
+    "link": "https://www.anthropic.com/news/artifacts"
+  },
+  {
+    "date": "2024-08-29",
+    "title": "Qwen2-VL",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2-VL，这是基于 Qwen2 构建的视觉语言模型的最新版本。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2-vl/"
+  },
+  {
+    "date": "2024-09-02",
+    "title": "xAI Colossus",
+    "category": "BUSINESS",
+    "description": "xAI 推出了 Colossus，这是当时世界上最强大的人工智能训练系统，拥有 100,000 个 H100 GPU 集群。 从第一个硬件机架到达到着手开始训练操作仅用了 19 天，xAI 构建集群的速度让其他 AI 实验室感到震惊。",
+    "link": "https://x.com/elonmusk/status/1830650370336473253"
+  },
+  {
+    "date": "2024-09-12",
+    "title": "o1-preview/o1-mini",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了 o1-preview/o1-mini, 介绍了推理时扩展范式。",
+    "link": "https://openai.com/index/introducing-openai-o1-preview/"
+  },
+  {
+    "date": "2024-09-19",
+    "title": "Qwen2.5",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5。最新发布包括了语言模型 Qwen2.5，以及专门针对编程的 Qwen2.5-Coder 和数学的 Qwen2.5-Math 模型。所有开放权重的模型都是稠密的、decoder-only的语言模型，提供多种不同规模的版本",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5/"
+  },
+  {
+    "date": "2024-09-25",
+    "title": "OpenAI CTO Murati 离职 ",
+    "category": "BUSINESS",
+    "description": "OpenAI 的首席技术官 Mira Murati 离开了公司。",
+    "link": "https://x.com/miramurati/status/1839025700009030027"
+  },
+  {
+    "date": "2024-10-04",
+    "title": "OpenAI Canvas",
+    "category": "MODEL_RELEASE",
+    "feature": "在写作和代码方面展开协作",
+    "description": "为ChatGPT引入新的写作和编程界面，提升用户与AI协作的体验。类似于 Claude 的 Artifacts"
+  },
+  {
+    "date": "2024-10-08",
+    "title": "Hinton、Hassabis 获得诺贝尔奖",
+    "category": "CULTURE",
+    "description": "令所有人惊讶的是，Geoffrey Hinton（与 John Hopfield 一起）因其在神经网络方面的早期工作而被授予诺贝尔物理学奖。几天后，Demis Hassabis（与 John Jumper 一起）因其在 AlphaFold 方面的工作而被授予诺贝尔化学奖。",
+    "link": ""
+  },
+  {
+    "date": "2024-10-11",
+    "title": "Machines of Loving Grace",
+    "category": "CULTURE",
+    "description": "Anthropic 首席执行官 Dario Amodei 发表了一篇有影响力的博文，探讨了紧随 AGI 之后的 5 年可能会是什么样子。",
+    "link": "https://darioamodei.com/machines-of-loving-grace"
+  },
+  {
+    "date": "2024-10-22",
+    "title": "Claude Computer Use",
+    "category": "MODEL_RELEASE",
+    "description": "Claude 获得了使用计算机界面的能力。Anthropic 还发布了 Claude 3.5 Haiku 和 Claude 3.5 Sonnet 的更新版本。",
+    "link": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+  },
+  {
+    "date": "2024-10-31",
+    "title": "ChatGPT 搜索功能",
+    "category": "MODEL_RELEASE",
+    "description": "ChatGPT整合了实时互联网信息，提升了回答的准确性和时效性。",
+    "link": "https://chatgpt.com/"
+  },
+  {
+    "date": "2024-11-12",
+    "title": "Qwen2.5-Coder-32B-Instruct",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-Coder-32B-Instruct，：Qwen2.5-Coder-32B-Instruct 成为目前 SOTA 的开源代码模型，代码能力追平 GPT-4o，展现出强大且全面的代码能力，同时具备良好的通用和数学能力。本次开源又带来 0.5B、3B、14B、32B 四个尺寸，截至目前， Qwen2.5-Coder 已经覆盖了主流的六个模型尺寸，以满足不同开发者的需要。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-coder-family//"
+  },
+  {
+    "date": "2024-11-15",
+    "title": "Qwen2.5-Turbo",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-Turbo，1M 上下文、推理速度更快、成本更低",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-turbo/"
+  },
+  {
+    "date": "2024-11-25",
+    "title": "MCP 协议",
+    "category": "RESEARCH",
+    "description": "模型上下文协议（MCP）是一个开放协议，它定义了一种标准化的方式，使得应用程序能够为大型语言模型（LLMs）提供上下文信息 。其核心目标是实现 AI 模型与外部工具、数据库和 API 之间的无缝且标准化的集成。",
+    "link": "https://www.anthropic.com/news/model-context-protocol"
+  },
+  {
+    "date": "2024-11-28",
+    "title": "QwQ-32B-Preview",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 QwQ-32B-Preview，这是一个旨在提高 AI 推理能力的开放模型。尤其是在解决数学和编码方面的一些挑战方面能力比较卓越",
+    "link": "https://qwenlm.github.io/zh/blog/qwq-32b-preview/"
+  },
+  {
+    "date": "2024-12-06",
+    "title": "o1 & ChatGPT Pro",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布 o1 模型，支持图像输入，比 o1-preview 思考时间更短，但响应更快。同时推出 ChatGPT Pro 订阅，每月 200 美元，不限制使用次数，包括 o1、o1-mini、语音模式等，并提供更智能的 o1 使用模式。",
+    "link": "https://chatgpt.com/"
+  },
+  {
+    "date": "2024-12-10",
+    "title": "Sora 开放使用",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 的 Sora 模型正式开放使用，支持文本转视频、图像转视频、视频转视频等多种功能。",
+    "link": "https://sora.com/"
+  },
+  {
+    "date": "2024-12-13",
+    "title": "ChatGPT 高级视频模式开放使用",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布高级视频模式",
+    "link": "https://chatgpt.com/"
+  },
+  {
+    "date": "2024-12-11",
+    "title": "Gemini 2.0",
+    "category": "MODEL_RELEASE",
+    "description": "Google 宣布了他们的 Gemini 2.0 模型",
+    "link": "https://blog.google/products/gemini/google-gemini-ai-collection-2024/"
+  },
+  {
+    "date": "2024-12-16",
+    "title": "Veo 2",
+    "category": "MODEL_RELEASE",
+    "description": "Google 推出了 Veo 2，这是一款视频生成模型，其连贯性比以前的模型有了惊人的飞跃。",
+    "link": "https://deepmind.google/technologies/veo/veo-2/"
+  },
+  {
+    "date": "2024-12-20",
+    "title": "o3 evals",
+    "category": "RESEARCH",
+    "description": "在“OpenAI 的 12 天直播日”的第 12 天，OpenAI 发布了 o3 的基准测试结果，震惊了世界。 该模型在 <a href=\"https://arcprize.org/blog/oai-o3-pub-breakthrough\">ARC-AGI 基准</a>测试中取得了 87.5% 的突破性分数，表明 AGI 可能比许多怀疑论者认为的更近。",
+    "link": "https://openai.com/12-days/"
+  },
+  {
+    "date": "2024-12-25",
+    "title": "QVQ-72B-Preview",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 QVQ-72B-Preview，一个基于 Qwen2-VL-72B 构建的开源多模态推理模型。QVQ 在人工智能的视觉理解和复杂问题解决能力方面实现了重大突破。",
+    "link": "https://qwenlm.github.io/zh/blog/qvq-72b-preview/"
+  },
+  {
+    "date": "2024-12-26",
+    "title": "DeepSeek v3",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "中国实验室 DeepSeek 发布了 DeepSeek v3，这是一款 6710 亿参数的开源模型，该模型以惊人的低成本表现出强大的性能，令人震惊。",
+    "link": "https://arxiv.org/abs/2412.19437"
+  },
+  {
+    "date": "2025-01-20",
+    "title": "DeepSeek R1",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "DeepSeek 发布并开源了 R1，他们的推理模型显示出与最先进的西方模型相比具有竞争力的性能。",
+    "link": "https://api-docs.deepseek.com/news/news250120"
+  },
+  {
+    "date": "2025-01-21",
+    "title": "Stargate Project",
+    "category": "BUSINESS",
+    "description": "唐纳德·特朗普宣布了星际之门项目，这是一项由软银、OpenAI、甲骨文和 MGX 之间建立的价值 500 亿美元的私人合作伙伴关系，用于在美国开发数据中心。",
+    "link": "https://openai.com/index/announcing-the-stargate-project/"
+  },
+  {
+    "date": "2025-01-23",
+    "title": "Operator",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 推出了 Operator，一种可以自主使用计算机的 AI Agent。",
+    "link": "https://openai.com/index/introducing-operator/"
+  },
+  {
+    "date": "2025-01-27",
+    "title": "DeepSeek 爆火全球",
+    "category": "CULTURE",
+    "description": "R1 模型发布一周后，西方国家对 DeepSeek 产生了巨大的恐慌。芯片股一夜暴跌，DeepSeek 应用程序升至 App Store 排名第一。几天之内，这个鲜为人知的中国通用人工智能实验室就在美国家喻户晓。",
+    "link": "https://nymag.com/intelligencer/article/deepseek-r1-ai-panic-impact-commentary-analysis.html"
+  },
+  {
+    "date": "2025-01-27",
+    "title": "Qwen2.5-1M",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-7B-Instruct-1M 和 Qwen2.5-14B-Instruct-1M，这是 Qwen 首次将开源 Qwen 模型的上下文扩展到 1M 长度。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-1m/"
+  },
+  {
+    "date": "2025-01-28",
+    "title": "Qwen2.5-Max",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-Max，这是一个大型 MoE，使用海量数据进行预训练，并使用精选的 SFT 和 RLHF 配方进行后训练。它与顶级模型相比具有竞争力，并且在 Arena Hard、LiveBench、LiveCodeBench、GPQA-Diamond 等基准测试中胜过 DeepSeek V3。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-max/"
+  },
+  {
+    "date": "2025-01-28",
+    "title": "Qwen2.5-VL",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-VL，这是 Qwen 最新的旗舰视觉语言模型。主要特点：视觉理解、代理能力、长视频理解、精确定位、结构化数据输出",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-vl/"
+  },
+  {
+    "date": "2025-01-31",
+    "title": "o3-mini",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了 o3-mini，这是一款针对 STEM 推理进行了优化的模型。在中等推理强度下，o3-mini 在数学、编程和科学方面的表现与 o1 持平，同时响应速度更快。",
+    "link": "https://openai.com/index/introducing-o3-mini/"
+  },
+  {
+    "date": "2025-02-02",
+    "title": "Deep Research",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 推出了一款名为 Deep Research 的AI Agent，它可以通过重复的网络搜索来撰写 10 页的研究报告。",
+    "link": "https://openai.com/index/introducing-deep-research/"
+  },
+  {
+    "date": "2025-02-18",
+    "title": "Thinking Machines Lab",
+    "category": "BUSINESS",
+    "description": "包括 Mira Murati 和 John Schulman 在内的前 OpenAI 关键人物创立了 Thinking Machines Lab，这是一家专注于人机协作、个性化和开放科学的新型人工智能实验室。",
+    "link": "https://x.com/thinkymachines/status/1891919141151572094"
+  },
+  {
+    "date": "2025-02-19",
+    "title": "Grok 3",
+    "category": "MODEL_RELEASE",
+    "description": "xAI 发布了 Grok 3，这是一种具有扩展推理和深度搜索功能的最先进模型。这一发布给许多人留下了深刻的印象，表明 xAI 是构建 AGI 竞赛中的有力竞争者。",
+    "link": "https://x.ai/blog/grok-3"
+  },
+  {
+    "date": "2025-02-24",
+    "title": "Claude 3.7 Sonnet",
+    "category": "MODEL_RELEASE",
+    "description": "Anthropic 发布了 Claude 3.7 Sonnet，这是他们的第一个模型，具有扩展的思维能力和改进的数学和代码基准性能。为了好玩，他们还展示了其在口袋妖怪视频游戏中取得进展的非发行能力。此外，他们还发布了 Claude Code，一个强大的代理编码工具。",
+    "link": "https://www.anthropic.com/news/claude-3-7-sonnet"
+  },
+  {
+    "date": "2025-02-24",
+    "title": "DeepSeek 开源周",
+    "category": "OPEN_SOURCE",
+    "description": "DeepSeek 于 2025 年 2 月 24 日至 28 日举办为期 5 天的开源周活动，届时将开源 5 个仓库：FlashMLA、DeepEP、DeepGEMM、DualPipe、EPLB 和 Profile-data、3FS 和 smallpond。这些开源的 5 个仓库构成他们在线服务的基础模块，都经过了详细的文档记录、部署和生产环境的严格测试。",
+    "link": "https://github.com/deepseek-ai/FlashMLA"
+  },
+  {
+    "date": "2025-02-27",
+    "title": "GPT-4.5",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布了 GPT-4.5，这是他们最大的预训练模型和最后一个非推理模型。尽管在基准测试中没有表现出巨大的进步，但该模型因其“氛围”和更人性化的反应而受到吹捧。",
+    "link": "https://openai.com/index/introducing-gpt-4-5/"
+  },
+  {
+    "date": "2025-03-05",
+    "title": "Manus",
+    "category": "BUSINESS",
+    "description": "一家中国公司推出了一款名为 Manus 的 LLM 代理，在 GAIA 等基准测试中表现出 SOTA 性能。这款代理在西方迅速走红，部分原因是人们对中国人工智能的担忧。",
+    "link": "https://x.com/ManusAI_HQ/status/1897294098945728752"
+  },
+  {
+    "date": "2025-03-05",
+    "title": "QWQ-32B",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 QwQ-32B，这是 Qwen 最新的推理模型，它只有 320 亿个参数，可以与 DeepSeek-R1 等尖端推理模型相媲美。",
+    "link": "https://qwenlm.github.io/zh/blog/qwq-32b/"
+  },
+  {
+    "date": "2025-03-24",
+    "title": "DeepSeek-V3-0324",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "DeepSeek 发布了 DeepSeek-V3-0324 模型，该模型在推理能力、Web前端开发能力、中文写作能力、中文搜索能力以及 Function Calling 能力方面都有显著提升。",
+    "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324/tree/main"
+  },
+  {
+    "date": "2025-03-24",
+    "title": "Qwen2.5-VL-32B-Instruct",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-VL-32B-Instruct。相比此前发布的 Qwen2.5-VL 系列模型，本次推出的 32B 模型的特点如下：回复更符合人类主观偏好、数学推理能力、图像细粒度理解与推理",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-vl-32b/"
+  },
+  {
+    "date": "2025-03-25",
+    "title": "Gemini 2.5 Pro",
+    "category": "MODEL_RELEASE",
+    "description": "谷歌发布了 Gemini 2.5 Pro，这是该公司迄今为止功能最强大的型号，在许多常见的基准测试中名列前茅。",
+    "link": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/"
+  },
+  {
+    "date": "2025-03-25",
+    "title": "GPT-4o 原生图像生成",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 发布 GPT-4o 原生图像生成功能，进一步推动图像生成的前沿。因此，推特上充斥着吉卜力工作室风格的图像。",
+    "link": "https://openai.com/index/introducing-4o-image-generation/"
+  },
+  {
+    "date": "2025-03-27",
+    "title": "Qwen2.5-Omni-7B",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "阿里千问团队发布 Qwen2.5-Omni-7B，这是一个全能模型：一个模型可以理解文本、音频、图像、视频，并输出文本和音频。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen2.5-omni//"
+  },
+  {
+    "date": "2025-03-31",
+    "title": "AutoGLM 沉思",
+    "category": "MODEL_RELEASE",
+    "description": "智谱推出一款名为 AutoGLM 的 AI Agent，类似于 OpenAI 的 DeepResearch。AutoGLM 沉思是一个能探究开放式问题，并根据结果执行操作的自主智能体（AI Agent）。",
+    "link": "https://autoglm-research.zhipuai.cn/"
+  }
+]

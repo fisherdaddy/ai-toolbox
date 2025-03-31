@@ -244,7 +244,7 @@
     },
     "wechatFormatter": {
       "title": "微信公众号排版助手",
-      "description": "Markdown、 HTML 格式内容一键即可转为微信公众号排版",
+      "description": "Markdown、HTML 内容一键转为公众号版式",
       "input": "输入内容",
       "output": "输出内容",
       "inputPlaceholder": "在此输入需要微信排版的文本",
@@ -265,5 +265,20 @@
       "downloadButton": "下载",
       "noImageMessage": "上传图片或提供图片URL开始",
       "resetView": "重置视图"
+    },
+    "aiTimeline": {
+      "title": "AI 重大事件一览",
+      "description": "展示 AI 领域的重大事件和模型发布时间线",
+      "attribution": "部分数据来源",
+      "lastUpdated": "最后更新时间",
+      "categories": {
+        "all": "全部事件",
+        "MODEL_RELEASE": "模型发布",
+        "RESEARCH": "研究与论文",
+        "POLICY": "政策与监管",
+        "BUSINESS": "商业与行业",
+        "CULTURE": "文化",
+        "OPEN_SOURCE": "开源"
+      } 
     }
 }

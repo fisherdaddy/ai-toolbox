@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vertical timeline bar -->
+  <rect x="4" y="3" width="3" height="18" rx="1.5" fill="#6366F1"/>
+  
+  <!-- Timeline events -->
+  <circle cx="16" cy="6" r="3" fill="#818CF8"/>
+  <circle cx="16" cy="12" r="3" fill="#4F46E5"/>
+  <circle cx="16" cy="18" r="3" fill="#6366F1"/>
+  
+  <!-- Connecting lines -->
+  <path d="M7 6H13" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M7 12H13" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M7 18H13" stroke="#6366F1" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- AI circuit elements inside the nodes -->
+  <path d="M15 6H17" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  <path d="M16 5V7" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  
+  <path d="M15 12L17 12" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  <path d="M15.5 11L16.5 13" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  <path d="M16.5 11L15.5 13" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  
+  <path d="M14.5 17.5L17.5 18.5" stroke="white" stroke-width="1" stroke-linecap="round"/>
+  <path d="M14.5 18.5L17.5 17.5" stroke="white" stroke-width="1" stroke-linecap="round"/>
+</svg> 

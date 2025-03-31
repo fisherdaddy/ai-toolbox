@@ -260,5 +260,20 @@
       "downloadButton": "ダウンロード",
       "noImageMessage": "画像をアップロードするか、画像URLを提供して開始してください",
       "resetView": "ビューをリセット"
+    },
+    "aiTimeline": {
+      "title": "AI 重要事件時間軸",
+      "description": "AI 分野の重要な事件とモデルリリース時間軸を表示します",
+      "attribution": "一部のデータ出典",
+      "lastUpdated": "最終更新日",
+      "categories": {
+        "all": "すべての事件",
+        "MODEL_RELEASE": "モデルリリース",
+        "RESEARCH": "研究と論文",
+        "POLICY": "政策と規制",
+        "BUSINESS": "ビジネスと産業",
+        "CULTURE": "文化",
+        "OPEN_SOURCE": "オープンソース"
+      }
     }
 }

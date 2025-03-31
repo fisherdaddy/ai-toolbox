@@ -4,6 +4,7 @@ import { useTranslation } from '../js/i18n';
 import SEO from '../components/SEO';
 
 const tools = [
+  { id: 'aiTimeline', icon: '/assets/icon/ai-timeline.svg', path: '/ai-timeline' },
   { id: 'openAITimeline', icon: '/assets/icon/openai_small.svg', path: '/openai-timeline' },
   { id: 'anthropicTimeline', icon: '/assets/icon/anthropic_small.svg', path: '/anthropic-timeline' },
   { id: 'deepSeekTimeline', icon: '/assets/icon/deepseek_small.jpg', path: '/deepseek-timeline' },

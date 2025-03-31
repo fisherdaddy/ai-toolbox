@@ -261,5 +261,20 @@
     "downloadButton": "다운로드",
     "noImageMessage": "이미지를 업로드하거나 이미지 URL을 제공하세요",
     "resetView": "뷰 초기화"
-  } 
+  },
+  "aiTimeline": {
+    "title": "AI 중요 사건 시간표",
+    "description": "AI 분야의 중요한 사건과 모델 출시 시간표를 표시합니다",
+    "attribution": "일부 데이터 출처",
+    "lastUpdated": "마지막 업데이트",
+    "categories": {
+      "all": "모든 사건",
+      "MODEL_RELEASE": "모델 출시",
+      "RESEARCH": "연구 및 논문",
+      "POLICY": "정치 및 규정",
+      "BUSINESS": "비즈니스 및 산업",
+      "CULTURE": "문화",
+      "OPEN_SOURCE": "오픈 소스"
+    }
+  }
 }

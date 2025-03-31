@@ -263,5 +263,20 @@
       "downloadButton": "Download",
       "noImageMessage": "Upload an image or provide an image URL to begin",
       "resetView": "Reset View"
+    },
+    "aiTimeline": {
+      "title": "AI Important Events Timeline",
+      "description": "Display important events and model release timelines in the AI field",
+      "attribution": "Some data sources",
+      "lastUpdated": "Last Updated",
+      "categories": {
+        "all": "All Events",
+        "MODEL_RELEASE": "Model Release",
+        "RESEARCH": "Research",
+        "POLICY": "Policy",
+        "BUSINESS": "Business",
+        "CULTURE": "Culture",
+        "OPEN_SOURCE": "Open Source"
+      }
     }
 }
