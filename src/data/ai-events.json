@@ -441,6 +441,20 @@
     "link": "https://openai.com/index/sora/"
   },
   {
+    "date": "2024-02-15",
+    "title": "Gemini 1.5",
+    "category": "MODEL_RELEASE",
+    "description": "Google 发布了 Gemini 1.5，该模型的性能显著增强，在跨模态的长上下文理解方面取得了突破。",
+    "link": "https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/"
+  },
+  {
+    "date": "2024-02-21",
+    "title": "Gemma",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Google 发布 Gemma，是一系列轻量级、先进的开放模型 ，采用与创建 Gemini 模型相同的研究和技术构建而成。两种尺寸的模型权重： Gemma 2B 和 Gemma 7B 。",
+    "link": "https://blog.google/technology/developers/gemma-open-models/"
+  },
+  {
     "date": "2024-02-26",
     "title": "Mistral Large",
     "category": "MODEL_RELEASE",
@@ -537,6 +551,13 @@
     "category": "MODEL_RELEASE",
     "description": "Anthropic 发布了 Claude 3.5 Sonnet，它将成为粉丝的最爱，后来被称为“伯克利最合格的单身汉”。",
     "link": "https://www.anthropic.com/news/claude-3-5-sonnet"
+  },
+  {
+    "date": "2024-06-27",
+    "title": "Gemma 2",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Google 发布 Gemma 3，Gemma 2 有 90 亿 (9B) 和 270 亿 (27B) 两种参数大小，与第一代相比，其性能更高、推理效率更高，并且内置了显著的安全改进。事实上，27B 的参数大小足以与比其大两倍的模型相媲美，其性能直到去年 12 月才在专有模型中实现。",
+    "link": "https://blog.google/technology/developers/google-gemma-2/"
   },
   {
     "date": "2024-07-16",
@@ -945,6 +966,13 @@
     "link": "https://team.doubao.com/zh/tech/seedream"
   },
   {
+    "date": "2025-03-12",
+    "title": "Gemma 3",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Google 发布 Gemma 3，这是一组轻量级、最先进的开放模型，采用与 Gemini 2.0 模型相同的研究和技术构建而成。它们旨在直接在设备（从手机、笔记本电脑到工作站）上快速运行，Gemma 3 有多种尺寸（1B、4B、12B 和 27B），可让您根据特定的硬件和性能需求选择最佳模型。",
+    "link": "https://blog.google/technology/developers/gemma-3/?hl=zh-cn"
+  },
+  {
     "date": "2025-03-17",
     "title": "Mistral Small 3.1",
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
@@ -978,6 +1006,13 @@
     "category": "MODEL_RELEASE",
     "description": "OpenAI 发布 GPT-4o 原生图像生成功能，进一步推动图像生成的前沿。因此，推特上充斥着吉卜力工作室风格的图像。",
     "link": "https://openai.com/index/introducing-4o-image-generation/"
+  },
+  {
+    "date": "2025-03-26",
+    "title": "GPT-4o 原生图像因吉卜力画风火爆全球",
+    "category": "CULTURE",
+    "description": "OpenAI 发布 GPT-4o 原生图像生成功能，在推特上造成了病毒是的传播，一小时内 ChatGPT 新增 100 万用户。堪比上一波 DeepSeek 的火爆程度。",
+    "link": "https://x.com/fun000001/status/1906892391656865812"
   },
   {
     "date": "2025-03-27",
