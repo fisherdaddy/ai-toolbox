@@ -787,7 +787,7 @@
     "date": "2024-12-20",
     "title": "o3 evals",
     "category": "RESEARCH",
-    "description": "在“OpenAI 的 12 天直播日”的第 12 天，OpenAI 发布了 o3 的基准测试结果，震惊了世界。 该模型在 <a href=\"https://arcprize.org/blog/oai-o3-pub-breakthrough\">ARC-AGI 基准</a>测试中取得了 87.5% 的突破性分数，表明 AGI 可能比许多怀疑论者认为的更近。",
+    "description": "在“OpenAI 的 12 天直播日”的第 12 天，OpenAI 发布了 o3 的基准测试结果，震惊了世界。 该模型在 ARC-AGI 基准测试中取得了 87.5% 的突破性分数，表明 AGI 可能比许多怀疑论者认为的更近。",
     "link": "https://openai.com/12-days/"
   },
   {
@@ -848,7 +848,7 @@
   },
   {
     "date": "2025-01-27",
-    "title": "DeepSeek 爆火全球",
+    "title": "DeepSeek 火爆全球",
     "category": "CULTURE",
     "description": "R1 模型发布一周后，西方国家对 DeepSeek 产生了巨大的恐慌。芯片股一夜暴跌，DeepSeek 应用程序升至 App Store 排名第一。几天之内，这个鲜为人知的中国通用人工智能实验室就在美国家喻户晓。",
     "link": "https://nymag.com/intelligencer/article/deepseek-r1-ai-panic-impact-commentary-analysis.html"
@@ -1009,7 +1009,7 @@
   },
   {
     "date": "2025-03-26",
-    "title": "GPT-4o 原生图像因吉卜力画风火爆全球",
+    "title": "GPT-4o 原生图像生成因吉卜力画风火爆全球",
     "category": "CULTURE",
     "description": "OpenAI 发布 GPT-4o 原生图像生成功能，在推特上造成了病毒是的传播，一小时内 ChatGPT 新增 100 万用户。堪比上一波 DeepSeek 的火爆程度。",
     "link": "https://x.com/fun000001/status/1906892391656865812"

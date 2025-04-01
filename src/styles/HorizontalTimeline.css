@@ -142,32 +142,35 @@
   flex-direction: column;
   gap: 0.75rem;
   flex-grow: 1;
-}
-
-.event-link {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   border-radius: 10px;
   border: 1px solid rgba(99, 102, 241, 0.15);
-  padding: 1rem 1.2rem;
-  transition: all 0.3s ease, max-height 0.4s ease-in-out;
-  cursor: pointer;
   box-shadow: 0 6px 25px rgba(99, 102, 241, 0.08);
+}
+
+.event-link {
+  padding: 1rem 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
   text-decoration: none;
   color: #1a1a1a;
   display: block;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.event-link:last-child {
+  border-bottom: none;
 }
 
 .event-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.05);
 }
 
 .event-content {
-  /* Container inside link if needed, or apply styles directly to .event-link */
+  padding-right: 2rem;
 }
 
 .event-title {
@@ -184,30 +187,27 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  max-height: calc(1.5em);
-  transition: max-height 0.3s ease-in-out;
+  -webkit-line-clamp: 2;
+  transition: all 0.3s ease;
 }
 
 .event-link:hover .event-description {
   -webkit-line-clamp: unset;
-  max-height: 100px;
 }
 
 .event-arrow {
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
   font-size: 1.1rem;
   color: rgba(99, 102, 241, 0.5);
   transition: all 0.3s ease;
-  opacity: 0;
 }
 
 .event-link:hover .event-arrow {
-  opacity: 1;
   color: #4F46E5;
-  transform: translate(2px, -2px);
+  transform: translate(3px, -50%);
 }
 
 .timeline-event-item.model-release::before {
@@ -300,11 +300,10 @@
   
   .event-description {
     font-size: 0.9rem;
-    max-height: calc(1.5em);
   }
   
-  .event-link:hover .event-description {
-    max-height: 80px;
+  .event-arrow {
+    right: 0.8rem;
   }
   
   .timeline-year-separator {
