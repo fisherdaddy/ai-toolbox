@@ -19,7 +19,9 @@ const categories = [
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const month = date.getMonth() + 1; // Months are 0-based
+  const day = date.getDate();
+  return `${month}.${day}`;
 };
 
 const getCategoryClass = (categoryArray) => {
@@ -48,6 +50,16 @@ const AITimeline = () => {
   const isLoading = usePageLoading();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [groupedEventsByDate, setGroupedEventsByDate] = useState([]);
+  const [lastUpdatedDate, setLastUpdatedDate] = useState(null);
+
+  // Set the last updated date once on component mount
+  useEffect(() => {
+    // Sort events by date descending to get the most recent event
+    const sortedEvents = [...events].sort((a, b) => new Date(b.date) - new Date(a.date));
+    if (sortedEvents.length > 0) {
+      setLastUpdatedDate(formatLastUpdatedDate(sortedEvents[0].date));
+    }
+  }, []);
 
   // Group events by date after sorting descendingly
   useEffect(() => {
@@ -87,11 +99,6 @@ const AITimeline = () => {
     }
     return new Date(currentDateGroup.date).getFullYear() !== new Date(previousDateGroup.date).getFullYear();
   };
-
-  // Calculate the last updated date from the sorted events
-  const lastUpdatedDate = groupedEventsByDate.length > 0
-    ? formatLastUpdatedDate(groupedEventsByDate[0].date)
-    : null;
 
   return (
     <>

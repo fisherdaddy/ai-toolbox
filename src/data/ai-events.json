@@ -427,11 +427,25 @@
     "link": "https://blog.google/technology/ai/google-gemini-ai/"
   },
   {
+    "date": "2024-12-11",
+    "title": "Mixtral 8x7B",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Mixtral 8x7B，Mixtral 在大多数基准测试中的表现都优于 Llama 2 70B，推理速度提高了 6 倍。它在大多数标准基准测试中与 GPT3.5 相当或优于 GPT3.5。",
+    "link": "https://mistral.ai/news/mixtral-8x7b"
+  },
+  {
     "date": "2024-02-15",
     "title": "Sora 演示",
     "category": "MODEL_RELEASE",
     "description": "OpenAI 演示了 Sora，这是一个文本到视频模型。",
     "link": "https://openai.com/index/sora/"
+  },
+  {
+    "date": "2024-02-26",
+    "title": "Mistral Large",
+    "category": "MODEL_RELEASE",
+    "description": "Mistral 发布了 Mistral Large，它达到了顶级推理能力。它可以用于复杂的多语言推理任务，包括文本理解、转换和代码生成。",
+    "link": "https://mistral.ai/news/mistral-large"
   },
   {
     "date": "2024-03-04",
@@ -525,11 +539,39 @@
     "link": "https://www.anthropic.com/news/claude-3-5-sonnet"
   },
   {
+    "date": "2024-07-16",
+    "title": "MathStral",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 MathStral，这是一个专为数学推理和科学发现而设计的特定 7B 模型。该模型具有 32k 上下文窗口，根据 Apache 2.0 许可证发布。",
+    "link": "https://mistral.ai/news/mathstral"
+  },
+  {
+    "date": "2024-07-16",
+    "title": "Codestral Mamba",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Codestral Mamba，一种专门用于代码生成的 Mamba2 语言模型，可在 Apache 2.0 许可下使用。",
+    "link": "https://mistral.ai/news/codestral-mamba"
+  },
+  {
     "date": "2024-07-18",
     "title": "GPT-4o-mini",
     "category": "MODEL_RELEASE", 
     "description": "相当于是能力更强的 GPT-3.5，同时支持文本和图像。GPT-4o mini 成本比 GPT-3.5 Turbo便宜超过60%。",
     "link": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/"
+  },
+  {
+    "date": "2024-07-18",
+    "title": "Mistral NeMo",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Mistral NeMo，最新推出的最佳小型模型。这是一种最先进的 12B 模型，上下文长度为 128k，与 NVIDIA 合作开发，并根据 Apache 2.0 许可发布。",
+    "link": "https://mistral.ai/news/mistral-nemo"
+  },
+  {
+    "date": "2024-07-24",
+    "title": "Mistral Large 2",
+    "category": "MODEL_RELEASE",
+    "description": "Mistral 发布了 Mistral Large 2，与前代产品相比，Mistral Large 2 在代码生成、数学和推理方面的能力显著增强。它还提供了更强大的多语言支持和高级函数调用功能。",
+    "link": "https://mistral.ai/news/mistral-large-2407"
   },
   {
     "date": "2024-08-08",
@@ -588,6 +630,13 @@
     "link": "https://openai.com/index/introducing-openai-o1-preview/"
   },
   {
+    "date": "2024-09-17",
+    "title": "Pixtral 12B",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Pixtral 12B，这是 Mistral 首个多模式 Mistral 模型。",
+    "link": "https://pixtral.com/news/pixtral-12b"
+  },
+  {
     "date": "2024-09-19",
     "title": "Qwen2.5",
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
@@ -623,6 +672,13 @@
     "link": "https://darioamodei.com/machines-of-loving-grace"
   },
   {
+    "date": "2024-10-16",
+    "title": "Mistral 3B 和 Mistral 8B",
+    "category": "MODEL_RELEASE",
+    "description": "Mistral 发布了 Mistral 3B 和 Mistral 8B，两款用于设备计算和边缘用例的全新先进模型。",
+    "link": "https://mistral.ai/news/ministraux"
+  },
+  {
     "date": "2024-10-22",
     "title": "Claude Computer Use",
     "category": "MODEL_RELEASE",
@@ -649,6 +705,13 @@
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
     "description": "阿里千问团队发布 Qwen2.5-Turbo，1M 上下文、推理速度更快、成本更低",
     "link": "https://qwenlm.github.io/zh/blog/qwen2.5-turbo/"
+  },
+  {
+    "date": "2024-11-18",
+    "title": "Pixtral Large",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Pixtral Large，这是一个基于 Mistral Large 2 构建的 124B 开放权重多模态模型。",
+    "link": "https://mistral.ai/news/pixtral-large"
   },
   {
     "date": "2024-11-25",
@@ -721,6 +784,13 @@
     "link": "https://arxiv.org/abs/2412.19437"
   },
   {
+    "date": "2025-01-13",
+    "title": "Codestral 25.01",
+    "category": "MODEL_RELEASE",
+    "description": "Mistral 发布了 Codestral 25.01，Codestral 25.01 具有比原版更高效的架构和改进的标记器，生成和完成代码的速度提高了约 2 倍。该模型现在是其重量级编码的明显领导者，并且是 FIM 用例的 SOTA。",
+    "link": "https://mistral.ai/news/codestral-2501"
+  },
+  {
     "date": "2025-01-20",
     "title": "DeepSeek R1",
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
@@ -728,11 +798,25 @@
     "link": "https://api-docs.deepseek.com/news/news250120"
   },
   {
+    "date": "2025-01-20",
+    "title": "豆包实时语音大模型",
+    "category": "MODEL_RELEASE",
+    "description": "豆包发布实时语音大模型，使用原生方法深度融合语音与文本模态，模型具备超低延时、真人级别的语音表现、多模态I/O、多种能力涌现。",
+    "link": "https://team.doubao.com/zh/special/realtime_voice"
+  },
+  {
     "date": "2025-01-21",
     "title": "Stargate Project",
     "category": "BUSINESS",
     "description": "唐纳德·特朗普宣布了星际之门项目，这是一项由软银、OpenAI、甲骨文和 MGX 之间建立的价值 500 亿美元的私人合作伙伴关系，用于在美国开发数据中心。",
     "link": "https://openai.com/index/announcing-the-stargate-project/"
+  },
+  {
+    "date": "2025-01-22",
+    "title": "Doubao-1.5-pro",
+    "category": "MODEL_RELEASE",
+    "description": "Doubao 发布了 Doubao-1.5-pro，模型使用 MoE 架构，并通过训练-推理一体化设计，探索模型性能和推理性能之间的极致平衡。Doubao-1.5-pro 仅用较小激活参数，即可超过一流超大稠密预训练模型的性能，并在多个评测基准上取得优异成绩。",
+    "link": "https://team.doubao.com/zh/special/doubao_1_5_pro"
   },
   {
     "date": "2025-01-23",
@@ -770,6 +854,13 @@
     "link": "https://qwenlm.github.io/zh/blog/qwen2.5-vl/"
   },
   {
+    "date": "2025-01-30",
+    "title": "Mistral Small 3",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Mistral Small 3，Mistral Small 3 与 Llama 3.3 70B 或 Qwen 32B 等大型模型相媲美，是 GPT4o-mini 等不透明专有模型的绝佳开放式替代品。Mistral Small 3 与 Llama 3.3 70B instruct 相当，但在相同硬件上速度却快 3 倍以上。",
+    "link": "https://mistral.ai/news/mistral-small-3"
+  }, 
+  {
     "date": "2025-01-31",
     "title": "o3-mini",
     "category": "MODEL_RELEASE",
@@ -782,6 +873,13 @@
     "category": "MODEL_RELEASE",
     "description": "OpenAI 推出了一款名为 Deep Research 的AI Agent，它可以通过重复的网络搜索来撰写 10 页的研究报告。",
     "link": "https://openai.com/index/introducing-deep-research/"
+  },
+  {
+    "date": "2025-02-17",
+    "title": "Mistral Saba",
+    "category": "MODEL_RELEASE",
+    "description": "Mistral 发布了 Mistral Saba，一个 24B 参数模型，基于来自中东和南亚各地精心策划的数据集进行训练。与超过其 ​​5 倍大小的模型相比，该模型提供了更准确、更相关的响应，同时速度更快、成本更低。",
+    "link": "https://mistral.ai/news/mistral-saba"
   },
   {
     "date": "2025-02-18",
@@ -831,6 +929,27 @@
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
     "description": "阿里千问团队发布 QwQ-32B，这是 Qwen 最新的推理模型，它只有 320 亿个参数，可以与 DeepSeek-R1 等尖端推理模型相媲美。",
     "link": "https://qwenlm.github.io/zh/blog/qwq-32b/"
+  },
+  {
+    "date": "2025-03-06",
+    "title": "Mistral OCR",
+    "category": ["MODEL_RELEASE"],
+    "description": "Mistral 发布了 Mistral OCR，这是世界上最好的文档理解 API。",
+    "link": "https://mistral.ai/news/mistral-ocr"
+  },
+  {
+    "date": "2025-03-11",
+    "title": "Seedream 2.0",
+    "category": "MODEL_RELEASE",
+    "description": "豆包发布 Seedream 2.0，一个原生、多维度的中英双语图像生成基础模型，可以完美处理中英文文本提示，支持双语图像生成与文本渲染。",
+    "link": "https://team.doubao.com/zh/tech/seedream"
+  },
+  {
+    "date": "2025-03-17",
+    "title": "Mistral Small 3.1",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Mistral 发布了 Mistral Small 3.1，该新模型以 Mistral Small 3 为基础，具有改进的文本性能、多模式理解和高达 128k 个标记的扩展上下文窗口。该模型的表现优于 Gemma 3 和 GPT-4o Mini 等同类模型，同时提供每秒 150 个标记的推理速度。",
+    "link": "https://mistral.ai/news/mistral-small-3-1"
   },
   {
     "date": "2025-03-24",
