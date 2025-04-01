@@ -29,7 +29,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -42,6 +42,9 @@
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-card:hover {
@@ -62,6 +65,7 @@
 .about-card p {
   color: #4B5563;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 .social-links {

@@ -38,12 +38,14 @@
     },
     "about": {
       "title": "关于我们",
-      "description": "AI 工具箱是一个集成多种AI开发工具的综合Web应用程序，旨在为用户提供一站式AI解决方案。",
+      "description": "AI 工具箱是一个集成多种 AI 工具的综合性网站，旨在为用户提供一站式的解决方案。",
       "mission": "我们的使命",
-      "missionDescription": "通过提供强大的AI工具，赋能用户，提高生产力和创造力。",
+      "missionDescription": "我们相信AI工具应该既强大又易于被每个人使用。",
       "team": "我们的团队",
-      "teamDescription": "我们是一支由AI爱好者和开发人员组成的专注团队，致力于构建创新的解决方案。",
-      "contact": "联系我们"
+      "teamDescription": "我们是一支由 A I爱好者组成的专注团队，致力于构建创新的解决方案。",
+      "contact": "联系我们",
+      "values": "我们的价值观",
+      "valuesDescription": "创新、易用性和以用户为中心的设计是我们一切工作的核心。"
     },
     "navigation": {
       "about": "关于我们"

@@ -36,12 +36,14 @@
     },
     "about": {
       "title": "About Us",
-      "description": "AI Toolbox is a comprehensive web application that integrates various AI tools to provide users with a one-stop AI solution.",
+      "description": "AI Toolbox is an integrated platform that brings together various AI tools, aiming to provide users with a one-stop solution.",
       "mission": "Our Mission",
-      "missionDescription": "To empower users with easy access to powerful AI tools, enhancing productivity and creativity.",
+      "missionDescription": "We believe AI tools should be powerful yet accessible to everyone.",
       "team": "Our Team",
-      "teamDescription": "We are a dedicated team of AI enthusiasts and developers committed to building innovative solutions.",
-      "contact": "Contact Us"
+      "teamDescription": "We are a focused team of AI enthusiasts dedicated to building innovative solutions.",
+      "contact": "Contact Us",
+      "values": "Our Values",
+      "valuesDescription": "Innovation, usability, and user-centered design are at the core of everything we do."
     },
     "navigation": {
       "about": "About Us"

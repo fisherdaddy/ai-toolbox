@@ -30,12 +30,20 @@ const About = () => {
             
             <div className="about-card">
               <h2>
+                <i className="fas fa-lightbulb"></i>
+                {t('about.values')}
+              </h2>
+              <p>{t('about.valuesDescription')}</p>
+            </div>
+
+            <div className="about-card">
+              <h2>
                 <i className="fas fa-users"></i>
                 {t('about.team')}
               </h2>
               <p>{t('about.teamDescription')}</p>
             </div>
-            
+
             <div className="about-card">
               <h2>
                 <i className="fas fa-envelope"></i>
