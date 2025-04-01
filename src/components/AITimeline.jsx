@@ -6,6 +6,7 @@ import SEO from './SEO';
 import { useTranslation } from '../js/i18n';
 import { usePageLoading } from '../hooks/usePageLoading';
 import LoadingOverlay from './LoadingOverlay';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const categories = [
   { id: 'all', label: 'All Events' },
@@ -171,6 +172,9 @@ const AITimeline = () => {
             );
           })}
         </div>
+        
+        {/* Scroll to top button */}
+        <ScrollToTopButton />
       </div>
     </>
   );
