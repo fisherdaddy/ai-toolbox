@@ -197,12 +197,20 @@ const WechatFormatter = () => {
     }
 
     // 处理标题，使用微信公众号兼容的样式
-    html = html.replace(/<h1>(.*?)<\/h1>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 24px; color: #333; display: block;">\$1</strong></section>');
-    html = html.replace(/<h2>(.*?)<\/h2>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 20px; color: #333; display: block;">\$1</strong></section>');
-    html = html.replace(/<h3>(.*?)<\/h3>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 18px; color: #333; display: block;">\$1</strong></section>');
-    html = html.replace(/<h4>(.*?)<\/h4>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 16px; color: #333; display: block;">\$1</strong></section>');
-    html = html.replace(/<h5>(.*?)<\/h5>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 15px; color: #333; display: block;">\$1</strong></section>');
-    html = html.replace(/<h6>(.*?)<\/h6>/g, '<section style="margin-top: 1.5em; margin-bottom: 0.5em;"><strong style="font-size: 14px; color: #333; display: block;">\$1</strong></section>');
+    html = html.replace(/<h1>(.*?)<\/h1>/g, '<section style="margin-top: 2em; margin-bottom: 1em;"><strong style="font-size: 28px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+    html = html.replace(/<h2>(.*?)<\/h2>/g, '<section style="margin-top: 1.8em; margin-bottom: 0.8em;"><strong style="font-size: 22px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+    html = html.replace(/<h3>(.*?)<\/h3>/g, '<section style="margin-top: 1.6em; margin-bottom: 0.6em;"><strong style="font-size: 19px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+    html = html.replace(/<h4>(.*?)<\/h4>/g, '<section style="margin-top: 1.4em; margin-bottom: 0.5em;"><strong style="font-size: 17px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+    html = html.replace(/<h5>(.*?)<\/h5>/g, '<section style="margin-top: 1.2em; margin-bottom: 0.5em;"><strong style="font-size: 15px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+    html = html.replace(/<h6>(.*?)<\/h6>/g, '<section style="margin-top: 1em; margin-bottom: 0.5em;"><strong style="font-size: 14px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+
+    // 处理列表中的粗体文本后跟冒号的情况
+    html = html.replace(/<li><strong>(.*?)<\/strong>：(.*?)<\/li>/g, 
+      '<li><span style="display: inline; white-space: nowrap;"><strong>\$1</strong>：</span>\$2</li>');
+    
+    // 确保列表项中的内容保持在一行
+    html = html.replace(/<li>(.*?)<\/li>/g, 
+      '<li style="margin-bottom: 0.5em; line-height: 1.6;">\$1</li>');
 
     // 添加微信公众号特定的样式
     const wechatHtml = `
