@@ -262,7 +262,8 @@
       "coordinatesPlaceholder": "Enter coordinates in JSON format: [[x_min,y_min,x_max,y_max], ...] or one box per line",
       "downloadButton": "Download",
       "noImageMessage": "Upload an image or provide an image URL to start",
-      "resetView": "Reset View"
+      "resetView": "Reset View",
+      "lineWidth": "Custom Line Width"
     },
     "aiTimeline": {
       "title": "AI Important Events Timeline",

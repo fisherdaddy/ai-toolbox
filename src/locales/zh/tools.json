@@ -264,7 +264,8 @@
       "coordinatesPlaceholder": "输入坐标，JSON格式：[[x_min,y_min,x_max,y_max], ...] 或每行输入一个框",
       "downloadButton": "下载",
       "noImageMessage": "上传图片或提供图片URL开始",
-      "resetView": "重置视图"
+      "resetView": "重置视图",
+      "lineWidth": "自定义线宽"
     },
     "aiTimeline": {
       "title": "AI 重大事件一览",

@@ -215,7 +215,7 @@ const Image = styled.img`
 
 const BoundingBox = styled.div`
   position: absolute;
-  border: 3px solid ${props => props.color || '#FF0000'};
+  border: ${props => `${props.lineWidth || 3}px solid ${props.color || '#FF0000'}`};
   background-color: ${props => props.color || '#FF0000'}20;
   z-index: 10;
   pointer-events: auto;
@@ -298,6 +298,24 @@ const ResetButton = styled.button`
   }
 `;
 
+const SettingsSection = styled.div`
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+`;
+
+const LineWidthControl = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const RangeInput = styled.input`
+  width: 100%;
+  max-width: 200px;
+`;
+
 // Box colors for different annotations
 const COLORS = [
   '#FF3B30', '#FF9500', '#FFCC00', '#34C759', '#5AC8FA', 
@@ -312,6 +330,7 @@ function ImageAnnotator() {
   const [error, setError] = useState('');
   const [imageError, setImageError] = useState('');
   const [useCors, setUseCors] = useState(true);
+  const [lineWidth, setLineWidth] = useState(3);
   const previewRef = useRef(null);
   const imageRef = useRef(null);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -535,6 +554,11 @@ function ImageAnnotator() {
     }
   };
 
+  // Handle line width change
+  const handleLineWidthChange = (e) => {
+    setLineWidth(parseInt(e.target.value, 10));
+  };
+
   const currentImageUrl = uploadedImage || (imageUrl.trim() && (useCors ? processImageUrl(imageUrl) : imageUrl));
   const hasImage = !!currentImageUrl;
   const hasBoxes = parsedBoxes.length > 0;
@@ -586,6 +610,20 @@ function ImageAnnotator() {
                 placeholder={t('tools.imageAnnotator.urlPlaceholder')}
               />
             </UploadSection>
+
+            {/* Line Width Control */}
+            <SettingsSection>
+              <LineWidthControl>
+                <Label>{t('tools.imageAnnotator.lineWidth') || '线条粗细'}: {lineWidth}px</Label>
+                <RangeInput
+                  type="range"
+                  min="1"
+                  max="10"
+                  value={lineWidth}
+                  onChange={handleLineWidthChange}
+                />
+              </LineWidthControl>
+            </SettingsSection>
 
             {/* Coordinates input section */}
             <CoordinatesSection>
@@ -676,6 +714,7 @@ function ImageAnnotator() {
                       <BoundingBox
                         key={box.id}
                         color={box.color}
+                        lineWidth={lineWidth}
                         isSelected={selectedBoxId === box.id}
                         isOtherSelected={selectedBoxId !== null && selectedBoxId !== box.id}
                         onClick={() => handleBoxClick(box.id)}

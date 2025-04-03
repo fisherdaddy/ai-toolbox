@@ -263,7 +263,8 @@
     "coordinatesPlaceholder": "좌표를 JSON 형식으로 입력: [[x_min,y_min,x_max,y_max], ...] 또는 한 줄에 하나의 박스 입력",
     "downloadButton": "다운로드",
     "noImageMessage": "시작하려면 이미지를 업로드하거나 이미지 URL을 입력하세요",
-    "resetView": "뷰 초기화"
+    "resetView": "뷰 초기화",
+    "lineWidth": "선 너비 설정"
   },
   "aiTimeline": {
     "title": "AI 중요 사건 시간표",

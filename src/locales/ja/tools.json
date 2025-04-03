@@ -262,7 +262,8 @@
       "coordinatesPlaceholder": "JSON形式で座標を入力：[[x_min,y_min,x_max,y_max], ...] または1行に1つのボックスを入力",
       "downloadButton": "ダウンロード",
       "noImageMessage": "開始するには画像をアップロードするか、画像URLを入力してください",
-      "resetView": "ビューをリセット"
+      "resetView": "ビューをリセット",
+      "lineWidth": "線の幅を設定"
     },
     "aiTimeline": {
       "title": "AI 重要事件時間軸",
