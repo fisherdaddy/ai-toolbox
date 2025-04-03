@@ -254,12 +254,15 @@
     "copied": "복사 완료!"
   },
   "imageAnnotator": {
-    "title": "이미지 어노테이터",
-    "description": "이미지에 경계 상자를 추가하고 편집합니다",
-    "uploadImage": "이미지 업로드",
-    "dropOrClick": "드래그하거나 클릭하여 이미지 업로드",
+    "title": "이미지 주석 도구",
+    "description": "이미지를 업로드하고 바운딩 박스를 시각화합니다",
+    "uploadLabel": "이미지 업로드",
+    "urlLabel": "또는 이미지 URL",
+    "urlPlaceholder": "https://example.com/image.jpg",
+    "coordinatesLabel": "바운딩 박스 좌표 [x_min,y_min,x_max,y_max]",
+    "coordinatesPlaceholder": "좌표를 JSON 형식으로 입력: [[x_min,y_min,x_max,y_max], ...] 또는 한 줄에 하나의 박스 입력",
     "downloadButton": "다운로드",
-    "noImageMessage": "이미지를 업로드하거나 이미지 URL을 제공하세요",
+    "noImageMessage": "시작하려면 이미지를 업로드하거나 이미지 URL을 입력하세요",
     "resetView": "뷰 초기화"
   },
   "aiTimeline": {

@@ -253,15 +253,15 @@
       "copied": "Copied!"
     },
     "imageAnnotator": {
-      "title": "Image Annotator",
-      "description": "Upload an image and visualize bounding boxes using coordinates",
+      "title": "Image Annotation Tool",
+      "description": "Upload an image and visualize bounding boxes",
       "uploadLabel": "Upload Image",
-      "urlLabel": "Or Image URL",
+      "urlLabel": "or Image URL",
       "urlPlaceholder": "https://example.com/image.jpg",
-      "coordinatesLabel": "Bounding Box Coordinates (x1,y1,x2,y2)",
-      "coordinatesPlaceholder": "Enter coordinates in JSON format: [[x1,y1,x2,y2], ...] or one box per line",
+      "coordinatesLabel": "Bounding Box Coordinates [x_min,y_min,x_max,y_max]",
+      "coordinatesPlaceholder": "Enter coordinates in JSON format: [[x_min,y_min,x_max,y_max], ...] or one box per line",
       "downloadButton": "Download",
-      "noImageMessage": "Upload an image or provide an image URL to begin",
+      "noImageMessage": "Upload an image or provide an image URL to start",
       "resetView": "Reset View"
     },
     "aiTimeline": {

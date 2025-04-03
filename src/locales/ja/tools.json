@@ -254,11 +254,14 @@
     },
     "imageAnnotator": {
       "title": "画像アノテーションツール",
-      "description": "画像に境界ボックスを追加して編集できます",
-      "uploadImage": "画像をアップロード",
-      "dropOrClick": "ドラッグまたはクリックして画像をアップロード",
+      "description": "画像をアップロードしてバウンディングボックスを可視化します",
+      "uploadLabel": "画像をアップロード",
+      "urlLabel": "または画像URL",
+      "urlPlaceholder": "https://example.com/image.jpg",
+      "coordinatesLabel": "バウンディングボックス座標 [x_min,y_min,x_max,y_max]",
+      "coordinatesPlaceholder": "JSON形式で座標を入力：[[x_min,y_min,x_max,y_max], ...] または1行に1つのボックスを入力",
       "downloadButton": "ダウンロード",
-      "noImageMessage": "画像をアップロードするか、画像URLを提供して開始してください",
+      "noImageMessage": "開始するには画像をアップロードするか、画像URLを入力してください",
       "resetView": "ビューをリセット"
     },
     "aiTimeline": {

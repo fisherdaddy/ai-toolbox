@@ -8,9 +8,19 @@ import LoadingOverlay from './LoadingOverlay';
 
 const Container = styled.div`
   min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
   padding: 4rem 2rem 2rem;
   position: relative;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
   
   &::before {
     content: '';
@@ -31,26 +41,37 @@ const ContentWrapper = styled.div`
   display: flex;
   gap: 2rem;
   max-width: 1400px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  flex: 1;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
 const InputContainer = styled.div`
   flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 300px;
+  }
 `;
 
 const TitleLabel = styled.h2`
@@ -82,6 +103,7 @@ const CoordinatesSection = styled(Section)`
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const UploadInput = styled.input`
@@ -114,7 +136,8 @@ const UrlInput = styled.input`
 
 const CoordinatesEditor = styled.textarea`
   width: 100%;
-  height: 200px;
+  flex: 1;
+  min-height: 150px;
   padding: 1rem;
   border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: 8px;
@@ -122,7 +145,7 @@ const CoordinatesEditor = styled.textarea`
   font-family: 'SF Mono', monospace;
   font-size: 14px;
   line-height: 1.5;
-  resize: vertical;
+  resize: none;
   color: #1a1a1a;
   overflow-y: auto;
 
@@ -138,10 +161,14 @@ const CoordinatesEditor = styled.textarea`
 
 const PreviewContainer = styled(InputContainer)`
   position: relative;
-  min-height: 400px;
-  overflow: visible;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: 60vh;
+    min-height: 400px;
+  }
 `;
 
 const ButtonsContainer = styled.div`
@@ -157,20 +184,33 @@ const ImagePreview = styled.div`
   position: relative;
   margin: 0 auto;
   max-width: 100%;
-  max-height: 100%;
+  height: 100%;
   overflow: auto;
   flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 `;
 
 const AnnotatedImage = styled.div`
   position: relative;
   display: inline-block;
+  max-height: 100%;
 `;
 
 const Image = styled.img`
   display: block;
   max-width: 100%;
-  max-height: 600px;
+  max-height: calc(100vh - 200px);
+  object-fit: contain;
+  
+  @media (min-width: 1200px) {
+    max-height: calc(100vh - 150px);
+  }
+  
+  @media (max-width: 768px) {
+    max-height: calc(60vh - 100px);
+  }
 `;
 
 const BoundingBox = styled.div`
@@ -207,6 +247,19 @@ const InfoMessage = styled.div`
   color: #64748b;
   text-align: center;
   padding: 2rem;
+`;
+
+const ImageInfo = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 20;
+  margin-top: 8px;
 `;
 
 const DownloadButton = styled.button`
@@ -257,6 +310,8 @@ function ImageAnnotator() {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [coordinates, setCoordinates] = useState('');
   const [error, setError] = useState('');
+  const [imageError, setImageError] = useState('');
+  const [useCors, setUseCors] = useState(true);
   const previewRef = useRef(null);
   const imageRef = useRef(null);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -282,6 +337,38 @@ function ImageAnnotator() {
   const handleImageUrlChange = (e) => {
     setImageUrl(e.target.value);
     setUploadedImage(null);
+    setImageError('');
+    setUseCors(true);
+  };
+
+  // Process image URL to handle CORS
+  const processImageUrl = (url) => {
+    if (!url) return '';
+    
+    if (!useCors) {
+      return url;
+    }
+    
+    try {
+      // For URLs that might have CORS issues, we can use a proxy
+      // This is a simple example - in production you might want to use your own proxy
+      const urlObj = new URL(url);
+      if (urlObj.origin !== window.location.origin) {
+        // For demo purposes we're using a public CORS proxy
+        // In production, replace this with your own proxy service
+        return `https://cors-anywhere.herokuapp.com/${url}`;
+      }
+    } catch (e) {
+      // Invalid URL, just return as is
+    }
+    
+    return url;
+  };
+
+  // Reset all states
+  const handleReset = () => {
+    setSelectedBoxId(null);
+    setImageError('');
   };
 
   // Handle coordinates input
@@ -391,6 +478,19 @@ function ImageAnnotator() {
       width: img.naturalWidth,
       height: img.naturalHeight
     });
+    setImageError('');
+  };
+
+  // Handle image load error
+  const handleImageError = () => {
+    if (useCors && imageUrl) {
+      // If loading with CORS fails, try without CORS
+      setUseCors(false);
+      setImageError(t('tools.imageAnnotator.tryingWithoutCors') || '正在尝试不使用跨域加载...');
+    } else {
+      setImageError(t('tools.imageAnnotator.imageLoadError') || '图片加载失败，可能是跨域问题或图片地址无效');
+      setImageSize({ width: 0, height: 0 });
+    }
   };
 
   // Handle image clicks (to deselect)
@@ -435,9 +535,24 @@ function ImageAnnotator() {
     }
   };
 
-  const currentImageUrl = uploadedImage || (imageUrl.trim() && imageUrl);
+  const currentImageUrl = uploadedImage || (imageUrl.trim() && (useCors ? processImageUrl(imageUrl) : imageUrl));
   const hasImage = !!currentImageUrl;
   const hasBoxes = parsedBoxes.length > 0;
+
+  // When component mounts or window resizes, adjust container height
+  useEffect(() => {
+    const handleResize = () => {
+      if (previewRef.current && imageRef.current) {
+        // Update any responsive layout if needed
+        setImageSize(prev => ({...prev})); // Force re-render to update scaled dimensions
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -500,7 +615,7 @@ function ImageAnnotator() {
               </DownloadButton>
               
               <ResetButton
-                onClick={() => setSelectedBoxId(null)}
+                onClick={handleReset}
                 visible={hasImage && hasBoxes}
               >
                 {t('tools.imageAnnotator.resetView') || '恢复视图'}
@@ -515,9 +630,31 @@ function ImageAnnotator() {
                     alt="Uploaded image"
                     ref={imageRef}
                     onLoad={handleImageLoad}
+                    onError={handleImageError}
                     onClick={handleImageClick}
-                    crossOrigin="anonymous"
+                    crossOrigin={useCors ? "anonymous" : null}
                   />
+                  {imageError && (
+                    <div style={{ 
+                      position: 'absolute', 
+                      top: '50%', 
+                      left: '50%', 
+                      transform: 'translate(-50%, -50%)',
+                      background: 'rgba(255, 0, 0, 0.7)',
+                      color: 'white',
+                      padding: '10px',
+                      borderRadius: '4px',
+                      maxWidth: '80%',
+                      textAlign: 'center'
+                    }}>
+                      {imageError}
+                    </div>
+                  )}
+                  {imageSize.width > 0 && (
+                    <ImageInfo>
+                      {imageSize.width} × {imageSize.height}
+                    </ImageInfo>
+                  )}
                   {hasBoxes && parsedBoxes.map((box) => {
                     // Determine label position based on box position
                     const isNearTop = box.y1 < 30;

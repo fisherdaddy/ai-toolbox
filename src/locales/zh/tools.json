@@ -260,8 +260,8 @@
       "uploadLabel": "上传图片",
       "urlLabel": "或图片URL",
       "urlPlaceholder": "https://example.com/image.jpg",
-      "coordinatesLabel": "边界框坐标 (x1,y1,x2,y2)",
-      "coordinatesPlaceholder": "输入坐标，JSON格式：[[x1,y1,x2,y2], ...] 或每行输入一个框",
+      "coordinatesLabel": "边界框坐标 [x_min,y_min,x_max,y_max]",
+      "coordinatesPlaceholder": "输入坐标，JSON格式：[[x_min,y_min,x_max,y_max], ...] 或每行输入一个框",
       "downloadButton": "下载",
       "noImageMessage": "上传图片或提供图片URL开始",
       "resetView": "重置视图"
