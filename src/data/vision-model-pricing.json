@@ -32,6 +32,7 @@
         "inputPrice": 0.7,
         "outputPrice": 2.8
       },
+
       {
         "name": "Doubao-1.5-vision-pro-32k",
         "logo": "/assets/icon/doubao.png",
@@ -75,6 +76,12 @@
         "outputPrice": 24
       },
       {
+        "name": "gemini 2.5 pro Preview",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 8.75,
+        "outputPrice": 70
+      },
+      {
         "name": "gpt-4o",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 17.5,
@@ -91,6 +98,12 @@
         "logo": "/assets/icon/google_small.svg",
         "inputPrice": 87.5,
         "outputPrice": 35
+      },
+      {
+        "name": "claude 3.7\nSonnet",
+        "logo": "/assets/icon/anthropic_small.svg",
+        "inputPrice": 26.3,
+        "outputPrice": 105
       },
       {
         "name": "claude 3.5\nSonnet",
