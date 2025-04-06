@@ -4,12 +4,22 @@
   "providers": [
     {
       "name": "Gemini-2.5-Pro-Exp-03-25",
-      "score": 1443,
+      "score": 1439,
       "logo": "/assets/icon/google_small.svg"
     },
     {
+      "name": "Llama-4-Maverick-03-26-Experimental",
+      "score": 1417,
+      "logo": "/assets/icon/meta_small.svg"
+    },
+    {
+      "name": "ChatGPT-4o-latest（2025-03-26）",
+      "score": 1410,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
       "name": "Grok-3-Preview-02-24",
-      "score": 1404,
+      "score": 1403,
       "logo": "/assets/icon/grok.svg"
     },
     {
@@ -19,7 +29,7 @@
     },
     {
       "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
-      "score": 1381,
+      "score": 1380,
       "logo": "/assets/icon/google_small.svg"
     },
     {
@@ -28,28 +38,23 @@
       "logo": "/assets/icon/google_small.svg"
     },
     {
-      "name": "ChatGPT-4o-latest（2025-01-29）",
-      "score": 1377,
-      "logo": "/assets/icon/openai_small.svg"
-    },
-    {
       "name": "DeepSeek-R1",
-      "score": 1361,
+      "score": 1358,
       "logo": "/assets/icon/deepseek_small.jpg"
     },
     {
       "name": "Gemini-2.0-Flash-001",
-      "score": 1355,
+      "score": 1354,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "o1-2024-12-17",
-      "score": 1352,
+      "score": 1351,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "Qwen2.5-Max",
-      "score": 1336,
+      "score": 1340,
       "logo": "/assets/icon/ali_small.svg"
     },
     {

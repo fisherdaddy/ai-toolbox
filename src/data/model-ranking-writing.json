@@ -4,23 +4,23 @@
   "providers": [
     {
       "name": "Gemini-2.5-Pro-Exp-03-25",
-      "score": 1486,
+      "score": 1458,
       "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Llama-4-Maverick-03-26-Experimental",
+      "score": 1442,
+      "logo": "/assets/icon/meta_small.svg"
     },
     {
       "name": "Grok-3-Preview-02-24t",
-      "score": 1404,
+      "score": 1408,
       "logo": "/assets/icon/grok.svg"
     },
     {
-      "name": "GPT-4.5-Preview",
-      "score": 1397,
+      "name": "ChatGPT-4o-latest (2025-03-26)",
+      "score": 1407,
       "logo": "/assets/icon/openai_small.svg"
-    },
-    {
-      "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
-      "score": 1390,
-      "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
@@ -28,13 +28,33 @@
       "logo": "/assets/icon/google_small.svg"
     },
     {
-      "name": "DeepSeek-R1",
-      "score": 1369,
+      "name": "GPT-4.5-Preview",
+      "score": 1390,
+      "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Gemini-2.0-Flash-Thinking-Exp-01-21",
+      "score": 1388,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "DeepSeek-V3-0324",
+      "score": 1383,
       "logo": "/assets/icon/deepseek_small.jpg"
     },
     {
+      "name": "DeepSeek-R1",
+      "score": 1357,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
+      "name": "Gemma-3-27B-Instruct",
+      "score": 1356,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
       "name": "Gemini-2.0-Flash-001",
-      "score": 1352,
+      "score": 1349,
       "logo": "/assets/icon/google_small.svg"
     },
     {

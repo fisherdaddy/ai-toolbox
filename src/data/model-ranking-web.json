@@ -4,7 +4,7 @@
   "providers": [
     {
       "name": "Claude-3.7-Sonnet-(20240219)",
-      "score": 1363,
+      "score": 1351,
       "logo": "/assets/icon/anthropic_small.svg"
     },
     {
@@ -14,12 +14,17 @@
     },
     {
       "name": "Claude-3.5-Sonnet-(20241022)",
-      "score": 1252.68,
+      "score": 1244,
       "logo": "/assets/icon/anthropic_small.svg"
     },
     {
+      "name": "DeepSeek-V3-0324",
+      "score": 1208,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
       "name": "DeepSeek-R1",
-      "score": 1210.90,
+      "score": 1202,
       "logo": "/assets/icon/deepseek_small.jpg"
     },
     {

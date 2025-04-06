@@ -1027,5 +1027,12 @@
     "category": "MODEL_RELEASE",
     "description": "智谱推出一款名为 AutoGLM 的 AI Agent，类似于 OpenAI 的 DeepResearch。AutoGLM 沉思是一个能探究开放式问题，并根据结果执行操作的自主智能体（AI Agent）。",
     "link": "https://autoglm-research.zhipuai.cn/"
+  },
+  {
+    "date": "2025-04-05",
+    "title": "Llama 4",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Meta 发布了 Llama 4，这是该公司迄今为止功能最强大的型号，该系列的核心是 Llama 4 Scout 和 Llama 4 Maverick 两款开放权重的模型，它们首次采用了 专家混合 (MoE) 架构，并具备处理文本、图像和视频的原生多模态能力，同时支持 100M 超长上下文窗口。",
+    "link": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
   }
 ]

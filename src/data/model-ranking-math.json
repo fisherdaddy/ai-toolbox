@@ -4,13 +4,18 @@
   "providers": [
     {
       "name": "Gemini-2.5-Pro-Exp-03-25",
-      "score": 1412,
+      "score": 1415,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "GPT-4.5-Preview",
-      "score": 1378,
+      "score": 1377,
       "logo": "/assets/icon/openai_small.svg"
+    },
+    {
+      "name": "Llama-4-Maverick-03-26-Experimental",
+      "score": 1364,
+      "logo": "/assets/icon/meta_small.svg"
     },
     {
       "name": "DeepSeek-R1",
@@ -53,6 +58,11 @@
       "logo": "/assets/icon/google_small.svg"
     },
     {
+      "name": "DeepSeek-V3-0324",
+      "score": 1334,
+      "logo": "/assets/icon/deepseek_small.jpg"
+    },
+    {
       "name": "Gemini-2.0-Flash-001",
       "score": 1332,
       "logo": "/assets/icon/google_small.svg"
@@ -68,8 +78,8 @@
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "ChatGPT-4o-latest（2025-01-29）",
-      "score": 1306,
+      "name": "ChatGPT-4o-latest (2025-03-26)",
+      "score": 1323,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
