@@ -67,6 +67,38 @@ const PreviewContainer = styled(EditorContainer)`
   position: relative;
 `;
 
+const PreviewHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+`;
+
+const FloatingCopyButton = styled.button`
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  z-index: 100;
+  opacity: ${props => props.visible ? 1 : 0};
+  pointer-events: ${props => props.visible ? 'auto' : 'none'};
+  transform: ${props => props.visible ? 'scale(1)' : 'scale(0.9)'};
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+`;
+
 const Editor = styled.textarea`
   width: 100%;
   min-height: 400px;
@@ -136,9 +168,6 @@ const CopyButton = styled.button`
   font-weight: 600;
   transition: opacity 0.2s;
   font-size: 0.9rem;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
   opacity: ${props => props.visible ? 1 : 0};
   pointer-events: ${props => props.visible ? 'auto' : 'none'};
 
@@ -176,6 +205,7 @@ const WechatFormatter = () => {
   const [output, setOutput] = useState('');
   const [format, setFormat] = useState('markdown'); // 'markdown' 或 'html'
   const tempDivRef = useRef(null);
+  const previewContainerRef = useRef(null);
   const { t } = useTranslation();
 
   const handleInputChange = (e) => {
@@ -197,12 +227,12 @@ const WechatFormatter = () => {
     }
 
     // 处理标题，使用微信公众号兼容的样式
-    html = html.replace(/<h1>(.*?)<\/h1>/g, '<section style="margin-top: 2em; margin-bottom: 1em;"><strong style="font-size: 28px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
-    html = html.replace(/<h2>(.*?)<\/h2>/g, '<section style="margin-top: 1.8em; margin-bottom: 0.8em;"><strong style="font-size: 22px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
-    html = html.replace(/<h3>(.*?)<\/h3>/g, '<section style="margin-top: 1.6em; margin-bottom: 0.6em;"><strong style="font-size: 19px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
-    html = html.replace(/<h4>(.*?)<\/h4>/g, '<section style="margin-top: 1.4em; margin-bottom: 0.5em;"><strong style="font-size: 17px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
-    html = html.replace(/<h5>(.*?)<\/h5>/g, '<section style="margin-top: 1.2em; margin-bottom: 0.5em;"><strong style="font-size: 15px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
-    html = html.replace(/<h6>(.*?)<\/h6>/g, '<section style="margin-top: 1em; margin-bottom: 0.5em;"><strong style="font-size: 14px; font-weight: bold; color: #000; display: block; line-height: 1.4;">\$1</strong></section>');
+    html = html.replace(/<h1>(.*?)<\/h1>/g, '<section><span><span textstyle style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 24px;">\$1</span></span></section>');
+    html = html.replace(/<h2>(.*?)<\/h2>/g, '<section><span><span textstyle style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 22px;">\$1</span></span></section>');
+    html = html.replace(/<h3>(.*?)<\/h3>/g, '<section><span><span textstyle style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 20px;">\$1</span></span></section>');
+    html = html.replace(/<h4>(.*?)<\/h4>/g, '<section><span><span textstyle style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 18px;">\$1</span></span></section>');
+    html = html.replace(/<h5>(.*?)<\/h5>/g, '<section><span><span textstyle style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 16px;">\$1</span></span></section>');
+    html = html.replace(/<h6>(.*?)<\/h6>/g, '<section><span><span textstyle style="margin-top: 30px; margin-bottom: 15px; padding: 0px; font-weight: bold; color: black; font-size: 16px;">\$1</span></span></section>');
 
     // 处理列表中的粗体文本后跟冒号的情况
     html = html.replace(/<li><strong>(.*?)<\/strong>：(.*?)<\/li>/g, 
@@ -211,19 +241,26 @@ const WechatFormatter = () => {
     // 确保列表项中的内容保持在一行
     html = html.replace(/<li>(.*?)<\/li>/g, 
       '<li style="margin-bottom: 0.5em; line-height: 1.6;">\$1</li>');
+      
+    // 为ul或ol中的最后一个li添加额外的标签
+    html = html.replace(/(<\/li>)(?=\s*<\/[uo]l>)/g, 
+      '<section><span leaf=""><br class="ProseMirror-trailingBreak"></span></section></li>');
 
     // 添加微信公众号特定的样式
-    const wechatHtml = `
+    var wechatHtml = `
       <div class="wechat-content prose max-w-none">
         ${html}
-      </div>
+      <div>
     `;
+
+    console.log('wechatHtml>>>', wechatHtml);
     setOutput(wechatHtml);
   };
 
   const copyToClipboard = () => {
     // 创建一个临时的 div 元素来存放内容
     if (!tempDivRef.current) {
+      console.log('444>>>');
       tempDivRef.current = document.createElement('div');
       document.body.appendChild(tempDivRef.current);
     }
@@ -292,20 +329,22 @@ const WechatFormatter = () => {
               placeholder={`请输入${format === 'markdown' ? 'Markdown' : 'HTML'}内容...`}
             />
           </EditorContainer>
-          <PreviewContainer>
-            <TitleLabel>预览效果</TitleLabel>
-            <CopyButton 
-              onClick={copyToClipboard}
-              visible={output.length > 0}
-            >
-              复制内容
-            </CopyButton>
+          <PreviewContainer ref={previewContainerRef}>
+            <PreviewHeader>
+              <TitleLabel style={{ margin: 0 }}>预览效果</TitleLabel>
+            </PreviewHeader>
             <Preview 
               className="preview-content"
               dangerouslySetInnerHTML={{ __html: output }} 
             />
           </PreviewContainer>
         </ContentWrapper>
+        <FloatingCopyButton 
+          onClick={copyToClipboard}
+          visible={output.length > 0}
+        >
+          复制内容
+        </FloatingCopyButton>
       </Container>
     </>
   );
