@@ -3,6 +3,12 @@
     "subtitle": "Price: RMB per 1M Tokens",
     "providers": [
       {
+        "name": "gpt-4.1-nano",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 0.7,
+        "outputPrice": 2.8
+      },
+      {
         "name": "gpt-4o-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.05,
@@ -32,7 +38,6 @@
         "inputPrice": 0.7,
         "outputPrice": 2.8
       },
-
       {
         "name": "Doubao-1.5-vision-pro-32k",
         "logo": "/assets/icon/doubao.png",
@@ -50,6 +55,12 @@
         "logo": "/assets/icon/yi_small.jpg",
         "inputPrice": 6,
         "outputPrice": 6
+      },
+      {
+        "name": "gpt-4.1-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 2.8,
+        "outputPrice": 11.2
       },
       {
         "name": "qwen-vl-plus",
@@ -75,6 +86,12 @@
         "inputPrice": 24,
         "outputPrice": 24
       },
+      {
+        "name": "gpt-4.1",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 14,
+        "outputPrice": 56
+      }, 
       {
         "name": "gemini 2.5 pro Preview",
         "logo": "/assets/icon/google_small.svg",

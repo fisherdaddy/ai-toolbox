@@ -1034,5 +1034,19 @@
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
     "description": "Meta 发布了 Llama 4，这是该公司迄今为止功能最强大的型号，该系列的核心是 Llama 4 Scout 和 Llama 4 Maverick 两款开放权重的模型，它们首次采用了 专家混合 (MoE) 架构，并具备处理文本、图像和视频的原生多模态能力，同时支持 100M 超长上下文窗口。",
     "link": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+  },
+  {
+    "date": "2025-04-09",
+    "title": "A2A 协议",
+    "category": "RESEARCH",
+    "description": "Agent2Agent 协议（A2A）是 Google Cloud 及其众多技术与服务合作伙伴联合推出的一项开放协议，旨在推动 AI 代理（AI agents）之间的互操作性。A2A 协议允许不同厂商和框架构建的 AI 代理在企业应用和平台之间安全地交流、协作和协调任务，从而提升自动化水平和生产效率，降低长期成本。A2A 的设计目标是建立一个开放、标准化的多代理生态系统，支持跨平台、跨云的协同工作，加速企业流程创新和智能化转型。",
+    "link": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/"
+  },
+  {
+    "date": "2025-04-15",
+    "title": "GPT-4.1",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 推出了全新系列的 GPT-4.1 模型，包括 GPT‑4.1、GPT‑4.1 mini 和 GPT‑4.1 nano，这些模型在编码、指令遵循和长上下文处理方面实现了重大突破。与之前的 GPT‑4o 系列相比，GPT‑4.1 全面提升了性能，并降低了成本和延迟，特别适合开发者在实际应用中构建更强大的智能系统和代理型应用。新模型还首次支持高达 1 百万 tokens 的超长上下文窗口，并在多项行业标准基准测试中刷新记录。GPT‑4.1 系列仅通过 API 提供，GPT‑4.5 Preview 将于 2025 年 7 月 14 日下线。",
+    "link": "https://openai.com/index/gpt-4-1/"
   }
 ]

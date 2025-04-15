@@ -3,10 +3,22 @@
     "subtitle": "Price: USD per 1M Tokens",
     "providers": [
       {
+        "name": "gpt-4.1-nano",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 0.1,
+        "outputPrice": 0.4
+      },
+      {
         "name": "gpt-4o-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 0.15,
         "outputPrice": 0.6
+      },
+      {
+        "name": "gpt-4.1-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 0.4,
+        "outputPrice": 1.6
       },
       {
         "name": "o3-mini",
@@ -25,6 +37,12 @@
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 3,
         "outputPrice": 5
+      },
+      {
+        "name": "gpt-4.1",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 2,
+        "outputPrice": 8
       },
       {
         "name": "gpt-4o",

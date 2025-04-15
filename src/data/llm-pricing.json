@@ -63,6 +63,12 @@
         "outputPrice": 2.8
       },
       {
+        "name": "gpt-4.1-nano",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 0.7,
+        "outputPrice": 2.8
+      },
+      {
         "name": "gpt-4o-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.05,
@@ -73,6 +79,12 @@
         "logo": "/assets/icon/deepseek_small.jpg",
         "inputPrice": 2,
         "outputPrice": 8
+      },
+      {
+        "name": "gpt-4.1-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 2.8,
+        "outputPrice": 11.2
       },
       {
         "name": "qwen-math-plus",
@@ -116,6 +128,12 @@
         "inputPrice": 24,
         "outputPrice": 24
       },
+      {
+        "name": "gpt-4.1",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 14,
+        "outputPrice": 56
+      }, 
       {
         "name": "gemini 2.5 pro Preview",
         "logo": "/assets/icon/google_small.svg",
