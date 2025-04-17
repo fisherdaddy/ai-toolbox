@@ -1048,5 +1048,12 @@
     "category": "MODEL_RELEASE",
     "description": "OpenAI 推出了全新系列的 GPT-4.1 模型，包括 GPT‑4.1、GPT‑4.1 mini 和 GPT‑4.1 nano，这些模型在编码、指令遵循和长上下文处理方面实现了重大突破。与之前的 GPT‑4o 系列相比，GPT‑4.1 全面提升了性能，并降低了成本和延迟，特别适合开发者在实际应用中构建更强大的智能系统和代理型应用。新模型还首次支持高达 1 百万 tokens 的超长上下文窗口，并在多项行业标准基准测试中刷新记录。GPT‑4.1 系列仅通过 API 提供，GPT‑4.5 Preview 将于 2025 年 7 月 14 日下线。",
     "link": "https://openai.com/index/gpt-4-1/"
+  },
+  {
+    "date": "2025-04-17",
+    "title": "o3 和 o4-mini",
+    "category": "MODEL_RELEASE",
+    "description": "OpenAI 推出了其 o 系列中迄今为止最智能、能力最强的模型——o3 和 o4-mini。这两款模型被训练用于更深度的推理（“思考更长时间”），显著提升了 ChatGPT 的能力。模型首次能够自主地（agentically）决定何时以及如何使用 ChatGPT 内的所有工具（网络搜索、代码执行、视觉分析、图像生成等）来解决复杂问题。",
+    "link": "https://openai.com/index/introducing-o3-and-o4-mini/"
   }
 ]

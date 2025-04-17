@@ -75,6 +75,18 @@
         "outputPrice": 10
       },
       {
+        "name": "o4-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 7.7,
+        "outputPrice": 30.8
+      },
+      {
+        "name": "o3-mini",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 7.7,
+        "outputPrice": 30.8
+      },
+      {
         "name": "qwen-vl-max",
         "logo": "/assets/icon/ali_small.svg",
         "inputPrice": 20,
@@ -129,10 +141,28 @@
         "outputPrice": 105
       },
       {
+        "name": "o3",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 70,
+        "outputPrice": 280
+      },
+      {
         "name": "o1",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 105,
         "outputPrice": 420
+      },
+      {
+        "name": "gpt-4.5",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 525,
+        "outputPrice": 1050
+      },
+      {
+        "name": "o1-pro",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 1050,
+        "outputPrice": 4200
       }
     ]
   }
