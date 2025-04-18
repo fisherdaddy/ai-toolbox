@@ -9,6 +9,7 @@ const tools = [
   { id: 'imageBase64Converter', icon: '/assets/icon/image-base64.png', path: '/image-base64' },
   { id: 'textDiff', icon: '/assets/icon/diff.png', path: '/text-diff' },
   { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
+  { id: 'perpetualCalendar', icon: '/assets/icon/calendar.jpg', path: '/perpetual-calendar' },
 ];
 
 const DevTools = () => {

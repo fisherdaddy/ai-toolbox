@@ -33,6 +33,7 @@ const DeepSeekTimeline = lazy(() => import('./components/DeepSeekTimeline'));
 const WechatFormatter = lazy(() => import('./components/WechatFormatter'));
 const ImageAnnotator = lazy(() => import('./components/ImageAnnotator'));
 const AITimelinePage = lazy(() => import('./pages/AITimelinePage'));
+const PerpetualCalendar = lazy(() => import('./components/PerpetualCalendar'));
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
                 <Route path="/wechat-formatter" element={<WechatFormatter />} />
                 <Route path="/image-annotator" element={<ImageAnnotator />} />
                 <Route path="/ai-timeline" element={<AITimelinePage />} />
+                <Route path="/perpetual-calendar" element={<PerpetualCalendar />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>

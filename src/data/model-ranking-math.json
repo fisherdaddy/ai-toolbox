@@ -4,18 +4,18 @@
   "providers": [
     {
       "name": "Gemini-2.5-Pro-Exp-03-25",
-      "score": 1415,
+      "score": 1421,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "GPT-4.5-Preview",
-      "score": 1377,
+      "score": 1375,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
-      "name": "Llama-4-Maverick-03-26-Experimental",
+      "name": "Gemini-2.5-Flash-Preview-04-17",
       "score": 1364,
-      "logo": "/assets/icon/meta_small.svg"
+      "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "DeepSeek-R1",

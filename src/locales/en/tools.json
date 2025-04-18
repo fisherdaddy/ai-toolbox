@@ -279,5 +279,9 @@
         "CULTURE": "Culture",
         "OPEN_SOURCE": "Open Source"
       }
+    },
+    "perpetualCalendar": {
+      "title": "Perpetual Calendar",
+      "description": "View any month of any year with this perpetual calendar"
     }
 }

@@ -4,8 +4,13 @@
   "providers": [
     {
       "name": "Claude-3.7-Sonnet-(20240219)",
-      "score": 1351,
+      "score": 1356,
       "logo": "/assets/icon/anthropic_small.svg"
+    },
+    {
+      "name": "GPT-4.1-2025-0414",
+      "score": 1283,
+      "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "Gemini-2.5-Pro-Exp-03-25",

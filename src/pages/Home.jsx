@@ -8,7 +8,8 @@ const tools = [
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
   { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
-  { id: 'imageAnnotator', icon: '/assets/icon/image-annotator.png', path: '/image-annotator' },
+  { id: 'perpetualCalendar', icon: '/assets/icon/calendar.png', path: '/perpetual-calendar' },
+  { id: 'imageAnnotator', icon: '/assets/icon/image-annotator.jpg', path: '/image-annotator' },
   { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },
   { id: 'imageCompressor', icon: '/assets/icon/image-compressor.png', path: '/image-compressor' },
   { id: 'imageWatermark', icon: '/assets/icon/image-watermark.png', path: '/image-watermark' },
@@ -152,7 +153,7 @@ const Home = () => {
         </div>
       </main>
 
-      <style jsx global>{`
+      <style>{`
         .bg-grid-pattern {
           background-image: radial-gradient(circle at 1px 1px, rgb(226 232 240 / 30%) 1px, transparent 0);
           background-size: 24px 24px;

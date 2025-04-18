@@ -93,6 +93,12 @@
         "outputPrice": 12
       },
       {
+        "name": "Doubao-1.5-thinking-pro",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 4,
+        "outputPrice": 16
+      },
+      {
         "name": "deepseek-R1",
         "logo": "/assets/icon/deepseek_small.jpg",
         "inputPrice": 4,

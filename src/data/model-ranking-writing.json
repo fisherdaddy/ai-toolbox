@@ -4,32 +4,32 @@
   "providers": [
     {
       "name": "Gemini-2.5-Pro-Exp-03-25",
-      "score": 1458,
+      "score": 1449,
       "logo": "/assets/icon/google_small.svg"
     },
     {
-      "name": "Llama-4-Maverick-03-26-Experimental",
-      "score": 1442,
-      "logo": "/assets/icon/meta.svg"
-    },
-    {
-      "name": "Grok-3-Preview-02-24t",
-      "score": 1408,
+      "name": "Grok-3-Preview-02-24",
+      "score": 1409,
       "logo": "/assets/icon/grok.svg"
     },
     {
       "name": "ChatGPT-4o-latest (2025-03-26)",
-      "score": 1407,
+      "score": 1405,
       "logo": "/assets/icon/openai_small.svg"
     },
     {
       "name": "Gemini-2.0-Pro-Exp-02-05",
-      "score": 1390,
+      "score": 1391,
+      "logo": "/assets/icon/google_small.svg"
+    },
+    {
+      "name": "Gemini-2.5-Flash-Preview-04-17",
+      "score": 1391,
       "logo": "/assets/icon/google_small.svg"
     },
     {
       "name": "GPT-4.5-Preview",
-      "score": 1390,
+      "score": 1389,
       "logo": "/assets/icon/openai_small.svg"
     },
     {

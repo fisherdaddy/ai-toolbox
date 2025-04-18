@@ -1,0 +1,76 @@
+{
+    "title": "国内外各模型能力对比 - 视觉",
+    "subtitle": "数据来源：lmarena.ai",
+    "providers": [
+      {
+        "name": "Gemini-2.5-Pro-Exp-03-25",
+        "score": 1320,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "ChatGPT-4o-latest (2025-03-26)",
+        "score": 1309,
+        "logo": "/assets/icon/openai_small.svg"
+      },
+      {
+        "name": "Gemini-2.5-Flash-Preview-04-17",
+        "score": 1287,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "Gemini-2.5-Flash-Thinking-Exp-01-21",
+        "score": 1279,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "GPT-4.5-Preview",
+        "score": 1254,
+        "logo": "/assets/icon/openai_small.svg"
+      },
+      {
+        "name": "Gemini-2.0-Pro-Exp-02-05",
+        "score": 1240,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "Gemini-2.0-Flash-001",
+        "score": 1229,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "o1-2024-12-17",
+        "score": 1226,
+        "logo": "/assets/icon/openai_small.svg"
+      },
+      {
+        "name": "Gemini-1.5-Pro-002",
+        "score": 1222,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "Qwen2.5-VL-32B-Instruct",
+        "score": 1216,
+        "logo": "/assets/icon/ali_small.svg"
+      },
+      {
+        "name": "Claude-3.7-Sonnet",
+        "score": 1211,
+        "logo": "/assets/icon/anthropic_small.svg"
+      },
+      {
+        "name": "GPT-4o-2025-0513",
+        "score": 1206,
+        "logo": "/assets/icon/openai_small.svg"
+      },
+      {
+        "name": "Gemini-1.5-Flash-002",
+        "score": 1206,
+        "logo": "/assets/icon/google_small.svg"
+      },
+      {
+        "name": "Claude-3.7-Sonnet-(20240620)",
+        "score": 1189,
+        "logo": "/assets/icon/anthropic_small.svg"
+      }
+    ]
+  } 

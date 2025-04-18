@@ -281,5 +281,9 @@
         "CULTURE": "文化",
         "OPEN_SOURCE": "开源"
       } 
+    },
+    "perpetualCalendar": {
+      "title": "万年历",
+      "description": "查看任意年份任意月份的日历"
     }
 }

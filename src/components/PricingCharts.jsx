@@ -9,6 +9,7 @@ import ModelRankingMath from '../data/model-ranking-math.json';
 import ModelRankingCode from '../data/model-ranking-code.json';
 import ModelRankingWeb from '../data/model-ranking-web.json';
 import ModelRankingWriting from '../data/model-ranking-writing.json';
+import ModelRankingVision from '../data/model-ranking-vision.json';
 import SEO from '../components/SEO';
 import { usePageLoading } from '../hooks/usePageLoading';
 import LoadingOverlay from './LoadingOverlay';
@@ -22,6 +23,7 @@ const TabRankingCharts = () => {
     { id: 'code', name: '代码能力', data: ModelRankingCode },
     { id: 'web', name: 'Web 开发能力', data: ModelRankingWeb },
     { id: 'writing', name: '写作能力', data: ModelRankingWriting },
+    { id: 'image', name: '视觉能力', data: ModelRankingVision },
   ];
 
   return (

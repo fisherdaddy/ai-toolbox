@@ -69,6 +69,12 @@
         "outputPrice": 8
       },
       {
+        "name": "Doubao-1.5-thinking-pro",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 4,
+        "outputPrice": 16
+      },
+      {
         "name": "GLM-4V-Plus",
         "logo": "/assets/icon/glm_small.svg",
         "inputPrice": 10,
