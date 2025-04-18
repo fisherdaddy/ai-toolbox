@@ -75,6 +75,12 @@
         "outputPrice": 10
       },
       {
+        "name": "Gemini 2.5 Flash Preview 04-17",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 1.05,
+        "outputPrice": 24.5
+      },
+      {
         "name": "o4-mini",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 7.7,

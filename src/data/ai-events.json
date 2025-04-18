@@ -1055,5 +1055,12 @@
     "category": "MODEL_RELEASE",
     "description": "OpenAI 推出了其 o 系列中迄今为止最智能、能力最强的模型——o3 和 o4-mini。这两款模型被训练用于更深度的推理（“思考更长时间”），显著提升了 ChatGPT 的能力。模型首次能够自主地（agentically）决定何时以及如何使用 ChatGPT 内的所有工具（网络搜索、代码执行、视觉分析、图像生成等）来解决复杂问题。",
     "link": "https://openai.com/index/introducing-o3-and-o4-mini/"
+  },
+  {
+    "date": "2025-04-18",
+    "title": "Gemini 2.5 Flash Preview 04-17",
+    "category": "MODEL_RELEASE",
+    "description": "Gemini 2.5 Flash 是 Google 首款完全混合推理模型，引入了可控的“思考”（thinking）过程。模型在生成响应前可以执行“思考”过程，以更好地理解提示、分解复杂任务和规划回答，尤其适用于需要多步推理的复杂问题（如数学、分析）。",
+    "link": "https://developers.googleblog.com/zh-hans/start-building-with-gemini-25-flash/"
   }
 ]
