@@ -3,7 +3,7 @@
     "subtitle": "Price: RMB per 1M Tokens",
     "providers": [
       {
-        "name": "Doubao-lite-32k",
+        "name": "Doubao-lite-32k-250318",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 0.3,
         "outputPrice": 0.6
@@ -79,6 +79,12 @@
         "logo": "/assets/icon/deepseek_small.jpg",
         "inputPrice": 2,
         "outputPrice": 8
+      },
+      {
+        "name": "Doubao-1.5-vision-pro-250328",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 3,
+        "outputPrice": 9
       },
       {
         "name": "gpt-4.1-mini",
