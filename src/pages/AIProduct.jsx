@@ -131,16 +131,9 @@ const tools = [
     category: 'Image'
   },
   { 
-    id: 'tongyiwanxiang', 
-    icon: '/assets/icon/ali_small.svg', 
-    path: 'https://tongyi.aliyun.com/wanxiang/', 
-    external: true ,
-    category: 'Image'
-  },
-  { 
-    id: 'wenxinyige', 
-    icon: '/assets/icon/wenxin_small.png', 
-    path: 'https://yige.baidu.com/', 
+    id: 'ideogram', 
+    icon: '/assets/icon/ideogram.svg', 
+    path: 'https://ideogram.ai/', 
     external: true ,
     category: 'Image'
   },
@@ -148,6 +141,13 @@ const tools = [
     id: 'canva', 
     icon: '/assets/icon/canva.png', 
     path: 'https://www.canva.com/', 
+    external: true ,
+    category: 'Image'
+  },
+  { 
+    id: 'tongyiwanxiang', 
+    icon: '/assets/icon/ali_small.svg', 
+    path: 'https://tongyi.aliyun.com/wanxiang/', 
     external: true ,
     category: 'Image'
   },
