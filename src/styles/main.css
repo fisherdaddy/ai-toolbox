@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Tabs for Translator */
+.custom-tabs .ant-tabs-nav {
+  margin-bottom: 0 !important;
+  padding: 0 1rem;
+}
+
+.custom-tabs .ant-tabs-nav::before {
+  border-bottom: none !important;
+}
+
+.custom-tabs .ant-tabs-tab {
+  padding: 12px 16px !important;
+  margin: 0 !important;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.custom-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 10px !important;
+}
+
+.custom-tabs .ant-tabs-tab:hover {
+  color: #6366f1 !important;
+}
+
+.custom-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  background-color: transparent;
+}
+
+.custom-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #4f46e5 !important;
+  font-weight: 600;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background-color: #4f46e5 !important;
+  height: 3px !important;
+}
+
+/* Image upload in translator */
+.image-upload-container .ant-upload.ant-upload-select-picture-card {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Remove box shadow from antd inputs */
+.custom-input .ant-input:focus,
+.custom-input .ant-input-focused {
+  box-shadow: none !important;
+}
+
+/* 隐藏缩略图水平滚动条但保留功能 */
+.image-thumbnails {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+  -ms-overflow-style: none;
+}
+
+.image-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.image-thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.image-thumbnails::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 20px;
+}
+
+.image-thumbnails::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.5);
+}
+
+/* 流式翻译效果 */
+@keyframes cursor-blink {
+  0%, 100% { border-right-color: transparent; }
+  50% { border-right-color: #4f46e5; }
+}
+
+.streaming-translation {
+  border-right: 2px solid #4f46e5;
+  animation: cursor-blink 0.8s infinite;
+}

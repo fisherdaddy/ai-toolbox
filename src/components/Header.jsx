@@ -155,6 +155,19 @@ function Header() {
                 {t('image-tools.title')}
               </NavLink>
               <NavLink 
+                to="/translator" 
+                className={({isActive}) => 
+                  `px-3 py-2 text-base font-medium transition-all duration-200 border-b-2 ${
+                    isActive 
+                      ? 'text-indigo-500 border-indigo-500' 
+                      : 'text-gray-600 border-transparent hover:text-indigo-500 hover:border-indigo-500'
+                  }`
+                }
+                onClick={handleNavClick}
+              >
+                翻译工具
+              </NavLink>
+              <NavLink 
                 to="/ai-products" 
                 className={({isActive}) => 
                   `px-3 py-2 text-base font-medium transition-all duration-200 border-b-2 ${
@@ -303,6 +316,19 @@ function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {t('image-tools.title')}
+                  </NavLink>
+                  <NavLink 
+                    to="/translator" 
+                    className={({isActive}) => 
+                      `block px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200 ${
+                        isActive 
+                          ? 'bg-indigo-50 text-indigo-600' 
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600'
+                      }`
+                    }
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    翻译工具
                   </NavLink>
                   <NavLink 
                     to="/ai-products" 

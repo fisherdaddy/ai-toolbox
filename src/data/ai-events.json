@@ -1057,6 +1057,13 @@
     "link": "https://openai.com/index/introducing-o3-and-o4-mini/"
   },
   {
+    "date": "2025-04-17",
+    "title": "豆包 1.5 深度思考模型",
+    "category": "MODEL_RELEASE",
+    "description": "豆包 1.5 深度思考模型发布：暴砍参数量，能看图思考，数学编程超DeepSeek-R1",
+    "link": "https://36kr.com/p/3253930654478340"
+  },
+  {
     "date": "2025-04-18",
     "title": "Gemini 2.5 Flash Preview 04-17",
     "category": "MODEL_RELEASE",
