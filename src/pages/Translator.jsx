@@ -24,7 +24,7 @@ const { Title, Paragraph, Text } = Typography;
 // API配置
 const API_KEY = '28c81f920240b0fdbca940e07b86b8db';
 const API_SECRET = 'd6e57784b134d09a8bed9ca004c98b4f';
-const API_BASE_URL = 'http://127.0.0.1:5050';
+const API_BASE_URL = 'https://www.heytransl.com';
 const API_TEXT_URL = `${API_BASE_URL}/api/translate/text`;
 const API_IMAGE_URL = `${API_BASE_URL}/api/translate/image`;
 
