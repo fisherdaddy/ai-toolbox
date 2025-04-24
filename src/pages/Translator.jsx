@@ -16,6 +16,8 @@ import {
   SyncOutlined,
   PauseOutlined
 } from '@ant-design/icons';
+import { useTranslation } from '../js/i18n';
+import SEO from '../components/SEO';
 
 const { TabPane } = Tabs;
 const { TextArea } = Input;
@@ -278,6 +280,7 @@ function fileToBase64(file) {
 }
 
 const Translator = () => {
+  const { t } = useTranslation();
   const [sourceText, setSourceText] = useState('');
   const [translatedText, setTranslatedText] = useState('');
   const [targetLanguage, setTargetLanguage] = useState('中文');
@@ -1027,19 +1030,25 @@ const Translator = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-16 md:pt-20 pb-12 px-4 sm:px-6">
-      <div className="w-full max-w-6xl">
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-          <Tabs
-            defaultActiveKey="text"
-            items={tabItems}
-            className="custom-tabs"
-            animated={{ inkBar: true, tabPane: false }}
-            onChange={handleTabChange}
-          />
+    <>
+      <SEO
+        title={t('translator.title')}
+        description={t('translator.description')}
+      />
+      <div className="flex flex-col items-center pt-16 md:pt-20 pb-12 px-4 sm:px-6">
+        <div className="w-full max-w-6xl">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+            <Tabs
+              defaultActiveKey="text"
+              items={tabItems}
+              className="custom-tabs"
+              animated={{ inkBar: true, tabPane: false }}
+              onChange={handleTabChange}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

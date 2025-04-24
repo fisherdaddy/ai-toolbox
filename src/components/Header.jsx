@@ -165,7 +165,7 @@ function Header() {
                 }
                 onClick={handleNavClick}
               >
-                翻译工具
+                {t('translator.title')}
               </NavLink>
               <NavLink 
                 to="/ai-products" 

@@ -18,6 +18,10 @@
       "title": "Image Tools",
       "description": "A suite of practical image processing tools, including a handwriting font generator, Markdown to image converter, and quote to image creator, making image editing and creative design tasks easier."
     },
+    "translator": {
+      "title": "Translator",
+      "description": "Supports text and image multi-language translation, making it easy to communicate across languages."
+    },
     "blog": {
       "title": "AI News",
       "description": "Offers the latest tech insights, development tips, and AI product reviews to help developers stay updated with cutting-edge information and improve their skills."
