@@ -7,6 +7,8 @@ const tools = [
   { id: 'handwrite', icon: '/assets/icon/handwrite.png', path: '/handwriting' },
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
+  { id: 'translator', icon: '/assets/icon/translator.png', path: '/translator' },
+  { id: 'documentTranslator', icon: '/assets/icon/pdf-translator.png', path: '/document-translator' },
   { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
   { id: 'perpetualCalendar', icon: '/assets/icon/calendar.jpg', path: '/perpetual-calendar' },
   { id: 'imageAnnotator', icon: '/assets/icon/image-annotator.png', path: '/image-annotator' },

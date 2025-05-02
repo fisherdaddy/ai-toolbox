@@ -20,7 +20,29 @@
     },
     "translator": {
       "title": "翻译工具",
-      "description": "支持文本和图片多语言翻译，轻松实现跨语言交流。"
+      "description": "支持文本和图片多语言翻译，轻松实现跨语言交流。",
+      "tabs": {
+        "text": "文本翻译",
+        "image": "图片翻译",
+        "document": "文档翻译"
+      },
+      "targetLanguageLabel": "目标语言",
+      "textPlaceholder": "请输入要翻译的文本",
+      "translationPlaceholder": "翻译结果将显示在这里",
+      "imagePlaceholder": "请上传要翻译的图片",
+      "translateButton": "翻译",
+      "uploadImageButton": "上传图片",
+      "emptyImagePlaceholder": "请先上传图片",
+      "displayModeLabel": "显示模式",
+      "displayModes": {
+        "translation": "翻译",
+        "bilingual": "双语",
+        "original": "原文"
+      },
+      "uploadFilePrompt": "上传文件",
+      "selectDocument": "选择文件",
+      "loginRequired": "请先登录",
+      "supportsPdf": "支持PDF文件"
     },
     "blog": {
       "title": "AI 资讯",

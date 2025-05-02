@@ -14,8 +14,21 @@ const Login = () => {
     const base64Url = credential.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
     const decodedPayload = JSON.parse(window.atob(base64));
+    
+    // Save user data to localStorage
     localStorage.setItem('user', JSON.stringify(decodedPayload));
-    navigate('/');
+    
+    // Check if there's a redirect path saved
+    const redirectPath = sessionStorage.getItem('redirectAfterLogin');
+    
+    // 使用直接的 window.location 跳转而不是 React Router 导航
+    // 这样可以确保页面完全重新加载，刷新登录状态
+    if (redirectPath) {
+      sessionStorage.removeItem('redirectAfterLogin');
+      window.location.href = redirectPath;
+    } else {
+      window.location.href = '/';
+    }
   };
 
   const handleLoginError = () => {
@@ -23,9 +36,17 @@ const Login = () => {
   };
 
   useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
-      navigate('/');
+    // Redirect if user is already logged in
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      // Check if there's a redirect path saved
+      const redirectPath = sessionStorage.getItem('redirectAfterLogin');
+      if (redirectPath) {
+        sessionStorage.removeItem('redirectAfterLogin');
+        window.location.href = redirectPath;
+      } else {
+        window.location.href = '/';
+      }
     }
   }, [navigate]);
 

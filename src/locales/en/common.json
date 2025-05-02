@@ -19,8 +19,30 @@
       "description": "A suite of practical image processing tools, including a handwriting font generator, Markdown to image converter, and quote to image creator, making image editing and creative design tasks easier."
     },
     "translator": {
-      "title": "Translator",
-      "description": "Supports text and image multi-language translation, making it easy to communicate across languages."
+      "title": "Translation Tool",
+      "description": "Supports multilingual translation for text and images, enabling easy cross-language communication.",
+      "tabs": {
+        "text": "Text Translation",
+        "image": "Image Translation",
+        "document": "Document Translation"
+      },
+      "targetLanguageLabel": "Target Language",
+      "textPlaceholder": "Please enter the text to be translated",
+      "translationPlaceholder": "Translation results will be displayed here",
+      "imagePlaceholder": "Please upload an image to be translated",
+      "translateButton": "Translate",
+      "uploadImageButton": "Upload Image",
+      "emptyImagePlaceholder": "Please upload an image first",
+      "displayModeLabel": "Display Mode",
+      "displayModes": {
+        "translation": "Translation",
+        "bilingual": "Bilingual",
+        "original": "Original"
+      },
+      "uploadFilePrompt": "Upload File",
+      "selectDocument": "Select File",
+      "loginRequired": "Please log in first",
+      "supportsPdf": "PDF files are supported"
     },
     "blog": {
       "title": "AI News",

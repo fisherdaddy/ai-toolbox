@@ -8,10 +8,33 @@ import logo from '/assets/logo.png';
 function Header() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('user'));
+  const [user, setUser] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
+
+  // Check for user on component mount and localStorage changes
+  useEffect(() => {
+    const checkUser = () => {
+      try {
+        const userData = localStorage.getItem('user');
+        if (userData) {
+          setUser(JSON.parse(userData));
+        } else {
+          setUser(null);
+        }
+      } catch (error) {
+        console.error('Failed to parse user data');
+        setUser(null);
+      }
+    };
+
+    checkUser();
+    
+    // Listen for storage events (in case user logs in/out in another tab)
+    window.addEventListener('storage', checkUser);
+    return () => window.removeEventListener('storage', checkUser);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -32,6 +55,7 @@ function Header() {
 
   const handleLogout = () => {
     localStorage.removeItem('user');
+    setUser(null);
     navigate('/login');
     setMobileMenuOpen(false);
   };
@@ -329,6 +353,19 @@ function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     翻译工具
+                  </NavLink>
+                  <NavLink 
+                    to="/document-translator" 
+                    className={({isActive}) => 
+                      `block px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200 ${
+                        isActive 
+                          ? 'bg-indigo-50 text-indigo-600' 
+                          : 'text-gray-700 hover:bg-gray-50 hover:text-indigo-600'
+                      }`
+                    }
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t('documentTranslator.title', 'PDF Translator')}
                   </NavLink>
                   <NavLink 
                     to="/ai-products" 

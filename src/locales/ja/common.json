@@ -20,7 +20,29 @@
     },
     "translator": {
       "title": "翻訳ツール",
-      "description": "テキストと画像の多言語翻訳をサポートし、簡単に言語を越えて交流できます。"
+      "description": "テキストや画像の多言語翻訳に対応し、簡単に言語の壁を越えたコミュニケーションを実現します。",
+      "tabs": {
+        "text": "テキスト翻訳",
+        "image": "画像翻訳",
+        "document": "ドキュメント翻訳"
+      },
+      "targetLanguageLabel": "翻訳先の言語",
+      "textPlaceholder": "翻訳したいテキストを入力してください",
+      "translationPlaceholder": "翻訳結果はここに表示されます",
+      "imagePlaceholder": "翻訳する画像をアップロードしてください",
+      "translateButton": "翻訳",
+      "uploadImageButton": "画像をアップロード",
+      "emptyImagePlaceholder": "まず画像をアップロードしてください",
+      "displayModeLabel": "表示モード",
+      "displayModes": {
+        "translation": "翻訳",
+        "bilingual": "バイリンガル",
+        "original": "原文"
+      },
+      "uploadFilePrompt": "ファイルをアップロード",
+      "selectDocument": "ファイルを選択",
+      "loginRequired": "ログインしてください",
+      "supportsPdf": "PDFファイルに対応"
     },
     "blog": {
       "title": "AIニュース",

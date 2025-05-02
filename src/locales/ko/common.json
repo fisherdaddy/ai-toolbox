@@ -20,7 +20,29 @@
     },
     "translator": {
       "title": "번역 도구",
-      "description": "텍스트 및 이미지 다국어 번역을 지원하여 교류를 쉽게 할 수 있습니다."
+      "description": "텍스트와 이미지의 다국어 번역을 지원하여 언어 장벽 없이 쉽게 소통할 수 있습니다.",
+      "tabs": {
+        "text": "텍스트 번역",
+        "image": "이미지 번역",
+        "document": "문서 번역"
+      },
+      "targetLanguageLabel": "대상 언어",
+      "textPlaceholder": "번역할 텍스트를 입력하세요",
+      "translationPlaceholder": "번역 결과가 여기에 표시됩니다",
+      "imagePlaceholder": "번역할 이미지를 업로드하세요",
+      "translateButton": "번역",
+      "uploadImageButton": "이미지 업로드",
+      "emptyImagePlaceholder": "먼저 이미지를 업로드해주세요",
+      "displayModeLabel": "표시 모드",
+      "displayModes": {
+        "translation": "번역",
+        "bilingual": "이중 언어",
+        "original": "원문"
+      },
+      "uploadFilePrompt": "파일 업로드",
+      "selectDocument": "파일 선택",
+      "loginRequired": "먼저 로그인해주세요",
+      "supportsPdf": "PDF 파일 지원"
     },
     "blog": {
       "title": "AI 뉴스",

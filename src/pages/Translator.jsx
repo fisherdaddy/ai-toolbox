@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, lazy, Suspense } from 'react';
 import { Select, Button, Tabs, Input, Upload, message, Spin, Tooltip, Empty, Card, Space, Typography } from 'antd';
 import { 
   UploadOutlined, 
@@ -14,10 +14,14 @@ import {
   GlobalOutlined,
   FileImageOutlined,
   SyncOutlined,
-  PauseOutlined
+  PauseOutlined,
+  FileOutlined
 } from '@ant-design/icons';
 import { useTranslation } from '../js/i18n';
 import SEO from '../components/SEO';
+
+// Lazy load the DocumentTranslator component
+const DocumentTranslatorContent = lazy(() => import('../components/DocumentTranslatorContent'));
 
 const { TabPane } = Tabs;
 const { TextArea } = Input;
@@ -329,7 +333,7 @@ const Translator = () => {
             };
             
             reader.readAsDataURL(file);
-            message.success('已从剪贴板添加图片');
+            message.success(t('translator.imageAddedFromClipboard'));
             break;
           }
         }
@@ -361,7 +365,7 @@ const Translator = () => {
         const file = e.dataTransfer.files[0];
         
         if (!file.type.startsWith('image/')) {
-          message.error('请上传图片文件');
+          message.error(t('translator.uploadImageOnly'));
           return;
         }
         
@@ -381,7 +385,7 @@ const Translator = () => {
         };
         
         reader.readAsDataURL(file);
-        message.success('已添加图片');
+        message.success(t('translator.imageAdded'));
       }
     };
 
@@ -421,7 +425,7 @@ const Translator = () => {
 
   const translateText = async () => {
     if (!sourceText.trim()) {
-      message.warning('请输入要翻译的文本');
+      message.warning(t('translator.enterTextPrompt'));
       return;
     }
 
@@ -479,7 +483,7 @@ const Translator = () => {
         (error) => {
           if (error.name !== 'AbortError') {
             console.error('Translation error:', error);
-            message.error('翻译服务暂时不可用');
+            message.error(t('translator.serviceUnavailable'));
           }
           setLoading(false);
           setStreamingTranslation(false);
@@ -488,7 +492,7 @@ const Translator = () => {
     } catch (error) {
       if (error.name !== 'AbortError') {
         console.error('Translation error:', error);
-        message.error('翻译服务暂时不可用');
+        message.error(t('translator.serviceUnavailable'));
       }
       setLoading(false);
       setStreamingTranslation(false);
@@ -497,7 +501,7 @@ const Translator = () => {
 
   const translateImage = async (file, newTargetLanguage) => {
     if (!file) {
-      message.warning('请先上传图片');
+      message.warning(t('translator.uploadImageFirst'));
       return;
     }
 
@@ -563,7 +567,7 @@ const Translator = () => {
         (error) => {
           if (error.name !== 'AbortError') {
             console.error('Image translation error:', error);
-            message.error('图片翻译服务暂时不可用');
+            message.error(t('translator.imageServiceUnavailable'));
             
             // For demo purposes only. In production, you should remove this section
             if (process.env.NODE_ENV === 'development') {
@@ -586,7 +590,7 @@ const Translator = () => {
     } catch (error) {
       if (error.name !== 'AbortError') {
         console.error('Image translation error:', error);
-        message.error('图片翻译服务暂时不可用');
+        message.error(t('translator.imageServiceUnavailable'));
         
         // For demo purposes only. In production, you should remove this section
         if (process.env.NODE_ENV === 'development') {
@@ -633,16 +637,16 @@ const Translator = () => {
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {
-      message.success('已复制到剪贴板');
+      message.success(t('translator.copied'));
     }, (err) => {
-      message.error('复制失败');
+      message.error(t('translator.copyFailed'));
       console.error('复制失败: ', err);
     });
   };
 
   const playText = (text) => {
     if (!text) {
-      message.warning('没有可朗读的文本');
+      message.warning(t('translator.noTextToSpeak'));
       return;
     }
     
@@ -683,7 +687,7 @@ const Translator = () => {
       label: (
         <span className="flex items-center gap-2">
           <TranslationOutlined />
-          <span>文本翻译</span>
+          <span>{t('translator.tabs.text')}</span>
         </span>
       ),
       children: (
@@ -691,7 +695,7 @@ const Translator = () => {
           <div className="flex items-center bg-gray-50 rounded-t-lg p-4 border-b border-gray-200">
             <div className="flex items-center mr-2">
               <GlobalOutlined className="text-indigo-500 mr-2" />
-              <span className="font-medium">目标语言:</span>
+              <span className="font-medium">{t('translator.targetLanguageLabel')}</span>
             </div>
             <Select
               value={targetLanguage}
@@ -700,10 +704,6 @@ const Translator = () => {
               style={{ width: 180 }}
               dropdownStyle={{ zIndex: 1001 }}
             />
-            <div className="ml-auto text-sm text-gray-500 flex items-center">
-              <InfoCircleOutlined className="mr-1" />
-              <span>输入任意语言文本，自动翻译为所选语言</span>
-            </div>
           </div>
           
           <div className="flex flex-col md:flex-row">
@@ -711,7 +711,7 @@ const Translator = () => {
               <TextArea
                 value={sourceText}
                 onChange={(e) => setSourceText(e.target.value)}
-                placeholder="请输入要翻译的文本"
+                placeholder={t('translator.textPlaceholder')}
                 autoSize={{ minRows: 12, maxRows: 20 }}
                 className="border-none rounded-none !shadow-none focus:shadow-none"
                 disabled={loading}
@@ -719,7 +719,7 @@ const Translator = () => {
               
               {sourceText && (
                 <div className="absolute bottom-3 right-3 flex space-x-2">
-                  <Tooltip title={isSpeaking && window.speechSynthesis.speaking ? "停止播放" : "播放原文"}>
+                  <Tooltip title={isSpeaking && window.speechSynthesis.speaking ? t('translator.tooltip.stopPlayback') : t('translator.tooltip.playSource')}>
                     <Button
                       type="text"
                       icon={isSpeaking && window.speechSynthesis.speaking ? <PauseOutlined /> : <SoundOutlined />}
@@ -728,7 +728,7 @@ const Translator = () => {
                       className="text-gray-500 hover:text-indigo-500"
                     />
                   </Tooltip>
-                  <Tooltip title="复制原文">
+                  <Tooltip title={t('translator.tooltip.copySource')}>
                     <Button
                       type="text"
                       icon={<CopyOutlined />}
@@ -746,21 +746,21 @@ const Translator = () => {
                 <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 z-10">
                   <div className="flex flex-col items-center">
                     <Spin size="large" />
-                    <span className="mt-4 text-gray-600">正在翻译...</span>
+                    <span className="mt-4 text-gray-600">{t('translator.translating')}</span>
                   </div>
                 </div>
               ) : null}
               <TextArea
                 value={translatedText}
                 readOnly
-                placeholder="翻译结果将显示在这里"
+                placeholder={t('translator.translationPlaceholder')}
                 autoSize={{ minRows: 12, maxRows: 20 }}
                 className={`border-none rounded-none !shadow-none bg-gray-50 ${streamingTranslation ? 'streaming-translation' : ''}`}
               />
               
               {translatedText && (
                 <div className="absolute bottom-3 right-3 flex space-x-2">
-                  <Tooltip title={isSpeaking && window.speechSynthesis.speaking ? "停止播放" : "播放译文"}>
+                  <Tooltip title={isSpeaking && window.speechSynthesis.speaking ? t('translator.tooltip.stopPlayback') : t('translator.tooltip.playTranslation')}>
                     <Button
                       type="text"
                       icon={isSpeaking && window.speechSynthesis.speaking ? <PauseOutlined /> : <SoundOutlined />}
@@ -769,7 +769,7 @@ const Translator = () => {
                       className="text-gray-500 hover:text-indigo-500"
                     />
                   </Tooltip>
-                  <Tooltip title="复制译文">
+                  <Tooltip title={t('translator.tooltip.copyTranslation')}>
                     <Button
                       type="text"
                       icon={<CopyOutlined />}
@@ -792,7 +792,7 @@ const Translator = () => {
               className="bg-indigo-600 hover:bg-indigo-700 px-8"
               size="large"
             >
-              翻译
+              {t('translator.translateButton')}
             </Button>
           </div>
         </div>
@@ -803,7 +803,7 @@ const Translator = () => {
       label: (
         <span className="flex items-center gap-2">
           <PictureOutlined />
-          <span>图片翻译</span>
+          <span>{t('translator.tabs.image')}</span>
         </span>
       ),
       children: (
@@ -812,7 +812,7 @@ const Translator = () => {
             <div className="flex items-center mb-3">
               <div className="flex items-center mr-2">
                 <GlobalOutlined className="text-indigo-500 mr-2" />
-                <span className="font-medium">目标语言:</span>
+                <span className="font-medium">{t('translator.targetLanguageLabel')}</span>
               </div>
               <Select
                 value={targetLanguage}
@@ -827,10 +827,6 @@ const Translator = () => {
                 style={{ width: 180 }}
                 dropdownStyle={{ zIndex: 1001 }}
               />
-              <div className="ml-auto text-sm text-gray-500 flex items-center">
-                <InfoCircleOutlined className="mr-1" />
-                <span>支持拖拽和粘贴图片 (Ctrl+V)</span>
-              </div>
             </div>
           </div>
           
@@ -851,12 +847,12 @@ const Translator = () => {
                       className="absolute inset-0 cursor-pointer bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
                       onClick={() => fileInputRef.current?.click()}
                     >
-                      <span className="text-white bg-black bg-opacity-50 px-3 py-1 rounded-full text-sm">点击更换图片</span>
+                      <span className="text-white bg-black bg-opacity-50 px-3 py-1 rounded-full text-sm">{t('translator.replaceImage')}</span>
                     </div>
                     
                     {/* Delete button - positioned outside the clickable area */}
                     <div className="absolute top-2 right-2 z-20">
-                      <Tooltip title="删除图片">
+                      <Tooltip title={t('translator.tooltip.deleteImage')}>
                         <Button 
                           type="default" 
                           size="small" 
@@ -891,7 +887,7 @@ const Translator = () => {
                             };
                             reader.readAsDataURL(file);
                           } else {
-                            message.error('您只能上传图片文件!');
+                            message.error(t('translator.uploadImageOnlyError'));
                           }
                         }
                         // Clear the input value to allow selecting the same file again
@@ -914,7 +910,7 @@ const Translator = () => {
                     beforeUpload={(file) => {
                       const isImage = file.type.startsWith('image/');
                       if (!isImage) {
-                        message.error('您只能上传图片文件!');
+                        message.error(t('translator.uploadImageOnlyError'));
                       }
                       return isImage;
                     }}
@@ -923,7 +919,7 @@ const Translator = () => {
                   >
                     <div className="flex flex-col items-center justify-center">
                       <FileImageOutlined className="text-4xl text-gray-400" />
-                      <p className="text-gray-500 mt-2">上传图片</p>
+                      <p className="text-gray-500 mt-2">{t('translator.uploadImageButton')}</p>
                     </div>
                   </Upload>
                 )}
@@ -943,7 +939,7 @@ const Translator = () => {
                   {loading && !streamingTranslation ? (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-70 z-10">
                       <Spin size="large" />
-                      <span className="mt-4 text-gray-600">图片翻译中...</span>
+                      <span className="mt-4 text-gray-600">{t('translator.imageTranslating')}</span>
                     </div>
                   ) : currentImage ? (
                     <div className="h-full relative">
@@ -951,14 +947,14 @@ const Translator = () => {
                         <TextArea 
                           value={translatedText} 
                           readOnly
-                          placeholder="翻译结果将显示在这里"
+                          placeholder={t('translator.translationPlaceholder')}
                           autoSize={{ minRows: 12, maxRows: 20 }}
                           className={`border-none rounded-none !shadow-none bg-gray-50 ${streamingTranslation ? 'streaming-translation' : ''}`}
                         />
                       ) : (
                         <div className="h-full flex items-center justify-center">
                           <Empty 
-                            description="尚未有翻译结果，请尝试重新翻译" 
+                            description={t('translator.emptyImageResult')} 
                             image={Empty.PRESENTED_IMAGE_SIMPLE}
                           />
                         </div>
@@ -967,7 +963,7 @@ const Translator = () => {
                   ) : (
                     <div className="h-full flex items-center justify-center">
                       <Empty 
-                        description="上传图片后，识别的文本将显示在这里" 
+                        description={t('translator.emptyImagePlaceholder')} 
                         image={Empty.PRESENTED_IMAGE_SIMPLE}
                       />
                     </div>
@@ -979,7 +975,7 @@ const Translator = () => {
                   <div className="px-4 py-2 bg-gray-100 border-t border-gray-200 flex justify-end space-x-2">
                     {translatedText && (
                       <>
-                        <Tooltip title={isSpeaking && window.speechSynthesis.speaking ? "停止播放" : "播放译文"}>
+                        <Tooltip title={isSpeaking && window.speechSynthesis.speaking ? t('translator.tooltip.stopPlayback') : t('translator.tooltip.playTranslation')}>
                           <Button
                             type="text"
                             icon={isSpeaking && window.speechSynthesis.speaking ? <PauseOutlined /> : <SoundOutlined />}
@@ -988,7 +984,7 @@ const Translator = () => {
                             className="text-gray-500 hover:text-indigo-500"
                           />
                         </Tooltip>
-                        <Tooltip title="复制译文">
+                        <Tooltip title={t('translator.tooltip.copyTranslation')}>
                           <Button
                             type="text"
                             icon={<CopyOutlined />}
@@ -1000,7 +996,7 @@ const Translator = () => {
                       </>
                     )}
                     {!loading && currentImage?.originFileObj && (
-                      <Tooltip title="重新翻译">
+                      <Tooltip title={t('translator.tooltip.retranslate')}>
                         <Button
                           type="text"
                           icon={<SyncOutlined />}
@@ -1015,18 +1011,26 @@ const Translator = () => {
               </div>
             </div>
           </div>
-          
-          {!currentImage && (
-            <div className="text-center text-sm text-gray-500 pb-4">
-              <p className="flex items-center justify-center gap-1">
-                <InfoCircleOutlined className="text-indigo-400" /> 
-                <span>图片翻译可自动识别图片中的文字，支持照片、截图、扫描件等</span>
-              </p>
-            </div>
-          )}
         </div>
       ),
     },
+    // {
+    //   key: 'document',
+    //   label: (
+    //     <span className="flex items-center gap-2">
+    //       <FileOutlined />
+    //       <span>{t('translator.tabs.document')}</span>
+    //     </span>
+    //   ),
+    //   children: (
+    //     <Suspense fallback={<div className="p-8 flex justify-center"><Spin size="large" /></div>}>
+    //       <DocumentTranslatorContent 
+    //         currentLanguage={targetLanguage}
+    //         onLanguageChange={setTargetLanguage}
+    //       />
+    //     </Suspense>
+    //   ),
+    // },
   ];
 
   return (

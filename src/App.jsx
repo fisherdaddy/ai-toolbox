@@ -11,6 +11,7 @@ const ImageTools = lazy(() => import('./pages/ImageTools'));
 const Blog = lazy(() => import('./pages/Blog'));
 const AIProduct = lazy(() => import('./pages/AIProduct'));
 const Translator = lazy(() => import('./pages/Translator'));
+const DocumentTranslator = lazy(() => import('./pages/DocumentTranslator'));
 
 const JsonFormatter = lazy(() => import('./components/JsonFormatter'));
 const MarkdownToImage = lazy(() => import('./components/MarkdownToImage'));
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/ai-products" element={<AIProduct />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/translator" element={<Translator />} />
+                <Route path="/document-translator" element={<DocumentTranslator />} />
 
                 <Route path="/markdown-to-image" element={<MarkdownToImage />} />
                 <Route path="/json-formatter" element={<JsonFormatter />} />
