@@ -85,8 +85,14 @@
     },
     {
       "date": "2025年2月25日",
-      "title": "Cloud 3.7 sonnet 和 Claude Code 发布",
+      "title": "Claude 3.7 sonnet 和 Claude Code 发布",
       "feature": "Claude 3.7 Sonnet 既是普通 LLM 又是推理模型。在标准模式下，它是 Claude 3.5 Sonnet 的升级版；在扩展思考模式下，它会在回答前进行自我反思，从而提高其在数学、物理、指令跟随、编码和许多其他任务上的性能。",
       "description": "与 Claude 3.7 Sonnet 模型一同发布的还有 Claude Code ，这是一个用于 agentic coding 的命令行工具，目前以有限的研究预览版形式提供。 Claude Code 旨在让开发者能够直接从终端将大量的工程任务委托给 Claude 完成。"
+    },
+    {
+      "date": "2025年5月2日",
+      "title": "Claude 发布 Integrations 功能以连接外部应用和工具，以及 Research 功能以提供更深入的调查能力。",
+      "feature": "Claude 可以通过名为 Integrations 的新功能连接到用户的应用程序和工具，使其能够理解更广泛的工作背景并跨平台执行任务。推出了高级研究模式，可以进行更长时间（最长 45 分钟）、更深入的调查，并能搜索网页、 Google Workspace 以及新连接的 Integrations 。",
+      "description": "更新地址：https://www.anthropic.com/news/integrations"
     }
   ]

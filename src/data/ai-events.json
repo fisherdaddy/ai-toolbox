@@ -1069,5 +1069,19 @@
     "category": "MODEL_RELEASE",
     "description": "Gemini 2.5 Flash 是 Google 首款完全混合推理模型，引入了可控的“思考”（thinking）过程。模型在生成响应前可以执行“思考”过程，以更好地理解提示、分解复杂任务和规划回答，尤其适用于需要多步推理的复杂问题（如数学、分析）。",
     "link": "https://developers.googleblog.com/zh-hans/start-building-with-gemini-25-flash/"
+  },
+  {
+    "date": "2025-04-29",
+    "title": "Qwen3",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "Qwen3 是一个性能强大的大型语言模型系列，包含多种规模的模型，旨在提供顶尖的性能和广泛的应用能力。其旗舰模型 Qwen3-235B-A22B 在多项基准测试中表现出色，可与业界顶级模型媲美，同时较小模型也实现了显著的性能提升。该系列引入了创新的双思考模式、广泛的多语言支持和增强的 Agent 能力。通过开源部分模型（包括两个 MoE 模型和六个 Dense 模型）。包括旗舰模型 Qwen3-235B-A22B (235B+ 总参数, 22B+ 激活参数) 和小型 MoE 模型 Qwen3-30B-A3B (约 30B 总参数, 3B 激活参数) 以及六个 Dense 模型 (Qwen3-32B 至 Qwen3-0.6B)，均采用 Apache 2.0 许可。",
+    "link": "https://qwenlm.github.io/zh/blog/qwen3/"
+  },
+  {
+    "date": "2025-04-30",
+    "title": "DeepSeek-Prover-V2",
+    "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
+    "description": "DeepSeek 推出了 DeepSeek-Prover-V2，一个用于 Lean 4 形式化定理证明的开源大语言模型。模型训练始于一个“冷启动”阶段，利用 DeepSeek-V3 通过递归证明流程生成初始数据，整合了非形式化推理（如思路链）和形式化证明步骤。随后通过强化学习进一步提升性能。DeepSeek-Prover-V2 在神经定理证明领域达到 SOTA 水平，特别是在 MiniF2F-test 上实现了 88.9 % 的通过率，并解决了 PutnamBench 中的 49 个问题。发布了两个尺寸的模型： 7B 和 671B 参数，可通过 Hugging Face Transformers 使用。",
+    "link": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B"
   }
 ]
