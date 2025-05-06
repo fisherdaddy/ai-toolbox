@@ -91,8 +91,8 @@
     },
     {
       "date": "2025年5月2日",
-      "title": "Claude 发布 Integrations 功能以连接外部应用和工具，以及 Research 功能以提供更深入的调查能力。",
-      "feature": "Claude 可以通过名为 Integrations 的新功能连接到用户的应用程序和工具，使其能够理解更广泛的工作背景并跨平台执行任务。推出了高级研究模式，可以进行更长时间（最长 45 分钟）、更深入的调查，并能搜索网页、 Google Workspace 以及新连接的 Integrations 。",
-      "description": "更新地址：https://www.anthropic.com/news/integrations"
+      "title": "Claude DeepResearch 发布",
+      "feature": "Claude 发布 Integrations 功能以连接外部应用和工具，以及 Research 功能以提供更深入的调查能力。",
+      "description": "Claude 可以通过名为 Integrations 的新功能连接到用户的应用程序和工具，使其能够理解更广泛的工作背景并跨平台执行任务。推出了高级研究模式，可以进行更长时间（最长 45 分钟）、更深入的调查，并能搜索网页、 Google Workspace 以及新连接的 Integrations "
     }
   ]
