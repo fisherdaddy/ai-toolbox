@@ -1082,6 +1082,13 @@
     "title": "DeepSeek-Prover-V2",
     "category": ["MODEL_RELEASE", "OPEN_SOURCE"],
     "description": "DeepSeek 推出了 DeepSeek-Prover-V2，一个用于 Lean 4 形式化定理证明的开源大语言模型。模型训练始于一个“冷启动”阶段，利用 DeepSeek-V3 通过递归证明流程生成初始数据，整合了非形式化推理（如思路链）和形式化证明步骤。随后通过强化学习进一步提升性能。DeepSeek-Prover-V2 在神经定理证明领域达到 SOTA 水平，特别是在 MiniF2F-test 上实现了 88.9 % 的通过率，并解决了 PutnamBench 中的 49 个问题。发布了两个尺寸的模型： 7B 和 671B 参数，可通过 Hugging Face Transformers 使用。",
-    "link": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B"
-  }
+      "link": "https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B"
+    },
+    {
+      "date": "2025-05-15",
+      "title": "AlphaEvolve",
+      "category": "RESEARCH",
+      "description": "Google 发布 AlphaEvolve: 一款利用大型语言模型（LLMs）进行通用算法发现与优化的进化编码代理。其核心思想是结合 Gemini 模型的创造性问题解决能力和自动化评估机制，通过进化迭代的方式生成、验证并改进算法。该代理不仅能够优化现有计算流程，还能在数学等基础科学领域探索新的解决方案，展示了其在多个领域应用的广泛前景和实际价值。",
+      "link": "https://fisherdaddy.com/posts/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    }
 ]

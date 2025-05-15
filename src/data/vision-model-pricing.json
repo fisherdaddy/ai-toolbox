@@ -39,19 +39,19 @@
         "outputPrice": 2.8
       },
       {
-        "name": "Doubao-1.5-vision-pro-250328",
+        "name": "Doubao-1.5-thinking-vision-pro",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 3,
         "outputPrice": 9
       },
       {
-        "name": "Doubao-1.5-vision-pro-32k",
+        "name": "Doubao-1.5-vision-pro",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 3,
         "outputPrice": 9
       },
       {
-        "name": "Doubao-vision-pro-32k",
+        "name": "Doubao-vision-pro",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 3,
         "outputPrice": 9
@@ -75,7 +75,7 @@
         "outputPrice": 8
       },
       {
-        "name": "Doubao-1.5-thinking-pro",
+        "name": "Doubao-1.5-thinking-pro-m",
         "logo": "/assets/icon/doubao.png",
         "inputPrice": 4,
         "outputPrice": 16
