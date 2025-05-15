@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="fisherdaddy" />
+    <title data-i18n="title">FisherAI - Your Best Summary Copilot | Chrome Extension</title>
+    <meta name="description" content="FisherAI is a cutting-edge Chrome extension that helps you quickly grasp the essence of web pages and videos through AI-powered summaries." />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .hero-gradient {
+        background: linear-gradient(to bottom, #eef2ff, #ffffff);
+      }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .stagger-container > * {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .stagger-container > *:nth-child(1) { animation: fadeIn 0.6s ease-out 0.0s forwards; }
+      .stagger-container > *:nth-child(2) { animation: fadeIn 0.6s ease-out 0.2s forwards; }
+      .stagger-container > *:nth-child(3) { animation: fadeIn 0.6s ease-out 0.4s forwards; }
+      .stagger-container > *:nth-child(4) { animation: fadeIn 0.6s ease-out 0.6s forwards; }
+      .stagger-container > *:nth-child(5) { animation: fadeIn 0.6s ease-out 0.8s forwards; }
+      .stagger-container > *:nth-child(6) { animation: fadeIn 0.6s ease-out 1.0s forwards; }
+      .language-selector {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 100;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              indigo: {
+                50: '#EEF2FF',
+                500: '#6366F1',
+                600: '#4F46E5',
+              },
+            },
+          },
+        }
+      }
+      
+      // 多语言支持
+      const translations = {
+        'en': {
+          'title': 'FisherAI - Your Best Summary Copilot | Chrome Extension',
+          'subtitle': 'Your Best Summary Copilot',
+          'intro': 'A cutting-edge Chrome extension that helps you quickly grasp the essence of web pages and videos through AI-powered summaries.',
+          'add-to-chrome': 'Add to Chrome',
+          'github': 'GitHub',
+          'features-title': 'Key Features',
+          'features-subtitle': 'FisherAI comes packed with powerful features to enhance your browsing experience.',
+          'feature-1-title': 'Free & Secure',
+          'feature-1-desc': 'Completely free with custom API keys stored locally. Open source code for transparency.',
+          'feature-2-title': 'Multiple AI Models',
+          'feature-2-desc': 'Use free models like Gemini 2.0 and DeepSeek R1, or connect your own API keys for premium models.',
+          'feature-3-title': 'Smart Summarization',
+          'feature-3-desc': 'Quickly extract key points from web articles, research papers, and news in seconds.',
+          'feature-4-title': 'Video Analysis',
+          'feature-4-desc': 'Summarize YouTube and Bilibili videos, translate subtitles, and download transcripts.',
+          'feature-5-title': 'Quick Actions',
+          'feature-5-desc': 'Use \'/\' commands for translation, summarization, polishing, image-to-text, and code explanation.',
+          'feature-6-title': 'Multilingual Support',
+          'feature-6-desc': 'Works with Chinese, English, Japanese, Korean, German, French, and Russian.',
+          'models-title': 'Supported AI Models',
+          'models-subtitle': 'Choose from a variety of top AI models or connect your own.',
+          'free-models': 'Free Models',
+          'custom-models': 'Custom API Models',
+          'commands-title': 'Quick Commands',
+          'commands-subtitle': 'Access powerful features instantly with slash commands',
+          'translate-command': 'Translate selected text to any supported language',
+          'summarize-command': 'Create a concise summary of the current page or selected text',
+          'polish-command': 'Improve and refine the selected text for clarity and professionalism',
+          'image-to-text-command': 'Extract text from images on the page',
+          'code-command': 'Explain code snippets from the page or help debug issues',
+          'cta-title': 'Ready to enhance your browsing experience?',
+          'cta-subtitle': 'Install FisherAI now and take your content consumption to the next level.',
+          'faq-title': 'Frequently Asked Questions',
+          'faq-1-q': 'Is FisherAI completely free to use?',
+          'faq-1-a': 'Yes, FisherAI is completely free to use with the included free models. You can also connect your own API keys for premium models if desired.',
+          'faq-2-q': 'Is my data safe with FisherAI?',
+          'faq-2-a': 'Absolutely. FisherAI stores your API keys locally on your device, and the code is completely open source for transparency and security.',
+          'faq-3-q': 'Which video platforms are supported?',
+          'faq-3-a': 'FisherAI currently supports YouTube and Bilibili for video summarization and subtitle translation/downloading.',
+          'faq-4-q': 'Can I use FisherAI in my language?',
+          'faq-4-a': 'Yes, FisherAI supports multiple languages including Chinese, English, Japanese, Korean, German, French, and Russian.',
+          'summary': 'Summary',
+          'ask-placeholder': 'Ask about this page...',
+          'footer-text': 'All rights reserved.'
+        },
+        'zh': {
+          'title': 'FisherAI - 您最好的摘要助手 | Chrome插件',
+          'subtitle': '您最好的摘要助手',
+          'intro': '一款先进的Chrome插件，通过AI强大的摘要能力，帮助您快速获取网页和视频内容的精华。',
+          'add-to-chrome': '添加至Chrome',
+          'github': 'GitHub',
+          'features-title': '核心功能',
+          'features-subtitle': 'FisherAI 拥有众多强大功能，提升您的浏览体验。',
+          'feature-1-title': '免费且安全',
+          'feature-1-desc': '完全免费使用，API密钥本地存储，代码完全开源透明。',
+          'feature-2-title': '多种AI模型',
+          'feature-2-desc': '使用免费模型如Gemini 2.0和DeepSeek R1，或连接您自己的API密钥使用高级模型。',
+          'feature-3-title': '智能摘要',
+          'feature-3-desc': '几秒钟内快速提取网页文章、研究报告和新闻的关键点。',
+          'feature-4-title': '视频分析',
+          'feature-4-desc': '摘要YouTube和Bilibili视频，翻译字幕，下载转录文本。',
+          'feature-5-title': '快捷命令',
+          'feature-5-desc': '使用"/"命令进行翻译、摘要、润色、图像转文本和代码解释。',
+          'feature-6-title': '多语言支持',
+          'feature-6-desc': '支持中文、英文、日语、韩语、德语、法语和俄语。',
+          'models-title': '支持的AI模型',
+          'models-subtitle': '选择各种顶级AI模型或连接您自己的模型。',
+          'free-models': '免费模型',
+          'custom-models': '自定义API模型',
+          'commands-title': '快捷命令',
+          'commands-subtitle': '通过斜杠命令即时访问强大功能',
+          'translate-command': '将选定文本翻译成任何支持的语言',
+          'summarize-command': '创建当前页面或选定文本的简明摘要',
+          'polish-command': '改进和优化选定文本，使其更清晰专业',
+          'image-to-text-command': '提取页面上图像中的文本',
+          'code-command': '解释页面上的代码片段或帮助调试问题',
+          'cta-title': '准备好提升您的浏览体验了吗？',
+          'cta-subtitle': '立即安装FisherAI，将您的内容消费提升到新高度。',
+          'faq-title': '常见问题',
+          'faq-1-q': 'FisherAI完全免费使用吗？',
+          'faq-1-a': '是的，FisherAI与内置的免费模型完全免费使用。您也可以连接自己的API密钥使用高级模型。',
+          'faq-2-q': '我的数据在FisherAI中安全吗？',
+          'faq-2-a': '绝对安全。FisherAI将您的API密钥存储在本地设备上，并且代码完全开源以确保透明和安全。',
+          'faq-3-q': '支持哪些视频平台？',
+          'faq-3-a': 'FisherAI目前支持YouTube和Bilibili进行视频摘要和字幕翻译/下载。',
+          'faq-4-q': '我可以用我的语言使用FisherAI吗？',
+          'faq-4-a': '是的，FisherAI支持多种语言，包括中文、英文、日语、韩语、德语、法语和俄语。',
+          'summary': '摘要',
+          'ask-placeholder': '询问关于此页面的问题...',
+          'footer-text': '版权所有'
+        }
+      };
+      
+      // 初始化语言
+      document.addEventListener('DOMContentLoaded', function() {
+        // 默认使用浏览器语言，如果不是中文则使用英文
+        const browserLang = navigator.language || navigator.userLanguage;
+        const defaultLang = browserLang.startsWith('zh') ? 'zh' : 'en';
+        setLanguage(defaultLang);
+      });
+      
+      // 设置语言
+      function setLanguage(lang) {
+        localStorage.setItem('preferredLanguage', lang);
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        
+        // 更新标题
+        const titleElement = document.querySelector('title');
+        if (titleElement && translations[lang]['title']) {
+          titleElement.textContent = translations[lang]['title'];
+        }
+        
+        // 更新所有带有data-i18n属性的元素
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+        
+        // 更新所有带有data-i18n-placeholder属性的元素
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+          const key = element.getAttribute('data-i18n-placeholder');
+          if (translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+          }
+        });
+        
+        // 更新语言切换按钮的显示状态
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('bg-indigo-600', 'text-white');
+            btn.classList.remove('bg-white', 'text-gray-700');
+          } else {
+            btn.classList.remove('bg-indigo-600', 'text-white');
+            btn.classList.add('bg-white', 'text-gray-700');
+          }
+        });
+        
+        // 更新元描述
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.content = translations[lang]['intro'];
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen hero-gradient">
+    <!-- 语言切换按钮 -->
+    <div class="language-selector">
+      <div class="inline-flex rounded-md shadow-sm" role="group">
+        <button type="button" class="lang-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-2 focus:ring-indigo-500" data-lang="en" onclick="setLanguage('en')">
+          EN
+        </button>
+        <button type="button" class="lang-btn px-4 py-2 text-sm font-medium rounded-r-lg border border-gray-200 bg-indigo-600 text-white hover:bg-indigo-700 focus:z-10 focus:ring-2 focus:ring-indigo-500" data-lang="zh" onclick="setLanguage('zh')">
+          中文
+        </button>
+      </div>
+    </div>
+
+    <div id="app" class="min-h-screen">
+      <!-- Hero Section -->
+      <section class="pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center fade-in">
+          <img src="/assets/logo.png" alt="FisherAI Logo" class="h-24 mx-auto mb-6" />
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+            FisherAI
+          </h1>
+          <p class="text-2xl md:text-3xl font-medium text-indigo-600 mb-6" data-i18n="subtitle">
+            Your Best Summary Copilot
+          </p>
+          <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8" data-i18n="intro">
+            A cutting-edge Chrome extension that helps you quickly grasp the essence of web pages and videos through AI-powered summaries.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-8 transition-all duration-200"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"> <defs> <linearGradient id="a" x1="3.2173" y1="15" x2="44.7812" y2="15" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#d93025"></stop> <stop offset="1" stop-color="#ea4335"></stop> </linearGradient> <linearGradient id="b" x1="20.7219" y1="47.6791" x2="41.5039" y2="11.6837" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#fcc934"></stop> <stop offset="1" stop-color="#fbbc04"></stop> </linearGradient> <linearGradient id="c" x1="26.5981" y1="46.5015" x2="5.8161" y2="10.506" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#1e8e3e"></stop> <stop offset="1" stop-color="#34a853"></stop> </linearGradient> </defs> <circle cx="24" cy="23.9947" r="12" style="fill:#fff"></circle> <path d="M3.2154,36A24,24,0,1,0,12,3.2154,24,24,0,0,0,3.2154,36ZM34.3923,18A12,12,0,1,1,18,13.6077,12,12,0,0,1,34.3923,18Z" style="fill:none"></path> <path d="M24,12H44.7812a23.9939,23.9939,0,0,0-41.5639.0029L13.6079,30l.0093-.0024A11.9852,11.9852,0,0,1,24,12Z" style="fill:url(#a)"></path> <circle cx="24" cy="24" r="9.5" style="fill:#1a73e8"></circle> <path d="M34.3913,30.0029,24.0007,48A23.994,23.994,0,0,0,44.78,12.0031H23.9989l-.0025.0093A11.985,11.985,0,0,1,34.3913,30.0029Z" style="fill:url(#b)"></path> <path d="M13.6086,30.0031,3.218,12.006A23.994,23.994,0,0,0,24.0025,48L34.3931,30.0029l-.0067-.0068a11.9852,11.9852,0,0,1-20.7778.007Z" style="fill:url(#c)"></path> </svg>
+              <span data-i18n="add-to-chrome">Add to Chrome</span>
+            </a>
+            <a 
+              href="https://github.com/fisherdaddy/FisherAI" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-8 transition-all duration-200"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+              </svg>
+              <span data-i18n="github">GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Demo/Screenshot Section -->
+      <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden fade-in">
+          <!-- Browser mockup with Chrome-like UI -->
+          <div class="relative bg-gray-100 rounded-t-lg p-2 border-b border-gray-200">
+            <div class="flex items-center">
+              <div class="flex space-x-2 ml-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <div class="flex-1 mx-4">
+                <div class="bg-white h-8 rounded-lg flex items-center px-4 text-sm text-gray-500">
+                  https://example.com/article
+                </div>
+              </div>
+              <div class="flex space-x-2 mr-2">
+                <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative bg-white p-4">
+            <div class="grid grid-cols-12 gap-4 min-h-[400px]">
+              <!-- Main content area -->
+              <div class="col-span-12 md:col-span-8 bg-gray-50 rounded-lg p-4">
+                <div class="animate-pulse">
+                  <div class="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-5/6 mb-6"></div>
+                  
+                  <div class="h-6 bg-gray-200 rounded w-2/4 mb-4"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-3/4 mb-6"></div>
+                  
+                  <div class="h-6 bg-gray-200 rounded w-3/5 mb-4"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div class="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                </div>
+              </div>
+              
+              <!-- FisherAI extension panel -->
+              <div class="col-span-12 md:col-span-4 bg-white border border-gray-200 rounded-lg shadow-md">
+                <div class="bg-indigo-600 text-white p-3 rounded-t-lg flex items-center justify-between">
+                  <div class="flex items-center">
+                    <img src="/assets/logo.png" alt="FisherAI Logo" class="h-6 w-6 mr-2" />
+                    <span class="font-semibold">FisherAI</span>
+                  </div>
+                  <div class="flex space-x-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                    </svg>
+                  </div>
+                </div>
+                
+                <div class="p-4">
+                  <div class="text-sm font-medium text-gray-600 mb-2" data-i18n="summary">Summary</div>
+                  <div class="mb-4">
+                    <div class="h-4 bg-gray-100 rounded w-full mb-2"></div>
+                    <div class="h-4 bg-gray-100 rounded w-full mb-2"></div>
+                    <div class="h-4 bg-gray-100 rounded w-5/6 mb-2"></div>
+                    <div class="h-4 bg-gray-100 rounded w-full mb-2"></div>
+                    <div class="h-4 bg-gray-100 rounded w-3/4"></div>
+                  </div>
+                  
+                  <div class="mt-4">
+                    <div class="relative">
+                      <input
+                        type="text"
+                        data-i18n-placeholder="ask-placeholder"
+                        placeholder="Ask about this page..."
+                        class="w-full p-2 pl-3 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
+                      />
+                      <button class="absolute right-2 top-2 text-gray-400 hover:text-indigo-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12 fade-in">
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="features-title">Key Features</h2>
+          <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="features-subtitle">
+            FisherAI comes packed with powerful features to enhance your browsing experience.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-container">
+          <!-- Feature 1 -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="text-4xl mb-4">🔒</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="feature-1-title">Free & Secure</h3>
+            <p class="text-gray-600" data-i18n="feature-1-desc">Completely free with custom API keys stored locally. Open source code for transparency.</p>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="text-4xl mb-4">🧠</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="feature-2-title">Multiple AI Models</h3>
+            <p class="text-gray-600" data-i18n="feature-2-desc">Use free models like Gemini 2.0 and DeepSeek R1, or connect your own API keys for premium models.</p>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="text-4xl mb-4">📝</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="feature-3-title">Smart Summarization</h3>
+            <p class="text-gray-600" data-i18n="feature-3-desc">Quickly extract key points from web articles, research papers, and news in seconds.</p>
+          </div>
+          
+          <!-- Feature 4 -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="text-4xl mb-4">🎬</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="feature-4-title">Video Analysis</h3>
+            <p class="text-gray-600" data-i18n="feature-4-desc">Summarize YouTube and Bilibili videos, translate subtitles, and download transcripts.</p>
+          </div>
+          
+          <!-- Feature 5 -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="feature-5-title">Quick Actions</h3>
+            <p class="text-gray-600" data-i18n="feature-5-desc">Use '/' commands for translation, summarization, polishing, image-to-text, and code explanation.</p>
+          </div>
+          
+          <!-- Feature 6 -->
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="text-4xl mb-4">🌐</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="feature-6-title">Multilingual Support</h3>
+            <p class="text-gray-600" data-i18n="feature-6-desc">Works with Chinese, English, Japanese, Korean, German, French, and Russian.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Models Section -->
+      <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-indigo-50 rounded-lg">
+        <div class="text-center mb-12 fade-in">
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="models-title">Supported AI Models</h2>
+          <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="models-subtitle">
+            Choose from a variety of top AI models or connect your own.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-md p-6 fade-in">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-4" data-i18n="free-models">Free Models</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Gemini 2.0 Series
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                DeepSeek R1
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 fade-in">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-4" data-i18n="custom-models">Custom API Models</h3>
+            <ul class="grid grid-cols-2 gap-2 text-gray-700">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                OpenAI
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Google
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                DeepSeek
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Mistral
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Moonshot
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Groq
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                01.AI
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Ollama (Local)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Commands Demo Section -->
+      <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12 fade-in">
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="commands-title">Quick Commands</h2>
+          <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="commands-subtitle">
+            Access powerful features instantly with slash commands
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-xl p-6 max-w-3xl mx-auto fade-in">
+          <div class="flex flex-col space-y-4">
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono bg-gray-50 p-2 rounded border border-gray-200 mb-2">/translate</p>
+                <p class="text-gray-700" data-i18n="translate-command">Translate selected text to any supported language</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono bg-gray-50 p-2 rounded border border-gray-200 mb-2">/summarize</p>
+                <p class="text-gray-700" data-i18n="summarize-command">Create a concise summary of the current page or selected text</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono bg-gray-50 p-2 rounded border border-gray-200 mb-2">/polish</p>
+                <p class="text-gray-700" data-i18n="polish-command">Improve and refine the selected text for clarity and professionalism</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono bg-gray-50 p-2 rounded border border-gray-200 mb-2">/image-to-text</p>
+                <p class="text-gray-700" data-i18n="image-to-text-command">Extract text from images on the page</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="font-mono bg-gray-50 p-2 rounded border border-gray-200 mb-2">/code</p>
+                <p class="text-gray-700" data-i18n="code-command">Explain code snippets from the page or help debug issues</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="bg-indigo-600 rounded-lg shadow-xl overflow-hidden fade-in">
+          <div class="px-6 py-12 md:py-16 md:px-12 text-center text-white">
+            <h2 class="text-3xl font-bold mb-4" data-i18n="cta-title">Ready to enhance your browsing experience?</h2>
+            <p class="text-xl mb-8" data-i18n="cta-subtitle">Install FisherAI now and take your content consumption to the next level.</p>
+            <a 
+              href="https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-8 transition-all duration-200"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"> <defs> <linearGradient id="cta-a" x1="3.2173" y1="15" x2="44.7812" y2="15" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#d93025"></stop> <stop offset="1" stop-color="#ea4335"></stop> </linearGradient> <linearGradient id="cta-b" x1="20.7219" y1="47.6791" x2="41.5039" y2="11.6837" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#fcc934"></stop> <stop offset="1" stop-color="#fbbc04"></stop> </linearGradient> <linearGradient id="cta-c" x1="26.5981" y1="46.5015" x2="5.8161" y2="10.506" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#1e8e3e"></stop> <stop offset="1" stop-color="#34a853"></stop> </linearGradient> </defs> <circle cx="24" cy="23.9947" r="12" style="fill:#fff"></circle> <path d="M3.2154,36A24,24,0,1,0,12,3.2154,24,24,0,0,0,3.2154,36ZM34.3923,18A12,12,0,1,1,18,13.6077,12,12,0,0,1,34.3923,18Z" style="fill:none"></path> <path d="M24,12H44.7812a23.9939,23.9939,0,0,0-41.5639.0029L13.6079,30l.0093-.0024A11.9852,11.9852,0,0,1,24,12Z" style="fill:url(#cta-a)"></path> <circle cx="24" cy="24" r="9.5" style="fill:#1a73e8"></circle> <path d="M34.3913,30.0029,24.0007,48A23.994,23.994,0,0,0,44.78,12.0031H23.9989l-.0025.0093A11.985,11.985,0,0,1,34.3913,30.0029Z" style="fill:url(#cta-b)"></path> <path d="M13.6086,30.0031,3.218,12.006A23.994,23.994,0,0,0,24.0025,48L34.3931,30.0029l-.0067-.0068a11.9852,11.9852,0,0,1-20.7778.007Z" style="fill:url(#cta-c)"></path> </svg>
+              <span data-i18n="add-to-chrome">Add to Chrome</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12 fade-in">
+          <h2 class="text-3xl font-bold text-gray-900" data-i18n="faq-title">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="grid gap-6 max-w-3xl mx-auto stagger-container">
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="faq-1-q">Is FisherAI completely free to use?</h3>
+            <p class="text-gray-600" data-i18n="faq-1-a">Yes, FisherAI is completely free to use with the included free models. You can also connect your own API keys for premium models if desired.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="faq-2-q">Is my data safe with FisherAI?</h3>
+            <p class="text-gray-600" data-i18n="faq-2-a">Absolutely. FisherAI stores your API keys locally on your device, and the code is completely open source for transparency and security.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="faq-3-q">Which video platforms are supported?</h3>
+            <p class="text-gray-600" data-i18n="faq-3-a">FisherAI currently supports YouTube and Bilibili for video summarization and subtitle translation/downloading.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="faq-4-q">Can I use FisherAI in my language?</h3>
+            <p class="text-gray-600" data-i18n="faq-4-a">Yes, FisherAI supports multiple languages including Chinese, English, Japanese, Korean, German, French, and Russian.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Footer -->
+      <footer class="bg-gradient-to-b from-indigo-50 to-white border-t border-gray-200 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          
+          <!-- Call to action section -->
+          <div class="bg-indigo-50 rounded-xl p-8 mb-10 flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Ready to get started?</h3>
+              <p class="text-gray-600">Install FisherAI and streamline your browsing experience today.</p>
+            </div>
+            <a 
+              href="https://chromewebstore.google.com/detail/fisherai-your-best-summar/ipfiijaobcenaibdpaacbbpbjefgekbj" 
+              class="mt-4 md:mt-0 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 transition text-white font-medium rounded-lg inline-flex items-center"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"> <defs> <linearGradient id="cta2-a" x1="3.2173" y1="15" x2="44.7812" y2="15" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#d93025"></stop> <stop offset="1" stop-color="#ea4335"></stop> </linearGradient> <linearGradient id="cta2-b" x1="20.7219" y1="47.6791" x2="41.5039" y2="11.6837" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#fcc934"></stop> <stop offset="1" stop-color="#fbbc04"></stop> </linearGradient> <linearGradient id="cta2-c" x1="26.5981" y1="46.5015" x2="5.8161" y2="10.506" gradientUnits="userSpaceOnUse"> <stop offset="0" stop-color="#1e8e3e"></stop> <stop offset="1" stop-color="#34a853"></stop> </linearGradient> </defs> <circle cx="24" cy="23.9947" r="12" style="fill:#fff"></circle> <path d="M3.2154,36A24,24,0,1,0,12,3.2154,24,24,0,0,0,3.2154,36ZM34.3923,18A12,12,0,1,1,18,13.6077,12,12,0,0,1,34.3923,18Z" style="fill:none"></path> <path d="M24,12H44.7812a23.9939,23.9939,0,0,0-41.5639.0029L13.6079,30l.0093-.0024A11.9852,11.9852,0,0,1,24,12Z" style="fill:url(#cta2-a)"></path> <circle cx="24" cy="24" r="9.5" style="fill:#1a73e8"></circle> <path d="M34.3913,30.0029,24.0007,48A23.994,23.994,0,0,0,44.78,12.0031H23.9989l-.0025.0093A11.985,11.985,0,0,1,34.3913,30.0029Z" style="fill:url(#cta2-b)"></path> <path d="M13.6086,30.0031,3.218,12.006A23.994,23.994,0,0,0,24.0025,48L34.3931,30.0029l-.0067-.0068a11.9852,11.9852,0,0,1-20.7778.007Z" style="fill:url(#cta2-c)"></path> </svg>
+              <span data-i18n="add-to-chrome">Add to Chrome</span>
+            </a>
+          </div>
+          
+          <!-- Copyright section -->
+          <div class="border-t border-gray-200 pt-8 text-center">
+            <p class="text-gray-500 text-sm">
+              © <script>document.write(new Date().getFullYear())</script> FisherAI. <span data-i18n="footer-text">All rights reserved.</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3PSXKB099C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3PSXKB099C');
+    </script>
+  </body>
+</html> 
