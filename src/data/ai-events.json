@@ -1090,5 +1090,12 @@
       "category": "RESEARCH",
       "description": "Google 发布 AlphaEvolve: 一款利用大型语言模型（LLMs）进行通用算法发现与优化的进化编码代理。其核心思想是结合 Gemini 模型的创造性问题解决能力和自动化评估机制，通过进化迭代的方式生成、验证并改进算法。该代理不仅能够优化现有计算流程，还能在数学等基础科学领域探索新的解决方案，展示了其在多个领域应用的广泛前景和实际价值。",
       "link": "https://fisherdaddy.com/posts/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+    },
+    {
+      "date": "2025-05-16",
+      "title": "OpenAI Codex",
+      "category": "MODEL_RELEASE",
+      "description": "OpenAI 推出全新 Codex，一款云端AI软件工程代理。基于codex-1，它能并行处理编码、修复Bug、提PR等任务，助开发者提升效率。现已向 ChatGPT Pro 、Team 和 Enterprise 用户开放。",
+      "link": "https://fisherdaddy.com/posts/introducing-openai-codex/"
     }
 ]

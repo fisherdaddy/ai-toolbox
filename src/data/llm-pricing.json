@@ -159,6 +159,12 @@
         "outputPrice": 24
       },
       {
+        "name": "codex-mini-latest",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 9,
+        "outputPrice": 42
+      },
+      {
         "name": "gpt-4.1",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 14,

@@ -39,6 +39,12 @@
         "outputPrice": 4.4
       },
       {
+        "name": "codex-mini-latest",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 1.5,
+        "outputPrice": 6
+      },
+      {
         "name": "gpt-4o-mini-transcribe",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 3,

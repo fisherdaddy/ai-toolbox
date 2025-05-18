@@ -250,5 +250,11 @@
     "title": "o3 和 o4-mini 发布",
     "feature": "o3 和 o4-mini 发布",
     "description": "OpenAI 推出了其 o 系列中迄今为止最智能、能力最强的模型——o3 和 o4-mini。这两款模型被训练用于更深度的推理（“思考更长时间”），显著提升了 ChatGPT 的能力。模型首次能够自主地（agentically）决定何时以及如何使用 ChatGPT 内的所有工具（网络搜索、代码执行、视觉分析、图像生成等）来解决复杂问题。"
+  },
+  {
+    "date": "2025年5月16日",
+    "title": "Codex 发布",
+    "feature": "Codex 和 codex-mini-latest发布",
+    "description": "OpenAI 推出全新 Codex，一款云端AI软件工程代理。基于codex-1，它能并行处理编码、修复Bug、提PR等任务，助开发者提升效率。现已向 ChatGPT Pro 、Team 和 Enterprise 用户开放。"
   }
 ]
