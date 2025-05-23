@@ -94,5 +94,11 @@
       "title": "Claude DeepResearch 发布",
       "feature": "Claude 发布 Integrations 功能以连接外部应用和工具，以及 Research 功能以提供更深入的调查能力。",
       "description": "Claude 可以通过名为 Integrations 的新功能连接到用户的应用程序和工具，使其能够理解更广泛的工作背景并跨平台执行任务。推出了高级研究模式，可以进行更长时间（最长 45 分钟）、更深入的调查，并能搜索网页、 Google Workspace 以及新连接的 Integrations "
+    },
+    {
+      "date": "2025年5月23日",
+      "title": "Claude 4",
+      "feature": "Claude 4 是 Claude 3.7 Sonnet 的升级版，在编码、高级推理和 AI 代理方面树立了新标准。",
+      "description": "Anthropic 推出了新一代 Claude 模型：Claude Opus 4 和 Claude Sonnet 4，它们在编码、高级推理和 AI 代理方面树立了新标准。Claude Opus 4 被誉为全球最佳编码模型，擅长处理复杂和长时间运行的任务，而 Claude Sonnet 4 则是对 Sonnet 3.7 的重大升级，在编码和推理方面表现卓越。两款模型都增强了工具使用、并行工具执行和记忆能力。"
     }
   ]

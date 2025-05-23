@@ -1097,5 +1097,19 @@
       "category": "MODEL_RELEASE",
       "description": "OpenAI 推出全新 Codex，一款云端AI软件工程代理。基于codex-1，它能并行处理编码、修复Bug、提PR等任务，助开发者提升效率。现已向 ChatGPT Pro 、Team 和 Enterprise 用户开放。",
       "link": "https://fisherdaddy.com/posts/introducing-openai-codex/"
+    },
+    {
+      "date": "2025-05-20",
+      "title": "Google I/O 2025：Goole Veo 3、Imagen 4、Flow、Gemini 2.5 Pro Deep Think",
+      "category": "MODEL_RELEASE",
+      "description": "Google I/O 2025 发布了大量的 Google 的最新能力，包括 Gemini 2.5 Pro Deep Think、Imagen 4、Flow、Google Veo 3、Lyria 2 等。",
+      "link": "https://fisherdaddy.com/posts/google-io-2025-collection-first-day/"
+    },
+    {
+      "date": "2025-05-23",
+      "title": "Claude 4",
+      "category": "MODEL_RELEASE",
+      "description": "Anthropic 推出了新一代 Claude 模型：Claude Opus 4 和 Claude Sonnet 4，它们在编码、高级推理和 AI 代理方面树立了新标准。Claude Opus 4 被誉为全球最佳编码模型，擅长处理复杂和长时间运行的任务，而 Claude Sonnet 4 则是对 Sonnet 3.7 的重大升级，在编码和推理方面表现卓越。两款模型都增强了工具使用、并行工具执行和记忆能力。",
+      "link": "https://www.anthropic.com/news/claude-4"
     }
 ]

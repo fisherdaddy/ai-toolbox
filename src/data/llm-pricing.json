@@ -207,15 +207,21 @@
         "outputPrice": 35
       },
       {
+        "name": "claude 4\nSonnet",
+        "logo": "/assets/icon/anthropic_small.svg",
+        "inputPrice": 21,
+        "outputPrice": 105
+      },
+      {
         "name": "claude 3.7\nSonnet",
         "logo": "/assets/icon/anthropic_small.svg",
-        "inputPrice": 26.3,
+        "inputPrice": 21,
         "outputPrice": 105
       },
       {
         "name": "claude 3.5\nSonnet",
         "logo": "/assets/icon/anthropic_small.svg",
-        "inputPrice": 26.3,
+        "inputPrice": 21,
         "outputPrice": 105
       },
       {
@@ -235,6 +241,12 @@
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 105,
         "outputPrice": 420
+      },
+      {
+        "name": "claude 4\nOpus",
+        "logo": "/assets/icon/anthropic_small.svg",
+        "inputPrice": 105,
+        "outputPrice": 525
       },
       {
         "name": "claude 3.5\nOpus",
