@@ -115,13 +115,13 @@
   },
   {
     "date": "2025-04-30",
-    "title": "DeepSeek-Prover-V2",
+    "title": "DeepSeek-Prover-V2 发布",
     "feature": "DeepSeek 推出了 DeepSeek-Prover-V2，一个用于 Lean 4 形式化定理证明的开源大语言模型。模型训练始于一个“冷启动”阶段，利用 DeepSeek-V3 通过递归证明流程生成初始数据，整合了非形式化推理（如思路链）和形式化证明步骤。随后通过强化学习进一步提升性能。DeepSeek-Prover-V2 在神经定理证明领域达到 SOTA 水平，特别是在 MiniF2F-test 上实现了 88.9 % 的通过率，并解决了 PutnamBench 中的 49 个问题。发布了两个尺寸的模型： 7B 和 671B 参数，可通过 Hugging Face Transformers 使用。",
     "description": "HuggingFace地址：https://huggingface.co/deepseek-ai/DeepSeek-Prover-V2-671B"
   },
   {
     "date": "2025-05-29",
-    "title": "DeepSeek-Prover-V2",
+    "title": "DeepSeek-R1-0528 发布",
     "feature": "DeepSeek-R1-0528 发布：推理与理解能力显著增强，性能逼近顶尖模型，例如 O3 和 Gemini 2.5 Pro。另外，还降低了生成“幻觉”（即不真实信息）的概率,增强了对函数调用的支持，优化了“写代码”（vibe coding）的体验。",
     "description": "HuggingFace地址：https://huggingface.co/deepseek-ai/DeepSeek-R1-0528"
   }
