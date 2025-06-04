@@ -8,6 +8,7 @@ const tools = [
   { id: 'quoteCard', icon: '/assets/icon/quotecard.png', path: '/quote-card' },
   { id: 'markdown2image', icon: '/assets/icon/markdown2image.png', path: '/markdown-to-image' },
   { id: 'wechatFormatter', icon: '/assets/icon/editor.png', path: '/wechat-formatter' },
+  { id: 'idPhotoMaker', icon: '/assets/icon/idcard.png', path: '/id-photo-maker' },
   { id: 'perpetualCalendar', icon: '/assets/icon/calendar.jpg', path: '/perpetual-calendar' },
   { id: 'imageAnnotator', icon: '/assets/icon/image-annotator.png', path: '/image-annotator' },
   { id: 'subtitleGenerator', icon: '/assets/icon/subtitle2image.png', path: '/subtitle-to-image' },

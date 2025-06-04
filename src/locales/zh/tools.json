@@ -285,5 +285,31 @@
     "perpetualCalendar": {
       "title": "万年历",
       "description": "查看任意年份任意月份的日历"
+    },
+    "idPhotoMaker": {
+      "title": "证件照制作",
+      "description": "将任意照片制作成标准证件照，支持多种尺寸规格",
+      "uploadPrompt": "点击或拖拽上传照片",
+      "selectSize": "选择尺寸",
+      "sizes": {
+        "small1inch": "小一寸 (22×32mm)",
+        "1inch": "一寸 (25×35mm)",
+        "large1inch": "大一寸 (33×48mm)",
+        "small2inch": "小二寸 (35×45mm)",
+        "2inch": "二寸 (35×49mm)",
+        "large2inch": "大二寸 (35×53mm)",
+        "3inch": "三寸 (55×84mm)",
+        "4inch": "四寸 (76×102mm)",
+        "5inch": "五寸 (89×127mm)"
+      },
+      "processing": "正在处理...",
+      "noImage": "请先上传照片",
+      "download": "下载证件照",
+      "preview": "预览效果",
+      "backgroundRemoval": "背景去除中...",
+      "addingBackground": "添加白色背景...",
+      "resizing": "调整尺寸...",
+      "privacyNote": "本功能完全在浏览器本地执行，无隐私数据泄露风险，请放心使用。",
+      "instructions": "操作说明：\n1. 上传一张人像照片\n2. 选择所需的证件照尺寸\n3. 系统会自动去除背景并添加白色背景\n4. 点击下载按钮保存证件照"
     }
 }

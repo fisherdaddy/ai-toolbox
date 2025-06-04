@@ -280,5 +280,31 @@
       "CULTURE": "문화",
       "OPEN_SOURCE": "오픈 소스"
     }
+  },
+  "idPhotoMaker": {
+    "title": "증명사진 제작",
+    "description": "임의의 사진을 표준 증명사진으로 변환하며, 다양한 크기 옵션을 제공",
+    "uploadPrompt": "클릭하거나 드래그하여 사진을 업로드하세요",
+    "selectSize": "크기 선택",
+    "sizes": {
+      "small1inch": "소형 1인치 (22×32mm)",
+      "1inch": "1인치 (25×35mm)",
+      "large1inch": "대형 1인치 (33×48mm)",
+      "small2inch": "소형 2인치 (35×45mm)",
+      "2inch": "2인치 (35×49mm)",
+      "large2inch": "대형 2인치 (35×53mm)",
+      "3inch": "3인치 (55×84mm)",
+      "4inch": "4인치 (76×102mm)",
+      "5inch": "5인치 (89×127mm)"
+    },
+    "processing": "처리 중...",
+    "noImage": "먼저 사진을 업로드하세요",
+    "download": "증명사진 다운로드",
+    "preview": "미리보기",
+    "backgroundRemoval": "배경 제거 중...",
+    "addingBackground": "흰색 배경 추가 중...",
+    "resizing": "크기 조정 중...",
+    "privacyNote": "이 기능은 완전히 브라우저 내에서 실행되며, 개인정보 유출 위험이 없습니다. 안심하고 사용하세요.",
+    "instructions": "사용 방법:\n1. 인물 사진을 업로드하세요\n2. 원하는 증명사진 크기를 선택하세요\n3. 시스템이 자동으로 배경을 제거하고 흰색 배경을 추가합니다\n4. 다운로드 버튼을 클릭하여 증명사진을 저장하세요"
   }
 }

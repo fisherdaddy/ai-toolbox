@@ -29,6 +29,7 @@ const ImageCompressor = lazy(() => import('./components/ImageCompressor'));
 const ImageWatermark = lazy(() => import('./components/ImageWatermark'));
 const TextBehindImage = lazy(() => import('./components/TextBehindImage'));
 const BackgroundRemover = lazy(() => import('./components/BackgroundRemover'));
+const IDPhotoMaker = lazy(() => import('./components/IDPhotoMaker'));
 const AnthropicTimeline = lazy(() => import('./components/AnthropicTimeline'));
 const DrugsList = lazy(() => import('./components/DrugsList'));
 const DeepSeekTimeline = lazy(() => import('./components/DeepSeekTimeline'));
@@ -74,6 +75,7 @@ function App() {
                 <Route path="/image-watermark" element={<ImageWatermark />} />
                 <Route path="/text-behind-image" element={<TextBehindImage />} /> 
                 <Route path="/background-remover" element={<BackgroundRemover />} />
+                <Route path="/id-photo-maker" element={<IDPhotoMaker />} />
                 <Route path="/deepseek-timeline" element={<DeepSeekTimeline />} />
                 <Route path="/wechat-formatter" element={<WechatFormatter />} />
                 <Route path="/image-annotator" element={<ImageAnnotator />} />

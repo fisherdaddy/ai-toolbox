@@ -283,5 +283,31 @@
     "perpetualCalendar": {
       "title": "Perpetual Calendar",
       "description": "View any month of any year with this perpetual calendar"
+    },
+    "idPhotoMaker": {
+      "title": "ID Photo Maker",
+      "description": "Convert any photo into standard ID photos with various size options",
+      "uploadPrompt": "Click or drag to upload photo",
+      "selectSize": "Select Size",
+      "sizes": {
+        "small1inch": "Small 1 Inch (22×32mm)",
+        "1inch": "1 Inch (25×35mm)",
+        "large1inch": "Large 1 Inch (33×48mm)",
+        "small2inch": "Small 2 Inch (35×45mm)",
+        "2inch": "2 Inch (35×49mm)",
+        "large2inch": "Large 2 Inch (35×53mm)",
+        "3inch": "3 Inch (55×84mm)",
+        "4inch": "4 Inch (76×102mm)",
+        "5inch": "5 Inch (89×127mm)"
+      },
+      "processing": "Processing...",
+      "noImage": "Please upload a photo first",
+      "download": "Download ID Photo",
+      "preview": "Preview",
+      "backgroundRemoval": "Removing background...",
+      "addingBackground": "Adding white background...",
+      "resizing": "Resizing...",
+      "privacyNote": "This feature runs entirely in your browser with no risk of privacy data leakage. Feel free to use it.",
+      "instructions": "Instructions:\n1. Upload a portrait photo\n2. Select the desired ID photo size\n3. The system will automatically remove background and add white background\n4. Click download button to save the ID photo"
     }
 }
