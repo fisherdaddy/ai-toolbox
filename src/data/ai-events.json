@@ -1125,5 +1125,12 @@
       "category": "MODEL_RELEASE",
       "description": "OpenAI 给 Pro 和 API 用户发布了 o3 Pro，并将所有 Plus 用户的 o3 速率限制翻倍，同时将 o3 的价格爆砍80%，说是架构的升级带来的成本下降。",
       "link": "https://x.com/fun000001/status/1932604377891831959"
+    },    
+    {
+      "date": "2025-06-11",
+      "title": "Doubao-Seed-1.6",
+      "category": "MODEL_RELEASE",
+      "description": "Doubao-Seed-1.6全新多模态深度思考模型，同时支持auto/thinking/non-thinking三种思考模式。 non-thinking模式下，模型效果对比Doubao-1.5-pro/250115大幅提升。支持 256k 上下文窗口，输出长度支持最大 16k tokens。豆包发布 1.6 系列模型，包括 Doubao-Seed-1.6-0615、Doubao-Seed-1.6-thinking-0615、Doubao-Seed-1.6-flash-0615。",
+      "link": "https://www.volcengine.com/product/doubao"
     }
 ]

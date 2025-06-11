@@ -9,6 +9,12 @@
         "outputPrice": 0.6
       },
       {
+        "name": "Doubao-seed-1.6-flash",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 0.15,
+        "outputPrice": 1.5
+      },
+      {
         "name": "yi-lightning\n-16k",
         "logo": "/assets/icon/yi_small.jpg",
         "inputPrice": 0.99,
@@ -31,6 +37,12 @@
         "logo": "/assets/icon/google_small.svg",
         "inputPrice": 0.53,
         "outputPrice": 2.1
+      },
+      {
+        "name": "Doubao-seed-1.6",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 0.8,
+        "outputPrice": 2
       },
       {
         "name": "Doubao-1.5-pro-32k",
@@ -73,6 +85,12 @@
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 1.05,
         "outputPrice": 4.2
+      },
+      {
+        "name": "Doubao-seed-1.6-thinking",
+        "logo": "/assets/icon/doubao.png",
+        "inputPrice": 0.8,
+        "outputPrice": 8
       },
       {
         "name": "deepseek-v3",
