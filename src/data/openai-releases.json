@@ -256,5 +256,11 @@
     "title": "Codex 发布",
     "feature": "Codex 和 codex-mini-latest发布",
     "description": "OpenAI 推出全新 Codex，一款云端AI软件工程代理。基于codex-1，它能并行处理编码、修复Bug、提PR等任务，助开发者提升效率。现已向 ChatGPT Pro 、Team 和 Enterprise 用户开放。"
+  },
+  {
+    "date": "2025年6月11日",
+    "title": "o3 Pro 发布",
+    "feature": "o3 Pro 发布",
+    "description": "OpenAI 给 Pro 和 API 用户发布了 o3 Pro，并将所有 Plus 用户的 o3 速率限制翻倍，同时将 o3 的价格爆砍80%，说是架构的升级带来的成本下降。"
   }
 ]

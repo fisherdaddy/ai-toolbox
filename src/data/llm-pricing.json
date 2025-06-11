@@ -165,6 +165,12 @@
         "outputPrice": 42
       },
       {
+        "name": "o3",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 14,
+        "outputPrice": 56
+      },
+      {
         "name": "gpt-4.1",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 14,
@@ -228,12 +234,6 @@
         "name": "GPT Image 1",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 35,
-        "outputPrice": 280
-      },
-      {
-        "name": "o3",
-        "logo": "/assets/icon/openai_small.svg",
-        "inputPrice": 70,
         "outputPrice": 280
       },
       {
