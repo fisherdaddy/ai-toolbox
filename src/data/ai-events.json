@@ -1137,7 +1137,7 @@
       "date": "2025-06-18",
       "title": "gemini-2.5-flash-lite-preview-06-17",
       "category": "MODEL_RELEASE",
-      "description": "Gemini 果然发布了三款模型：Gemini 2.5 Pro 正式发布（与 06-05 预览版相比没有变化），Gemini 2.5 Flash 正式发布（与 04-17 预览版相比没有变化，思考和非思考模型价格进行了统一），Gemini 2.5 Flash-Lite 预览版发布，价格和 Gemini 2.0 Flash 一样，性能上整体也要优于 Gemini 2.0 Flash。另外，Gemini 2.5 系列的所有模型都是深度思考模型，且都可以自定义思考的预算。",
+      "description": "Gemini 发布了三款模型：Gemini 2.5 Pro 正式发布（与 06-05 预览版相比没有变化），Gemini 2.5 Flash 正式发布（与 04-17 预览版相比没有变化，思考和非思考模型价格进行了统一），Gemini 2.5 Flash-Lite 预览版发布，价格和 Gemini 2.0 Flash 一样，性能上整体也要优于 Gemini 2.0 Flash。另外，Gemini 2.5 系列的所有模型都是深度思考模型，且都可以自定义思考的预算。",
       "link": "https://developers.googleblog.com/zh-hans/gemini-2-5-thinking-model-updates/"
     }
 ]
