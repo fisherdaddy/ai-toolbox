@@ -68,6 +68,12 @@
         "inputPrice": 0.8,
         "outputPrice": 2
       },
+            {
+        "name": "gemini-2.5-flash-lite-preview-06-17",
+        "logo": "/assets/icon/google_small.svg",
+        "inputPrice": 0.7,
+        "outputPrice": 2.8
+      },
       {
         "name": "google 2.0 Falsh",
         "logo": "/assets/icon/google_small.svg",
@@ -135,10 +141,10 @@
         "outputPrice": 16
       },
       {
-        "name": "Gemini 2.5 Flash Preview 04-17",
+        "name": "Gemini 2.5 Flash",
         "logo": "/assets/icon/google_small.svg",
-        "inputPrice": 1.05,
-        "outputPrice": 24.5
+        "inputPrice": 2.1,
+        "outputPrice": 17.5
       },
       {
         "name": "o4-mini",
@@ -195,7 +201,7 @@
         "outputPrice": 56
       }, 
       {
-        "name": "gemini 2.5 pro Preview",
+        "name": "gemini 2.5 pro",
         "logo": "/assets/icon/google_small.svg",
         "inputPrice": 8.75,
         "outputPrice": 70
@@ -271,6 +277,12 @@
         "logo": "/assets/icon/anthropic_small.svg",
         "inputPrice": 131,
         "outputPrice": 525
+      },
+      {
+        "name": "o3-pro",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 140,
+        "outputPrice": 560
       },
       {
         "name": "gpt-4.5",

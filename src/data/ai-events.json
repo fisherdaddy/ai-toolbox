@@ -1132,5 +1132,12 @@
       "category": "MODEL_RELEASE",
       "description": "Doubao-Seed-1.6全新多模态深度思考模型，同时支持auto/thinking/non-thinking三种思考模式。 non-thinking模式下，模型效果对比Doubao-1.5-pro/250115大幅提升。支持 256k 上下文窗口，输出长度支持最大 16k tokens。豆包发布 1.6 系列模型，包括 Doubao-Seed-1.6-0615、Doubao-Seed-1.6-thinking-0615、Doubao-Seed-1.6-flash-0615。",
       "link": "https://www.volcengine.com/product/doubao"
+    },    
+    {
+      "date": "2025-06-18",
+      "title": "gemini-2.5-flash-lite-preview-06-17",
+      "category": "MODEL_RELEASE",
+      "description": "Gemini 果然发布了三款模型：Gemini 2.5 Pro 正式发布（与 06-05 预览版相比没有变化），Gemini 2.5 Flash 正式发布（与 04-17 预览版相比没有变化，思考和非思考模型价格进行了统一），Gemini 2.5 Flash-Lite 预览版发布，价格和 Gemini 2.0 Flash 一样，性能上整体也要优于 Gemini 2.0 Flash。另外，Gemini 2.5 系列的所有模型都是深度思考模型，且都可以自定义思考的预算。",
+      "link": "https://developers.googleblog.com/zh-hans/gemini-2-5-thinking-model-updates/"
     }
 ]

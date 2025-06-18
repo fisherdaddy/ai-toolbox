@@ -123,6 +123,12 @@
         "outputPrice": 60
       },
       {
+        "name": "o3-pro",
+        "logo": "/assets/icon/openai_small.svg",
+        "inputPrice": 20,
+        "outputPrice": 80
+      },
+      {
         "name": "gpt-4.5",
         "logo": "/assets/icon/openai_small.svg",
         "inputPrice": 75,
